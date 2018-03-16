@@ -5,13 +5,10 @@
     /// </summary>
     public class Bomberman : Player
     {
-        public Bomberman()
-        {
-            BombStackCount = Constants.BombermanBombStackCount;
-            BombCountdown = Constants.BombermanBombCountdown;
-        }
+        public override int BombStackCount { get; set; } = Constants.BombermanBombStackCount;
+        public override float BombCountdown { get; set; } = Constants.BombermanBombCountdown;
+        public override int BombExplosionDistance { get; set; } = Constants.BombermanBombExplosionDistance;
 
-        // Use this for initialization
         protected override void Start()
         {
             base.Start();

@@ -205,6 +205,7 @@ Transform:
   m_Children:
   - {fileID: 396662766}
   - {fileID: 1585078669}
+  - {fileID: 869714542}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,6 +365,49 @@ Transform:
   m_PrefabParentObject: {fileID: 4955692010094732, guid: 2aef1125e20158a428e2364cf5a5339a,
     type: 2}
   m_PrefabInternal: {fileID: 17518111}
+--- !u!1 &869714541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 869714542}
+  - component: {fileID: 869714543}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869714542
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869714541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 295897515}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869714543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869714541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5faea79efdfab0a49999c0e0c751ece2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallTile: {fileID: 11400000, guid: 9409437a7bfc3cf41992c44b2b71ee30, type: 2}
+  _destructibleTile: {fileID: 11400000, guid: 4ec2592da47a7184a9d84f18fcdd128a, type: 2}
+  _tilemapGameplay: {fileID: 1716858370}
 --- !u!1 &1135127970
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +417,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1135127972}
   - component: {fileID: 1135127971}
-  - component: {fileID: 1135127973}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -406,22 +449,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1135127973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135127970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5faea79efdfab0a49999c0e0c751ece2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tilemap: {fileID: 1716858370}
-  _wallTile: {fileID: 0}
-  _destructibleTile: {fileID: 11400000, guid: 4ec2592da47a7184a9d84f18fcdd128a, type: 2}
-  _explosionPrefab: {fileID: 1051096854954962, guid: 475a5b610ee3aaf458ff985a3a836f45,
-    type: 2}
 --- !u!1 &1251551100
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9928ebcf29e43d438cc6f11b069fac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tilemapGameplay: {fileID: 1716858370}
 --- !u!1 &1716858367
 GameObject:
   m_ObjectHideFlags: 0

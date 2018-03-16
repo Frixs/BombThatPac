@@ -11,8 +11,13 @@ namespace Characters
         /// <summary>
         /// Name of the current character.
         /// </summary>
-        [SerializeField] protected string Name = Constants.CharacterDefaultName;
-        
+        [SerializeField] private string _name = Constants.CharacterDefaultName;
+
+        public string Name
+        {
+            get { return _name; }
+        }
+
         /// <summary>
         /// The Player's movement speed.
         /// </summary>
@@ -29,17 +34,9 @@ namespace Characters
         private Animator _myAnimator;
 
         /// <summary>
-        /// TODO
+        /// Reference to rigid body.
         /// </summary>
         private Rigidbody2D _myRigidBody;
-
-        /// <summary>
-        /// TODO
-        /// </summary>
-        public bool IsMoving()
-        {
-            return Direction.x != 0 || Direction.y != 0;
-        }
 
         // Use this for initialization
         protected virtual void Start()
@@ -53,10 +50,16 @@ namespace Characters
         {
             HandleLayers();
         }
-
+        
         /// <summary>
-        /// TODO
+        /// Check if character is moving.
         /// </summary>
+        public bool IsMoving()
+        {
+            return Direction.x != 0 || Direction.y != 0;
+        }
+
+        // Fixed update
         private void FixedUpdate()
         {
             Move();
@@ -74,7 +77,7 @@ namespace Characters
         /// <summary>
         /// TODO
         /// </summary>
-        public void HandleLayers()
+        private void HandleLayers()
         {
             // Checks if we are moving or standing still.
             if (IsMoving())
@@ -94,7 +97,7 @@ namespace Characters
         /// <summary>
         /// TODO
         /// </summary>
-        public void ActivateLayer(string layerName)
+        private void ActivateLayer(string layerName)
         {
             for (int i = 0; i < _myAnimator.layerCount; i++)
             {

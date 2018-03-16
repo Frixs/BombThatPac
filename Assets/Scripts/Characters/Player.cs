@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using Items;
+using Managers;
 using UnityEngine;
 
 namespace Characters
@@ -6,7 +7,7 @@ namespace Characters
     /// <summary>
     /// Player controlled character.
     /// </summary>
-    public class Player : Character
+    public abstract class Player : Character
     {
         /// <summary>
         /// Input HOTKEY to MOVE UP.
@@ -46,12 +47,17 @@ namespace Characters
         /// <summary>
         /// Default number of the bombs that can be placed on the same time.
         /// </summary>
-        protected int BombStackCount = Constants.PlayerDefaultBombStackCount;
+        public abstract int BombStackCount { get; set; }
 
         /// <summary>
         /// Bomb countdown.
         /// </summary>
-        protected float BombCountdown = Constants.BombDefaultCountdown;
+        public abstract float BombCountdown { get; set; }
+
+        /// <summary>
+        /// Bomb explosion distance in tiles.
+        /// </summary>
+        public abstract int BombExplosionDistance { get; set; }
 
         /// <summary>
         /// Reference to bomb PREFAB.
@@ -59,13 +65,13 @@ namespace Characters
         [SerializeField] private GameObject _bombPrefab;
 
         // Use this for initialization
-        protected virtual void Start()
+        protected override void Start()
         {
             base.Start();
         }
 
         // Update is called once per frame
-        protected virtual void Update()
+        protected override void Update()
         {
             GetInput();
 
@@ -113,16 +119,15 @@ namespace Characters
         }
 
         /// <summary>
-        /// TODO
+        /// Deploy the bomb on the correct position.
         /// </summary>
         protected void DeployTheBomb()
         {
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb deployed!", Name);
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(transform.position);
-            Vector3Int cell = GetComponent<GameManager>().GetTilemapGameplay().WorldToCell(worldPos);
-            Vector3 cellCenterPos = GetComponent<GameManager>().GetTilemapGameplay().GetCellCenterWorld(cell);
+            Vector3Int cell = FindObjectOfType<MapManager>().TilemapGameplay.WorldToCell(transform.position);
+            Vector3 cellCenterPos = FindObjectOfType<MapManager>().TilemapGameplay.GetCellCenterWorld(cell);
 
-            Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity);
+            (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Owner = this;
         }
     }
 }
