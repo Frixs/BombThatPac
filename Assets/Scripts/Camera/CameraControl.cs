@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is able to manipulate with the main camera.
+/// </summary>
 public class CameraControl : MonoBehaviour
 {
     [SerializeField] private float _mDampTime = 0.8f; // Approximate time for the camera to refocus.

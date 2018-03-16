@@ -1,18 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Bomberman : Player
+﻿namespace Characters
 {
-    // Use this for initialization
-    protected override void Start()
+    /// <summary>
+    /// Player's role.
+    /// </summary>
+    public class Bomberman : Player
     {
-        base.Start();
-    }
+        public Bomberman()
+        {
+            BombStackCount = Constants.BombermanBombStackCount;
+            BombCountdown = Constants.BombermanBombCountdown;
+        }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
+        // Use this for initialization
+        protected override void Start()
+        {
+            base.Start();
+        }
+
+        // Update is called once per frame
+        protected override void Update()
+        {
+            base.Update();
+        }
     }
 }

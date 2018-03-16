@@ -1,97 +1,107 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Tilemaps;
 
-public abstract class Character : MonoBehaviour
+namespace Characters
 {
     /// <summary>
-    /// The Player's movement speed.
+    /// This class defines the basics of all characters in the game.
     /// </summary>
-    [SerializeField] private float _speed;
-
-    /// <summary>
-    /// The Player's direction.
-    /// </summary>
-    protected Vector2 Direction;
-
-    /// <summary>
-    /// A reference to the character's animator.
-    /// </summary>
-    private Animator _myAnimator;
-
-    /// <summary>
-    /// TODO
-    /// </summary>
-    private Rigidbody2D _myRigidBody;
-
-    /// <summary>
-    /// TODO
-    /// </summary>
-    public bool IsMoving()
+    public abstract class Character : MonoBehaviour
     {
-        return Direction.x != 0 || Direction.y != 0;
-    }
+        /// <summary>
+        /// Name of the current character.
+        /// </summary>
+        [SerializeField] protected string Name = Constants.CharacterDefaultName;
+        
+        /// <summary>
+        /// The Player's movement speed.
+        /// </summary>
+        [SerializeField] private float _speed = Constants.PlayerDefaultSpeed;
 
-    // Use this for initialization
-    protected virtual void Start()
-    {
-        _myRigidBody = GetComponent<Rigidbody2D>();
-        _myAnimator = GetComponent<Animator>();
-    }
+        /// <summary>
+        /// The Player's direction.
+        /// </summary>
+        protected Vector2 Direction;
 
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-        HandleLayers();
-    }
+        /// <summary>
+        /// A reference to the character's animator.
+        /// </summary>
+        private Animator _myAnimator;
 
-    /// <summary>
-    /// TODO
-    /// </summary>
-    private void FixedUpdate()
-    {
-        Move();
-    }
+        /// <summary>
+        /// TODO
+        /// </summary>
+        private Rigidbody2D _myRigidBody;
 
-    /// <summary>
-    /// Moves the player.
-    /// </summary>
-    public void Move()
-    {
-        // Makes sure that the player moves.
-        _myRigidBody.velocity = Direction.normalized * _speed;
-    }
-
-    /// <summary>
-    /// TODO
-    /// </summary>
-    public void HandleLayers()
-    {
-        // Checks if we are moving or standing still.
-        if (IsMoving())
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public bool IsMoving()
         {
-            ActivateLayer("WalkLayer");
-
-            // Sets the animation parameter so that he faces the correct direction.
-            _myAnimator.SetFloat("x", Direction.x);
-            _myAnimator.SetFloat("y", Direction.y);
-        }
-        else
-        {
-            ActivateLayer("IdleLayer");
-        }
-    }
-
-    /// <summary>
-    /// TODO
-    /// </summary>
-    public void ActivateLayer(string layerName)
-    {
-        for (int i = 0; i < _myAnimator.layerCount; i++)
-        {
-            _myAnimator.SetLayerWeight(i, 0);
+            return Direction.x != 0 || Direction.y != 0;
         }
 
-        _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
+        // Use this for initialization
+        protected virtual void Start()
+        {
+            _myRigidBody = GetComponent<Rigidbody2D>();
+            _myAnimator = GetComponent<Animator>();
+        }
+
+        // Update is called once per frame
+        protected virtual void Update()
+        {
+            HandleLayers();
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        private void FixedUpdate()
+        {
+            Move();
+        }
+
+        /// <summary>
+        /// Moves the player.
+        /// </summary>
+        public void Move()
+        {
+            // Makes sure that the player moves.
+            _myRigidBody.velocity = Direction.normalized * _speed;
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public void HandleLayers()
+        {
+            // Checks if we are moving or standing still.
+            if (IsMoving())
+            {
+                ActivateLayer("WalkLayer");
+
+                // Sets the animation parameter so that he faces the correct direction.
+                _myAnimator.SetFloat("x", Direction.x);
+                _myAnimator.SetFloat("y", Direction.y);
+            }
+            else
+            {
+                ActivateLayer("IdleLayer");
+            }
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        public void ActivateLayer(string layerName)
+        {
+            for (int i = 0; i < _myAnimator.layerCount; i++)
+            {
+                _myAnimator.SetLayerWeight(i, 0);
+            }
+
+            _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
+        }
     }
 }

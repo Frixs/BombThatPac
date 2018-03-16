@@ -1,26 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Bomb : MonoBehaviour
+namespace Items
 {
-	private float _countdown = 2.0f;
-	
-	// Use this for initialization
-	void Start ()
-	{	
-	}
-	
-	// Update is called once per frame
-	void Update ()
+	public class Bomb : MonoBehaviour
 	{
-		_countdown -= Time.deltaTime;
-
-		if (_countdown <= 0.0f)
+		private float _countdown = 2.0f;
+	
+		// Use this for initialization
+		void Start ()
+		{	
+		}
+	
+		// Update is called once per frame
+		void Update ()
 		{
-			Debug.Log("BOOM!");
-			FindObjectOfType<MapDestroyer>().Explode(transform.position);
-			Destroy(gameObject);
+			_countdown -= Time.deltaTime;
+
+			if (_countdown <= 0.0f)
+			{
+				Debug.unityLogger.logHandler.LogFormat(LogType.Log, null, "Bomb exploded!");
+				FindObjectOfType<MapDestroyer>().Explode(transform.position);
+				Destroy(gameObject);
+			}
 		}
 	}
 }

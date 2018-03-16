@@ -107,11 +107,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc29b9e132e6e84fb77b17d1cd376ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: NONAME
   _speed: 3
   InputMoveUp: 119
   InputMoveLeft: 97
   InputMoveDown: 115
   InputMoveRight: 100
+  InputAction: 32
+  InputSpecialAction: 114
+  InputCollectItem: 102
+  _bombPrefab: {fileID: 1286217638179488, guid: 5e0de5d795da747438060a9a3f8cf5cc,
+    type: 2}
 --- !u!212 &212224063605262326
 SpriteRenderer:
   m_ObjectHideFlags: 1
