@@ -10,6 +10,31 @@ namespace Characters
     public abstract class Player : Character
     {
         /// <summary>
+        /// Default number of the bombs that can be placed on the same time.
+        /// </summary>
+        public abstract int BombStackCount { get; set; }
+
+        /// <summary>
+        /// Bomb countdown.
+        /// </summary>
+        public abstract float BombCountdown { get; set; }
+
+        /// <summary>
+        /// Bomb explosion distance in tiles.
+        /// </summary>
+        public abstract int BombExplosionDistance { get; set; }
+        
+        /// <summary>
+        /// Maximal number of deployed bombs at the same time.
+        /// </summary>
+        public abstract int BombMaxAllowedDeploys { get; set; }
+        
+        /// <summary>
+        /// Explosion direction represented as array filled with X, Y coords representing the direction.
+        /// </summary>
+        public abstract int[,] BombExplosionDirection { get; set; }
+        
+        /// <summary>
         /// Input HOTKEY to MOVE UP.
         /// </summary>
         [SerializeField] protected KeyCode InputMoveUp = KeyCode.W;
@@ -45,24 +70,14 @@ namespace Characters
         [SerializeField] protected KeyCode InputCollectItem = KeyCode.F;
 
         /// <summary>
-        /// Default number of the bombs that can be placed on the same time.
-        /// </summary>
-        public abstract int BombStackCount { get; set; }
-
-        /// <summary>
-        /// Bomb countdown.
-        /// </summary>
-        public abstract float BombCountdown { get; set; }
-
-        /// <summary>
-        /// Bomb explosion distance in tiles.
-        /// </summary>
-        public abstract int BombExplosionDistance { get; set; }
-
-        /// <summary>
         /// Reference to bomb PREFAB.
         /// </summary>
         [SerializeField] private GameObject _bombPrefab;
+        
+        /// <summary>
+        /// Counter of bomb deploys.
+        /// </summary>
+        public int BombDeployCounter { get; set; } = 0;
 
         // Use this for initialization
         protected override void Start()
@@ -123,11 +138,17 @@ namespace Characters
         /// </summary>
         protected void DeployTheBomb()
         {
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb deployed!", Name);
+            if (BombDeployCounter >= BombMaxAllowedDeploys)
+                return;
+
+            BombDeployCounter++;
+            
             Vector3Int cell = FindObjectOfType<MapManager>().TilemapGameplay.WorldToCell(transform.position);
             Vector3 cellCenterPos = FindObjectOfType<MapManager>().TilemapGameplay.GetCellCenterWorld(cell);
 
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Owner = this;
+            
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb deployed!", Name);
         }
     }
 }

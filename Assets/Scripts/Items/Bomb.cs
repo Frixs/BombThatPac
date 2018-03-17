@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using Characters;
+﻿using Characters;
 using Managers;
 using UnityEngine;
 
@@ -31,6 +30,9 @@ namespace Items
 		void Start()
 		{
 			_countdown = Owner.BombCountdown;
+			
+			// Ignore collision when spawning under your feet.
+			Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
 		}
 	
 		// Update is called once per frame
@@ -40,9 +42,22 @@ namespace Items
 
 			if (_countdown <= 0.0f)
 			{
-				Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb exploded!", Owner.Name);
 				Explode(transform.position);
+				Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb exploded!", Owner.Name);
+				
+				Owner.BombDeployCounter--;
+				
 				Destroy(gameObject);
+			}
+		}
+
+		// FixedUpdate is called every fixed framerate frame
+		void FixedUpdate()
+		{
+			// Restore the collision when player will be in sufficient distance from the bomb.
+			if (Vector2.Distance(Owner.transform.position, transform.position) > FindObjectOfType<MapManager>().TilemapGameplay.cellSize.sqrMagnitude / 3.5f)
+			{
+				Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
 			}
 		}
 		
@@ -53,22 +68,26 @@ namespace Items
 		public void Explode(Vector2 worldPos)
 		{
 			Vector3Int originCell = FindObjectOfType<MapManager>().TilemapGameplay.WorldToCell(worldPos);
-			bool[] isCollisionInDirection = new bool[4] {false, false, false, false};
-
+			
 			FindObjectOfType<MapManager>().ExplodeInCell(originCell);
+			
+			for (int i = 0; i < Owner.BombExplosionDirection.GetLength(0); i++)
+			{
+				ExplodeInDirection(originCell, new Vector3Int(Owner.BombExplosionDirection[i, 0], Owner.BombExplosionDirection[i, 1], Owner.BombExplosionDirection[i, 2]));
+			}
+		}
+
+		/// <summary>
+		/// Explosion in certain direction.
+		/// </summary>
+		/// <param name="origin">Origion of the explosion.</param>
+		/// <param name="direction">Direction of explosion - Vector3Int filled only with -1, 0, 1 values. Each direction can has only1 value rest 0. We are on grid only.</param>
+		private void ExplodeInDirection(Vector3Int origin, Vector3Int direction)
+		{
 			for (int i = 1; i <= Owner.BombExplosionDistance; i++)
 			{
-				if (!isCollisionInDirection[0] && !FindObjectOfType<MapManager>().ExplodeInCell(originCell + new Vector3Int(i, 0, 0)))
-					isCollisionInDirection[0] = true;
-				
-				if (!isCollisionInDirection[1] && !FindObjectOfType<MapManager>().ExplodeInCell(originCell + new Vector3Int(0, i, 0)))
-					isCollisionInDirection[1] = true;
-				
-				if (!isCollisionInDirection[2] && !FindObjectOfType<MapManager>().ExplodeInCell(originCell + new Vector3Int(-i, 0, 0)))
-					isCollisionInDirection[2] = true;
-				
-				if (!isCollisionInDirection[3] && !FindObjectOfType<MapManager>().ExplodeInCell(originCell + new Vector3Int(0, -i, 0)))
-					isCollisionInDirection[3] = true;
+				if (!FindObjectOfType<MapManager>().ExplodeInCell(origin + direction * i))
+					break;
 			}
 		}
 	}
