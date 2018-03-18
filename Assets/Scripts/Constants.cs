@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-/// <summary>
+﻿/// <summary>
 /// List of all game constants.
 /// </summary>
 public static class Constants
@@ -28,7 +26,7 @@ public static class Constants
     /// <summary>
     /// Role: BOMBERMAN - distance of bomb's explosion.
     /// </summary>
-    public const int BombermanBombExplosionDistance = 3;
+    public const int BombermanBombExplosionDistance = 2;
 
     /// <summary>
     /// Role: BOMBERMAN - bomb max deploy count.

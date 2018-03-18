@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50736437586787514}
   - component: {fileID: 58076598537587118}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerBomberman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc29b9e132e6e84fb77b17d1cd376ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: NONAME
+  _name: NONAME
   _speed: 3
   InputMoveUp: 119
   InputMoveLeft: 97

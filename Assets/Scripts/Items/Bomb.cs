@@ -9,7 +9,7 @@ namespace Items
 		/// <summary>
 		/// Reference to bomb owner.
 		/// </summary>
-		public Player Owner { private get; set; }
+		[HideInInspector] public Player Owner;
 
 		/// <summary>
 		/// Bomb's countdown.
@@ -55,7 +55,7 @@ namespace Items
 		void FixedUpdate()
 		{
 			// Restore the collision when player will be in sufficient distance from the bomb.
-			if (Vector2.Distance(Owner.transform.position, transform.position) > FindObjectOfType<MapManager>().TilemapGameplay.cellSize.sqrMagnitude / 3.5f)
+			if (Vector2.Distance(Owner.transform.position, transform.position) > MapManager.Instance.TilemapGameplay.cellSize.sqrMagnitude / 3.0f)
 			{
 				Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
 			}
@@ -67,9 +67,9 @@ namespace Items
 		/// <param name="worldPos">Position of epicenter.</param>
 		public void Explode(Vector2 worldPos)
 		{
-			Vector3Int originCell = FindObjectOfType<MapManager>().TilemapGameplay.WorldToCell(worldPos);
+			Vector3Int originCell = MapManager.Instance.TilemapGameplay.WorldToCell(worldPos);
 			
-			FindObjectOfType<MapManager>().ExplodeInCell(originCell);
+			MapManager.Instance.ExplodeInCell(originCell);
 			
 			for (int i = 0; i < Owner.BombExplosionDirection.GetLength(0); i++)
 			{
@@ -86,7 +86,7 @@ namespace Items
 		{
 			for (int i = 1; i <= Owner.BombExplosionDistance; i++)
 			{
-				if (!FindObjectOfType<MapManager>().ExplodeInCell(origin + direction * i))
+				if (!MapManager.Instance.ExplodeInCell(origin + direction * i))
 					break;
 			}
 		}

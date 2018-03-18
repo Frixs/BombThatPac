@@ -33,41 +33,11 @@ namespace Characters
         /// Explosion direction represented as array filled with X, Y coords representing the direction.
         /// </summary>
         public abstract int[,] BombExplosionDirection { get; set; }
-        
-        /// <summary>
-        /// Input HOTKEY to MOVE UP.
-        /// </summary>
-        [SerializeField] protected KeyCode InputMoveUp = KeyCode.W;
 
         /// <summary>
-        /// Input HOTKEY to MOVE LEFT.
+        /// Lets say which section of player controls the character should use.
         /// </summary>
-        [SerializeField] protected KeyCode InputMoveLeft = KeyCode.A;
-
-        /// <summary>
-        /// Input HOTKEY to MOVE DOWN.
-        /// </summary>
-        [SerializeField] protected KeyCode InputMoveDown = KeyCode.S;
-
-        /// <summary>
-        /// Input HOTKEY to MOVE RIGHT.
-        /// </summary>
-        [SerializeField] protected KeyCode InputMoveRight = KeyCode.D;
-
-        /// <summary>
-        /// Input HOTKEY to ACTION.
-        /// </summary>
-        [SerializeField] protected KeyCode InputAction = KeyCode.Space;
-
-        /// <summary>
-        /// Input HOTKEY to SPECIAL ACTION.
-        /// </summary>
-        [SerializeField] protected KeyCode InputSpecialAction = KeyCode.R;
-
-        /// <summary>
-        /// Input HOTKEY to COLLECT ITEM.
-        /// </summary>
-        [SerializeField] protected KeyCode InputCollectItem = KeyCode.F;
+        public string InputPlayerSection;
 
         /// <summary>
         /// Reference to bomb PREFAB.
@@ -77,7 +47,7 @@ namespace Characters
         /// <summary>
         /// Counter of bomb deploys.
         /// </summary>
-        public int BombDeployCounter { get; set; } = 0;
+        [HideInInspector] public int BombDeployCounter = 0;
 
         // Use this for initialization
         protected override void Start()
@@ -100,51 +70,54 @@ namespace Characters
         {
             Direction = Vector2.zero;
 
-            if (Input.GetKey(InputMoveUp))
+            if (!HasEnabledActions)
+                return;
+
+            if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveUp")))
             {
                 Direction += Vector2.up;
             }
-            else if (Input.GetKey(InputMoveLeft))
+            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveLeft")))
             {
                 Direction += Vector2.left;
             }
-            else if (Input.GetKey(InputMoveDown))
+            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveDown")))
             {
                 Direction += Vector2.down;
             }
-            else if (Input.GetKey(InputMoveRight))
+            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveRight")))
             {
                 Direction += Vector2.right;
             }
 
-            if (Input.GetKeyDown(InputAction))
+            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "Action")))
             {
-                DeployTheBomb();
+                PlaceBomb();
             }
             
-            if (Input.GetKeyDown(InputSpecialAction))
+            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "SpecialAction")))
             {
-                DeployTheBomb();
+                PlaceBomb();
             }
             
-            if (Input.GetKeyDown(InputCollectItem))
+            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "CollectItem")))
             {
-                DeployTheBomb();
+                PlaceBomb();
             }
         }
 
         /// <summary>
-        /// Deploy the bomb on the correct position.
+        /// Place the bomb on the correct position.
         /// </summary>
-        protected void DeployTheBomb()
+        protected void PlaceBomb()
         {
             if (BombDeployCounter >= BombMaxAllowedDeploys)
                 return;
 
             BombDeployCounter++;
             
-            Vector3Int cell = FindObjectOfType<MapManager>().TilemapGameplay.WorldToCell(transform.position);
-            Vector3 cellCenterPos = FindObjectOfType<MapManager>().TilemapGameplay.GetCellCenterWorld(cell);
+            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
+            Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Owner = this;
             

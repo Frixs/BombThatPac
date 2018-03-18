@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Characters
 {
@@ -9,14 +8,14 @@ namespace Characters
     public abstract class Character : MonoBehaviour
     {
         /// <summary>
+        /// Used to identify which tank belongs to which player.
+        /// </summary>
+        [HideInInspector] public int PlayerNumber;
+        
+        /// <summary>
         /// Name of the current character.
         /// </summary>
-        [SerializeField] private string _name = Constants.CharacterDefaultName;
-
-        public string Name
-        {
-            get { return _name; }
-        }
+        [HideInInspector] public string Name = Constants.CharacterDefaultName;
 
         /// <summary>
         /// The Player's movement speed.
@@ -37,6 +36,16 @@ namespace Characters
         /// Reference to rigid body.
         /// </summary>
         private Rigidbody2D _myRigidBody;
+        
+        /// <summary>
+        /// Set if character can move and interact with other characters.
+        /// 
+        /// FALSE:
+        /// Character cannot move.
+        /// Players cannot use inputs.
+        /// AI cannot attack.
+        /// </summary>
+        public bool HasEnabledActions { get; private set; } = true;
 
         // Use this for initialization
         protected virtual void Start()
@@ -71,11 +80,11 @@ namespace Characters
         public void Move()
         {
             // Makes sure that the player moves.
-            _myRigidBody.velocity = Direction.normalized * _speed;
+            _myRigidBody.velocity = Direction.normalized * _speed * (HasEnabledActions ? 1 : 0);
         }
 
         /// <summary>
-        /// TODO
+        /// Handle animation layers.
         /// </summary>
         private void HandleLayers()
         {
@@ -95,7 +104,7 @@ namespace Characters
         }
 
         /// <summary>
-        /// TODO
+        /// Activate current animation layer.
         /// </summary>
         private void ActivateLayer(string layerName)
         {
@@ -105,6 +114,22 @@ namespace Characters
             }
 
             _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
+        }
+        
+        /// <summary>
+        /// Enable actions.
+        /// </summary>
+        public void EnableActions()
+        {
+            HasEnabledActions = true;
+        }
+        
+        /// <summary>
+        /// Disable actions.
+        /// </summary>
+        public void DisableActions()
+        {
+            HasEnabledActions = false;
         }
     }
 }
