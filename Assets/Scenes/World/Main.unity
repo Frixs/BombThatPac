@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 869714543}
   m_Layer: 0
   m_Name: MapManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wallTile: {fileID: 11400000, guid: 9409437a7bfc3cf41992c44b2b71ee30, type: 2}
   _destructibleTile: {fileID: 11400000, guid: 4ec2592da47a7184a9d84f18fcdd128a, type: 2}
-  _tilemapGameplay: {fileID: 1716858370}
+  TilemapGameplay: {fileID: 1716858370}
 --- !u!1 &1135127970
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 1460512158}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

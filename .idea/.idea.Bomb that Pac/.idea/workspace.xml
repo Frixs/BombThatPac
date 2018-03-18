@@ -6,47 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3945026-ee59-4bbb-a764-16d26cab1ec8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enviroment.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PlayerBomberman.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/PlayerBomberman.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Bomb.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Bomb.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/InputManager.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers/InputManager.prefab" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/Main.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/World/Main.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraControl.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraControl.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enviroment.meta" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs.meta" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs" />
+      <change beforePath="$PROJECT_DIR$/Library/AnnotationManager" afterPath="$PROJECT_DIR$/Library/AnnotationManager" />
       <change beforePath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" afterPath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" />
-      <change beforePath="$PROJECT_DIR$/Library/GridBrush/UnityEditor.GridBrush.asset" afterPath="$PROJECT_DIR$/Library/GridBrush/UnityEditor.GridBrush.asset" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" afterPath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2aef1125e20158a428e2364cf5a5339a" afterPath="$PROJECT_DIR$/Library/metadata/2a/2aef1125e20158a428e2364cf5a5339a" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2aef1125e20158a428e2364cf5a5339a.info" afterPath="$PROJECT_DIR$/Library/metadata/2a/2aef1125e20158a428e2364cf5a5339a.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/2c/2ca5aa91ada036e4eada241ac93401cb" afterPath="$PROJECT_DIR$/Library/metadata/2c/2ca5aa91ada036e4eada241ac93401cb" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/5f/5faea79efdfab0a49999c0e0c751ece2" afterPath="$PROJECT_DIR$/Library/metadata/5f/5faea79efdfab0a49999c0e0c751ece2" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/72/7221d4f7ac9393a4db375103bce24a75" afterPath="$PROJECT_DIR$/Library/metadata/72/7221d4f7ac9393a4db375103bce24a75" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/72/7221d4f7ac9393a4db375103bce24a75.info" afterPath="$PROJECT_DIR$/Library/metadata/72/7221d4f7ac9393a4db375103bce24a75.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/74/74aec074507da0c4a81efea7427bc866" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/74/74aec074507da0c4a81efea7427bc866.info" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/98/980e28a0a19a2f8469baaff293f684c0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/98/980e28a0a19a2f8469baaff293f684c0.info" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bd/bd7779245d6e30b44b6f96d08613bf7c" afterPath="$PROJECT_DIR$/Library/metadata/bd/bd7779245d6e30b44b6f96d08613bf7c" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bd/bd7779245d6e30b44b6f96d08613bf7c.info" afterPath="$PROJECT_DIR$/Library/metadata/bd/bd7779245d6e30b44b6f96d08613bf7c.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" afterPath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" afterPath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-271">
@@ -148,68 +127,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs">
+      <file leaf-file-name="MapManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
-              <caret line="82" column="49" lean-forward="false" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+              <caret line="102" column="40" lean-forward="false" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
               <folding>
-                <marker date="1521383413553" expanded="false" signature="6:71" ph="..." />
-                <marker date="1521383413553" expanded="true" signature="91:2536" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="136:2534" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="142:262" ph="/// Static instance of InputManager which allows it to be accessed by any other script. ... " />
-                <marker date="1521383413553" expanded="true" signature="312:377" ph="/// Dictionary with all hotkeys. ... " />
-                <marker date="1521383413553" expanded="true" signature="485:1284" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="583:1279" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="641:896" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="960:1267" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1355:1832" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1424:1492" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1574:1735" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1883:1891" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1947:1955" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="1959:2173" ph="/// Get KeyCode by the section and name of the hotkey. ... " />
-                <marker date="1521383413553" expanded="true" signature="2242:2531" ph="{...}" />
-                <marker date="1521383413553" expanded="true" signature="2329:2486" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="6:111" ph="..." />
+                <marker date="1521393878563" expanded="true" signature="131:4027" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="177:4025" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="192:322" ph="/// Static instance of MapManager which allows it to be accessed by any other script. ... " />
+                <marker date="1521393878563" expanded="true" signature="390:462" ph="/// Reference of wall tile. ... " />
+                <marker date="1521393878563" expanded="true" signature="532:611" ph="/// Reference of detructable tile. ... " />
+                <marker date="1521393878563" expanded="true" signature="693:776" ph="/// Reference to the gameplay tilemap. ... " />
+                <marker date="1521393878563" expanded="true" signature="826:897" ph="/// Constant of cell size. ... " />
+                <marker date="1521393878563" expanded="true" signature="974:1050" ph="/// Constant of cell half size. ... " />
+                <marker date="1521393878563" expanded="true" signature="1196:1710" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="1289:1399" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="1499:1700" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="1779:1913" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="1979:1999" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="2009:2233" ph="/// Make explosion in the current cell (by world position pointing to the cell.) ... " />
+                <marker date="1521393878563" expanded="true" signature="2284:4019" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="2565:2682" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="2699:3531" ph="{...}" />
+                <marker date="1521393878563" expanded="true" signature="3277:3517" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Character.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-575">
-              <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="689">
+              <caret line="158" column="12" lean-forward="true" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
               <folding>
-                <marker date="1521384244553" expanded="true" signature="40:3669" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
-                <marker date="1521384244553" expanded="true" signature="200:3667" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
-                <marker date="1521384244553" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
-                <marker date="1521384244553" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
-                <marker date="1521384244553" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
-                <marker date="1521384244553" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
-                <marker date="1521384244553" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
-                <marker date="1521384244553" expanded="true" signature="1107:1353" ph="/// Set if character can move and interact with other characters. ... " />
-                <marker date="1521384244553" expanded="true" signature="1500:1628" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="1712:1760" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="1778:1856" ph="/// Check if character is moving. ... " />
-                <marker date="1521384244553" expanded="true" signature="1887:1964" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2024:2064" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2074:2140" ph="/// Moves the player. ... " />
-                <marker date="1521384244553" expanded="true" signature="2167:2333" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2343:2416" ph="/// Handle animation layers. ... " />
-                <marker date="1521384244553" expanded="true" signature="2452:2920" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2548:2821" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2838:2910" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="2930:3012" ph="/// Activate current animation layer. ... " />
-                <marker date="1521384244553" expanded="true" signature="3065:3306" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="3136:3214" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="3324:3388" ph="/// Enable actions. ... " />
-                <marker date="1521384244553" expanded="true" signature="3424:3482" ph="{...}" />
-                <marker date="1521384244553" expanded="true" signature="3500:3565" ph="/// Disable actions. ... " />
-                <marker date="1521384244553" expanded="true" signature="3602:3661" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="40:4865" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
+                <marker date="1521395040498" expanded="true" signature="200:4863" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
+                <marker date="1521395040498" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
+                <marker date="1521395040498" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
+                <marker date="1521395040498" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
+                <marker date="1521395040498" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
+                <marker date="1521395040498" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
+                <marker date="1521395040498" expanded="true" signature="1099:1196" ph="/// Is character invulnerable thanks to some effect? ... " />
+                <marker date="1521395040498" expanded="true" signature="1277:1373" ph="/// Check if the character is already death or not. ... " />
+                <marker date="1521395040498" expanded="true" signature="1422:1668" ph="/// Set if character can move and interact with other characters. ... " />
+                <marker date="1521395040498" expanded="true" signature="1815:1943" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2027:2075" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2093:2171" ph="/// Check if character is moving. ... " />
+                <marker date="1521395040498" expanded="true" signature="2202:2279" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2339:2379" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2442:2492" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2502:2568" ph="/// Moves the player. ... " />
+                <marker date="1521395040498" expanded="true" signature="2595:2761" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2771:2844" ph="/// Handle animation layers. ... " />
+                <marker date="1521395040498" expanded="true" signature="2880:3348" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="2976:3249" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="3266:3338" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="3358:3440" ph="/// Activate current animation layer. ... " />
+                <marker date="1521395040498" expanded="true" signature="3493:3734" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="3564:3642" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="3744:3908" ph="/// Check if character is killable. ... " />
+                <marker date="1521395040498" expanded="true" signature="3941:4011" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="4029:4126" ph="/// TODO ... " />
+                <marker date="1521395040498" expanded="true" signature="4171:4319" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="4329:4425" ph="/// TODO ... " />
+                <marker date="1521395040498" expanded="true" signature="4469:4502" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="4520:4584" ph="/// Enable actions. ... " />
+                <marker date="1521395040498" expanded="true" signature="4620:4678" ph="{...}" />
+                <marker date="1521395040498" expanded="true" signature="4696:4761" ph="/// Disable actions. ... " />
+                <marker date="1521395040498" expanded="true" signature="4798:4857" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -218,34 +208,34 @@
       <file leaf-file-name="Player.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
-                <marker date="1521384055313" expanded="false" signature="6:47" ph="..." />
-                <marker date="1521384055313" expanded="true" signature="69:3995" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
-                <marker date="1521384055313" expanded="true" signature="190:3993" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
-                <marker date="1521384055313" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
-                <marker date="1521384055313" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
-                <marker date="1521384055313" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
-                <marker date="1521384055313" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
-                <marker date="1521384055313" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
-                <marker date="1521384055313" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
-                <marker date="1521384055313" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
-                <marker date="1521384055313" expanded="true" signature="1611:1657" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="1742:1814" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
-                <marker date="1521384055313" expanded="true" signature="1937:3284" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="2147:2216" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="2323:2394" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="2501:2572" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="2680:2752" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="2857:2914" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="3038:3095" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="3217:3274" ph="{...}" />
-                <marker date="1521384055313" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
-                <marker date="1521384055313" expanded="true" signature="3417:3987" ph="{...}" />
+                <marker date="1521386847392" expanded="false" signature="6:47" ph="..." />
+                <marker date="1521386847392" expanded="true" signature="69:4015" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
+                <marker date="1521386847392" expanded="true" signature="190:4013" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
+                <marker date="1521386847392" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
+                <marker date="1521386847392" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
+                <marker date="1521386847392" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
+                <marker date="1521386847392" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
+                <marker date="1521386847392" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
+                <marker date="1521386847392" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
+                <marker date="1521386847392" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
+                <marker date="1521386847392" expanded="true" signature="1611:1657" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="1742:1814" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
+                <marker date="1521386847392" expanded="true" signature="1937:3284" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="2147:2216" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="2323:2394" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="2501:2572" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="2680:2752" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="2857:2914" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="3038:3095" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="3217:3274" ph="{...}" />
+                <marker date="1521386847392" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
+                <marker date="1521386847392" expanded="true" signature="3417:4007" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -257,6 +247,7 @@
             <state relative-caret-position="112">
               <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding>
+                <marker date="1521338438594" expanded="true" signature="40:889" ph="{...}" />
                 <marker date="1521338438594" expanded="true" signature="47:102" ph="/// Player's role. ... " />
                 <marker date="1521338438594" expanded="true" signature="138:887" ph="{...}" />
                 <marker date="1521338438594" expanded="true" signature="703:749" ph="{...}" />
@@ -287,6 +278,9 @@
       <find>game</find>
       <find>unitylogger</find>
       <find>Targets</find>
+      <find>cellSize</find>
+      <find>LogType</find>
+      <find>_explosionPrefab</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -320,16 +314,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enviroment/MapDestroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ConstantManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Bomberman.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Loader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" />
       </list>
     </option>
@@ -340,7 +334,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="131" />
     <option name="width" value="1440" />
@@ -369,6 +363,40 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Items" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Managers" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -420,12 +448,12 @@
       <workItem from="1521294218271" duration="9179000" />
       <workItem from="1521309972271" duration="11577000" />
       <workItem from="1521333825196" duration="8887000" />
-      <workItem from="1521380192639" duration="4136000" />
+      <workItem from="1521380192639" duration="14347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115714000" />
+    <option name="totallyTimeSpent" value="125925000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,8 +465,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -448,9 +475,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -460,7 +489,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -482,31 +510,31 @@
         <state relative-caret-position="1184">
           <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
           <folding>
-            <marker date="1521384055313" expanded="false" signature="6:47" ph="..." />
-            <marker date="1521384055313" expanded="true" signature="69:3995" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
-            <marker date="1521384055313" expanded="true" signature="190:3993" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
-            <marker date="1521384055313" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
-            <marker date="1521384055313" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
-            <marker date="1521384055313" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
-            <marker date="1521384055313" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
-            <marker date="1521384055313" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
-            <marker date="1521384055313" expanded="true" signature="1611:1657" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1742:1814" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
-            <marker date="1521384055313" expanded="true" signature="1937:3284" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2147:2216" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2323:2394" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2501:2572" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2680:2752" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2857:2914" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3038:3095" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3217:3274" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
-            <marker date="1521384055313" expanded="true" signature="3417:3987" ph="{...}" />
+            <marker date="1521386847392" expanded="false" signature="6:47" ph="..." />
+            <marker date="1521386847392" expanded="true" signature="69:4015" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
+            <marker date="1521386847392" expanded="true" signature="190:4013" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
+            <marker date="1521386847392" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
+            <marker date="1521386847392" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
+            <marker date="1521386847392" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
+            <marker date="1521386847392" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
+            <marker date="1521386847392" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
+            <marker date="1521386847392" expanded="true" signature="1611:1657" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1742:1814" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
+            <marker date="1521386847392" expanded="true" signature="1937:3284" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2147:2216" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2323:2394" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2501:2572" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2680:2752" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2857:2914" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3038:3095" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3217:3274" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
+            <marker date="1521386847392" expanded="true" signature="3417:4007" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -541,6 +569,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="48" column="42" lean-forward="false" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+          <folding>
+            <marker date="1521390538305" expanded="true" signature="6:87" ph="..." />
+            <marker date="1521390538305" expanded="true" signature="104:2749" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="141:2747" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="147:208" ph="/// Reference to bomb owner. ... " />
+            <marker date="1521390538305" expanded="true" signature="253:307" ph="/// Bomb's countdown. ... " />
+            <marker date="1521390538305" expanded="true" signature="341:408" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1521390538305" expanded="true" signature="449:555" ph="/// Range when the bomb become collidable after placing it on the ground. ... " />
+            <marker date="1521390538305" expanded="true" signature="646:925" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="980:1266" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1045:1262" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1343:1657" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1531:1653" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1663:1775" ph="/// Bomb explosion. ... " />
+            <marker date="1521390538305" expanded="true" signature="1815:2208" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2034:2204" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2212:2513" ph="/// Explosion in certain direction. ... " />
+            <marker date="1521390538305" expanded="true" signature="2588:2744" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2650:2740" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,6 +596,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <marker date="1521393878563" expanded="true" signature="6:111" ph="..." />
+            <marker date="1521393878563" expanded="true" signature="131:4027" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="177:4025" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="192:322" ph="/// Static instance of MapManager which allows it to be accessed by any other script. ... " />
+            <marker date="1521393878563" expanded="true" signature="390:462" ph="/// Reference of wall tile. ... " />
+            <marker date="1521393878563" expanded="true" signature="532:611" ph="/// Reference of detructable tile. ... " />
+            <marker date="1521393878563" expanded="true" signature="693:776" ph="/// Reference to the gameplay tilemap. ... " />
+            <marker date="1521393878563" expanded="true" signature="826:897" ph="/// Constant of cell size. ... " />
+            <marker date="1521393878563" expanded="true" signature="974:1050" ph="/// Constant of cell half size. ... " />
+            <marker date="1521393878563" expanded="true" signature="1196:1710" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1289:1399" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1499:1700" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1779:1913" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1979:1999" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2009:2233" ph="/// Make explosion in the current cell (by world position pointing to the cell.) ... " />
+            <marker date="1521393878563" expanded="true" signature="2284:4019" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2565:2682" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2699:3531" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="3277:3517" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,34 +625,43 @@
         <state relative-caret-position="848">
           <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
           <folding>
-            <marker date="1521384244553" expanded="true" signature="40:3669" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
-            <marker date="1521384244553" expanded="true" signature="200:3667" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
-            <marker date="1521384244553" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
-            <marker date="1521384244553" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
-            <marker date="1521384244553" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
-            <marker date="1521384244553" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
-            <marker date="1521384244553" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
-            <marker date="1521384244553" expanded="true" signature="1107:1353" ph="/// Set if character can move and interact with other characters. ... " />
-            <marker date="1521384244553" expanded="true" signature="1500:1628" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1712:1760" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1778:1856" ph="/// Check if character is moving. ... " />
-            <marker date="1521384244553" expanded="true" signature="1887:1964" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2024:2064" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2074:2140" ph="/// Moves the player. ... " />
-            <marker date="1521384244553" expanded="true" signature="2167:2333" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2343:2416" ph="/// Handle animation layers. ... " />
-            <marker date="1521384244553" expanded="true" signature="2452:2920" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2548:2821" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2838:2910" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2930:3012" ph="/// Activate current animation layer. ... " />
-            <marker date="1521384244553" expanded="true" signature="3065:3306" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3136:3214" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3324:3388" ph="/// Enable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3424:3482" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3500:3565" ph="/// Disable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3602:3661" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="40:4865" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
+            <marker date="1521395040498" expanded="true" signature="200:4863" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
+            <marker date="1521395040498" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
+            <marker date="1521395040498" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
+            <marker date="1521395040498" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
+            <marker date="1521395040498" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
+            <marker date="1521395040498" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
+            <marker date="1521395040498" expanded="true" signature="1099:1196" ph="/// Is character invulnerable thanks to some effect? ... " />
+            <marker date="1521395040498" expanded="true" signature="1277:1373" ph="/// Check if the character is already death or not. ... " />
+            <marker date="1521395040498" expanded="true" signature="1422:1668" ph="/// Set if character can move and interact with other characters. ... " />
+            <marker date="1521395040498" expanded="true" signature="1815:1943" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2027:2075" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2093:2171" ph="/// Check if character is moving. ... " />
+            <marker date="1521395040498" expanded="true" signature="2202:2279" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2339:2379" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2442:2492" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2502:2568" ph="/// Moves the player. ... " />
+            <marker date="1521395040498" expanded="true" signature="2595:2761" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2771:2844" ph="/// Handle animation layers. ... " />
+            <marker date="1521395040498" expanded="true" signature="2880:3348" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2976:3249" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3266:3338" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3358:3440" ph="/// Activate current animation layer. ... " />
+            <marker date="1521395040498" expanded="true" signature="3493:3734" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3564:3642" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3744:3908" ph="/// Check if character is killable. ... " />
+            <marker date="1521395040498" expanded="true" signature="3941:4011" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4029:4126" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4171:4319" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4329:4425" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4469:4502" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4520:4584" ph="/// Enable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4620:4678" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4696:4761" ph="/// Disable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4798:4857" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -600,31 +678,31 @@
         <state relative-caret-position="2176">
           <caret line="136" column="23" lean-forward="false" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
           <folding>
-            <marker date="1521384055313" expanded="false" signature="6:47" ph="..." />
-            <marker date="1521384055313" expanded="true" signature="69:3995" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
-            <marker date="1521384055313" expanded="true" signature="190:3993" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
-            <marker date="1521384055313" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
-            <marker date="1521384055313" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
-            <marker date="1521384055313" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
-            <marker date="1521384055313" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
-            <marker date="1521384055313" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
-            <marker date="1521384055313" expanded="true" signature="1611:1657" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1742:1814" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
-            <marker date="1521384055313" expanded="true" signature="1937:3284" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2147:2216" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2323:2394" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2501:2572" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2680:2752" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2857:2914" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3038:3095" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3217:3274" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
-            <marker date="1521384055313" expanded="true" signature="3417:3987" ph="{...}" />
+            <marker date="1521386847392" expanded="false" signature="6:47" ph="..." />
+            <marker date="1521386847392" expanded="true" signature="69:4015" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
+            <marker date="1521386847392" expanded="true" signature="190:4013" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
+            <marker date="1521386847392" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
+            <marker date="1521386847392" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
+            <marker date="1521386847392" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
+            <marker date="1521386847392" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
+            <marker date="1521386847392" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
+            <marker date="1521386847392" expanded="true" signature="1611:1657" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1742:1814" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
+            <marker date="1521386847392" expanded="true" signature="1937:3284" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2147:2216" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2323:2394" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2501:2572" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2680:2752" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2857:2914" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3038:3095" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3217:3274" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
+            <marker date="1521386847392" expanded="true" signature="3417:4007" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -633,6 +711,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <marker date="1521390538305" expanded="true" signature="6:87" ph="..." />
+            <marker date="1521390538305" expanded="true" signature="104:2749" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="141:2747" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="147:208" ph="/// Reference to bomb owner. ... " />
+            <marker date="1521390538305" expanded="true" signature="253:307" ph="/// Bomb's countdown. ... " />
+            <marker date="1521390538305" expanded="true" signature="341:408" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1521390538305" expanded="true" signature="449:555" ph="/// Range when the bomb become collidable after placing it on the ground. ... " />
+            <marker date="1521390538305" expanded="true" signature="646:925" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="980:1266" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1045:1262" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1343:1657" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1531:1653" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1663:1775" ph="/// Bomb explosion. ... " />
+            <marker date="1521390538305" expanded="true" signature="1815:2208" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2034:2204" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2212:2513" ph="/// Explosion in certain direction. ... " />
+            <marker date="1521390538305" expanded="true" signature="2588:2744" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2650:2740" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,34 +759,43 @@
         <state relative-caret-position="476">
           <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
-            <marker date="1521384244553" expanded="true" signature="40:3669" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
-            <marker date="1521384244553" expanded="true" signature="200:3667" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
-            <marker date="1521384244553" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
-            <marker date="1521384244553" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
-            <marker date="1521384244553" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
-            <marker date="1521384244553" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
-            <marker date="1521384244553" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
-            <marker date="1521384244553" expanded="true" signature="1107:1353" ph="/// Set if character can move and interact with other characters. ... " />
-            <marker date="1521384244553" expanded="true" signature="1500:1628" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1712:1760" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1778:1856" ph="/// Check if character is moving. ... " />
-            <marker date="1521384244553" expanded="true" signature="1887:1964" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2024:2064" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2074:2140" ph="/// Moves the player. ... " />
-            <marker date="1521384244553" expanded="true" signature="2167:2333" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2343:2416" ph="/// Handle animation layers. ... " />
-            <marker date="1521384244553" expanded="true" signature="2452:2920" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2548:2821" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2838:2910" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2930:3012" ph="/// Activate current animation layer. ... " />
-            <marker date="1521384244553" expanded="true" signature="3065:3306" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3136:3214" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3324:3388" ph="/// Enable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3424:3482" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3500:3565" ph="/// Disable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3602:3661" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="40:4865" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
+            <marker date="1521395040498" expanded="true" signature="200:4863" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
+            <marker date="1521395040498" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
+            <marker date="1521395040498" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
+            <marker date="1521395040498" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
+            <marker date="1521395040498" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
+            <marker date="1521395040498" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
+            <marker date="1521395040498" expanded="true" signature="1099:1196" ph="/// Is character invulnerable thanks to some effect? ... " />
+            <marker date="1521395040498" expanded="true" signature="1277:1373" ph="/// Check if the character is already death or not. ... " />
+            <marker date="1521395040498" expanded="true" signature="1422:1668" ph="/// Set if character can move and interact with other characters. ... " />
+            <marker date="1521395040498" expanded="true" signature="1815:1943" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2027:2075" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2093:2171" ph="/// Check if character is moving. ... " />
+            <marker date="1521395040498" expanded="true" signature="2202:2279" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2339:2379" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2442:2492" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2502:2568" ph="/// Moves the player. ... " />
+            <marker date="1521395040498" expanded="true" signature="2595:2761" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2771:2844" ph="/// Handle animation layers. ... " />
+            <marker date="1521395040498" expanded="true" signature="2880:3348" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2976:3249" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3266:3338" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3358:3440" ph="/// Activate current animation layer. ... " />
+            <marker date="1521395040498" expanded="true" signature="3493:3734" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3564:3642" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3744:3908" ph="/// Check if character is killable. ... " />
+            <marker date="1521395040498" expanded="true" signature="3941:4011" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4029:4126" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4171:4319" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4329:4425" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4469:4502" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4520:4584" ph="/// Enable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4620:4678" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4696:4761" ph="/// Disable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4798:4857" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -698,31 +805,31 @@
         <state relative-caret-position="2091">
           <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
-            <marker date="1521384055313" expanded="false" signature="6:47" ph="..." />
-            <marker date="1521384055313" expanded="true" signature="69:3995" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
-            <marker date="1521384055313" expanded="true" signature="190:3993" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
-            <marker date="1521384055313" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
-            <marker date="1521384055313" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
-            <marker date="1521384055313" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
-            <marker date="1521384055313" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
-            <marker date="1521384055313" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
-            <marker date="1521384055313" expanded="true" signature="1611:1657" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1742:1814" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
-            <marker date="1521384055313" expanded="true" signature="1937:3284" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2147:2216" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2323:2394" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2501:2572" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2680:2752" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2857:2914" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3038:3095" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3217:3274" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
-            <marker date="1521384055313" expanded="true" signature="3417:3987" ph="{...}" />
+            <marker date="1521386847392" expanded="false" signature="6:47" ph="..." />
+            <marker date="1521386847392" expanded="true" signature="69:4015" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
+            <marker date="1521386847392" expanded="true" signature="190:4013" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
+            <marker date="1521386847392" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
+            <marker date="1521386847392" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
+            <marker date="1521386847392" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
+            <marker date="1521386847392" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
+            <marker date="1521386847392" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
+            <marker date="1521386847392" expanded="true" signature="1611:1657" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1742:1814" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
+            <marker date="1521386847392" expanded="true" signature="1937:3284" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2147:2216" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2323:2394" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2501:2572" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2680:2752" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2857:2914" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3038:3095" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3217:3274" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
+            <marker date="1521386847392" expanded="true" signature="3417:4007" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -746,6 +853,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <marker date="1521390538305" expanded="true" signature="6:87" ph="..." />
+            <marker date="1521390538305" expanded="true" signature="104:2749" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="141:2747" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="147:208" ph="/// Reference to bomb owner. ... " />
+            <marker date="1521390538305" expanded="true" signature="253:307" ph="/// Bomb's countdown. ... " />
+            <marker date="1521390538305" expanded="true" signature="341:408" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1521390538305" expanded="true" signature="449:555" ph="/// Range when the bomb become collidable after placing it on the ground. ... " />
+            <marker date="1521390538305" expanded="true" signature="646:925" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="980:1266" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1045:1262" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1343:1657" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1531:1653" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1663:1775" ph="/// Bomb explosion. ... " />
+            <marker date="1521390538305" expanded="true" signature="1815:2208" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2034:2204" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2212:2513" ph="/// Explosion in certain direction. ... " />
+            <marker date="1521390538305" expanded="true" signature="2588:2744" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2650:2740" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -763,6 +890,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <marker date="1521390538305" expanded="true" signature="6:87" ph="..." />
+            <marker date="1521390538305" expanded="true" signature="104:2749" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="141:2747" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="147:208" ph="/// Reference to bomb owner. ... " />
+            <marker date="1521390538305" expanded="true" signature="253:307" ph="/// Bomb's countdown. ... " />
+            <marker date="1521390538305" expanded="true" signature="341:408" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1521390538305" expanded="true" signature="449:555" ph="/// Range when the bomb become collidable after placing it on the ground. ... " />
+            <marker date="1521390538305" expanded="true" signature="646:925" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="980:1266" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1045:1262" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1343:1657" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1531:1653" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1663:1775" ph="/// Bomb explosion. ... " />
+            <marker date="1521390538305" expanded="true" signature="1815:2208" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2034:2204" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2212:2513" ph="/// Explosion in certain direction. ... " />
+            <marker date="1521390538305" expanded="true" signature="2588:2744" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2650:2740" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -796,33 +943,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1264">
-          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Bomberman.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1521338438594" expanded="true" signature="47:102" ph="/// Player's role. ... " />
-            <marker date="1521338438594" expanded="true" signature="138:887" ph="{...}" />
-            <marker date="1521338438594" expanded="true" signature="703:749" ph="{...}" />
-            <marker date="1521338438594" expanded="true" signature="834:881" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Loader.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -871,128 +991,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <marker date="1521384055313" expanded="false" signature="6:47" ph="..." />
-            <marker date="1521384055313" expanded="true" signature="69:3995" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
-            <marker date="1521384055313" expanded="true" signature="190:3993" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
-            <marker date="1521384055313" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
-            <marker date="1521384055313" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
-            <marker date="1521384055313" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
-            <marker date="1521384055313" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
-            <marker date="1521384055313" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
-            <marker date="1521384055313" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
-            <marker date="1521384055313" expanded="true" signature="1611:1657" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1742:1814" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
-            <marker date="1521384055313" expanded="true" signature="1937:3284" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2147:2216" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2323:2394" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2501:2572" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2680:2752" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="2857:2914" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3038:3095" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3217:3274" ph="{...}" />
-            <marker date="1521384055313" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
-            <marker date="1521384055313" expanded="true" signature="3417:3987" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="82" column="49" lean-forward="false" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+        <state relative-caret-position="273">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding>
-            <marker date="1521383413553" expanded="false" signature="6:71" ph="..." />
-            <marker date="1521383413553" expanded="true" signature="91:2536" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="136:2534" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="142:262" ph="/// Static instance of InputManager which allows it to be accessed by any other script. ... " />
-            <marker date="1521383413553" expanded="true" signature="312:377" ph="/// Dictionary with all hotkeys. ... " />
-            <marker date="1521383413553" expanded="true" signature="485:1284" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="583:1279" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="641:896" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="960:1267" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1355:1832" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1424:1492" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1574:1735" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1883:1891" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1947:1955" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="1959:2173" ph="/// Get KeyCode by the section and name of the hotkey. ... " />
-            <marker date="1521383413553" expanded="true" signature="2242:2531" ph="{...}" />
-            <marker date="1521383413553" expanded="true" signature="2329:2486" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding>
-            <marker date="1521384244553" expanded="true" signature="40:3669" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
-            <marker date="1521384244553" expanded="true" signature="200:3667" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
-            <marker date="1521384244553" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
-            <marker date="1521384244553" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
-            <marker date="1521384244553" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
-            <marker date="1521384244553" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
-            <marker date="1521384244553" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
-            <marker date="1521384244553" expanded="true" signature="1107:1353" ph="/// Set if character can move and interact with other characters. ... " />
-            <marker date="1521384244553" expanded="true" signature="1500:1628" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1712:1760" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="1778:1856" ph="/// Check if character is moving. ... " />
-            <marker date="1521384244553" expanded="true" signature="1887:1964" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2024:2064" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2074:2140" ph="/// Moves the player. ... " />
-            <marker date="1521384244553" expanded="true" signature="2167:2333" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2343:2416" ph="/// Handle animation layers. ... " />
-            <marker date="1521384244553" expanded="true" signature="2452:2920" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2548:2821" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2838:2910" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="2930:3012" ph="/// Activate current animation layer. ... " />
-            <marker date="1521384244553" expanded="true" signature="3065:3306" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3136:3214" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3324:3388" ph="/// Enable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3424:3482" ph="{...}" />
-            <marker date="1521384244553" expanded="true" signature="3500:3565" ph="/// Disable actions. ... " />
-            <marker date="1521384244553" expanded="true" signature="3602:3661" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-          <folding>
-            <marker date="1521384192017" expanded="false" signature="6:50" ph="..." />
-            <marker date="1521384192017" expanded="true" signature="70:2851" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="77:364" ph="/// This class is to manage various settings on a player. ... " />
-            <marker date="1521384192017" expanded="true" signature="414:2849" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="429:497" ph="/// Name of the player. ... " />
-            <marker date="1521384192017" expanded="true" signature="549:641" ph="/// This is the color this tank will be tinted. ... " />
-            <marker date="1521384192017" expanded="true" signature="693:803" ph="/// The position and direction the tank will have when it spawns. ... " />
-            <marker date="1521384192017" expanded="true" signature="858:966" ph="/// A reference to the instance of the tank when it is created. ... " />
-            <marker date="1521384192017" expanded="true" signature="1038:1125" ph="/// Reference to player's movement script. ... " />
-            <marker date="1521384192017" expanded="true" signature="1191:1282" ph="/// The number of wins this player has so far. ... " />
-            <marker date="1521384192017" expanded="true" signature="1339:1456" ph="/// Pass all necessary parameters to Player scripts (like hotkeys etc.). ... " />
-            <marker date="1521384192017" expanded="true" signature="1484:1906" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="1732:1896" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="1920:2066" ph="/// Used during the phases of the game where the player shouldn't be able to control their character. ... " />
-            <marker date="1521384192017" expanded="true" signature="2103:2159" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="2169:2312" ph="/// Used during the phases of the game where the player should be able to control their character. ... " />
-            <marker date="1521384192017" expanded="true" signature="2348:2403" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="2417:2543" ph="/// Used at the start of each round to put the character into it's default state. ... " />
-            <marker date="1521384192017" expanded="true" signature="2571:2843" ph="{...}" />
-            <marker date="1521384192017" expanded="true" signature="2590:2833" ph="/* m_Instance.transform.position = m_SpawnPoint.position; ... */" />
+            <marker date="1521385449973" expanded="false" signature="6:71" ph="..." />
+            <marker date="1521385449973" expanded="true" signature="91:2536" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="136:2534" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="142:262" ph="/// Static instance of InputManager which allows it to be accessed by any other script. ... " />
+            <marker date="1521385449973" expanded="true" signature="312:377" ph="/// Dictionary with all hotkeys. ... " />
+            <marker date="1521385449973" expanded="true" signature="485:1284" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="583:1279" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="641:896" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="960:1267" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1355:1832" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1424:1492" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1574:1735" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1883:1891" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1947:1955" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="1959:2173" ph="/// Get KeyCode by the section and name of the hotkey. ... " />
+            <marker date="1521385449973" expanded="true" signature="2242:2531" ph="{...}" />
+            <marker date="1521385449973" expanded="true" signature="2329:2486" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1030,6 +1050,184 @@
             <marker date="1521383764730" expanded="true" signature="3462:3549" ph="/// Set all camera targets which camera should follow. ... " />
             <marker date="1521383764730" expanded="true" signature="3583:4012" ph="{...}" />
             <marker date="1521383764730" expanded="true" signature="3804:3917" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <marker date="1521386847392" expanded="false" signature="6:47" ph="..." />
+            <marker date="1521386847392" expanded="true" signature="69:4015" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="76:145" ph="/// Player controlled character. ... " />
+            <marker date="1521386847392" expanded="true" signature="190:4013" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="205:318" ph="/// Default number of the bombs that can be placed on the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="385:449" ph="/// Bomb countdown. ... " />
+            <marker date="1521386847392" expanded="true" signature="517:599" ph="/// Bomb explosion distance in tiles. ... " />
+            <marker date="1521386847392" expanded="true" signature="681:780" ph="/// Maximal number of deployed bombs at the same time. ... " />
+            <marker date="1521386847392" expanded="true" signature="862:1003" ph="/// Explosion direction represented as array filled with X, Y coords representing the direction. ... " />
+            <marker date="1521386847392" expanded="true" signature="1081:1197" ph="/// Lets say which section of player controls the character should use. ... " />
+            <marker date="1521386847392" expanded="true" signature="1249:1323" ph="/// Reference to bomb PREFAB. ... " />
+            <marker date="1521386847392" expanded="true" signature="1398:1471" ph="/// Counter of bomb deploys. ... " />
+            <marker date="1521386847392" expanded="true" signature="1611:1657" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1742:1814" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="1824:1903" ph="/// Listen's to the players input. ... " />
+            <marker date="1521386847392" expanded="true" signature="1937:3284" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2147:2216" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2323:2394" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2501:2572" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2680:2752" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="2857:2914" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3038:3095" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3217:3274" ph="{...}" />
+            <marker date="1521386847392" expanded="true" signature="3294:3382" ph="/// Place the bomb on the correct position. ... " />
+            <marker date="1521386847392" expanded="true" signature="3417:4007" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Bomberman.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <marker date="1521338438594" expanded="true" signature="40:889" ph="{...}" />
+            <marker date="1521338438594" expanded="true" signature="47:102" ph="/// Player's role. ... " />
+            <marker date="1521338438594" expanded="true" signature="138:887" ph="{...}" />
+            <marker date="1521338438594" expanded="true" signature="703:749" ph="{...}" />
+            <marker date="1521338438594" expanded="true" signature="834:881" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <marker date="1521390538305" expanded="true" signature="6:87" ph="..." />
+            <marker date="1521390538305" expanded="true" signature="104:2749" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="141:2747" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="147:208" ph="/// Reference to bomb owner. ... " />
+            <marker date="1521390538305" expanded="true" signature="253:307" ph="/// Bomb's countdown. ... " />
+            <marker date="1521390538305" expanded="true" signature="341:408" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1521390538305" expanded="true" signature="449:555" ph="/// Range when the bomb become collidable after placing it on the ground. ... " />
+            <marker date="1521390538305" expanded="true" signature="646:925" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="980:1266" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1045:1262" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1343:1657" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1531:1653" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="1663:1775" ph="/// Bomb explosion. ... " />
+            <marker date="1521390538305" expanded="true" signature="1815:2208" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2034:2204" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2212:2513" ph="/// Explosion in certain direction. ... " />
+            <marker date="1521390538305" expanded="true" signature="2588:2744" ph="{...}" />
+            <marker date="1521390538305" expanded="true" signature="2650:2740" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <marker date="1521384192017" expanded="false" signature="6:50" ph="..." />
+            <marker date="1521384192017" expanded="true" signature="70:2851" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="77:364" ph="/// This class is to manage various settings on a player. ... " />
+            <marker date="1521384192017" expanded="true" signature="414:2849" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="429:497" ph="/// Name of the player. ... " />
+            <marker date="1521384192017" expanded="true" signature="549:641" ph="/// This is the color this tank will be tinted. ... " />
+            <marker date="1521384192017" expanded="true" signature="693:803" ph="/// The position and direction the tank will have when it spawns. ... " />
+            <marker date="1521384192017" expanded="true" signature="858:966" ph="/// A reference to the instance of the tank when it is created. ... " />
+            <marker date="1521384192017" expanded="true" signature="1038:1125" ph="/// Reference to player's movement script. ... " />
+            <marker date="1521384192017" expanded="true" signature="1191:1282" ph="/// The number of wins this player has so far. ... " />
+            <marker date="1521384192017" expanded="true" signature="1339:1456" ph="/// Pass all necessary parameters to Player scripts (like hotkeys etc.). ... " />
+            <marker date="1521384192017" expanded="true" signature="1484:1906" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="1732:1896" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="1920:2066" ph="/// Used during the phases of the game where the player shouldn't be able to control their character. ... " />
+            <marker date="1521384192017" expanded="true" signature="2103:2159" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="2169:2312" ph="/// Used during the phases of the game where the player should be able to control their character. ... " />
+            <marker date="1521384192017" expanded="true" signature="2348:2403" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="2417:2543" ph="/// Used at the start of each round to put the character into it's default state. ... " />
+            <marker date="1521384192017" expanded="true" signature="2571:2843" ph="{...}" />
+            <marker date="1521384192017" expanded="true" signature="2590:2833" ph="/* m_Instance.transform.position = m_SpawnPoint.position; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MapManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="102" column="40" lean-forward="false" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
+          <folding>
+            <marker date="1521393878563" expanded="true" signature="6:111" ph="..." />
+            <marker date="1521393878563" expanded="true" signature="131:4027" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="177:4025" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="192:322" ph="/// Static instance of MapManager which allows it to be accessed by any other script. ... " />
+            <marker date="1521393878563" expanded="true" signature="390:462" ph="/// Reference of wall tile. ... " />
+            <marker date="1521393878563" expanded="true" signature="532:611" ph="/// Reference of detructable tile. ... " />
+            <marker date="1521393878563" expanded="true" signature="693:776" ph="/// Reference to the gameplay tilemap. ... " />
+            <marker date="1521393878563" expanded="true" signature="826:897" ph="/// Constant of cell size. ... " />
+            <marker date="1521393878563" expanded="true" signature="974:1050" ph="/// Constant of cell half size. ... " />
+            <marker date="1521393878563" expanded="true" signature="1196:1710" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1289:1399" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1499:1700" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1779:1913" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="1979:1999" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2009:2233" ph="/// Make explosion in the current cell (by world position pointing to the cell.) ... " />
+            <marker date="1521393878563" expanded="true" signature="2284:4019" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2565:2682" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="2699:3531" ph="{...}" />
+            <marker date="1521393878563" expanded="true" signature="3277:3517" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="158" column="12" lean-forward="true" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+          <folding>
+            <marker date="1521395040498" expanded="true" signature="40:4865" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="47:148" ph="/// This class defines the basics of all characters in the game. ... " />
+            <marker date="1521395040498" expanded="true" signature="200:4863" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="215:316" ph="/// Used to identify which tank belongs to which player. ... " />
+            <marker date="1521395040498" expanded="true" signature="385:464" ph="/// Name of the current character. ... " />
+            <marker date="1521395040498" expanded="true" signature="553:630" ph="/// The Player's movement speed. ... " />
+            <marker date="1521395040498" expanded="true" signature="718:790" ph="/// The Player's direction. ... " />
+            <marker date="1521395040498" expanded="true" signature="837:926" ph="/// A reference to the character's animator. ... " />
+            <marker date="1521395040498" expanded="true" signature="974:1047" ph="/// Reference to rigid body. ... " />
+            <marker date="1521395040498" expanded="true" signature="1099:1196" ph="/// Is character invulnerable thanks to some effect? ... " />
+            <marker date="1521395040498" expanded="true" signature="1277:1373" ph="/// Check if the character is already death or not. ... " />
+            <marker date="1521395040498" expanded="true" signature="1422:1668" ph="/// Set if character can move and interact with other characters. ... " />
+            <marker date="1521395040498" expanded="true" signature="1815:1943" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2027:2075" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2093:2171" ph="/// Check if character is moving. ... " />
+            <marker date="1521395040498" expanded="true" signature="2202:2279" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2339:2379" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2442:2492" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2502:2568" ph="/// Moves the player. ... " />
+            <marker date="1521395040498" expanded="true" signature="2595:2761" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2771:2844" ph="/// Handle animation layers. ... " />
+            <marker date="1521395040498" expanded="true" signature="2880:3348" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="2976:3249" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3266:3338" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3358:3440" ph="/// Activate current animation layer. ... " />
+            <marker date="1521395040498" expanded="true" signature="3493:3734" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3564:3642" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="3744:3908" ph="/// Check if character is killable. ... " />
+            <marker date="1521395040498" expanded="true" signature="3941:4011" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4029:4126" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4171:4319" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4329:4425" ph="/// TODO ... " />
+            <marker date="1521395040498" expanded="true" signature="4469:4502" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4520:4584" ph="/// Enable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4620:4678" ph="{...}" />
+            <marker date="1521395040498" expanded="true" signature="4696:4761" ph="/// Disable actions. ... " />
+            <marker date="1521395040498" expanded="true" signature="4798:4857" ph="{...}" />
           </folding>
         </state>
       </provider>

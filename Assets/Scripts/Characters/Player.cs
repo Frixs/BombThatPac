@@ -121,7 +121,7 @@ namespace Characters
 
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Owner = this;
             
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb deployed!", Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb deployed!", PlayerNumber, Name);
         }
     }
 }

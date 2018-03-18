@@ -1,6 +1,7 @@
 ﻿using Characters;
 using Managers;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 namespace Items
 {
@@ -19,17 +20,18 @@ namespace Items
 		/// <summary>
 		/// Reference to explosion PREFAB.
 		/// </summary>
-		[SerializeField] private GameObject _explosionPrefab;
+		public GameObject ExplosionPrefab;
 
-		public GameObject ExplosionPrefab
-		{
-			get { return _explosionPrefab; }
-		}
+		/// <summary>
+		/// Range when the bomb become collidable after placing it on the ground.
+		/// </summary>
+		private float _rangeToBecomeCollidable;
 
 		// Use this for initialization
 		void Start()
 		{
 			_countdown = Owner.BombCountdown;
+			_rangeToBecomeCollidable = MapManager.Instance.TilemapCellSize / 2f;
 			
 			// Ignore collision when spawning under your feet.
 			Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
@@ -43,7 +45,7 @@ namespace Items
 			if (_countdown <= 0.0f)
 			{
 				Explode(transform.position);
-				Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb exploded!", Owner.Name);
+				Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb exploded!", Owner.PlayerNumber, Owner.Name);
 				
 				Owner.BombDeployCounter--;
 				
@@ -55,7 +57,7 @@ namespace Items
 		void FixedUpdate()
 		{
 			// Restore the collision when player will be in sufficient distance from the bomb.
-			if (Vector2.Distance(Owner.transform.position, transform.position) > MapManager.Instance.TilemapGameplay.cellSize.sqrMagnitude / 3.0f)
+			if (Vector2.Distance(Owner.transform.position, transform.position) > _rangeToBecomeCollidable)
 			{
 				Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
 			}

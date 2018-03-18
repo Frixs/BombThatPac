@@ -1,4 +1,5 @@
-﻿using Items;
+﻿using Characters;
+using Items;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -25,12 +26,17 @@ namespace Managers
         /// <summary>
         /// Reference to the gameplay tilemap.
         /// </summary>
-        [SerializeField] private Tilemap _tilemapGameplay;
+        public Tilemap TilemapGameplay;
+
+        /// <summary>
+        /// Constant of cell size.
+        /// </summary>
+        public float TilemapCellSize { get; private set; }
         
-        public Tilemap TilemapGameplay
-        {
-            get { return _tilemapGameplay; }
-        }
+        /// <summary>
+        /// Constant of cell half size.
+        /// </summary>
+        public float TilemapCellHalfSize { get; private set; }
 
         // Awake is always called before any Start functions
         void Awake()
@@ -52,6 +58,8 @@ namespace Managers
         // Use this for initialization
         void Start()
         {
+            TilemapCellSize = TilemapGameplay.cellSize.x;
+            TilemapCellHalfSize = TilemapCellSize / 2f;
         }
 
         // Update is called once per frame
@@ -66,7 +74,7 @@ namespace Managers
         /// <returns></returns>
         public bool ExplodeInCell(Vector3Int cell)
         {
-            TileBase tile = _tilemapGameplay.GetTile<TileBase>(cell);
+            TileBase tile = TilemapGameplay.GetTile<TileBase>(cell);
             
             // End an explosion if explosion wants to hit obstacle.
             if (tile == _wallTile)
@@ -75,15 +83,30 @@ namespace Managers
             if (tile == _destructibleTile)
             {
                 // Remove the tile.
-                _tilemapGameplay.SetTile(cell, null);
+                TilemapGameplay.SetTile(cell, null);
             }
-            else if (true)
+            else
             {
-                //TODO Physics2D.OverlapCircle(new Vector2(cell.x, cell.y), TilemapGameplay.cellSize.sqrMagnitude / 2.0f);
+                // Find all players affected by the explosion.
+                Collider2D[] hitColliders = Physics2D.OverlapCircleAll(
+                    new Vector2(
+                        cell.x + TilemapCellHalfSize, 
+                        cell.y + TilemapCellHalfSize
+                    ),
+                    TilemapCellHalfSize,
+                    1 << LayerMask.NameToLayer("Player")
+                );
+                
+                // Go through all players affected by the explosion.
+                for (var i = 0; i < hitColliders.Length; i++)
+                {
+                    // TODO Kill player.
+                    Debug.Log(((Player) hitColliders[i].GetComponent("Player")).Name +", CellSize: "+ TilemapGameplay.cellSize +", X: "+ cell.x +", Y: "+ cell.y);
+                }
             }
 
             // Create an explosion.
-            Vector3 pos = _tilemapGameplay.GetCellCenterWorld(cell);
+            Vector3 pos = TilemapGameplay.GetCellCenterWorld(cell);
             GameObject explosion = (GameObject) Instantiate(FindObjectOfType<Bomb>().ExplosionPrefab, pos, Quaternion.identity);
         
             // Destroy the explosion after animation.
