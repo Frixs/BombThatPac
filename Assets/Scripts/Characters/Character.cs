@@ -36,6 +36,16 @@ namespace Characters
         /// Reference to rigid body.
         /// </summary>
         private Rigidbody2D _myRigidBody;
+
+        /// <summary>
+        /// Is character invulnerable thanks to some effect?
+        /// </summary>
+        [HideInInspector] public bool IsInvulnearable = false;
+        
+        /// <summary>
+        /// Check if the character is already death or not.
+        /// </summary>
+        private bool _isDeath;
         
         /// <summary>
         /// Set if character can move and interact with other characters.
@@ -72,6 +82,12 @@ namespace Characters
         private void FixedUpdate()
         {
             Move();
+        }
+
+        // On script enables.
+        private void OnEnable()
+        {
+            _isDeath = false;
         }
 
         /// <summary>
@@ -114,6 +130,33 @@ namespace Characters
             }
 
             _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
+        }
+
+        /// <summary>
+        /// Check if character is killable.
+        /// </summary>
+        /// <returns>TRUE: Is killable. FALSE: Character is NOT killable.</returns>
+        public bool IsKillable()
+        {
+            return !_isDeath && !IsInvulnearable;
+        }
+        
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="attacker"></param>
+        public void Kill(Character attacker)
+        {
+            // TODO We neeed to determiny if it is Player or AI. Each of htem has other procedures to do (like score counting).
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="respawn"></param>
+        public void ForceKill(bool respawn)
+        {
+            
         }
         
         /// <summary>
