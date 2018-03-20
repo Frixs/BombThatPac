@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Managers
 {
+	/// <summary>
+	/// Initialization & controlling the game.
+	/// </summary>
 	public class GameManager : MonoBehaviour
 	{
 		/// <summary>
@@ -105,6 +108,11 @@ namespace Managers
 			//StartCoroutine(GameLoop());
 		}
 		
+		// Update is called once per frame
+		void Update()
+		{
+		}
+		
 		/// <summary>
 		/// Spawn all players with choosen role.
 		/// </summary>
@@ -114,9 +122,9 @@ namespace Managers
 			for (int i = 0; i < Players.Length; i++)
 			{
 				// ... create them, set their player number and references needed for control.
-				Players[i].Instance = Instantiate(PlayerPrefabs[0], Players[i].SpawnPoint.position, Players[i].SpawnPoint.rotation);
+				Players[i].Instance = Instantiate(PlayerPrefabs[0], MapManager.Instance.PlayerSpawnPoints[i].position, MapManager.Instance.PlayerSpawnPoints[i].rotation);
 				Players[i].Player 	= Players[i].Instance.GetComponent<Player>();
-				Players[i].Player.PlayerNumber = i + 1;
+				Players[i].Player.Identifier = i + 1;
 				Players[i].Setup();
 			}
 		}

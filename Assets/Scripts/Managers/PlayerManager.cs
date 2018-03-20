@@ -25,11 +25,6 @@ namespace Managers
         public Color PlayerColor;
         
         /// <summary>
-        /// The position and direction the tank will have when it spawns.
-        /// </summary>
-        public Transform SpawnPoint;
-        
-        /// <summary>
         /// A reference to the instance of the tank when it is created.
         /// </summary>
         [HideInInspector] public GameObject Instance;
@@ -56,7 +51,7 @@ namespace Managers
             switch (GameManager.Instance.GameType)
             {
                 case "LOCAL":
-                    Player.InputPlayerSection = "Player"+ Player.PlayerNumber;
+                    Player.InputPlayerSection = "Player"+ Player.Identifier;
                     break;
             }
         }

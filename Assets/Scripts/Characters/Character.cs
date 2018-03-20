@@ -8,9 +8,14 @@ namespace Characters
     public abstract class Character : MonoBehaviour
     {
         /// <summary>
+        /// Delay to respawn.
+        /// </summary>
+        public abstract float RespawnDeathDelay { get; set; }
+        
+        /// <summary>
         /// Used to identify which tank belongs to which player.
         /// </summary>
-        [HideInInspector] public int PlayerNumber;
+        [HideInInspector] public int Identifier;
         
         /// <summary>
         /// Name of the current character.
@@ -45,7 +50,12 @@ namespace Characters
         /// <summary>
         /// Check if the character is already death or not.
         /// </summary>
-        private bool _isDeath;
+        [HideInInspector] public bool IsDeath;
+        
+        /// <summary>
+        /// Tells if character can respawn after death.
+        /// </summary>
+        [HideInInspector] public bool IsRespawnable = true;
         
         /// <summary>
         /// Set if character can move and interact with other characters.
@@ -67,6 +77,7 @@ namespace Characters
         // Update is called once per frame
         protected virtual void Update()
         {
+            // Handle animation layers and set the correct one.
             HandleLayers();
         }
         
@@ -87,9 +98,30 @@ namespace Characters
         // On script enables.
         private void OnEnable()
         {
-            _isDeath = false;
+            IsDeath = false;
         }
 
+        /// <summary>
+        /// Kill the character.
+        /// </summary>
+        /// <param name="attacker">Reference to attacker character.</param>
+        public abstract void Kill(Character attacker);
+
+        /// <summary>
+        /// Immediately kills the character without any reason.
+        /// </summary>
+        /// <param name="respawn">TRUE for respawn after death. FALSE for no respawn anymore.</param>
+        public abstract void ForceKill(bool respawn);
+        
+        /// <summary>
+        /// Check if character is killable.
+        /// </summary>
+        /// <returns>TRUE: Is killable. FALSE: Character is NOT killable.</returns>
+        public bool IsKillable()
+        {
+            return !IsDeath && !IsInvulnearable;
+        }
+        
         /// <summary>
         /// Moves the player.
         /// </summary>
@@ -130,33 +162,6 @@ namespace Characters
             }
 
             _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
-        }
-
-        /// <summary>
-        /// Check if character is killable.
-        /// </summary>
-        /// <returns>TRUE: Is killable. FALSE: Character is NOT killable.</returns>
-        public bool IsKillable()
-        {
-            return !_isDeath && !IsInvulnearable;
-        }
-        
-        /// <summary>
-        /// TODO
-        /// </summary>
-        /// <param name="attacker"></param>
-        public void Kill(Character attacker)
-        {
-            // TODO We neeed to determiny if it is Player or AI. Each of htem has other procedures to do (like score counting).
-        }
-
-        /// <summary>
-        /// TODO
-        /// </summary>
-        /// <param name="respawn"></param>
-        public void ForceKill(bool respawn)
-        {
-            
         }
         
         /// <summary>

@@ -7,11 +7,11 @@ namespace Characters
     /// </summary>
     public class Bomberman : Player
     {
-        public override int BombStackCount { get; set; } = Constants.BombermanBombStackCount;
         public override float BombCountdown { get; set; } = Constants.BombermanBombCountdown;
         public override int BombExplosionDistance { get; set; } = Constants.BombermanBombExplosionDistance;
         public override int BombMaxAllowedDeploys { get; set; } = Constants.BombermanBombMaxAllowedDeploys;
         public override int[,] BombExplosionDirection { get; set; } = Constants.BombermanBombExplosionDirections;
+        public override float RespawnDeathDelay { get; set; } = Constants.BombermanRespawnDeathDelay;
 
         protected override void Start()
         {

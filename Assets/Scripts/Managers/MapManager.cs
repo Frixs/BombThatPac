@@ -6,12 +6,20 @@ using UnityEngine.Tilemaps;
 
 namespace Managers
 {
+    /// <summary>
+    /// This class works with map tiles and  launches events like explosions in the map.
+    /// </summary>
     public class MapManager : MonoBehaviour
     {
         /// <summary>
         /// Static instance of MapManager which allows it to be accessed by any other script.
         /// </summary>
         public static MapManager Instance = null;
+
+        /// <summary>
+        /// List of all possible player spawn positions.
+        /// </summary>
+        public Transform[] PlayerSpawnPoints;
         
         /// <summary>
         /// Reference of wall tile.
@@ -71,8 +79,9 @@ namespace Managers
         /// Make explosion in the current cell (by world position pointing to the cell.)
         /// </summary>
         /// <param name="cell">World position of the cell.</param>
+        /// <param name="caster">Reference to caster of an effect which caused the explosion.</param>
         /// <returns></returns>
-        public bool ExplodeInCell(Vector3Int cell)
+        public bool ExplodeInCell(Vector3Int cell, Character caster)
         {
             TileBase tile = TilemapGameplay.GetTile<TileBase>(cell);
             
@@ -87,21 +96,25 @@ namespace Managers
             }
             else
             {
-                // Find all players affected by the explosion.
+                // Find all characters affected by the explosion.
                 Collider2D[] hitColliders = Physics2D.OverlapCircleAll(
                     new Vector2(
                         cell.x + TilemapCellHalfSize, 
                         cell.y + TilemapCellHalfSize
                     ),
                     TilemapCellHalfSize,
-                    1 << LayerMask.NameToLayer("Player")
+                    1 << LayerMask.NameToLayer("Character")
                 );
                 
-                // Go through all players affected by the explosion.
+                // Go through all characters affected by the explosion.
                 for (var i = 0; i < hitColliders.Length; i++)
                 {
-                    // TODO Kill player.
-                    Debug.Log(((Player) hitColliders[i].GetComponent("Player")).Name +", CellSize: "+ TilemapGameplay.cellSize +", X: "+ cell.x +", Y: "+ cell.y);
+                    Component component = null;
+
+                    if ((component = hitColliders[i].GetComponent<Player>()) != null)
+                    {
+                        ((Player) component).Kill(caster);
+                    }
                 }
             }
 

@@ -17,6 +17,7 @@ namespace Camera
         [HideInInspector] public Transform[] Targets; // All the targets the camera needs to encompass.
 
         private UnityEngine.Camera _camera; // Used for referencing the camera.
+        private Vector3 _cameraDefaultPosition; // Used for centering map.
         private float _zoomSpeed; // Reference speed for the smooth damping of the orthographic size.
         private Vector3 _moveVelocity; // Reference velocity for the smooth damping of the position.
         private Vector3 _mDesiredPosition; // The position the camera is moving towards.
@@ -24,6 +25,7 @@ namespace Camera
         private void Awake()
         {
             _camera = GetComponentInChildren<UnityEngine.Camera>();
+            _cameraDefaultPosition = _camera.transform.position;
         }
 
         private void FixedUpdate()
@@ -49,7 +51,7 @@ namespace Camera
         {
             Vector3 averagePos = new Vector3();
             int numTargets = 0;
-
+            
             // Go through all the targets and add their positions together.
             for (int i = 0; i < Targets.Length; i++)
             {
@@ -70,7 +72,10 @@ namespace Camera
             //averagePos.y = transform.position.y;
 
             // The desired position is the average position;
-            _mDesiredPosition = averagePos;
+            if (numTargets > 0)
+                _mDesiredPosition = averagePos;
+            else
+                _mDesiredPosition = _cameraDefaultPosition;
         }
 
         private void Zoom()

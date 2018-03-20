@@ -10,11 +10,6 @@ namespace Characters
     public abstract class Player : Character
     {
         /// <summary>
-        /// Default number of the bombs that can be placed on the same time.
-        /// </summary>
-        public abstract int BombStackCount { get; set; }
-
-        /// <summary>
         /// Bomb countdown.
         /// </summary>
         public abstract float BombCountdown { get; set; }
@@ -33,11 +28,11 @@ namespace Characters
         /// Explosion direction represented as array filled with X, Y coords representing the direction.
         /// </summary>
         public abstract int[,] BombExplosionDirection { get; set; }
-
+        
         /// <summary>
         /// Lets say which section of player controls the character should use.
         /// </summary>
-        public string InputPlayerSection;
+        [HideInInspector] public string InputPlayerSection;
 
         /// <summary>
         /// Reference to bomb PREFAB.
@@ -119,9 +114,45 @@ namespace Characters
             Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
-            (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Owner = this;
+            (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
             
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb deployed!", PlayerNumber, Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb deployed!", Identifier, Name);
+        }
+
+        /// <summary>
+        /// Kill the character.
+        /// </summary>
+        /// <param name="attacker">Reference to attacker character.</param>
+        public override void Kill(Character attacker)
+        {
+            if (!IsKillable() || !attacker)
+                return;
+
+            IsDeath = true;
+            
+            if (IsRespawnable)
+                SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+
+            gameObject.SetActive(false);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] character has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
+        }
+
+        /// <summary>
+        /// Immediately kills the character without any reason.
+        /// </summary>
+        /// <param name="respawn">TRUE for respawn after death. FALSE for no respawn anymore.</param>
+        public override void ForceKill(bool respawn)
+        {
+            if (!respawn)
+                IsRespawnable = false;
+            
+            IsDeath = true;
+            
+            if (IsRespawnable)
+                SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+            
+            gameObject.SetActive(false);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Character has been force killed!", Identifier, Name);
         }
     }
 }

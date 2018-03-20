@@ -10,7 +10,7 @@ namespace Items
 		/// <summary>
 		/// Reference to bomb owner.
 		/// </summary>
-		[HideInInspector] public Player Owner;
+		[HideInInspector] public Player Caster;
 
 		/// <summary>
 		/// Bomb's countdown.
@@ -30,11 +30,11 @@ namespace Items
 		// Use this for initialization
 		void Start()
 		{
-			_countdown = Owner.BombCountdown;
+			_countdown = Caster.BombCountdown;
 			_rangeToBecomeCollidable = MapManager.Instance.TilemapCellSize / 2f;
 			
 			// Ignore collision when spawning under your feet.
-			Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
+			Physics2D.IgnoreCollision(Caster.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
 		}
 	
 		// Update is called once per frame
@@ -45,9 +45,9 @@ namespace Items
 			if (_countdown <= 0.0f)
 			{
 				Explode(transform.position);
-				Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb exploded!", Owner.PlayerNumber, Owner.Name);
+				Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb exploded!", Caster.Identifier, Caster.Name);
 				
-				Owner.BombDeployCounter--;
+				Caster.BombDeployCounter--;
 				
 				Destroy(gameObject);
 			}
@@ -57,9 +57,9 @@ namespace Items
 		void FixedUpdate()
 		{
 			// Restore the collision when player will be in sufficient distance from the bomb.
-			if (Vector2.Distance(Owner.transform.position, transform.position) > _rangeToBecomeCollidable)
+			if (Vector2.Distance(Caster.transform.position, transform.position) > _rangeToBecomeCollidable)
 			{
-				Physics2D.IgnoreCollision(Owner.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
+				Physics2D.IgnoreCollision(Caster.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
 			}
 		}
 		
@@ -71,11 +71,11 @@ namespace Items
 		{
 			Vector3Int originCell = MapManager.Instance.TilemapGameplay.WorldToCell(worldPos);
 			
-			MapManager.Instance.ExplodeInCell(originCell);
+			MapManager.Instance.ExplodeInCell(originCell, Caster);
 			
-			for (int i = 0; i < Owner.BombExplosionDirection.GetLength(0); i++)
+			for (int i = 0; i < Caster.BombExplosionDirection.GetLength(0); i++)
 			{
-				ExplodeInDirection(originCell, new Vector3Int(Owner.BombExplosionDirection[i, 0], Owner.BombExplosionDirection[i, 1], Owner.BombExplosionDirection[i, 2]));
+				ExplodeInDirection(originCell, new Vector3Int(Caster.BombExplosionDirection[i, 0], Caster.BombExplosionDirection[i, 1], Caster.BombExplosionDirection[i, 2]));
 			}
 		}
 
@@ -86,9 +86,9 @@ namespace Items
 		/// <param name="direction">Direction of explosion - Vector3Int filled only with -1, 0, 1 values. Each direction can has only1 value rest 0. We are on grid only.</param>
 		private void ExplodeInDirection(Vector3Int origin, Vector3Int direction)
 		{
-			for (int i = 1; i <= Owner.BombExplosionDistance; i++)
+			for (int i = 1; i <= Caster.BombExplosionDistance; i++)
 			{
-				if (!MapManager.Instance.ExplodeInCell(origin + direction * i))
+				if (!MapManager.Instance.ExplodeInCell(origin + direction * i, Caster))
 					break;
 			}
 		}

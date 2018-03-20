@@ -14,11 +14,6 @@ public static class Constants
     public const float PlayerDefaultSpeed = 3.0f;
 
     /// <summary>
-    /// Role: BOMBERMAN - number of the bombs that can be placed on the same time.
-    /// </summary>
-    public const int BombermanBombStackCount = 1;
-
-    /// <summary>
     /// Role: BOMBERMAN - countdown when the bomb explodes.
     /// </summary>
     public const float BombermanBombCountdown = 2.0f;
@@ -32,6 +27,11 @@ public static class Constants
     /// Role: BOMBERMAN - bomb max deploy count.
     /// </summary>
     public const int BombermanBombMaxAllowedDeploys = 3;
+
+    /// <summary>
+    /// Role: BOMBERMAN - Time to respawn the character.
+    /// </summary>
+    public const float BombermanRespawnDeathDelay = 3.0f;
 
     /// <summary>
     /// Role: BOMBERMAN - bomb explosion directions.
