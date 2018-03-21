@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\Characters\Player.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\Items\Bomb.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemLevitation.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\InputManager.cs" />

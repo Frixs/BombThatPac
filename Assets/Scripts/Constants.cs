@@ -46,4 +46,14 @@ public static class Constants
         {-1,  0, 0}, // Left
         { 0, -1, 0}, // Down
     };
+    
+    /// <summary>
+    /// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value.
+    /// </summary>
+    public const float BombChainedCountdown = 0.5f;
+
+    /// <summary>
+    /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be triggered (f.e bomb is looking for players.).
+    /// </summary>
+    public const string UserLayerNameTriggerObject = "TriggerObject";
 }

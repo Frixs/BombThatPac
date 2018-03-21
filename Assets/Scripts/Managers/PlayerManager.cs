@@ -15,6 +15,11 @@ namespace Managers
     public class PlayerManager
     {
         /// <summary>
+        /// A reference to the instance of the tank when it is created.
+        /// </summary>
+        [HideInInspector] public GameObject Instance;
+        
+        /// <summary>
         /// Name of the player.
         /// </summary>
         public string PlayerName;
@@ -23,11 +28,6 @@ namespace Managers
         /// This is the color this tank will be tinted.
         /// </summary>
         public Color PlayerColor;
-        
-        /// <summary>
-        /// A reference to the instance of the tank when it is created.
-        /// </summary>
-        [HideInInspector] public GameObject Instance;
         
         /// <summary>
         /// Reference to player's movement script.
@@ -54,22 +54,6 @@ namespace Managers
                     Player.InputPlayerSection = "Player"+ Player.Identifier;
                     break;
             }
-        }
-    
-        /// <summary>
-        /// Used during the phases of the game where the player shouldn't be able to control their character.
-        /// </summary>
-        public void DisableControl()
-        {
-            Player.enabled = false;
-        }
-
-        /// <summary>
-        /// Used during the phases of the game where the player should be able to control their character.
-        /// </summary>
-        public void EnableControl()
-        {
-            Player.enabled = true;
         }
     
         /// <summary>

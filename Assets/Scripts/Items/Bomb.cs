@@ -15,7 +15,7 @@ namespace Items
 		/// <summary>
 		/// Bomb's countdown.
 		/// </summary>
-		private float _countdown;
+		[HideInInspector] public float Countdown;
 		
 		/// <summary>
 		/// Reference to explosion PREFAB.
@@ -30,7 +30,7 @@ namespace Items
 		// Use this for initialization
 		void Start()
 		{
-			_countdown = Caster.BombCountdown;
+			Countdown = Caster.BombCountdown;
 			_rangeToBecomeCollidable = MapManager.Instance.TilemapCellSize / 2f;
 			
 			// Ignore collision when spawning under your feet.
@@ -40,9 +40,9 @@ namespace Items
 		// Update is called once per frame
 		void Update()
 		{
-			_countdown -= Time.deltaTime;
+			Countdown -= Time.deltaTime;
 
-			if (_countdown <= 0.0f)
+			if (Countdown <= 0.0f)
 			{
 				Explode(transform.position);
 				Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb exploded!", Caster.Identifier, Caster.Name);

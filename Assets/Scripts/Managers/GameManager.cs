@@ -98,8 +98,8 @@ namespace Managers
 		void Start ()
 		{
 			// Create the delays so they only have to be made once.
-			_startWait = new WaitForSeconds (StartDelay);
-			_endWait = new WaitForSeconds (EndDelay);
+			_startWait = new WaitForSeconds(StartDelay);
+			_endWait = new WaitForSeconds(EndDelay);
 			
 			SpawnAllPlayers();
 			SetCameraTargets();

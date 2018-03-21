@@ -61,13 +61,15 @@ namespace Managers
                 // Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a MapManager.
                 Destroy(gameObject);
             }
+            
+            // Initialize important constants.
+            TilemapCellSize = TilemapGameplay.cellSize.x;
+            TilemapCellHalfSize = TilemapCellSize / 2f;
         }
         
         // Use this for initialization
         void Start()
         {
-            TilemapCellSize = TilemapGameplay.cellSize.x;
-            TilemapCellHalfSize = TilemapCellSize / 2f;
         }
 
         // Update is called once per frame
@@ -103,7 +105,7 @@ namespace Managers
                         cell.y + TilemapCellHalfSize
                     ),
                     TilemapCellHalfSize,
-                    1 << LayerMask.NameToLayer("Character")
+                    1 << LayerMask.NameToLayer(Constants.UserLayerNameTriggerObject)
                 );
                 
                 // Go through all characters affected by the explosion.
@@ -114,6 +116,11 @@ namespace Managers
                     if ((component = hitColliders[i].GetComponent<Player>()) != null)
                     {
                         ((Player) component).Kill(caster);
+                    }
+
+                    if ((component = hitColliders[i].GetComponent<Bomb>()) != null)
+                    {
+                        ((Bomb) component).Countdown = Constants.BombChainedCountdown;
                     }
                 }
             }

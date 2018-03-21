@@ -44,6 +44,11 @@ namespace Characters
         /// </summary>
         [HideInInspector] public int BombDeployCounter = 0;
 
+        /// <summary>
+        /// Counts player collected fragments.
+        /// </summary>
+        [HideInInspector] public int FragmentCounter = 0;
+
         // Use this for initialization
         protected override void Start()
         {
@@ -117,6 +122,19 @@ namespace Characters
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
             
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb deployed!", Identifier, Name);
+        }
+        
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="other"></param>
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Fragment"))
+            {
+                FragmentCounter++;
+                Destroy(other.gameObject);
+            }
         }
 
         /// <summary>
