@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Reflection;
+using UnityEngine;
 
 namespace Characters
 {
@@ -7,6 +8,11 @@ namespace Characters
     /// </summary>
     public abstract class Character : MonoBehaviour
     {
+        /// <summary>
+        /// The Character's movement speed.
+        /// </summary>
+        protected abstract float Speed { get; set; }
+        
         /// <summary>
         /// Delay to respawn.
         /// </summary>
@@ -23,12 +29,7 @@ namespace Characters
         [HideInInspector] public string Name = Constants.CharacterDefaultName;
 
         /// <summary>
-        /// The Player's movement speed.
-        /// </summary>
-        [SerializeField] private float _speed = Constants.PlayerDefaultSpeed;
-
-        /// <summary>
-        /// The Player's direction.
+        /// The Player's direction. This value should be defined in inherit class in method like GetInput (Player).
         /// </summary>
         protected Vector2 Direction;
 
@@ -78,15 +79,7 @@ namespace Characters
         protected virtual void Update()
         {
             // Handle animation layers and set the correct one.
-            HandleLayers();
-        }
-        
-        /// <summary>
-        /// Check if character is moving.
-        /// </summary>
-        public bool IsMoving()
-        {
-            return Direction.x != 0 || Direction.y != 0;
+            //HandleLayers();
         }
 
         // Fixed update
@@ -99,6 +92,14 @@ namespace Characters
         private void OnEnable()
         {
             IsDeath = false;
+        }
+        
+        /// <summary>
+        /// Check if character is moving.
+        /// </summary>
+        public bool IsMoving()
+        {
+            return Direction.x != 0 || Direction.y != 0;
         }
 
         /// <summary>
@@ -123,12 +124,12 @@ namespace Characters
         }
         
         /// <summary>
-        /// Moves the player.
+        /// Moves the character.
         /// </summary>
-        public void Move()
+        public virtual void Move()
         {
             // Makes sure that the player moves.
-            _myRigidBody.velocity = Direction.normalized * _speed * (HasEnabledActions ? 1 : 0);
+            _myRigidBody.velocity = Direction.normalized * Speed * (HasEnabledActions ? 1 : 0);
         }
 
         /// <summary>

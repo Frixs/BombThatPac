@@ -52,8 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\Characters\ArtificialIntelligence.cs" />
+    <Compile Include="Assets\Scripts\Characters\Blinky.cs" />
     <Compile Include="Assets\Scripts\Characters\Bomberman.cs" />
     <Compile Include="Assets\Scripts\Characters\Character.cs" />
+    <Compile Include="Assets\Scripts\Characters\Ghost.cs" />
     <Compile Include="Assets\Scripts\Characters\Player.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\Items\Bomb.cs" />

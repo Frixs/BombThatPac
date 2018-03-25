@@ -12,6 +12,11 @@ public static class Constants
     /// Player's default movement speed.
     /// </summary>
     public const float PlayerDefaultSpeed = 3.0f;
+    
+    /// <summary>
+    /// Ghost's default movement speed.
+    /// </summary>
+    public const float GhostDefaultSpeed = PlayerDefaultSpeed - 1.1f;
 
     /// <summary>
     /// Role: BOMBERMAN - countdown when the bomb explodes.
@@ -56,4 +61,24 @@ public static class Constants
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be triggered (f.e bomb is looking for players.).
     /// </summary>
     public const string UserLayerNameTriggerObject = "TriggerObject";
+    
+    /// <summary>
+    /// Delay after death to respawn.
+    /// </summary>
+    public const float GhostRespawnDeathDelay = 3.0f;
+    
+    /// <summary>
+    /// Number of iterations for ghost modes.
+    /// </summary>
+    public const int GhostModeNumberOfIterations = 4;
+
+    /// <summary>
+    /// Ghost mode phases from the start of the game.
+    /// </summary>
+    public static readonly float[] GhostScatterModeTimer = new float[GhostModeNumberOfIterations] { 7f, 7f, 5f, 5f };
+
+    /// <summary>
+    /// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode.
+    /// </summary>
+    public static readonly float[] GhostChaseModeTimer = new float[GhostModeNumberOfIterations - 1] { 20f, 20f, 20f };
 }

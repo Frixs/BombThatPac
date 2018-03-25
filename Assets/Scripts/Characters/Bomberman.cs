@@ -13,6 +13,7 @@ namespace Characters
         public override int[,] BombExplosionDirection { get; set; } = Constants.BombermanBombExplosionDirections;
         public override float RespawnDeathDelay { get; set; } = Constants.BombermanRespawnDeathDelay;
 
+        // Use this for initialization
         protected override void Start()
         {
             base.Start();

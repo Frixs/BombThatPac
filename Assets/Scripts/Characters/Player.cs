@@ -10,6 +10,11 @@ namespace Characters
     public abstract class Player : Character
     {
         /// <summary>
+        /// The Player's movement speed.
+        /// </summary>
+        protected override float Speed { get; set; } = Constants.PlayerDefaultSpeed;
+        
+        /// <summary>
         /// Bomb countdown.
         /// </summary>
         public abstract float BombCountdown { get; set; }

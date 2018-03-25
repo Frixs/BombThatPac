@@ -35,7 +35,7 @@ namespace Items
 		{
 			_originalX = transform.position.x;
 			_originalY = transform.position.y;
-			_floatStrength = MapManager.Instance.TilemapCellSize / 48f;
+			_floatStrength = MapManager.Instance.TilemapCellSize / 40f;
 			_randomSeed = Random.Range(0f, 360f);
 		}
 

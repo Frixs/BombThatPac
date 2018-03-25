@@ -1119,6 +1119,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97,
     type: 2}
   m_PrefabInternal: {fileID: 958299868}
+--- !u!1001 &1061022552
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130001184602850, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6d0bb1248cc9da04d8153167d5338be6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1135127970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,14 +1419,14 @@ MonoBehaviour:
   PlayerPrefabs:
   - {fileID: 1808872423296922, guid: 2aef1125e20158a428e2364cf5a5339a, type: 2}
   Players:
-  - PlayerName: Player1
+  - Instance: {fileID: 0}
+    PlayerName: Player1
     PlayerColor: {r: 0.09385811, g: 0.5056319, b: 0.9117647, a: 0}
-    Instance: {fileID: 0}
     Player: {fileID: 0}
     Wins: 0
-  - PlayerName: Player2
+  - Instance: {fileID: 0}
+    PlayerName: Player2
     PlayerColor: {r: 0.86764705, g: 0.15311417, b: 0.15311417, a: 0}
-    Instance: {fileID: 0}
     Player: {fileID: 0}
     Wins: 0
 --- !u!4 &1460512159

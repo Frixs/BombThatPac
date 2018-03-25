@@ -633,9 +633,11 @@ PlayerSettings:
   cloudServicesEnabled:
     Build: 0
     Collab: 1
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 1b678b43-3af6-4050-9916-067681d20f7b
   projectName: Bomb that Pac
   organizationId: frixs
