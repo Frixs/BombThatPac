@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Characters
 {
+    /// <inheritdoc />
     /// <summary>
     /// Player controlled character.
     /// </summary>
@@ -68,11 +69,36 @@ namespace Characters
             base.Update();
         }
 
+        public override void Move()
+        {
+            // Makes sure that the player moves.
+            MyRigidBody.velocity = Direction.normalized * Speed * (HasEnabledActions ? 1 : 0);
+        }
+
+        public override Vector2 GetOrientation()
+        {
+            Vector2 orientation = Vector2.zero;
+
+            if (PreviousDirection.y > 0)
+                orientation = Vector2.up;
+            else if (PreviousDirection.x < 0)
+                orientation = Vector2.left;
+            else if (PreviousDirection.y < 0)
+                orientation = Vector2.down;
+            else if (PreviousDirection.x > 0)
+                orientation = Vector2.right;
+            
+            return orientation;
+        }
+        
         /// <summary>
         /// Listen's to the players input.
         /// </summary>
         protected void GetInput()
         {
+            if (Direction != Vector2.zero && Direction != PreviousDirection)
+                PreviousDirection = Direction;
+            
             Direction = Vector2.zero;
 
             if (!HasEnabledActions)
@@ -102,12 +128,10 @@ namespace Characters
             
             if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "SpecialAction")))
             {
-                PlaceBomb();
             }
             
             if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "CollectItem")))
             {
-                PlaceBomb();
             }
         }
 
@@ -126,7 +150,7 @@ namespace Characters
 
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
             
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb deployed!", Identifier, Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb planted!", Identifier, Name);
         }
         
         /// <summary>

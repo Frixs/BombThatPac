@@ -1,7 +1,10 @@
-﻿using Managers;
+﻿using System;
+using Managers;
 using UnityEditor.Graphs.AnimationBlendTree;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.XR.WSA;
 
 namespace Characters
 {
@@ -10,10 +13,37 @@ namespace Characters
 		public override float RespawnDeathDelay { get; set; } = Constants.GhostRespawnDeathDelay;
 		
 		/// <summary>
-		/// The Ghost's movement speed.
+		/// Timer to release ghosts from the start.
 		/// </summary>
+		protected abstract float GhostReleaseTimer { get; set; }
+		
 		protected override float Speed { get; set; } = Constants.GhostDefaultSpeed;
 
+		/// <summary>
+		/// Spawn position of the ghost. //TODO: generating maze will require GhostSpawnPointManger to handle all these spawn & scatter positions for better organisation.
+		/// </summary>
+		protected abstract Transform SpawnPosition { get; set; }
+		
+		/// <summary>
+		/// Ghost scatter base position.
+		/// </summary>
+		protected abstract Transform ScatterBasePosition { get; set; }
+		
+		/// <summary>
+		/// First target position till leaving the ghost house.
+		/// </summary>
+		protected abstract Transform StartTargetPosition { get; set; }
+
+		/// <summary>
+		/// Checks if ghost is still in ghost house.
+		/// </summary>
+		public bool IsInGhostHouse;
+		
+		/// <summary>
+		/// Default value of 'IsInGhostHouse' set in inicialization.
+		/// </summary>
+		private bool _isInGhostHouseDefaultVal;
+		
 		/// <summary>
 		/// Default mode start iteration.
 		/// </summary>
@@ -49,28 +79,26 @@ namespace Characters
 		/// </summary>
 		private Vector3 _currentCell, _targetCell, _previousCell;
 		
-		/// <summary>
-		/// Current direction with memory of the last other direction.
-		/// </summary>
-		private Vector2 _direction, _previousDirection;
-		
 		// Use this for initialization
 		protected override void Start()
 		{
+			HasEnabledActions = false;
+			_isInGhostHouseDefaultVal = IsInGhostHouse;
+			
 			// Get position of the ghost.
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.localPosition);
 			Vector3 cellCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 			// Set current position of the ghost.
-			if (cellCenter != Vector3.zero)
-			{
-				_currentCell = cellCenter;
-			}
-			// Set initial direction.
-			_direction = Vector2.up;
+			_currentCell = cellCenter;
+
+			// Set default direction.
+			Direction = PreviousDirection = Vector2.left;
+			
+			// Set initial direction and find first target position.
+			_targetCell = ChooseNextCell();
+
 			// Set previous direction as current for default.
 			_previousCell = _currentCell;
-			// Find first target position.
-			_targetCell = ChooseNextCell();
 			
 			base.Start();
 		}
@@ -82,58 +110,54 @@ namespace Characters
 
 			base.Update();
 		}
+		
+		// Fixed update
+		protected override void FixedUpdate()
+		{
+			ReleaseGhost();
+			
+			base.FixedUpdate();
+		}
 
-		/// <summary>
-		/// Kill the character.
-		/// </summary>
-		/// <param name="attacker">Reference to attacker character.</param>
 		public override void Kill(Character attacker)
 		{
+			// TODO
 			throw new System.NotImplementedException();
 		}
 
-		/// <summary>
-		/// Immediately kills the character without any reason.
-		/// </summary>
-		/// <param name="respawn">TRUE for respawn after death. FALSE for no respawn anymore.</param>
 		public override void ForceKill(bool respawn)
 		{
+			// TODO
 			throw new System.NotImplementedException();
 		}
-
+		
 		/// <summary>
-		/// Move in the correct direction.
+		/// Method to get position of final target which the ghost is searching for.
 		/// </summary>
+		/// <returns>Origin position of the closest player cell.</returns>
+		protected abstract Vector3Int GetCellOfTarget();
+
 		public override void Move()
 		{
-			/*
-			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
-			Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
-			Vector3Int originCell = MapManager.Instance.TilemapGameplay.WorldToCell(cellCenterPos);
-			
-			TileBase tile = MapManager.Instance.TilemapGameplay.GetTile<TileBase>(cell);
-			if (tile == MapManager.Instance.WallTile)
+			if (_currentCell == _targetCell)
 				return;
-			*/
-
-			if (_currentCell != _targetCell && _targetCell != Vector3.zero)
+			
+			if (OverShotTarget())
 			{
-				if (OverShotTarget())
-				{
-					_currentCell = _targetCell;
+				_currentCell = _targetCell;
 
-					transform.localPosition = _currentCell;
+				transform.localPosition = _currentCell;
 					
-					// portal
+				// portal
 
-					_targetCell = ChooseNextCell();
-					_previousCell = _currentCell;
-					_currentCell = Vector3.zero;
-				}
-				else
-				{
-					transform.position += (Vector3) _direction * Speed * Time.deltaTime;
-				}
+				PreviousDirection = Direction;
+				_targetCell = ChooseNextCell();
+				_previousCell = _currentCell;
+				_currentCell = Vector3.zero;
+			}
+			else
+			{
+				transform.position += (Vector3) Direction * Speed * Time.deltaTime * (HasEnabledActions ? 1 : 0);
 			}
 		}
 		
@@ -181,6 +205,22 @@ namespace Characters
 		{
 			_currentMode = mode;
 		}
+		
+		/// <summary>
+		/// Starting release ghost timer.
+		/// </summary>
+		protected void ReleaseGhost()
+		{
+			if (GhostReleaseTimer < 0f)
+				return;
+			
+			GhostReleaseTimer -= Time.deltaTime;
+
+			if (GhostReleaseTimer > 0f)
+				return;
+
+			HasEnabledActions = true;
+		}
 
 		/// <summary>
 		/// Chose next direction tile of ghost's move.
@@ -190,18 +230,32 @@ namespace Characters
 		{
 			float[,] cellNeighborDirections = {
 				// x,   y,  z
-				{ 1f,  0f, 0f}, // Right 
 				{ 0f,  1f, 0f}, // Up
 				{-1f,  0f, 0f}, // Left
 				{ 0f, -1f, 0f}, // Down
+				{ 1f,  0f, 0f}, // Right 
 			};
 			
 			// Get player's tile position.
-			Vector3Int target = MapManager.Instance.TilemapGameplay.WorldToCell(GetClosestPlayer().transform.position);
-			Vector3 targetCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(target);
+			Vector3 targetCenter;
+			if (IsInGhostHouse)
+			{
+				targetCenter = StartTargetPosition.position;
+			}
+			else if (_currentMode == Mode.Scatter)
+			{
+				targetCenter = ScatterBasePosition.transform.position;
+			}
+			else // Chase Mode
+			{
+				Vector3Int target = GetCellOfTarget();
+				targetCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(target);
+			}
 
 			// Target position of the next move.
 			Vector3 moveToCell = Vector3.zero;
+			// Direction to moved cell.
+			Vector2 direction = Vector2.zero;
 
 			// All neighbors with its directions.
 			Vector3[] foundCells = new Vector3[4];
@@ -220,7 +274,17 @@ namespace Characters
 				TileBase tile = MapManager.Instance.TilemapGameplay.GetTile<TileBase>(neighbor);
 				
 				// Find only the valid one.
-				if (tile != MapManager.Instance.WallTile)
+				// Try to find obstacle in the current cell.
+				Collider2D[] obstacles = Physics2D.OverlapCircleAll(
+					new Vector2(
+						neighborCenter.x,
+						neighborCenter.y
+					),
+					MapManager.Instance.TilemapCellHalfSize,
+					1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
+				);
+				// Evaluate tiles. If it is not wall or obstacle you can go in this direction. If you are in ghost house you can go through the obstacle (only obstacle there is door).
+				if (tile != MapManager.Instance.WallTile && (obstacles.Length == 0 || (IsInGhostHouse && obstacles.Length > 0)))
 				{
 					foundCells[cellCounter] = neighborCenter;
 					foundCellsDirection[cellCounter] = new Vector2(cellNeighborDirections[i, 0], cellNeighborDirections[i, 1]);
@@ -232,7 +296,7 @@ namespace Characters
 			if (cellCounter == 1)
 			{
 				moveToCell = foundCells[0];
-				_direction = foundCellsDirection[0];
+				direction = foundCellsDirection[0];
 			}
 			else if (cellCounter > 1)
 			{
@@ -240,7 +304,7 @@ namespace Characters
 
 				for (int i = 0; i < foundCells.Length; i++)
 				{
-					if (foundCellsDirection[i] != Vector2.zero)
+					if (foundCellsDirection[i] != Vector2.zero && IsPossibleToChangeDirection(foundCellsDirection[i], PreviousDirection))
 					{
 						float distance = Vector3.Distance(foundCells[i], targetCenter);
 
@@ -248,12 +312,13 @@ namespace Characters
 						{
 							shortestDistance = distance;
 							moveToCell = foundCells[i];
-							_direction = foundCellsDirection[i];
+							direction = foundCellsDirection[i];
 						}
 					}
 				}
 			}
 
+			Direction = direction;
 			return moveToCell;
 		}
 
@@ -261,7 +326,7 @@ namespace Characters
 		/// Get the closest player from the ghost.
 		/// </summary>
 		/// <returns>Player script reference.</returns>
-		private Player GetClosestPlayer()
+		protected Player GetClosestPlayer()
 		{
 			Player closestPlayer = null;
 			float shortestDistance = float.MaxValue, currentDistance = 0;
@@ -287,8 +352,29 @@ namespace Characters
 		{
 			float cellToTarget = Vector3.Distance(_previousCell, _targetCell);
 			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell);
-			
+
 			return cellToSelf > cellToTarget;
+		}
+
+		/// <summary>
+		/// Check if it is possible change direction.
+		/// F.e. you cannot change direction from LEFT to RIGHT.
+		/// </summary>
+		/// <param name="direction">Dirrection you wish to change.</param>
+		/// <param name="previousDirection">Previous direction.</param>
+		/// <returns>TRUE: It is possible direction.</returns>
+		private bool IsPossibleToChangeDirection(Vector2 direction, Vector2 previousDirection)
+		{
+			if (direction == Vector2.left && previousDirection == Vector2.right)
+				return false;
+			if (direction == Vector2.right && previousDirection == Vector2.left)
+				return false;
+			if (direction == Vector2.up && previousDirection == Vector2.down)
+				return false;
+			if (direction == Vector2.down && previousDirection == Vector2.up)
+				return false;
+
+			return true;
 		}
 	}
 }

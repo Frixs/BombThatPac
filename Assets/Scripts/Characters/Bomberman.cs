@@ -2,6 +2,7 @@
 
 namespace Characters
 {
+    /// <inheritdoc />
     /// <summary>
     /// Player's role.
     /// </summary>

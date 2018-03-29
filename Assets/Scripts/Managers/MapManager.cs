@@ -32,6 +32,12 @@ namespace Managers
         /// </summary>
         public Tile DestructibleTile => _destructibleTile;
         [SerializeField] private Tile _destructibleTile;
+        
+        /// <summary>
+        /// Reference to door game object.
+        /// </summary>
+        public GameObject DoorObject => _doorObject;
+        [SerializeField] private GameObject _doorObject;
 
         /// <summary>
         /// Reference to the gameplay tilemap.
@@ -89,14 +95,25 @@ namespace Managers
         {
             TileBase tile = TilemapGameplay.GetTile<TileBase>(cell);
 
+            // Try to find obstacle in the current cell.
+            Collider2D[] obstacles = Physics2D.OverlapCircleAll(
+                new Vector2(
+                    cell.x + TilemapCellHalfSize,
+                    cell.y + TilemapCellHalfSize
+                ),
+                TilemapCellHalfSize,
+                1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
+            );
+            
             // End an explosion if explosion wants to hit obstacle.
-            if (tile == WallTile)
+            if (tile == WallTile || obstacles.Length > 0)
                 return false;
 
             if (tile == DestructibleTile)
             {
                 // Remove the tile.
                 TilemapGameplay.SetTile(cell, null);
+                return false;
             }
             else
             {

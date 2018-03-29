@@ -46,10 +46,10 @@ public static class Constants
     /// </summary>
     public static readonly int[,] BombermanBombExplosionDirections = {
         //x,  y, z
-        { 1,  0, 0}, // Right 
         { 0,  1, 0}, // Up
         {-1,  0, 0}, // Left
         { 0, -1, 0}, // Down
+        { 1,  0, 0}, // Right 
     };
     
     /// <summary>
@@ -61,6 +61,11 @@ public static class Constants
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be triggered (f.e bomb is looking for players.).
     /// </summary>
     public const string UserLayerNameTriggerObject = "TriggerObject";
+    
+    /// <summary>
+    /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be refered as obstacle.
+    /// </summary>
+    public const string UserLayerNameObstacle = "Obstacle";
     
     /// <summary>
     /// Delay after death to respawn.
@@ -81,4 +86,45 @@ public static class Constants
     /// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode.
     /// </summary>
     public static readonly float[] GhostChaseModeTimer = new float[GhostModeNumberOfIterations - 1] { 20f, 20f, 20f };
+
+    /// <summary>
+    /// Release Blinky ghost from its house.
+    /// </summary>
+    public const float GhostBlinkyReleaseTimer = 0.0f;
+    
+    /// <summary>
+    /// Release Pinky ghost from its house.
+    /// </summary>
+    public const float GhostPinkyReleaseTimer = 5.0f;
+    
+    /// <summary>
+    /// Release Inky ghost from its house.
+    /// </summary>
+    public const float GhostInkyReleaseTimer = 14.0f;
+    
+    /// <summary>
+    /// Release Clyde ghost from its house.
+    /// </summary>
+    public const float GhostClydeReleaseTimer = 21.0f;
+    
+    /// <summary>
+    /// Pinky targets its target X cells ahead of target's direction.
+    /// This is the number of cells.
+    /// </summary>
+    public const int GhostPinkyNumberOfCellsAheadToTarget = 3;
+    
+    /// <summary>
+    /// Select the position X cells in front of the closest player.
+    /// Draw Vector from Blinky ghost to that position.
+    /// X-times the length of the vector (GhostInkyVectorMultiplier).
+    /// </summary>
+    public const int GhostInkyNumberOfCellsAhead = 2;
+    public const int GhostInkyVectorMultiplier = 2;
+    
+    /// <summary>
+    /// Calculate the distance from the closest player.
+    /// If the distance is greater than X cells targeting is the same as Blinky.
+    /// If the distance is less than X cells, then target is his scatter base, so same as scatter mode.
+    /// </summary>
+    public const float GhostClydeNumberOfCellsDistance = 4f;
 }

@@ -29,19 +29,20 @@ namespace Characters
         [HideInInspector] public string Name = Constants.CharacterDefaultName;
 
         /// <summary>
-        /// The Player's direction. This value should be defined in inherit class in method like GetInput (Player).
+        /// The Character's direction. This value should be defined in inherit class in method like GetInput (Player).
+        /// Current direction with memory of the last other direction.
         /// </summary>
-        protected Vector2 Direction;
+        protected Vector2 Direction, PreviousDirection = Vector2.zero;
 
         /// <summary>
         /// A reference to the character's animator.
         /// </summary>
-        private Animator _myAnimator;
+        protected Animator MyAnimator;
 
         /// <summary>
         /// Reference to rigid body.
         /// </summary>
-        private Rigidbody2D _myRigidBody;
+        protected Rigidbody2D MyRigidBody;
 
         /// <summary>
         /// Is character invulnerable thanks to some effect?
@@ -66,13 +67,13 @@ namespace Characters
         /// Players cannot use inputs.
         /// AI cannot attack.
         /// </summary>
-        public bool HasEnabledActions { get; private set; } = true;
+        public bool HasEnabledActions { get; protected set; } = true;
 
         // Use this for initialization
         protected virtual void Start()
         {
-            _myRigidBody = GetComponent<Rigidbody2D>();
-            _myAnimator = GetComponent<Animator>();
+            MyRigidBody = GetComponent<Rigidbody2D>();
+            MyAnimator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -83,7 +84,7 @@ namespace Characters
         }
 
         // Fixed update
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             Move();
         }
@@ -101,6 +102,17 @@ namespace Characters
         {
             return Direction.x != 0 || Direction.y != 0;
         }
+        
+        /// <summary>
+        /// Moves the character.
+        /// </summary>
+        public abstract void Move();
+
+        /// <summary>
+        /// Get orientation of the character. Normalized vector with only 1 possible direction (W, A, S, D).
+        /// </summary>
+        /// <returns>Orientation.</returns>
+        public abstract Vector2 GetOrientation();
 
         /// <summary>
         /// Kill the character.
@@ -122,15 +134,6 @@ namespace Characters
         {
             return !IsDeath && !IsInvulnearable;
         }
-        
-        /// <summary>
-        /// Moves the character.
-        /// </summary>
-        public virtual void Move()
-        {
-            // Makes sure that the player moves.
-            _myRigidBody.velocity = Direction.normalized * Speed * (HasEnabledActions ? 1 : 0);
-        }
 
         /// <summary>
         /// Handle animation layers.
@@ -143,8 +146,8 @@ namespace Characters
                 ActivateLayer("WalkLayer");
 
                 // Sets the animation parameter so that he faces the correct direction.
-                _myAnimator.SetFloat("x", Direction.x);
-                _myAnimator.SetFloat("y", Direction.y);
+                MyAnimator.SetFloat("x", Direction.x);
+                MyAnimator.SetFloat("y", Direction.y);
             }
             else
             {
@@ -157,12 +160,12 @@ namespace Characters
         /// </summary>
         private void ActivateLayer(string layerName)
         {
-            for (int i = 0; i < _myAnimator.layerCount; i++)
+            for (int i = 0; i < MyAnimator.layerCount; i++)
             {
-                _myAnimator.SetLayerWeight(i, 0);
+                MyAnimator.SetLayerWeight(i, 0);
             }
 
-            _myAnimator.SetLayerWeight(_myAnimator.GetLayerIndex(layerName), 1);
+            MyAnimator.SetLayerWeight(MyAnimator.GetLayerIndex(layerName), 1);
         }
         
         /// <summary>
