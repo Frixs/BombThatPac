@@ -23,12 +23,16 @@
             <e p="Blinky.cs" t="Include" />
             <e p="Bomberman.cs" t="Include" />
             <e p="Character.cs" t="Include" />
+            <e p="Clyde.cs" t="Include" />
             <e p="Ghost.cs" t="Include" />
+            <e p="Inky.cs" t="Include" />
+            <e p="Pinky.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="Bomb.cs" t="Include" />
+            <e p="Fragment.cs" t="Include" />
             <e p="ItemLevitation.cs" t="Include" />
           </e>
           <e p="Loader.cs" t="Include" />
@@ -38,6 +42,9 @@
             <e p="MapManager.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />
+          </e>
+          <e p="Special" t="Include">
+            <e p="GhostHouseDoorTrigger.cs" t="Include" />
           </e>
         </e>
         <e p="Tilemap" t="Include">

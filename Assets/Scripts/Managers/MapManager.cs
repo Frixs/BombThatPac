@@ -19,7 +19,7 @@ namespace Managers
         /// <summary>
         /// List of all possible player spawn positions.
         /// </summary>
-        public Transform[] PlayerSpawnPoints;
+        [HideInInspector] public Transform[] PlayerSpawnPoints;
 
         /// <summary>
         /// Reference of wall tile.
@@ -78,6 +78,14 @@ namespace Managers
         // Use this for initialization
         void Start()
         {
+            GameObject playerSpawnPointHandler = GameObject.Find("PlayerSpawnPoints");
+            
+            PlayerSpawnPoints = new Transform[playerSpawnPointHandler.transform.childCount];
+            
+            for (int i = 0; i < playerSpawnPointHandler.transform.childCount; i++)
+            {
+                PlayerSpawnPoints[i] = playerSpawnPointHandler.transform.GetChild(i);
+            }
         }
 
         // Update is called once per frame
