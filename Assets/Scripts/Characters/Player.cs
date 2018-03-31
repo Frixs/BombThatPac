@@ -1,5 +1,6 @@
 ﻿using Items;
 using Managers;
+using StatusEffects.Scriptable;
 using UnityEngine;
 
 namespace Characters
@@ -36,14 +37,21 @@ namespace Characters
         public abstract int[,] BombExplosionDirection { get; set; }
         
         /// <summary>
-        /// Lets say which section of player controls the character should use.
-        /// </summary>
-        [HideInInspector] public string InputPlayerSection;
-
-        /// <summary>
         /// Reference to bomb PREFAB.
         /// </summary>
         [SerializeField] private GameObject _bombPrefab;
+
+        /// <summary>
+        /// Scriptable asset of invulnerability status effect buff after respawn player.
+        /// </summary>
+        public ScriptableStatusEffect RespawnInvulStatusEffect => _respawnInvulStatusEffect;
+
+        [SerializeField] private ScriptableStatusEffect _respawnInvulStatusEffect;
+        
+        /// <summary>
+        /// Lets say which section of player controls the character should use.
+        /// </summary>
+        [HideInInspector] public string InputPlayerSection;
         
         /// <summary>
         /// Counter of bomb deploys.
@@ -189,7 +197,7 @@ namespace Characters
             IsDeath = true;
             
             if (IsRespawnable)
-                SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+                SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
 
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
@@ -207,7 +215,7 @@ namespace Characters
             IsDeath = true;
             
             if (IsRespawnable)
-                SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+                SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
             
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been force killed!", Identifier, Name);

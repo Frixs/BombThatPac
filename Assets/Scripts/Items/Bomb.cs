@@ -24,7 +24,7 @@ namespace Items
 		public GameObject ExplosionPrefab;
 
 		/// <summary>
-		/// TODO
+		/// Scriptable asset of for ghost when the bomb hit it it will get debuff.
 		/// </summary>
 		public ScriptableStatusEffect GhostBombStatusEffect;
 		

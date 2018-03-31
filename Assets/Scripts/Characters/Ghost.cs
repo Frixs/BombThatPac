@@ -22,7 +22,7 @@ namespace Characters
 		public override float MoveSpeed { get; set; } = Constants.GhostDefaultMoveSpeed;
 
 		/// <summary>
-		/// Spawn position of the ghost. //TODO: generating maze will require GhostSpawnPointManger to handle all these spawn & scatter positions for better organisation.
+		/// Spawn position of the ghost.
 		/// </summary>
 		public abstract Transform SpawnPosition { get; set; }
 		
@@ -390,7 +390,7 @@ namespace Characters
 		}
 
 		/// <summary>
-		/// TODO
+		/// Start frightened mode of the ghost.
 		/// </summary>
 		public void StartFrightenedMode()
 		{

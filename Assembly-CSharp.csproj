@@ -73,7 +73,9 @@
     <Compile Include="Assets\Scripts\Managers\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Managers\StatusEffectManager.cs" />
     <Compile Include="Assets\Scripts\Special\GhostHouseDoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\Invulnerability.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\MoveSpeedIncrease.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\Scriptable\ScriptableInvulnerability.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Scriptable\ScriptableMoveSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\Scriptable\ScriptableStatusEffect.cs" />
     <Compile Include="Assets\Scripts\StatusEffects\StatusEffect.cs" />

@@ -1,6 +1,5 @@
 ﻿using Characters;
 using StatusEffects.Scriptable;
-using UnityEngine;
 
 namespace StatusEffects
 {
@@ -18,6 +17,11 @@ namespace StatusEffects
 		protected override void End()
 		{
 			Target.MoveSpeed -= ((ScriptableMoveSpeedIncrease) Data).SpeedIncrease;
+		}
+
+		protected override void Repeat()
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

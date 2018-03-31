@@ -44,9 +44,6 @@ namespace StatusEffects.Scriptable
 		/// </summary>
 		/// <param name="obj">Target game object to cast the effect.</param>
 		/// <returns>Reference of the effect.</returns>
-		public virtual StatusEffect Initialize(Character obj)
-		{
-			return new MoveSpeedIncrease(this, obj);
-		}
+		public abstract StatusEffect Initialize(Character obj);
 	}
 }

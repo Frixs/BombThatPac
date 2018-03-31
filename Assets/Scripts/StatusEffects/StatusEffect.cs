@@ -82,8 +82,17 @@ namespace StatusEffects
 			_durationTimer -= delta;
 			if(_durationTimer <= 0f)
 				End();
-			
-			//TODO: DoT need to be implemented.
+
+			// Repeating process.
+			if (Data.RepeatTime > 0f)
+			{
+				_repeatTimer -= delta;
+				if (_repeatTimer <= 0f)
+				{
+					_repeatTimer = Data.RepeatTime;
+					Repeat();
+				}
+			}
 		}
 
 		/// <summary>
@@ -95,6 +104,11 @@ namespace StatusEffects
 		/// End the status effect.
 		/// </summary>
 		protected abstract void End();
+		
+		/// <summary>
+		/// Repeat some procedure each each tick according to repeat timer.
+		/// </summary>
+		protected abstract void Repeat();
 
 		/// <summary>
 		/// Enum type of status effect.

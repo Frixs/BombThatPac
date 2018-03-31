@@ -38,7 +38,7 @@ namespace Managers
 		/// </summary>
 		/// <param name="target">Target who will get a new status effect.</param>
 		/// <param name="newStatusEffect">New status effect to be applied.</param>
-		public void ApplyStatusEffect(Character target, StatusEffect newStatusEffect)
+		public void ApplyStatusEffect(Character target, StatusEffect newStatusEffect) // TODO Try to look at using this method. There have to be 2 definition of the same target in 2 parameters. It is wierd.
 		{
 			bool effectOccurrence = target.AppliedStatusEffects.Any(item => item.GetType() == newStatusEffect.GetType());
 			

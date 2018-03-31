@@ -112,9 +112,11 @@ MonoBehaviour:
   IsInvulnearable: 0
   IsDeath: 0
   IsRespawnable: 1
-  InputPlayerSection: 
   _bombPrefab: {fileID: 1286217638179488, guid: 5e0de5d795da747438060a9a3f8cf5cc,
     type: 2}
+  _respawnInvulStatusEffect: {fileID: 11400000, guid: af5f9306dc89cdc4ea4da5a282883e70,
+    type: 2}
+  InputPlayerSection: 
   BombDeployCounter: 0
   FragmentCounter: 0
 --- !u!212 &212224063605262326

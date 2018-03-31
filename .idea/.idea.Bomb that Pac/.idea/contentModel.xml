@@ -50,8 +50,10 @@
             <e p="GhostHouseDoorTrigger.cs" t="Include" />
           </e>
           <e p="StatusEffects" t="Include">
+            <e p="Invulnerability.cs" t="Include" />
             <e p="MoveSpeedIncrease.cs" t="Include" />
             <e p="Scriptable" t="Include">
+              <e p="ScriptableInvulnerability.cs" t="Include" />
               <e p="ScriptableMoveSpeedIncrease.cs" t="Include" />
               <e p="ScriptableStatusEffect.cs" t="Include" />
             </e>

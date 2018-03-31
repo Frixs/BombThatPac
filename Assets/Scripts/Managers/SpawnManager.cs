@@ -50,8 +50,14 @@ namespace Managers
 		/// <param name="toRespawn">GameObject reference to respawn.</param>
 		/// <param name="delay">Time to respawn.</param>
 		/// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
-		public void RespawnCharacterInit(GameObject toRespawn, float delay, Transform[] positions)
+		public void RespawnCharacterInit(Character toRespawn, float delay, Transform[] positions)
 		{
+			if (toRespawn == null || positions.Length == 0)
+			{
+				Debug.unityLogger.Log(LogType.Error, "There is missing parameter to be able to respawn!");
+				return;
+			}
+
 			StartCoroutine(RespawnCharacter(toRespawn, delay, positions));
 		}
 
@@ -62,15 +68,19 @@ namespace Managers
 		/// <param name="delay">Time to respawn.</param>
 		/// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
 		/// <returns></returns>
-		private IEnumerator RespawnCharacter(GameObject toRespawn, float delay, Transform[] positions)
+		private IEnumerator RespawnCharacter(Character toRespawn, float delay, Transform[] positions)
 		{
 			yield return new WaitForSeconds(delay);
 
 			toRespawn.transform.position = positions[Random.Range(0, positions.Length)].position;
-			toRespawn.SetActive(true);
+			toRespawn.gameObject.SetActive(true);
 			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Character has been respawned!", toRespawn.GetComponent<Character>().Identifier, toRespawn.GetComponent<Character>().Name);
 		    
 			toRespawn.GetComponent<Character>().IsDeath = false;
+
+			// If it is Player, set invulnerability on respawn.
+			if (toRespawn is Player)
+				StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, ((Player) toRespawn).RespawnInvulStatusEffect.Initialize(toRespawn));
 		}
 	}
 }
