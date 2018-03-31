@@ -52,7 +52,7 @@ namespace Managers
 		/// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
 		public void RespawnCharacterInit(GameObject toRespawn, float delay, Transform[] positions)
 		{
-			StartCoroutine(RespawnCharacterObject(toRespawn, delay, positions));
+			StartCoroutine(RespawnCharacter(toRespawn, delay, positions));
 		}
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Managers
 		/// <param name="delay">Time to respawn.</param>
 		/// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
 		/// <returns></returns>
-		private IEnumerator RespawnCharacterObject(GameObject toRespawn, float delay, Transform[] positions)
+		private IEnumerator RespawnCharacter(GameObject toRespawn, float delay, Transform[] positions)
 		{
 			yield return new WaitForSeconds(delay);
 

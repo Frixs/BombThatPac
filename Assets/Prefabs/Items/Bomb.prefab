@@ -72,6 +72,8 @@ MonoBehaviour:
   Countdown: 0
   ExplosionPrefab: {fileID: 1051096854954962, guid: 475a5b610ee3aaf458ff985a3a836f45,
     type: 2}
+  GhostBombStatusEffect: {fileID: 11400000, guid: 9705f734134807244b65ca9c7aacb277,
+    type: 2}
 --- !u!212 &212803701123302480
 SpriteRenderer:
   m_ObjectHideFlags: 1

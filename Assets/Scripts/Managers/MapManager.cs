@@ -1,7 +1,4 @@
-﻿using Characters;
-using Items;
-using UnityEditor.VersionControl;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace Managers
@@ -17,29 +14,6 @@ namespace Managers
         public static MapManager Instance = null;
 
         /// <summary>
-        /// List of all possible player spawn positions.
-        /// </summary>
-        [HideInInspector] public Transform[] PlayerSpawnPoints;
-
-        /// <summary>
-        /// Reference of wall tile.
-        /// </summary>
-        public TileBase WallTile => _wallTile;
-        [SerializeField] private TileBase _wallTile;
-
-        /// <summary>
-        /// Reference of detructable tile.
-        /// </summary>
-        public Tile DestructibleTile => _destructibleTile;
-        [SerializeField] private Tile _destructibleTile;
-        
-        /// <summary>
-        /// Reference to door game object.
-        /// </summary>
-        public GameObject DoorObject => _doorObject;
-        [SerializeField] private GameObject _doorObject;
-
-        /// <summary>
         /// Reference to the gameplay tilemap.
         /// </summary>
         public Tilemap TilemapGameplay;
@@ -53,6 +27,72 @@ namespace Managers
         /// Constant of cell half size.
         /// </summary>
         public float TilemapCellHalfSize { get; private set; }
+
+        /// <summary>
+        /// Reference of wall tile.
+        /// </summary>
+        public TileBase WallTile => _wallTile;
+
+        [Header("Enviroment")] [SerializeField]
+        private TileBase _wallTile;
+
+        /// <summary>
+        /// Reference of detructable tile.
+        /// </summary>
+        public Tile DestructibleTile => _destructibleTile;
+
+        [SerializeField] private Tile _destructibleTile;
+
+        /// <summary>
+        /// Reference to door game object.
+        /// </summary>
+        public GameObject PlayerSpawnPointPrefab => _playerSpawnPointPrefab;
+
+        [Header("Player Points")] [SerializeField]
+        private GameObject _playerSpawnPointPrefab;
+        
+        /// <summary>
+        /// List of all possible player spawn positions.
+        /// </summary>
+        [HideInInspector] public Transform[] PlayerSpawnPoints;
+        
+        /// <summary>
+        /// Reference to door game object.
+        /// </summary>
+        public GameObject GhostDoorPrefab => _ghostDoorPrefab;
+
+        [Header("Ghost Points")] [SerializeField]
+        private GameObject _ghostDoorPrefab;
+        
+        /// <summary>
+        /// Reference to door game object trigger event handler.
+        /// </summary>
+        public GameObject GhostDoorTriggerPrefab => _ghostDoorTriggerPrefab;
+
+        [SerializeField]
+        private GameObject _ghostDoorTriggerPrefab;
+        
+        /// <summary>
+        /// Reference to ghost start target position. This is the first position whre they should go.
+        /// </summary>
+        public GameObject GhostStartTargetPositionPointPrefab => _ghostStartTargetPositionPointPrefab;
+
+        [SerializeField]
+        private GameObject _ghostStartTargetPositionPointPrefab;
+
+        /// <summary>
+        /// Reference to ghost spawn positions. Each ghost has only 1 own spawn position. Depends on the order!!!
+        /// </summary>
+        public GameObject[] GhostSpawnPointPrefabs => _ghostSpawnPointPrefabs;
+
+        [SerializeField] private GameObject[] _ghostSpawnPointPrefabs;
+
+        /// <summary>
+        /// Reference to ghost scatter home positions. Each ghost has only 1 own scatter home position. Depends on the order!!!
+        /// </summary>
+        public GameObject[] GhostScatterHomePrefabs => _ghostScatterHomePrefabs;
+
+        [SerializeField] private GameObject[] _ghostScatterHomePrefabs;
 
         // Awake is always called before any Start functions
         void Awake()
@@ -79,9 +119,9 @@ namespace Managers
         void Start()
         {
             GameObject playerSpawnPointHandler = GameObject.Find("PlayerSpawnPoints");
-            
+
             PlayerSpawnPoints = new Transform[playerSpawnPointHandler.transform.childCount];
-            
+
             for (int i = 0; i < playerSpawnPointHandler.transform.childCount; i++)
             {
                 PlayerSpawnPoints[i] = playerSpawnPointHandler.transform.GetChild(i);
@@ -91,75 +131,6 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
-        }
-
-        /// <summary>
-        /// Make explosion in the current cell (by world position pointing to the cell.)
-        /// </summary>
-        /// <param name="cell">World position of the cell.</param>
-        /// <param name="caster">Reference to caster of an effect which caused the explosion.</param>
-        /// <returns></returns>
-        public bool ExplodeInCell(Vector3Int cell, Character caster)
-        {
-            TileBase tile = TilemapGameplay.GetTile<TileBase>(cell);
-
-            // Try to find obstacle in the current cell.
-            Collider2D[] obstacles = Physics2D.OverlapCircleAll(
-                new Vector2(
-                    cell.x + TilemapCellHalfSize,
-                    cell.y + TilemapCellHalfSize
-                ),
-                TilemapCellHalfSize,
-                1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
-            );
-            
-            // End an explosion if explosion wants to hit obstacle.
-            if (tile == WallTile || obstacles.Length > 0)
-                return false;
-
-            if (tile == DestructibleTile)
-            {
-                // Remove the tile.
-                TilemapGameplay.SetTile(cell, null);
-                return false;
-            }
-            else
-            {
-                // Find all characters affected by the explosion.
-                Collider2D[] hitColliders = Physics2D.OverlapCircleAll(
-                    new Vector2(
-                        cell.x + TilemapCellHalfSize,
-                        cell.y + TilemapCellHalfSize
-                    ),
-                    TilemapCellHalfSize,
-                    1 << LayerMask.NameToLayer(Constants.UserLayerNameTriggerObject)
-                );
-
-                // Go through all characters affected by the explosion.
-                for (var i = 0; i < hitColliders.Length; i++)
-                {
-                    Component component = null;
-
-                    if ((component = hitColliders[i].GetComponent<Player>()) != null)
-                    {
-                        ((Player) component).Kill(caster);
-                    }
-
-                    if ((component = hitColliders[i].GetComponent<Bomb>()) != null)
-                    {
-                        ((Bomb) component).Countdown = Constants.BombChainedCountdown;
-                    }
-                }
-            }
-
-            // Create an explosion.
-            Vector3 pos = TilemapGameplay.GetCellCenterWorld(cell);
-            GameObject explosion = (GameObject) Instantiate(FindObjectOfType<Bomb>().ExplosionPrefab, pos, Quaternion.identity);
-
-            // Destroy the explosion after animation.
-            Destroy(explosion, FindObjectOfType<Bomb>().ExplosionPrefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.Length);
-
-            return true;
         }
     }
 }

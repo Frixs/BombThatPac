@@ -20,13 +20,15 @@
           </e>
           <e p="Characters" t="Include">
             <e p="ArtificialIntelligence.cs" t="Include" />
-            <e p="Blinky.cs" t="Include" />
             <e p="Bomberman.cs" t="Include" />
             <e p="Character.cs" t="Include" />
-            <e p="Clyde.cs" t="Include" />
             <e p="Ghost.cs" t="Include" />
-            <e p="Inky.cs" t="Include" />
-            <e p="Pinky.cs" t="Include" />
+            <e p="Ghosts" t="Include">
+              <e p="Blinky.cs" t="Include" />
+              <e p="Clyde.cs" t="Include" />
+              <e p="Inky.cs" t="Include" />
+              <e p="Pinky.cs" t="Include" />
+            </e>
             <e p="Player.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
@@ -42,9 +44,18 @@
             <e p="MapManager.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />
+            <e p="StatusEffectManager.cs" t="Include" />
           </e>
           <e p="Special" t="Include">
             <e p="GhostHouseDoorTrigger.cs" t="Include" />
+          </e>
+          <e p="StatusEffects" t="Include">
+            <e p="MoveSpeedIncrease.cs" t="Include" />
+            <e p="Scriptable" t="Include">
+              <e p="ScriptableMoveSpeedIncrease.cs" t="Include" />
+              <e p="ScriptableStatusEffect.cs" t="Include" />
+            </e>
+            <e p="StatusEffect.cs" t="Include" />
           </e>
         </e>
         <e p="Tilemap" t="Include">

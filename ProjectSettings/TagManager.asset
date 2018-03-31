@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Fragment
   - Bomb
+  - Cherry
+  - Item
+  - Ghost
   layers:
   - Default
   - TransparentFX

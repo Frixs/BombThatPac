@@ -53,13 +53,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Characters\ArtificialIntelligence.cs" />
-    <Compile Include="Assets\Scripts\Characters\Blinky.cs" />
     <Compile Include="Assets\Scripts\Characters\Bomberman.cs" />
     <Compile Include="Assets\Scripts\Characters\Character.cs" />
-    <Compile Include="Assets\Scripts\Characters\Clyde.cs" />
     <Compile Include="Assets\Scripts\Characters\Ghost.cs" />
-    <Compile Include="Assets\Scripts\Characters\Inky.cs" />
-    <Compile Include="Assets\Scripts\Characters\Pinky.cs" />
+    <Compile Include="Assets\Scripts\Characters\Ghosts\Blinky.cs" />
+    <Compile Include="Assets\Scripts\Characters\Ghosts\Clyde.cs" />
+    <Compile Include="Assets\Scripts\Characters\Ghosts\Inky.cs" />
+    <Compile Include="Assets\Scripts\Characters\Ghosts\Pinky.cs" />
     <Compile Include="Assets\Scripts\Characters\Player.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\Items\Bomb.cs" />
@@ -71,7 +71,12 @@
     <Compile Include="Assets\Scripts\Managers\MapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\StatusEffectManager.cs" />
     <Compile Include="Assets\Scripts\Special\GhostHouseDoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\MoveSpeedIncrease.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\Scriptable\ScriptableMoveSpeedIncrease.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\Scriptable\ScriptableStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\StatusEffects\StatusEffect.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
     <Compile Include="Assets\Tilemap\GridInformation\Scripts\GridInformation.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />

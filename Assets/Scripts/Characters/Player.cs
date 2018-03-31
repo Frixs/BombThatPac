@@ -13,7 +13,7 @@ namespace Characters
         /// <summary>
         /// The Player's movement speed.
         /// </summary>
-        protected override float Speed { get; set; } = Constants.PlayerDefaultSpeed;
+        public override float MoveSpeed { get; set; } = Constants.PlayerDefaultMoveSpeed;
         
         /// <summary>
         /// Bomb countdown.
@@ -72,7 +72,7 @@ namespace Characters
         public override void Move()
         {
             // Makes sure that the player moves.
-            MyRigidBody.velocity = Direction.normalized * Speed * (HasEnabledActions ? 1 : 0);
+            MyRigidBody.velocity = Direction.normalized * MoveSpeed * (HasEnabledActions ? 1 : 0);
         }
 
         public override Vector2 GetOrientation()
@@ -154,14 +154,25 @@ namespace Characters
         }
         
         /// <summary>
-        /// TODO
+        /// ON pick-up event of items laying on the ground.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">Reference to item's collider.</param>
         void OnTriggerEnter2D(Collider2D other)
         {
+            // FRAGMENT.
             if (other.gameObject.CompareTag("Fragment"))
             {
                 FragmentCounter++;
+                Destroy(other.gameObject);
+            }
+            // CHERRY.
+            else if (other.gameObject.CompareTag("Cherry"))
+            {
+                for (int i = 0; i < GameManager.Instance.Ghosts.Length; i++)
+                {
+                    GameManager.Instance.Ghosts[i].StartFrightenedMode();
+                }
+                
                 Destroy(other.gameObject);
             }
         }
@@ -181,7 +192,7 @@ namespace Characters
                 SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
 
             gameObject.SetActive(false);
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] character has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
         }
 
         /// <summary>
@@ -199,7 +210,7 @@ namespace Characters
                 SpawnManager.Instance.RespawnCharacterInit(gameObject, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
             
             gameObject.SetActive(false);
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Character has been force killed!", Identifier, Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been force killed!", Identifier, Name);
         }
     }
 }

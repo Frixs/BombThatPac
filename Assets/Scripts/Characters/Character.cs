@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Managers;
+using StatusEffects;
 using UnityEngine;
 
 namespace Characters
@@ -11,7 +15,7 @@ namespace Characters
         /// <summary>
         /// The Character's movement speed.
         /// </summary>
-        protected abstract float Speed { get; set; }
+        public abstract float MoveSpeed { get; set; }
         
         /// <summary>
         /// Delay to respawn.
@@ -27,6 +31,11 @@ namespace Characters
         /// Name of the current character.
         /// </summary>
         [HideInInspector] public string Name = Constants.CharacterDefaultName;
+        
+        /// <summary>
+        /// All status effects which are currently applied on the character.
+        /// </summary>
+        public List<StatusEffect> AppliedStatusEffects = new List<StatusEffect>();
 
         /// <summary>
         /// The Character's direction. This value should be defined in inherit class in method like GetInput (Player).
@@ -38,6 +47,11 @@ namespace Characters
         /// A reference to the character's animator.
         /// </summary>
         protected Animator MyAnimator;
+
+        /// <summary>
+        /// Reference to default animation controller. If character changes its animations we know which is the default one to go back.
+        /// </summary>
+        protected RuntimeAnimatorController AnimationControllerDefault;
 
         /// <summary>
         /// Reference to rigid body.
@@ -74,13 +88,17 @@ namespace Characters
         {
             MyRigidBody = GetComponent<Rigidbody2D>();
             MyAnimator = GetComponent<Animator>();
+            AnimationControllerDefault = MyAnimator.runtimeAnimatorController;
         }
 
         // Update is called once per frame
         protected virtual void Update()
         {
             // Handle animation layers and set the correct one.
-            //HandleLayers();
+            HandleAnimationLayers();
+
+            // Process all character's buffs and debuffs.
+            StatusEffectManager.Instance.ProcessStatusEffects(this);
         }
 
         // Fixed update
@@ -138,7 +156,7 @@ namespace Characters
         /// <summary>
         /// Handle animation layers.
         /// </summary>
-        private void HandleLayers()
+        protected virtual void HandleAnimationLayers()
         {
             // Checks if we are moving or standing still.
             if (IsMoving())

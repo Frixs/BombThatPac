@@ -5,9 +5,11 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.XR.WSA;
+using Random = UnityEngine.Random;
 
 namespace Characters
 {
+	[Serializable]
 	public abstract class Ghost : ArtificialIntelligence
 	{
 		public override float RespawnDeathDelay { get; set; } = Constants.GhostRespawnDeathDelay;
@@ -17,27 +19,54 @@ namespace Characters
 		/// </summary>
 		protected abstract float GhostReleaseTimer { get; set; }
 		
-		protected override float Speed { get; set; } = Constants.GhostDefaultSpeed;
+		public override float MoveSpeed { get; set; } = Constants.GhostDefaultMoveSpeed;
 
 		/// <summary>
 		/// Spawn position of the ghost. //TODO: generating maze will require GhostSpawnPointManger to handle all these spawn & scatter positions for better organisation.
 		/// </summary>
-		protected abstract Transform SpawnPosition { get; set; }
+		public abstract Transform SpawnPosition { get; set; }
 		
 		/// <summary>
 		/// Ghost scatter base position.
 		/// </summary>
-		protected abstract Transform ScatterBasePosition { get; set; }
+		public abstract Transform ScatterBasePosition { get; set; }
 		
 		/// <summary>
 		/// First target position till leaving the ghost house.
 		/// </summary>
-		protected abstract Transform StartTargetPosition { get; set; }
+		public abstract Transform StartTargetPosition { get; set; }
+		
+		/// <summary>
+		/// Reference to frightened animation controller.
+		/// </summary>
+		protected RuntimeAnimatorController AnimationControllerFrightenedBlue;
+		
+		/// <summary>
+		/// Reference to frightened animation controller.
+		/// </summary>
+		protected RuntimeAnimatorController AnimationControllerFrightenedWhite;
+
+		/// <summary>
+		/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house.
+		/// </summary>
+		[Header("Death Eyes Sprites")][SerializeField] protected Sprite SpriteEyesUp;
+		/// <summary>
+		/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house.
+		/// </summary>
+		[SerializeField] protected Sprite SpriteEyesLeft;
+		/// <summary>
+		/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house.
+		/// </summary>
+		[SerializeField] protected Sprite SpriteEyesDown;
+		/// <summary>
+		/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house.
+		/// </summary>
+		[SerializeField] protected Sprite SpriteEyesRight;
 
 		/// <summary>
 		/// Checks if ghost is still in ghost house.
 		/// </summary>
-		public bool IsInGhostHouse;
+		[Header("Settings")] public bool IsInGhostHouse;
 		
 		/// <summary>
 		/// Default value of 'IsInGhostHouse' set in inicialization.
@@ -55,19 +84,35 @@ namespace Characters
 		private float _modeChangeTimer = 0;
 
 		/// <summary>
+		/// Timer for changing back to normal/Chase mode.
+		/// </summary>
+		private float _frightenedModeTimer = 0;
+		
+		/// <summary>
+		/// Timer for blinking in frightened mode.
+		/// </summary>
+		private float _frightenedBlinkTimer = 0;
+		
+		/// <summary>
+		/// Check if ghost is white (blinking) in frightened mode.
+		/// </summary>
+		private bool _frightenedModeIsWhite = false;
+
+		/// <summary>
 		/// All mode types.
 		/// </summary>
-		private enum Mode
+		public enum Mode
 		{
 			Chase,
 			Scatter,
-			Frightened
+			Frightened,
+			Consumed
 		}
 
 		/// <summary>
 		/// Current ghost's mode.
 		/// </summary>
-		private Mode _currentMode = Mode.Scatter;
+		public Mode CurrentMode { get; protected set; } = Mode.Scatter;
 		
 		/// <summary>
 		/// Previous ghost's mode.
@@ -78,10 +123,18 @@ namespace Characters
 		/// Target location is tile position 1 ahead, Previous location is the location from which the ghost just left. Current is auxiliary variable.
 		/// </summary>
 		private Vector3 _currentCell, _targetCell, _previousCell;
+
+		// TODO Remove these 3 variables after making animations for the ghosts.
+		private Sprite _defaultSprite;
+		public Sprite FrightenedBlueSprite;
+		public Sprite FrightenedWhiteSprite;
 		
 		// Use this for initialization
 		protected override void Start()
 		{
+			// TODO Remove this line after making animations for the ghosts.
+			_defaultSprite = GetComponent<SpriteRenderer>().sprite;
+			
 			HasEnabledActions = false;
 			_isInGhostHouseDefaultVal = IsInGhostHouse;
 			
@@ -118,17 +171,86 @@ namespace Characters
 			
 			base.FixedUpdate();
 		}
+		
+		protected override void HandleAnimationLayers()
+		{
+			// TODO Add animations and remove static sprites.
+			if (CurrentMode != Mode.Frightened && CurrentMode != Mode.Consumed)
+			{
+				if (MyAnimator.runtimeAnimatorController != AnimationControllerDefault)
+					MyAnimator.runtimeAnimatorController = AnimationControllerDefault;
+
+				if (GetComponent<SpriteRenderer>().sprite != _defaultSprite)
+					GetComponent<SpriteRenderer>().sprite = _defaultSprite;
+
+				// TODO uncomment this line after adding ghost animations.
+				//base.HandleAnimationLayers();
+			}
+			else if (CurrentMode == Mode.Frightened)
+			{
+				if (MyAnimator.runtimeAnimatorController != AnimationControllerFrightenedBlue)
+					MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
+				
+				if (GetComponent<SpriteRenderer>().sprite != FrightenedBlueSprite && GetComponent<SpriteRenderer>().sprite != FrightenedWhiteSprite)
+					GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
+			}
+			else if (CurrentMode == Mode.Consumed)
+			{
+				if (MyAnimator.runtimeAnimatorController != null)
+					MyAnimator.runtimeAnimatorController = null;
+
+				if (Direction == Vector2.up)
+				{
+					transform.GetComponent<SpriteRenderer>().sprite = SpriteEyesUp;
+				}
+				else if (Direction == Vector2.left)
+				{
+					transform.GetComponent<SpriteRenderer>().sprite = SpriteEyesLeft;
+				}
+				else if (Direction == Vector2.down)
+				{
+					transform.GetComponent<SpriteRenderer>().sprite = SpriteEyesDown;
+				}
+				else if (Direction == Vector2.right)
+				{
+					transform.GetComponent<SpriteRenderer>().sprite = SpriteEyesRight;
+				}
+			}
+		}
 
 		public override void Kill(Character attacker)
 		{
-			// TODO
-			throw new System.NotImplementedException();
+			if (!IsKillable() || !attacker)
+				return;
+
+			IsInvulnearable = true;
+			CurrentMode = Mode.Consumed; // We are not using ChangeMode method because we don't want to record previous mode.
+			MoveSpeed = Constants.GhostConsumedMoveSpeed;
+			
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] ghost has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
 		}
 
 		public override void ForceKill(bool respawn)
 		{
-			// TODO
-			throw new System.NotImplementedException();
+			if (!respawn)
+				IsRespawnable = false;
+			
+			IsInvulnearable = true;
+			CurrentMode = Mode.Consumed;
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] ghost has been force killed!", Identifier, Name);
+		}
+		
+		/// <summary>
+		/// OnTrigger event.
+		/// </summary>
+		/// <param name="other">Reference to item's collider.</param>
+		void OnTriggerEnter2D(Collider2D other)
+		{
+			// Kill the player.
+			if (CurrentMode != Mode.Frightened && CurrentMode != Mode.Consumed && other.CompareTag("Player"))
+			{
+				other.GetComponent<Player>().Kill(this);
+			}
 		}
 		
 		/// <summary>
@@ -148,7 +270,20 @@ namespace Characters
 
 				transform.localPosition = _currentCell;
 					
-				// portal
+				// portal code
+				
+				// When the ghost reach its spawn point after death, lets put him back to its normal mode to continue.
+				if (CurrentMode == Mode.Consumed && _currentCell == SpawnPosition.position)
+				{
+					IsInvulnearable = false;
+					
+					if (!IsRespawnable)
+						Destroy(this);
+					
+					ChangeMode(_previousMode);
+					MoveSpeed = Constants.GhostDefaultMoveSpeed;
+					IsInGhostHouse = _isInGhostHouseDefaultVal;
+				}
 
 				PreviousDirection = Direction;
 				_targetCell = ChooseNextCell();
@@ -157,7 +292,7 @@ namespace Characters
 			}
 			else
 			{
-				transform.position += (Vector3) Direction * Speed * Time.deltaTime * (HasEnabledActions ? 1 : 0);
+				transform.position += (Vector3) Direction * MoveSpeed * Time.deltaTime * (HasEnabledActions ? 1 : 0);
 			}
 		}
 		
@@ -166,7 +301,7 @@ namespace Characters
 		/// </summary>
 		private void ModeUpdate()
 		{
-			if (_currentMode != Mode.Frightened)
+			if (CurrentMode != Mode.Frightened)
 			{
 				// Timer works only if ghost are out of frightened mode.
 				_modeChangeTimer += Time.deltaTime;
@@ -177,13 +312,13 @@ namespace Characters
 					if (_modeChangeIteration != i)
 						continue;
 					
-					if (_currentMode == Mode.Scatter && _modeChangeTimer > Constants.GhostScatterModeTimer[i - 1])
+					if (CurrentMode == Mode.Scatter && _modeChangeTimer > Constants.GhostScatterModeTimer[i - 1])
 					{
 						ChangeMode(Mode.Chase);
 						_modeChangeTimer = 0;
 					}
 
-					if (_modeChangeIteration != Constants.GhostModeNumberOfIterations && _currentMode == Mode.Chase && _modeChangeTimer > Constants.GhostChaseModeTimer[i - 1])
+					if (_modeChangeIteration != Constants.GhostModeNumberOfIterations && CurrentMode == Mode.Chase && _modeChangeTimer > Constants.GhostChaseModeTimer[i - 1])
 					{
 						_modeChangeIteration = i + 1;
 						ChangeMode(Mode.Scatter);
@@ -191,9 +326,43 @@ namespace Characters
 					}
 				}
 			}
-			else
+			else if (CurrentMode == Mode.Frightened)
 			{
-				
+				_frightenedModeTimer += Time.deltaTime;
+
+				// Frightened timer.
+				if (_frightenedModeTimer >= Constants.GhostFrightenedModeDuration)
+				{
+					_frightenedModeTimer = 0f;
+					ChangeMode(_previousMode);
+				}
+				// Blinking in frightened mode.
+				else if (_frightenedModeTimer >= Constants.GhostFrightenedModeStartBlinkingAt)
+				{
+					_frightenedBlinkTimer += Time.deltaTime;
+
+					if (_frightenedBlinkTimer >= Constants.GhostFrightenedModeBlinkingSpeed)
+					{
+						_frightenedBlinkTimer = 0f;
+						
+						if (_frightenedModeIsWhite) // Go to blue.
+						{
+							MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
+							_frightenedModeIsWhite = false;
+							
+							// TODO remove this line after adding animations.
+							GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
+						}
+						else // Go to white.
+						{
+							MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedWhite;
+							_frightenedModeIsWhite = true;
+							
+							// TODO remove this line after adding animations.
+							GetComponent<SpriteRenderer>().sprite = FrightenedWhiteSprite;
+						}
+					}
+				}
 			}
 		}
 		
@@ -203,7 +372,32 @@ namespace Characters
 		/// <param name="mode">Mode to change.</param>
 		private void ChangeMode(Mode mode)
 		{
-			_currentMode = mode;
+			if (mode == CurrentMode)
+				return;
+			
+			if (CurrentMode == Mode.Frightened)
+			{
+				MoveSpeed = Constants.GhostDefaultMoveSpeed;
+			}
+			
+			if (mode == Mode.Frightened)
+			{
+				MoveSpeed = Constants.GhostFrightenedMoveSpeed;
+			}
+			
+			_previousMode = CurrentMode;
+			CurrentMode = mode;
+		}
+
+		/// <summary>
+		/// TODO
+		/// </summary>
+		public void StartFrightenedMode()
+		{
+			_frightenedModeTimer = 0f;
+			
+			if (CurrentMode != Mode.Consumed)
+				ChangeMode(Mode.Frightened);
 		}
 		
 		/// <summary>
@@ -236,20 +430,33 @@ namespace Characters
 				{ 1f,  0f, 0f}, // Right 
 			};
 			
-			// Get player's tile position.
-			Vector3 targetCenter;
+			// Get target.
+			Vector3 targetCenter = Vector3.zero;
 			if (IsInGhostHouse)
 			{
 				targetCenter = StartTargetPosition.position;
 			}
-			else if (_currentMode == Mode.Scatter)
-			{
-				targetCenter = ScatterBasePosition.transform.position;
-			}
-			else // Chase Mode
+			else if (CurrentMode == Mode.Chase)
 			{
 				Vector3Int target = GetCellOfTarget();
 				targetCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(target);
+			}
+			else if (CurrentMode == Mode.Scatter)
+			{
+				targetCenter = ScatterBasePosition.transform.position;
+			}
+			else if (CurrentMode == Mode.Frightened)
+			{
+				Vector3Int target = GetRandomCellAroundGhostHouse();
+				targetCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(target);
+			}
+			else if (CurrentMode == Mode.Consumed)
+			{
+				targetCenter = SpawnPosition.position;
+			}
+			else
+			{
+				Debug.unityLogger.Log(LogType.Error, "No target! There is missing definition of the current mode!");
 			}
 
 			// Target position of the next move.
@@ -283,8 +490,9 @@ namespace Characters
 					MapManager.Instance.TilemapCellHalfSize,
 					1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
 				);
-				// Evaluate tiles. If it is not wall or obstacle you can go in this direction. If you are in ghost house you can go through the obstacle (only obstacle there is door).
-				if (tile != MapManager.Instance.WallTile && (obstacles.Length == 0 || (IsInGhostHouse && obstacles.Length > 0)))
+				// Evaluate tiles. If it is not wall or obstacle you can go in this direction.
+				// If the ghosts are in ghost house (or in Consumed mode), they can go through the obstacle (only obstacle there is door).
+				if (tile != MapManager.Instance.WallTile && (obstacles.Length == 0 || (IsInGhostHouse && obstacles.Length > 0) || CurrentMode == Mode.Consumed))
 				{
 					foundCells[cellCounter] = neighborCenter;
 					foundCellsDirection[cellCounter] = new Vector2(cellNeighborDirections[i, 0], cellNeighborDirections[i, 1]);
@@ -354,6 +562,20 @@ namespace Characters
 			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell);
 
 			return cellToSelf > cellToTarget;
+		}
+
+		/// <summary>
+		/// Get random cell coords around the start target position.
+		/// </summary>
+		/// <returns>Random cell around ghost start target position.</returns>
+		private Vector3Int GetRandomCellAroundGhostHouse()
+		{
+			int x = Random.Range(-Constants.GhostGetRandomCellMethodMaxDistance, Constants.GhostGetRandomCellMethodMaxDistance);
+			int y = Random.Range(-Constants.GhostGetRandomCellMethodMaxDistance, Constants.GhostGetRandomCellMethodMaxDistance);
+			
+			Vector3Int startTargetPositionCell = MapManager.Instance.TilemapGameplay.WorldToCell(StartTargetPosition.position);
+			
+			return new Vector3Int(startTargetPositionCell.x + x, startTargetPositionCell.y + y, 0);
 		}
 
 		/// <summary>

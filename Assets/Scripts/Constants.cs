@@ -9,14 +9,29 @@ public static class Constants
     public const string CharacterDefaultName = "NONAME";
 
     /// <summary>
+    /// Invulnerability of player after respawn/spawn.
+    /// </summary>
+    public const float PlayerInvulOnRespawn = 3.0f;
+    
+    /// <summary>
     /// Player's default movement speed.
     /// </summary>
-    public const float PlayerDefaultSpeed = 3.0f;
+    public const float PlayerDefaultMoveSpeed = 3.0f;
     
     /// <summary>
     /// Ghost's default movement speed.
     /// </summary>
-    public const float GhostDefaultSpeed = PlayerDefaultSpeed - 1.1f;
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.5f;
+    
+    /// <summary>
+    /// Ghost's frightened movement speed.
+    /// </summary>
+    public const float GhostFrightenedMoveSpeed = PlayerDefaultMoveSpeed - 1.8f;
+    
+    /// <summary>
+    /// Ghost's consumed (killed) movement speed.
+    /// </summary>
+    public const float GhostConsumedMoveSpeed = 15.0f;
 
     /// <summary>
     /// Role: BOMBERMAN - countdown when the bomb explodes.
@@ -73,6 +88,21 @@ public static class Constants
     public const float GhostRespawnDeathDelay = 3.0f;
     
     /// <summary>
+    /// Duration of ghost frightened mode.
+    /// </summary>
+    public const float GhostFrightenedModeDuration = 10.0f;
+
+    /// <summary>
+    /// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which says how long they will NOT blinking.
+    /// </summary>
+    public const float GhostFrightenedModeStartBlinkingAt = GhostFrightenedModeDuration - 3.0f;
+    
+    /// <summary>
+    /// Blinking speed of the ghosts in frightened mode.
+    /// </summary>
+    public const float GhostFrightenedModeBlinkingSpeed = 0.2f;
+    
+    /// <summary>
     /// Number of iterations for ghost modes.
     /// </summary>
     public const int GhostModeNumberOfIterations = 4;
@@ -127,4 +157,9 @@ public static class Constants
     /// If the distance is less than X cells, then target is his scatter base, so same as scatter mode.
     /// </summary>
     public const float GhostClydeNumberOfCellsDistance = 4f;
+    
+    /// <summary>
+    /// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random cell around.
+    /// </summary>
+    public const int GhostGetRandomCellMethodMaxDistance = 6;
 }

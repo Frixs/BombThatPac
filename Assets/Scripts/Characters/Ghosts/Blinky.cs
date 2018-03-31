@@ -1,22 +1,21 @@
-﻿using Managers;
+﻿using System;
+using Managers;
 using UnityEngine;
 
 namespace Characters
 {
+	[Serializable]
 	public class Blinky : Ghost
 	{
 		// Use this for initialization
 		protected override float GhostReleaseTimer { get; set; } = Constants.GhostBlinkyReleaseTimer;
-		protected override Transform SpawnPosition { get; set; }
-		protected override Transform ScatterBasePosition { get; set; }
-		protected override Transform StartTargetPosition { get; set; }
-
+		public override Transform SpawnPosition { get; set; }
+		public override Transform ScatterBasePosition { get; set; }
+		public override Transform StartTargetPosition { get; set; }
+		
 		// Awake is always called before any Start functions
 		protected void Awake()
 		{
-			SpawnPosition = GameObject.Find("GhostBlinkySpawnPoint").transform;
-			ScatterBasePosition = GameObject.Find("GhostBlinkyScatterBase").transform;
-			StartTargetPosition = GameObject.Find("GhostStartTargetPositionPoint").transform;
 		}
 		
 		protected override void Start ()

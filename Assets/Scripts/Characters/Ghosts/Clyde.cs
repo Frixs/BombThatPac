@@ -7,16 +7,13 @@ namespace Characters
 	{
 		// Use this for initialization
 		protected override float GhostReleaseTimer { get; set; } = Constants.GhostClydeReleaseTimer;
-		protected override Transform SpawnPosition { get; set; }
-		protected override Transform ScatterBasePosition { get; set; }
-		protected override Transform StartTargetPosition { get; set; }
+		public override Transform SpawnPosition { get; set; }
+		public override Transform ScatterBasePosition { get; set; }
+		public override Transform StartTargetPosition { get; set; }
 
 		// Awake is always called before any Start functions
 		protected void Awake()
 		{
-			SpawnPosition = GameObject.Find("GhostClydeSpawnPoint").transform;
-			ScatterBasePosition = GameObject.Find("GhostClydeScatterBase").transform;
-			StartTargetPosition = GameObject.Find("GhostStartTargetPositionPoint").transform;
 		}
 		
 		protected override void Start ()
