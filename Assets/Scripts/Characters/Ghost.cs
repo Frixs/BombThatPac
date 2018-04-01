@@ -120,7 +120,7 @@ namespace Characters
 		private Mode _previousMode;
 
 		/// <summary>
-		/// Target location is tile position 1 ahead, Previous location is the location from which the ghost just left. Current is auxiliary variable.
+		/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. Current is auxiliary variable.
 		/// </summary>
 		private Vector3 _currentCell, _targetCell, _previousCell;
 
@@ -553,7 +553,7 @@ namespace Characters
 		}
 
 		/// <summary>
-		/// Checks if the ghost already reached the target location (1 tile ahead) or he is still on the way between two tiles.
+		/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two cells.
 		/// </summary>
 		/// <returns>TRUE: The ghost reached the target location.</returns>
 		private bool OverShotTarget()

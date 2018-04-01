@@ -3,6 +3,10 @@
 /// </summary>
 public static class Constants
 {
+    /*
+     * GLOBAL
+     */
+ 
     /// <summary>
     /// Default name of the character.
     /// </summary>
@@ -21,7 +25,7 @@ public static class Constants
     /// <summary>
     /// Ghost's default movement speed.
     /// </summary>
-    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.5f;
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.4f;
     
     /// <summary>
     /// Ghost's frightened movement speed.
@@ -33,6 +37,10 @@ public static class Constants
     /// </summary>
     public const float GhostConsumedMoveSpeed = 15.0f;
 
+    /*
+     * BOMBERMAN
+     */
+    
     /// <summary>
     /// Role: BOMBERMAN - countdown when the bomb explodes.
     /// </summary>
@@ -46,7 +54,7 @@ public static class Constants
     /// <summary>
     /// Role: BOMBERMAN - bomb max deploy count.
     /// </summary>
-    public const int BombermanBombMaxAllowedDeploys = 3;
+    public const int BombermanBombMaxAllowedDeploys = 2;
 
     /// <summary>
     /// Role: BOMBERMAN - Time to respawn the character.
@@ -67,11 +75,34 @@ public static class Constants
         { 1,  0, 0}, // Right 
     };
     
+    /*
+     * BOMB
+     */
+    
     /// <summary>
     /// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value.
     /// </summary>
     public const float BombChainedCountdown = 0.5f;
+ 
+    /// <summary>
+    /// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the current direction.
+    /// </summary>
+    public const int BombRollDistance = 2;
+ 
+    /// <summary>
+    /// Speed of a rolling bomb.
+    /// </summary>
+    public const float BombRollSpeed = 3.0f;
+ 
+    /// <summary>
+    /// Delayed explosion after rolling a bomb.
+    /// </summary>
+    public const float BombExplosionDelayAfterRolling = 0.5f;
 
+    /*
+     * LAYERS
+     */
+    
     /// <summary>
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be triggered (f.e bomb is looking for players.).
     /// </summary>
@@ -81,6 +112,10 @@ public static class Constants
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be refered as obstacle.
     /// </summary>
     public const string UserLayerNameObstacle = "Obstacle";
+    
+    /*
+     * GHOSTS
+     */
     
     /// <summary>
     /// Delay after death to respawn.

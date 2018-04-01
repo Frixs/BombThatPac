@@ -141,6 +141,7 @@ namespace Managers
                 Players[i].Instance = Instantiate(PlayerPrefabs[0], MapManager.Instance.PlayerSpawnPoints[i].position, MapManager.Instance.PlayerSpawnPoints[i].rotation);
                 Players[i].Player = Players[i].Instance.GetComponent<Player>();
                 Players[i].Player.Identifier = ++MaxObjectIdentifier;
+                Players[i].Player.Name = "Player" + Players[i].Player.Identifier;
                 Players[i].Setup();
             }
         }

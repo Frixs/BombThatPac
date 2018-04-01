@@ -38,6 +38,11 @@ namespace StatusEffects
 		protected readonly Character Target;
 		
 		/// <summary>
+		/// Caster which casted the status effect.
+		/// </summary>
+		protected readonly Character Caster;
+		
+		/// <summary>
 		/// Check if status effect already expired.
 		/// </summary>
 		public bool IsFinished => _durationTimer <= 0f;
@@ -47,10 +52,12 @@ namespace StatusEffects
 		/// </summary>
 		/// <param name="data">Reference to Scriptable status effects which storing data about the status effect.</param>
 		/// <param name="target">Target which has applied this status effect.</param>
-		protected StatusEffect(ScriptableStatusEffect data, Character target)
+		/// <param name="caster">Caster which casted the status effect.</param>
+		protected StatusEffect(ScriptableStatusEffect data, Character target, Character caster)
 		{
 			Data = data;
 			Target = target;
+			Caster = caster;
 
 			_durationTimer = Data.Duration;
 			_startDelayTimer = Data.StartActivationDelay;
@@ -78,10 +85,14 @@ namespace StatusEffects
 				_isAlreadyActivated = true;
 			}
 
-			// Main duration timer.
-			_durationTimer -= delta;
-			if(_durationTimer <= 0f)
-				End();
+			// Check if status effect is timed (or permanent).
+			if (Data.Duration > 0f)
+			{
+				// Main duration timer.
+				_durationTimer -= delta;
+				if (_durationTimer <= 0f)
+					End();
+			}
 
 			// Repeating process.
 			if (Data.RepeatTime > 0f)

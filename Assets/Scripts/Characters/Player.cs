@@ -2,6 +2,7 @@
 using Managers;
 using StatusEffects.Scriptable;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Characters
 {
@@ -11,6 +12,11 @@ namespace Characters
     /// </summary>
     public abstract class Player : Character
     {
+        /// <summary>
+        /// Reference to the player. This is just game object (Player) which player controls.
+        /// </summary>
+        [HideInInspector] public PlayerManager PlayerManagerReference;
+        
         /// <summary>
         /// The Player's movement speed.
         /// </summary>
@@ -39,14 +45,19 @@ namespace Characters
         /// <summary>
         /// Reference to bomb PREFAB.
         /// </summary>
-        [SerializeField] private GameObject _bombPrefab;
+        [Header("Prefab References")] [SerializeField] private GameObject _bombPrefab;
+        
+        /// <summary>
+        /// Reference to fragment PREFAB.
+        /// </summary>
+        [SerializeField] private GameObject _fragmentPrefab;
 
         /// <summary>
         /// Scriptable asset of invulnerability status effect buff after respawn player.
         /// </summary>
         public ScriptableStatusEffect RespawnInvulStatusEffect => _respawnInvulStatusEffect;
 
-        [SerializeField] private ScriptableStatusEffect _respawnInvulStatusEffect;
+        [Header("Status Effects")] [SerializeField] private ScriptableStatusEffect _respawnInvulStatusEffect;
         
         /// <summary>
         /// Lets say which section of player controls the character should use.
@@ -151,26 +162,34 @@ namespace Characters
             if (BombDeployCounter >= BombMaxAllowedDeploys)
                 return;
 
-            BombDeployCounter++;
-            
             Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
+            // Try to find if there is another bomb already planted.
+            Collider2D[] triggerObjects = Physics2D.OverlapCircleAll(
+                new Vector2(
+                    cellCenterPos.x,
+                    cellCenterPos.y
+                ),
+                MapManager.Instance.TilemapCellHalfSize,
+                1 << LayerMask.NameToLayer(Constants.UserLayerNameTriggerObject)
+            );
+            for (int i = 0; i < triggerObjects.Length; i++)
+                if (triggerObjects[i].CompareTag("Bomb"))
+                    return;
+            
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
+            BombDeployCounter++;
             
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb planted!", Identifier, Name);
         }
-        
-        /// <summary>
-        /// ON pick-up event of items laying on the ground.
-        /// </summary>
-        /// <param name="other">Reference to item's collider.</param>
+
         void OnTriggerEnter2D(Collider2D other)
         {
             // FRAGMENT.
             if (other.gameObject.CompareTag("Fragment"))
             {
-                FragmentCounter++;
+                FragmentCounter += other.GetComponent<Fragment>().Quantity;
                 Destroy(other.gameObject);
             }
             // CHERRY.
@@ -186,9 +205,23 @@ namespace Characters
         }
 
         /// <summary>
-        /// Kill the character.
+        /// Drop fragments when the player is killed.
         /// </summary>
-        /// <param name="attacker">Reference to attacker character.</param>
+        protected void DropFragments()
+        {
+            if (FragmentCounter == 0)
+                return;
+            
+            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
+            Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
+
+            // TODO: There is no check if any fragments are already on the position.
+            Fragment frag = Instantiate(_fragmentPrefab, cellCenterPos, Quaternion.identity).GetComponent<Fragment>();
+            frag.Quantity = FragmentCounter;
+
+            FragmentCounter = 0;
+        }
+
         public override void Kill(Character attacker)
         {
             if (!IsKillable() || !attacker)
@@ -199,23 +232,20 @@ namespace Characters
             if (IsRespawnable)
                 SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
 
+            DropFragments();
+
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
         }
 
-        /// <summary>
-        /// Immediately kills the character without any reason.
-        /// </summary>
-        /// <param name="respawn">TRUE for respawn after death. FALSE for no respawn anymore.</param>
         public override void ForceKill(bool respawn)
         {
             if (!respawn)
                 IsRespawnable = false;
             
             IsDeath = true;
-            
-            if (IsRespawnable)
-                SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+
+            DropFragments();
             
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been force killed!", Identifier, Name);

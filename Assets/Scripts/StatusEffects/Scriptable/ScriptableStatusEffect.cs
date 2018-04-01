@@ -42,8 +42,9 @@ namespace StatusEffects.Scriptable
 		/// <summary>
 		/// Initialize the effect on the game object.
 		/// </summary>
-		/// <param name="obj">Target game object to cast the effect.</param>
+		/// <param name="target">Target game object to cast the effect.</param>
+		/// <param name="caster">Caster game object which casted the status effect.</param>
 		/// <returns>Reference of the effect.</returns>
-		public abstract StatusEffect Initialize(Character obj);
+		public abstract StatusEffect Initialize(Character target, Character caster);
 	}
 }

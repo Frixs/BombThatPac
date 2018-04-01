@@ -112,7 +112,15 @@ MonoBehaviour:
   IsInvulnearable: 0
   IsDeath: 0
   IsRespawnable: 1
+  PlayerManagerReference:
+    Instance: {fileID: 0}
+    PlayerName: 
+    PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+    Player: {fileID: 0}
+    Wins: 0
   _bombPrefab: {fileID: 1286217638179488, guid: 5e0de5d795da747438060a9a3f8cf5cc,
+    type: 2}
+  _fragmentPrefab: {fileID: 1868182462786954, guid: 10ffaae0391b27747952111efc276d97,
     type: 2}
   _respawnInvulStatusEffect: {fileID: 11400000, guid: af5f9306dc89cdc4ea4da5a282883e70,
     type: 2}

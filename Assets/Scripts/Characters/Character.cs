@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Managers;
 using StatusEffects;
 using UnityEngine;
@@ -44,15 +42,15 @@ namespace Characters
         protected Vector2 Direction, PreviousDirection = Vector2.zero;
 
         /// <summary>
-        /// A reference to the character's animator.
-        /// </summary>
-        protected Animator MyAnimator;
-
-        /// <summary>
         /// Reference to default animation controller. If character changes its animations we know which is the default one to go back.
         /// </summary>
         protected RuntimeAnimatorController AnimationControllerDefault;
 
+        /// <summary>
+        /// A reference to the character's animator.
+        /// </summary>
+        protected Animator MyAnimator;
+        
         /// <summary>
         /// Reference to rigid body.
         /// </summary>
@@ -143,7 +141,7 @@ namespace Characters
         /// </summary>
         /// <param name="respawn">TRUE for respawn after death. FALSE for no respawn anymore.</param>
         public abstract void ForceKill(bool respawn);
-        
+
         /// <summary>
         /// Check if character is killable.
         /// </summary>

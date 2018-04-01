@@ -11,9 +11,9 @@ namespace StatusEffects.Scriptable
 		/// </summary>
 		[Header("Effect Speciality")] public float SpeedIncrease;
 
-		public override StatusEffect Initialize(Character obj)
+		public override StatusEffect Initialize(Character target, Character caster)
 		{
-			return new MoveSpeedIncrease(this, obj);
+			return new MoveSpeedIncrease(this, target, caster);
 		}
 	}
 }

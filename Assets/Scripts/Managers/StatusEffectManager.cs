@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using Characters;
 using StatusEffects;
+using StatusEffects.Scriptable;
 using UnityEngine;
 
 namespace Managers
@@ -32,15 +34,25 @@ namespace Managers
 			// Sets this to not be destroyed when reloading scene.
 			//DontDestroyOnLoad(gameObject);
 		}
-		
+
 		/// <summary>
 		/// Apply a new status effect to a list of other effects which are already applied.
 		/// </summary>
 		/// <param name="target">Target who will get a new status effect.</param>
-		/// <param name="newStatusEffect">New status effect to be applied.</param>
-		public void ApplyStatusEffect(Character target, StatusEffect newStatusEffect) // TODO Try to look at using this method. There have to be 2 definition of the same target in 2 parameters. It is wierd.
+		/// <param name="caster">Caster who applied status effect on the target. Can be NULL.</param>
+		/// <param name="newScriptableStatusEffect">New scriptable status effect to be applied.</param>
+		public void ApplyStatusEffect(Character target, Character caster, ScriptableStatusEffect newScriptableStatusEffect)
 		{
-			bool effectOccurrence = target.AppliedStatusEffects.Any(item => item.GetType() == newStatusEffect.GetType());
+			if (target == null || newScriptableStatusEffect == null)
+			{
+				Debug.unityLogger.Log(LogType.Error, "Null reference for adding a new status effect!");
+				return;
+			}
+
+			// Get status effect.
+			StatusEffect newStatusEffect = newScriptableStatusEffect.Initialize(target, caster);
+			
+			bool effectOccurrence = target.AppliedStatusEffects.Any(item => item.Data == newScriptableStatusEffect);
 			
 			// Don't let it create a new status effect of the same type if the status effect is not stackable and there is already one in.
 			if (!newStatusEffect.Data.IsStackable && effectOccurrence)
@@ -48,7 +60,7 @@ namespace Managers
 			
 			// Do not apply a new status effect if the status effect cannot be overwritten and this type of effect is already in.
 			if (newStatusEffect.Data.CanBeOverwritten && effectOccurrence)
-				target.AppliedStatusEffects.RemoveAll(item => item.GetType() == newStatusEffect.GetType());
+				target.AppliedStatusEffects.RemoveAll(item => item.Data == newScriptableStatusEffect);
 			else if (!newStatusEffect.Data.CanBeOverwritten && effectOccurrence)
 				return;
 
@@ -58,9 +70,15 @@ namespace Managers
 		/// <summary>
 		/// Process all character's status effects.
 		/// </summary>
-		/// <param name="target"></param>
+		/// <param name="target">Target to process its status effects.</param>
 		public void ProcessStatusEffects(Character target)
 		{
+			if (target == null)
+			{
+				Debug.unityLogger.Log(LogType.Error, "Null reference for processing status effects!");
+				return;
+			}
+			
 			foreach (StatusEffect statusEffect in target.AppliedStatusEffects.ToArray())
 			{
 				statusEffect.Tick(Time.deltaTime);
@@ -69,6 +87,11 @@ namespace Managers
 					target.AppliedStatusEffects.Remove(statusEffect);
 				}
 			}
+		}
+
+		public void RemoveStatusEffect()
+		{
+			//TODO
 		}
 	}
 }

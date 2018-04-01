@@ -44,9 +44,9 @@ namespace Managers
         /// </summary>
         public void Setup()
         {
-            // Set the player attributes to be consistent across the scripts.
-            Player.Name = PlayerName;
-
+            // Assign player a new player object.
+            Player.PlayerManagerReference = this;
+            
             // Setup player's controls according to type of the game.
             switch (GameManager.Instance.GameType)
             {

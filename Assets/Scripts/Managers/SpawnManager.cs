@@ -80,7 +80,7 @@ namespace Managers
 
 			// If it is Player, set invulnerability on respawn.
 			if (toRespawn is Player)
-				StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, ((Player) toRespawn).RespawnInvulStatusEffect.Initialize(toRespawn));
+				StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
 		}
 	}
 }
