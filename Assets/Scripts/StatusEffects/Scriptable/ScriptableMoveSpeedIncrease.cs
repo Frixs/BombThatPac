@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace StatusEffects.Scriptable
 {
-	[CreateAssetMenu(menuName = "StatusEffects/MoveSpeedIncrease")]
+	[CreateAssetMenu(menuName = "StatusEffect/MoveSpeedIncrease")]
 	public class ScriptableMoveSpeedIncrease : ScriptableStatusEffect
 	{
 		/// <summary>

@@ -1,10 +1,7 @@
 ﻿using System;
 using Managers;
-using UnityEditor.Graphs.AnimationBlendTree;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.XR.WSA;
 using Random = UnityEngine.Random;
 
 namespace Characters

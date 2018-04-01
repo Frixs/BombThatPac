@@ -35,12 +35,12 @@ namespace StatusEffects
 		/// <summary>
 		/// Target which has applied this status effect.
 		/// </summary>
-		protected readonly Character Target;
+		public readonly Character Target;
 		
 		/// <summary>
 		/// Caster which casted the status effect.
 		/// </summary>
-		protected readonly Character Caster;
+		public readonly Character Caster;
 		
 		/// <summary>
 		/// Check if status effect already expired.

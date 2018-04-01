@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: GhostBombMoveSpeedDebuff
   m_EditorClassIdentifier: 
   StatusEffectType: 1
-  Duration: 2
+  Duration: 1.5
   IsStackable: 0
   CanBeOverwritten: 0
   StartActivationDelay: 0
   RepeatTime: 0
-  SpeedIncrease: -1.8
+  SpeedIncrease: -1.5

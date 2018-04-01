@@ -7,46 +7,24 @@
   <component name="ChangeListManager">
     <list default="true" id="c3945026-ee59-4bbb-a764-16d26cab1ec8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/PlayerBomberman.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/PlayerBomberman.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Invulnerability.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Invulnerability.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/MoveSpeedIncrease.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/MoveSpeedIncrease.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/StatusEffects/GhostBombMoveSpeedDebuff.asset" afterPath="$PROJECT_DIR$/Assets/StatusEffects/GhostBombMoveSpeedDebuff.asset" />
-      <change beforePath="$PROJECT_DIR$/Assets/StatusEffects/PlayerRespawnInvulnerabilityBuff.asset" afterPath="$PROJECT_DIR$/Assets/StatusEffects/PlayerRespawnInvulnerabilityBuff.asset" />
       <change beforePath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" afterPath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" afterPath="$PROJECT_DIR$/Library/expandedItems" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" afterPath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/2b/2b6f152042eba2b4cbe8804d31fd19c3" afterPath="$PROJECT_DIR$/Library/metadata/2b/2b6f152042eba2b4cbe8804d31fd19c3" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2c/2ca5aa91ada036e4eada241ac93401cb" afterPath="$PROJECT_DIR$/Library/metadata/2c/2ca5aa91ada036e4eada241ac93401cb" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/5e/5e0de5d795da747438060a9a3f8cf5cc.info" afterPath="$PROJECT_DIR$/Library/metadata/5e/5e0de5d795da747438060a9a3f8cf5cc.info" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/6e/6efc480c41ca42a4f85e3ecbac9ae3b9" afterPath="$PROJECT_DIR$/Library/metadata/6e/6efc480c41ca42a4f85e3ecbac9ae3b9" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/82/82208ccea8374564bb09407be8432847" afterPath="$PROJECT_DIR$/Library/metadata/82/82208ccea8374564bb09407be8432847" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/91/911f5b054b0967843b58bc294b2b3f66" afterPath="$PROJECT_DIR$/Library/metadata/91/911f5b054b0967843b58bc294b2b3f66" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a4/a4b94fba5c027e4449125e4a0b7e486d" afterPath="$PROJECT_DIR$/Library/metadata/a4/a4b94fba5c027e4449125e4a0b7e486d" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a5/a50f6f9e59dd4b545a2f3c8abbf27834" afterPath="$PROJECT_DIR$/Library/metadata/a5/a50f6f9e59dd4b545a2f3c8abbf27834" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/b9/b9c0d1260519a944588c0097071e26d5" afterPath="$PROJECT_DIR$/Library/metadata/b9/b9c0d1260519a944588c0097071e26d5" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf309b5b993adde468e0be71153ae371" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf309b5b993adde468e0be71153ae371" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" afterPath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" afterPath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/ea/ea3f01450c9c5f147a8b467d27287215" afterPath="$PROJECT_DIR$/Library/metadata/ea/ea3f01450c9c5f147a8b467d27287215" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa6c7a0fffa219146b647366c365bf61" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa6c7a0fffa219146b647366c365bf61" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,187 +35,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Constants.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Constants.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            <state relative-caret-position="512">
+              <caret line="32" column="78" lean-forward="false" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
               <folding>
-                <marker date="1522597309268" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
-                <marker date="1522597309268" expanded="true" signature="90:6473" ph="{...}" />
-                <marker date="1522597309268" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
-                <marker date="1522597309268" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
-                <marker date="1522597309268" expanded="true" signature="262:349" ph="/// Invulnerability of player after respawn/spawn. ... " />
-                <marker date="1522597309268" expanded="true" signature="411:484" ph="/// Player's default movement speed. ... " />
-                <marker date="1522597309268" expanded="true" signature="548:620" ph="/// Ghost's default movement speed. ... " />
-                <marker date="1522597309268" expanded="true" signature="708:783" ph="/// Ghost's frightened movement speed. ... " />
-                <marker date="1522597309268" expanded="true" signature="874:956" ph="/// Ghost's consumed (killed) movement speed. ... " />
-                <marker date="1522597309268" expanded="true" signature="1017:1044" ph="/* BOMBERMAN ... */" />
-                <marker date="1522597309268" expanded="true" signature="1054:1146" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
-                <marker date="1522597309268" expanded="true" signature="1206:1294" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
-                <marker date="1522597309268" expanded="true" signature="1357:1438" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
-                <marker date="1522597309268" expanded="true" signature="1501:1590" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
-                <marker date="1522597309268" expanded="true" signature="1654:1899" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
-                <marker date="1522597309268" expanded="true" signature="1969:2111" ph="{...}" />
-                <marker date="1522597309268" expanded="true" signature="2122:2144" ph="/* BOMB ... */" />
-                <marker date="1522597309268" expanded="true" signature="2154:2304" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
-                <marker date="1522597309268" expanded="true" signature="2363:2526" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
-                <marker date="1522597309268" expanded="true" signature="2576:2641" ph="/// Speed of a rolling bomb. ... " />
-                <marker date="1522597309268" expanded="true" signature="2693:2773" ph="/// Delayed explosion after rolling a bomb. ... " />
-                <marker date="1522597309268" expanded="true" signature="2841:2865" ph="/* LAYERS ... */" />
-                <marker date="1522597309268" expanded="true" signature="2875:3086" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-                <marker date="1522597309268" expanded="true" signature="3166:3352" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-                <marker date="1522597309268" expanded="true" signature="3422:3446" ph="/* GHOSTS ... */" />
-                <marker date="1522597309268" expanded="true" signature="3456:3526" ph="/// Delay after death to respawn. ... " />
-                <marker date="1522597309268" expanded="true" signature="3590:3665" ph="/// Duration of ghost frightened mode. ... " />
-                <marker date="1522597309268" expanded="true" signature="3731:3917" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
-                <marker date="1522597309268" expanded="true" signature="4023:4112" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
-                <marker date="1522597309268" expanded="true" signature="4186:4264" ph="/// Number of iterations for ghost modes. ... " />
-                <marker date="1522597309268" expanded="true" signature="4324:4410" ph="/// Ghost mode phases from the start of the game. ... " />
-                <marker date="1522597309268" expanded="true" signature="4534:4661" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
-                <marker date="1522597309268" expanded="true" signature="4786:4863" ph="/// Release Blinky ghost from its house. ... " />
-                <marker date="1522597309268" expanded="true" signature="4928:5004" ph="/// Release Pinky ghost from its house. ... " />
-                <marker date="1522597309268" expanded="true" signature="5068:5143" ph="/// Release Inky ghost from its house. ... " />
-                <marker date="1522597309268" expanded="true" signature="5207:5283" ph="/// Release Clyde ghost from its house. ... " />
-                <marker date="1522597309268" expanded="true" signature="5348:5487" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
-                <marker date="1522597309268" expanded="true" signature="5560:5786" ph="/// Select the position X cells in front of the closest player. ... " />
-                <marker date="1522597309268" expanded="true" signature="5902:6175" ph="/// Calculate the distance from the closest player. ... " />
-                <marker date="1522597309268" expanded="true" signature="6246:6409" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
+                <marker date="1522626636957" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
+                <marker date="1522626636957" expanded="true" signature="90:6473" ph="{...}" />
+                <marker date="1522626636957" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
+                <marker date="1522626636957" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
+                <marker date="1522626636957" expanded="true" signature="262:349" ph="/// Invulnerability of player after respawn/spawn. ... " />
+                <marker date="1522626636957" expanded="true" signature="411:484" ph="/// Player's default movement speed. ... " />
+                <marker date="1522626636957" expanded="true" signature="548:620" ph="/// Ghost's default movement speed. ... " />
+                <marker date="1522626636957" expanded="true" signature="708:783" ph="/// Ghost's frightened movement speed. ... " />
+                <marker date="1522626636957" expanded="true" signature="874:956" ph="/// Ghost's consumed (killed) movement speed. ... " />
+                <marker date="1522626636957" expanded="true" signature="1017:1044" ph="/* BOMBERMAN ... */" />
+                <marker date="1522626636957" expanded="true" signature="1054:1146" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
+                <marker date="1522626636957" expanded="true" signature="1206:1294" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
+                <marker date="1522626636957" expanded="true" signature="1357:1438" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
+                <marker date="1522626636957" expanded="true" signature="1501:1590" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
+                <marker date="1522626636957" expanded="true" signature="1654:1899" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
+                <marker date="1522626636957" expanded="true" signature="1969:2111" ph="{...}" />
+                <marker date="1522626636957" expanded="true" signature="2122:2144" ph="/* BOMB ... */" />
+                <marker date="1522626636957" expanded="true" signature="2154:2304" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
+                <marker date="1522626636957" expanded="true" signature="2363:2526" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
+                <marker date="1522626636957" expanded="true" signature="2576:2641" ph="/// Speed of a rolling bomb. ... " />
+                <marker date="1522626636957" expanded="true" signature="2693:2773" ph="/// Delayed explosion after rolling a bomb. ... " />
+                <marker date="1522626636957" expanded="true" signature="2841:2865" ph="/* LAYERS ... */" />
+                <marker date="1522626636957" expanded="true" signature="2875:3086" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+                <marker date="1522626636957" expanded="true" signature="3166:3352" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+                <marker date="1522626636957" expanded="true" signature="3422:3446" ph="/* GHOSTS ... */" />
+                <marker date="1522626636957" expanded="true" signature="3456:3526" ph="/// Delay after death to respawn. ... " />
+                <marker date="1522626636957" expanded="true" signature="3590:3665" ph="/// Duration of ghost frightened mode. ... " />
+                <marker date="1522626636957" expanded="true" signature="3731:3917" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
+                <marker date="1522626636957" expanded="true" signature="4023:4112" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
+                <marker date="1522626636957" expanded="true" signature="4186:4264" ph="/// Number of iterations for ghost modes. ... " />
+                <marker date="1522626636957" expanded="true" signature="4324:4410" ph="/// Ghost mode phases from the start of the game. ... " />
+                <marker date="1522626636957" expanded="true" signature="4534:4661" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
+                <marker date="1522626636957" expanded="true" signature="4786:4863" ph="/// Release Blinky ghost from its house. ... " />
+                <marker date="1522626636957" expanded="true" signature="4928:5004" ph="/// Release Pinky ghost from its house. ... " />
+                <marker date="1522626636957" expanded="true" signature="5068:5143" ph="/// Release Inky ghost from its house. ... " />
+                <marker date="1522626636957" expanded="true" signature="5207:5283" ph="/// Release Clyde ghost from its house. ... " />
+                <marker date="1522626636957" expanded="true" signature="5348:5487" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
+                <marker date="1522626636957" expanded="true" signature="5560:5786" ph="/// Select the position X cells in front of the closest player. ... " />
+                <marker date="1522626636957" expanded="true" signature="5902:6175" ph="/// Calculate the distance from the closest player. ... " />
+                <marker date="1522626636957" expanded="true" signature="6246:6409" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ghost.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1568">
-              <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-              <folding>
-                <marker date="1522597357164" expanded="false" signature="6:209" ph="..." />
-                <marker date="1522597357164" expanded="true" signature="231:18173" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="303:18171" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="404:480" ph="/// Timer to release ghosts from the start. ... " />
-                <marker date="1522597357164" expanded="true" signature="629:694" ph="/// Spawn position of the ghost. ... " />
-                <marker date="1522597357164" expanded="true" signature="756:821" ph="/// Ghost scatter base position. ... " />
-                <marker date="1522597357164" expanded="true" signature="889:977" ph="/// First target position till leaving the ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="1045:1127" ph="/// Reference to frightened animation controller. ... " />
-                <marker date="1522597357164" expanded="true" signature="1206:1288" ph="/// Reference to frightened animation controller. ... " />
-                <marker date="1522597357164" expanded="true" signature="1366:1488" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="1571:1693" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="1748:1870" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="1925:2047" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="2104:2181" ph="/// Checks if ghost is still in ghost house. ... " />
-                <marker date="1522597357164" expanded="true" signature="2238:2331" ph="/// Default value of 'IsInGhostHouse' set in inicialization. ... " />
-                <marker date="1522597357164" expanded="true" signature="2379:2445" ph="/// Default mode start iteration. ... " />
-                <marker date="1522597357164" expanded="true" signature="2491:2561" ph="/// Timer for changing between modes. ... " />
-                <marker date="1522597357164" expanded="true" signature="2603:2685" ph="/// Timer for changing back to normal/Chase mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="2733:2808" ph="/// Timer for blinking in frightened mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="2857:2948" ph="/// Check if ghost is white (blinking) in frightened mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="2999:3051" ph="/// All mode types. ... " />
-                <marker date="1522597357164" expanded="true" signature="3070:3127" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="3131:3189" ph="/// Current ghost's mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="3261:3320" ph="/// Previous ghost's mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="3354:3529" ph="/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. C ... " />
-                <marker date="1522597357164" expanded="true" signature="3845:4636" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="4710:4754" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="4815:4869" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="4922:6506" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="5050:5435" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="5336:5430" ph="/* TODO uncomment this line after adding ghost animations. ... */" />
-                <marker date="1522597357164" expanded="true" signature="5479:5860" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="5902:6502" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="6045:6126" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="6166:6249" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="6289:6372" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="6413:6497" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="6555:6971" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="7019:7241" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="7247:7364" ph="/// OnTrigger event. ... " />
-                <marker date="1522597357164" expanded="true" signature="7406:7593" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="7534:7589" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="7599:7777" ph="/// Method to get position of final target which the ghost is searching for. ... " />
-                <marker date="1522597357164" expanded="true" signature="7859:8742" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="7940:8614" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="8033:8159" ph="/* portal code ... */" />
-                <marker date="1522597357164" expanded="true" signature="8239:8470" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="8622:8738" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="8748:8828" ph="/// Change mode depending on current game time. ... " />
-                <marker date="1522597357164" expanded="true" signature="8856:10893" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="8899:9690" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="9173:9685" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="9336:9408" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="9569:9679" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="9734:10889" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="9880:9956" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="10075:10884" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="10206:10878" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="10303:10573" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="10600:10871" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="10899:11022" ph="/// Change required mode to current mode. ... " />
-                <marker date="1522597357164" expanded="true" signature="11059:11366" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="11146:11205" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="11241:11303" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="11370:11442" ph="/// Start frightened mode of the ghost. ... " />
-                <marker date="1522597357164" expanded="true" signature="11478:11590" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="11596:11662" ph="/// Starting release ghost timer. ... " />
-                <marker date="1522597357164" expanded="true" signature="11694:11863" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="11867:12003" ph="/// Chose next direction tile of ghost's move. ... " />
-                <marker date="1522597357164" expanded="true" signature="12038:15559" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12080:12216" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12302:12361" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12400:12536" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12577:12646" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12690:12840" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12882:12935" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="12943:13058" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="13519:14813" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="13933:14009" ph="/* Find only the valid one. ... */" />
-                <marker date="1522597357164" expanded="true" signature="14262:14467" ph="/* Evaluate tiles. If it is not wall or obstacle you can go in this direction. ... */" />
-                <marker date="1522597357164" expanded="true" signature="14616:14808" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="14902:14984" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15013:15506" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15112:15501" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15241:15495" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15358:15488" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15563:15688" ph="/// Get the closest player from the ghost. ... " />
-                <marker date="1522597357164" expanded="true" signature="15726:16224" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="15896:16194" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="16075:16189" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="16228:16450" ph="/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two  ... " />
-                <marker date="1522597357164" expanded="true" signature="16482:16678" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="16682:16848" ph="/// Get random cell coords around the start target position. ... " />
-                <marker date="1522597357164" expanded="true" signature="16901:17367" ph="{...}" />
-                <marker date="1522597357164" expanded="true" signature="17371:17700" ph="/// Check if it is possible change direction. ... " />
-                <marker date="1522597357164" expanded="true" signature="17789:18168" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatusEffectManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatusEffectManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="705">
+              <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
               <folding>
-                <marker date="1522617174541" expanded="false" signature="6:183" ph="..." />
-                <marker date="1522617174541" expanded="true" signature="203:3188" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="255:3186" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
-                <marker date="1522617174541" expanded="true" signature="514:1000" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="583:651" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="733:901" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
-                <marker date="1522617174541" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
-                <marker date="1522617174541" expanded="true" signature="1508:2544" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="1572:1686" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="2550:2699" ph="/// Process all character's status effects. ... " />
-                <marker date="1522617174541" expanded="true" signature="2752:3129" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="2779:2892" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="2976:3125" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="3053:3120" ph="{...}" />
-                <marker date="1522617174541" expanded="true" signature="3165:3183" ph="{...}" />
+                <marker date="1522626489057" expanded="false" signature="6:183" ph="..." />
+                <marker date="1522626489057" expanded="true" signature="203:4701" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="255:4699" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
+                <marker date="1522626489057" expanded="true" signature="514:1000" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="583:651" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="733:901" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+                <marker date="1522626489057" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
+                <marker date="1522626489057" expanded="true" signature="1508:2547" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="1572:1686" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="2553:2702" ph="/// Process all character's status effects. ... " />
+                <marker date="1522626489057" expanded="true" signature="2755:3132" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="2782:2895" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="2979:3128" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="3056:3123" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="3136:3823" ph="/// Manually removes selected status effect/s. ... " />
+                <marker date="1522626489057" expanded="true" signature="4001:4696" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="4085:4343" ph="{...}" />
+                <marker date="1522626489057" expanded="true" signature="4402:4692" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -246,8 +120,8 @@
       <file leaf-file-name="Bomb.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="230" column="96" lean-forward="false" selection-start-line="230" selection-start-column="96" selection-end-line="230" selection-end-column="96" />
+            <state relative-caret-position="473">
+              <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding>
                 <marker date="1522617095600" expanded="false" signature="6:112" ph="..." />
                 <marker date="1522617095600" expanded="true" signature="129:11486" ph="{...}" />
@@ -298,34 +172,34 @@
       <file leaf-file-name="StatusEffect.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            <state relative-caret-position="-47">
+              <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
               <folding>
-                <marker date="1522617480249" expanded="false" signature="6:82" ph="..." />
-                <marker date="1522617480249" expanded="true" signature="107:3096" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="145:3094" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="151:217" ph="/// Status effect duration timer. ... " />
-                <marker date="1522617480249" expanded="true" signature="255:336" ph="/// Start delay timer to activate status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="376:436" ph="/// Damage over time timer. ... " />
-                <marker date="1522617480249" expanded="true" signature="470:577" ph="/// Get information about the status effect if has been already activated. ... " />
-                <marker date="1522617480249" expanded="true" signature="619:738" ph="/// Reference to Scriptable status effects which storing data about the status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="805:886" ph="/// Target which has applied this status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="931:1006" ph="/// Caster which casted the status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="1051:1127" ph="/// Check if status effect already expired. ... " />
-                <marker date="1522617480249" expanded="true" signature="1181:1533" ph="/// Initialize the status effect via constructor. ... " />
-                <marker date="1522617480249" expanded="true" signature="1623:1839" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="1843:1954" ph="/// Timer processes. ... " />
-                <marker date="1522617480249" expanded="true" signature="1986:2609" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2055:2108" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2172:2230" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2312:2421" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2476:2605" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2536:2600" ph="{...}" />
-                <marker date="1522617480249" expanded="true" signature="2613:2687" ph="/// Activate and start the status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="2731:2790" ph="/// End the status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="2829:2929" ph="/// Repeat some procedure each each tick according to repeat timer. ... " />
-                <marker date="1522617480249" expanded="true" signature="2969:3033" ph="/// Enum type of status effect. ... " />
-                <marker date="1522617480249" expanded="true" signature="3064:3091" ph="{...}" />
+                <marker date="1522619423989" expanded="false" signature="6:82" ph="..." />
+                <marker date="1522619423989" expanded="true" signature="107:3090" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="145:3088" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="151:217" ph="/// Status effect duration timer. ... " />
+                <marker date="1522619423989" expanded="true" signature="255:336" ph="/// Start delay timer to activate status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="376:436" ph="/// Damage over time timer. ... " />
+                <marker date="1522619423989" expanded="true" signature="470:577" ph="/// Get information about the status effect if has been already activated. ... " />
+                <marker date="1522619423989" expanded="true" signature="619:738" ph="/// Reference to Scriptable status effects which storing data about the status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="805:886" ph="/// Target which has applied this status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="928:1003" ph="/// Caster which casted the status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="1045:1121" ph="/// Check if status effect already expired. ... " />
+                <marker date="1522619423989" expanded="true" signature="1175:1527" ph="/// Initialize the status effect via constructor. ... " />
+                <marker date="1522619423989" expanded="true" signature="1617:1833" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="1837:1948" ph="/// Timer processes. ... " />
+                <marker date="1522619423989" expanded="true" signature="1980:2603" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2049:2102" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2166:2224" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2306:2415" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2470:2599" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2530:2594" ph="{...}" />
+                <marker date="1522619423989" expanded="true" signature="2607:2681" ph="/// Activate and start the status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="2725:2784" ph="/// End the status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="2823:2923" ph="/// Repeat some procedure each each tick according to repeat timer. ... " />
+                <marker date="1522619423989" expanded="true" signature="2963:3027" ph="/// Enum type of status effect. ... " />
+                <marker date="1522619423989" expanded="true" signature="3058:3085" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -447,18 +321,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/MoveSpeedIncrease.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Invulnerability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
       </list>
     </option>
   </component>
@@ -625,12 +499,12 @@
       <workItem from="1522493608416" duration="25171000" />
       <workItem from="1522526331995" duration="12843000" />
       <workItem from="1522584677677" duration="14307000" />
-      <workItem from="1522614220785" duration="3490000" />
+      <workItem from="1522614220785" duration="10564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348131000" />
+    <option name="totallyTimeSpent" value="355205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -643,7 +517,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -800,160 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-          <folding>
-            <marker date="1522597309268" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
-            <marker date="1522597309268" expanded="true" signature="90:6473" ph="{...}" />
-            <marker date="1522597309268" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
-            <marker date="1522597309268" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
-            <marker date="1522597309268" expanded="true" signature="262:349" ph="/// Invulnerability of player after respawn/spawn. ... " />
-            <marker date="1522597309268" expanded="true" signature="411:484" ph="/// Player's default movement speed. ... " />
-            <marker date="1522597309268" expanded="true" signature="548:620" ph="/// Ghost's default movement speed. ... " />
-            <marker date="1522597309268" expanded="true" signature="708:783" ph="/// Ghost's frightened movement speed. ... " />
-            <marker date="1522597309268" expanded="true" signature="874:956" ph="/// Ghost's consumed (killed) movement speed. ... " />
-            <marker date="1522597309268" expanded="true" signature="1017:1044" ph="/* BOMBERMAN ... */" />
-            <marker date="1522597309268" expanded="true" signature="1054:1146" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
-            <marker date="1522597309268" expanded="true" signature="1206:1294" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
-            <marker date="1522597309268" expanded="true" signature="1357:1438" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
-            <marker date="1522597309268" expanded="true" signature="1501:1590" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
-            <marker date="1522597309268" expanded="true" signature="1654:1899" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
-            <marker date="1522597309268" expanded="true" signature="1969:2111" ph="{...}" />
-            <marker date="1522597309268" expanded="true" signature="2122:2144" ph="/* BOMB ... */" />
-            <marker date="1522597309268" expanded="true" signature="2154:2304" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
-            <marker date="1522597309268" expanded="true" signature="2363:2526" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
-            <marker date="1522597309268" expanded="true" signature="2576:2641" ph="/// Speed of a rolling bomb. ... " />
-            <marker date="1522597309268" expanded="true" signature="2693:2773" ph="/// Delayed explosion after rolling a bomb. ... " />
-            <marker date="1522597309268" expanded="true" signature="2841:2865" ph="/* LAYERS ... */" />
-            <marker date="1522597309268" expanded="true" signature="2875:3086" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-            <marker date="1522597309268" expanded="true" signature="3166:3352" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-            <marker date="1522597309268" expanded="true" signature="3422:3446" ph="/* GHOSTS ... */" />
-            <marker date="1522597309268" expanded="true" signature="3456:3526" ph="/// Delay after death to respawn. ... " />
-            <marker date="1522597309268" expanded="true" signature="3590:3665" ph="/// Duration of ghost frightened mode. ... " />
-            <marker date="1522597309268" expanded="true" signature="3731:3917" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
-            <marker date="1522597309268" expanded="true" signature="4023:4112" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
-            <marker date="1522597309268" expanded="true" signature="4186:4264" ph="/// Number of iterations for ghost modes. ... " />
-            <marker date="1522597309268" expanded="true" signature="4324:4410" ph="/// Ghost mode phases from the start of the game. ... " />
-            <marker date="1522597309268" expanded="true" signature="4534:4661" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
-            <marker date="1522597309268" expanded="true" signature="4786:4863" ph="/// Release Blinky ghost from its house. ... " />
-            <marker date="1522597309268" expanded="true" signature="4928:5004" ph="/// Release Pinky ghost from its house. ... " />
-            <marker date="1522597309268" expanded="true" signature="5068:5143" ph="/// Release Inky ghost from its house. ... " />
-            <marker date="1522597309268" expanded="true" signature="5207:5283" ph="/// Release Clyde ghost from its house. ... " />
-            <marker date="1522597309268" expanded="true" signature="5348:5487" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
-            <marker date="1522597309268" expanded="true" signature="5560:5786" ph="/// Select the position X cells in front of the closest player. ... " />
-            <marker date="1522597309268" expanded="true" signature="5902:6175" ph="/// Calculate the distance from the closest player. ... " />
-            <marker date="1522597309268" expanded="true" signature="6246:6409" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1568">
-          <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-          <folding>
-            <marker date="1522597357164" expanded="false" signature="6:209" ph="..." />
-            <marker date="1522597357164" expanded="true" signature="231:18173" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="303:18171" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="404:480" ph="/// Timer to release ghosts from the start. ... " />
-            <marker date="1522597357164" expanded="true" signature="629:694" ph="/// Spawn position of the ghost. ... " />
-            <marker date="1522597357164" expanded="true" signature="756:821" ph="/// Ghost scatter base position. ... " />
-            <marker date="1522597357164" expanded="true" signature="889:977" ph="/// First target position till leaving the ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="1045:1127" ph="/// Reference to frightened animation controller. ... " />
-            <marker date="1522597357164" expanded="true" signature="1206:1288" ph="/// Reference to frightened animation controller. ... " />
-            <marker date="1522597357164" expanded="true" signature="1366:1488" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="1571:1693" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="1748:1870" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="1925:2047" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="2104:2181" ph="/// Checks if ghost is still in ghost house. ... " />
-            <marker date="1522597357164" expanded="true" signature="2238:2331" ph="/// Default value of 'IsInGhostHouse' set in inicialization. ... " />
-            <marker date="1522597357164" expanded="true" signature="2379:2445" ph="/// Default mode start iteration. ... " />
-            <marker date="1522597357164" expanded="true" signature="2491:2561" ph="/// Timer for changing between modes. ... " />
-            <marker date="1522597357164" expanded="true" signature="2603:2685" ph="/// Timer for changing back to normal/Chase mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="2733:2808" ph="/// Timer for blinking in frightened mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="2857:2948" ph="/// Check if ghost is white (blinking) in frightened mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="2999:3051" ph="/// All mode types. ... " />
-            <marker date="1522597357164" expanded="true" signature="3070:3127" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="3131:3189" ph="/// Current ghost's mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="3261:3320" ph="/// Previous ghost's mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="3354:3529" ph="/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. C ... " />
-            <marker date="1522597357164" expanded="true" signature="3845:4636" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="4710:4754" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="4815:4869" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="4922:6506" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="5050:5435" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="5336:5430" ph="/* TODO uncomment this line after adding ghost animations. ... */" />
-            <marker date="1522597357164" expanded="true" signature="5479:5860" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="5902:6502" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="6045:6126" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="6166:6249" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="6289:6372" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="6413:6497" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="6555:6971" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="7019:7241" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="7247:7364" ph="/// OnTrigger event. ... " />
-            <marker date="1522597357164" expanded="true" signature="7406:7593" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="7534:7589" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="7599:7777" ph="/// Method to get position of final target which the ghost is searching for. ... " />
-            <marker date="1522597357164" expanded="true" signature="7859:8742" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="7940:8614" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="8033:8159" ph="/* portal code ... */" />
-            <marker date="1522597357164" expanded="true" signature="8239:8470" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="8622:8738" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="8748:8828" ph="/// Change mode depending on current game time. ... " />
-            <marker date="1522597357164" expanded="true" signature="8856:10893" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="8899:9690" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="9173:9685" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="9336:9408" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="9569:9679" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="9734:10889" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="9880:9956" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="10075:10884" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="10206:10878" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="10303:10573" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="10600:10871" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="10899:11022" ph="/// Change required mode to current mode. ... " />
-            <marker date="1522597357164" expanded="true" signature="11059:11366" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="11146:11205" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="11241:11303" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="11370:11442" ph="/// Start frightened mode of the ghost. ... " />
-            <marker date="1522597357164" expanded="true" signature="11478:11590" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="11596:11662" ph="/// Starting release ghost timer. ... " />
-            <marker date="1522597357164" expanded="true" signature="11694:11863" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="11867:12003" ph="/// Chose next direction tile of ghost's move. ... " />
-            <marker date="1522597357164" expanded="true" signature="12038:15559" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12080:12216" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12302:12361" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12400:12536" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12577:12646" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12690:12840" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12882:12935" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="12943:13058" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="13519:14813" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="13933:14009" ph="/* Find only the valid one. ... */" />
-            <marker date="1522597357164" expanded="true" signature="14262:14467" ph="/* Evaluate tiles. If it is not wall or obstacle you can go in this direction. ... */" />
-            <marker date="1522597357164" expanded="true" signature="14616:14808" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="14902:14984" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15013:15506" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15112:15501" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15241:15495" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15358:15488" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15563:15688" ph="/// Get the closest player from the ghost. ... " />
-            <marker date="1522597357164" expanded="true" signature="15726:16224" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="15896:16194" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="16075:16189" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="16228:16450" ph="/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two  ... " />
-            <marker date="1522597357164" expanded="true" signature="16482:16678" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="16682:16848" ph="/// Get random cell coords around the start target position. ... " />
-            <marker date="1522597357164" expanded="true" signature="16901:17367" ph="{...}" />
-            <marker date="1522597357164" expanded="true" signature="17371:17700" ph="/// Check if it is possible change direction. ... " />
-            <marker date="1522597357164" expanded="true" signature="17789:18168" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Special/GhostHouseDoorTrigger.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -995,20 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <marker date="1522617276003" expanded="false" signature="6:36" ph="..." />
-            <marker date="1522617276003" expanded="true" signature="72:494" ph="{...}" />
-            <marker date="1522617276003" expanded="true" signature="206:492" ph="{...}" />
-            <marker date="1522617276003" expanded="true" signature="212:287" ph="/// Speed to be increased (or deecreased). ... " />
-            <marker date="1522617276003" expanded="true" signature="426:489" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Invulnerability.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1044,43 +749,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        <state relative-caret-position="96">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
-            <marker date="1522617306852" expanded="false" signature="6:36" ph="..." />
-            <marker date="1522617306852" expanded="true" signature="72:1640" ph="{...}" />
-            <marker date="1522617306852" expanded="true" signature="76:284" ph="/// This class holds all global variables needs to be in every status effects. ... " />
-            <marker date="1522617306852" expanded="true" signature="349:1638" ph="{...}" />
-            <marker date="1522617306852" expanded="true" signature="355:426" ph="/// Type of the current status effect. ... " />
-            <marker date="1522617306852" expanded="true" signature="516:576" ph="/// Duration of the effect. ... " />
-            <marker date="1522617306852" expanded="true" signature="635:723" ph="/// Is this status effect stackable with the same type? ... " />
-            <marker date="1522617306852" expanded="true" signature="756:869" ph="/// Can this status effect be overwritten by the same type of the status effect? ... " />
-            <marker date="1522617306852" expanded="true" signature="907:1000" ph="/// Delay from the start of the status effect to be applied. ... " />
-            <marker date="1522617306852" expanded="true" signature="1043:1237" ph="/// Is this status effect damage over time (DoT)? If no, set this value to 0. If this value is set it says in whi ... " />
-            <marker date="1522617306852" expanded="true" signature="1268:1556" ph="/// Initialize the effect on the game object. ... " />
+            <marker date="1522617810739" expanded="false" signature="6:36" ph="..." />
+            <marker date="1522617810739" expanded="true" signature="72:493" ph="{...}" />
+            <marker date="1522617810739" expanded="true" signature="205:491" ph="{...}" />
+            <marker date="1522617810739" expanded="true" signature="211:286" ph="/// Speed to be increased (or deecreased). ... " />
+            <marker date="1522617810739" expanded="true" signature="425:488" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="96">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
-            <marker date="1522617276016" expanded="false" signature="6:36" ph="..." />
-            <marker date="1522617276016" expanded="true" signature="72:349" ph="{...}" />
-            <marker date="1522617276016" expanded="true" signature="202:347" ph="{...}" />
-            <marker date="1522617276016" expanded="true" signature="283:344" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6:111" ph="..." />
+            <marker date="1522618707373" expanded="true" signature="133:18075" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="205:18073" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="306:382" ph="/// Timer to release ghosts from the start. ... " />
+            <marker date="1522618707373" expanded="true" signature="531:596" ph="/// Spawn position of the ghost. ... " />
+            <marker date="1522618707373" expanded="true" signature="658:723" ph="/// Ghost scatter base position. ... " />
+            <marker date="1522618707373" expanded="true" signature="791:879" ph="/// First target position till leaving the ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="947:1029" ph="/// Reference to frightened animation controller. ... " />
+            <marker date="1522618707373" expanded="true" signature="1108:1190" ph="/// Reference to frightened animation controller. ... " />
+            <marker date="1522618707373" expanded="true" signature="1268:1390" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="1473:1595" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="1650:1772" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="1827:1949" ph="/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="2006:2083" ph="/// Checks if ghost is still in ghost house. ... " />
+            <marker date="1522618707373" expanded="true" signature="2140:2233" ph="/// Default value of 'IsInGhostHouse' set in inicialization. ... " />
+            <marker date="1522618707373" expanded="true" signature="2281:2347" ph="/// Default mode start iteration. ... " />
+            <marker date="1522618707373" expanded="true" signature="2393:2463" ph="/// Timer for changing between modes. ... " />
+            <marker date="1522618707373" expanded="true" signature="2505:2587" ph="/// Timer for changing back to normal/Chase mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="2635:2710" ph="/// Timer for blinking in frightened mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="2759:2850" ph="/// Check if ghost is white (blinking) in frightened mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="2901:2953" ph="/// All mode types. ... " />
+            <marker date="1522618707373" expanded="true" signature="2972:3029" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="3033:3091" ph="/// Current ghost's mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="3163:3222" ph="/// Previous ghost's mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="3256:3431" ph="/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. C ... " />
+            <marker date="1522618707373" expanded="true" signature="3747:4538" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="4612:4656" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="4717:4771" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="4824:6408" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="4952:5337" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="5238:5332" ph="/* TODO uncomment this line after adding ghost animations. ... */" />
+            <marker date="1522618707373" expanded="true" signature="5381:5762" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="5804:6404" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="5947:6028" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6068:6151" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6191:6274" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6315:6399" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6457:6873" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="6921:7143" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="7149:7266" ph="/// OnTrigger event. ... " />
+            <marker date="1522618707373" expanded="true" signature="7308:7495" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="7436:7491" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="7501:7679" ph="/// Method to get position of final target which the ghost is searching for. ... " />
+            <marker date="1522618707373" expanded="true" signature="7761:8644" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="7842:8516" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="7935:8061" ph="/* portal code ... */" />
+            <marker date="1522618707373" expanded="true" signature="8141:8372" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="8524:8640" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="8650:8730" ph="/// Change mode depending on current game time. ... " />
+            <marker date="1522618707373" expanded="true" signature="8758:10795" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="8801:9592" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9075:9587" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9238:9310" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9471:9581" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9636:10791" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9782:9858" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="9977:10786" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="10108:10780" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="10205:10475" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="10502:10773" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="10801:10924" ph="/// Change required mode to current mode. ... " />
+            <marker date="1522618707373" expanded="true" signature="10961:11268" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11048:11107" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11143:11205" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11272:11344" ph="/// Start frightened mode of the ghost. ... " />
+            <marker date="1522618707373" expanded="true" signature="11380:11492" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11498:11564" ph="/// Starting release ghost timer. ... " />
+            <marker date="1522618707373" expanded="true" signature="11596:11765" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11769:11905" ph="/// Chose next direction tile of ghost's move. ... " />
+            <marker date="1522618707373" expanded="true" signature="11940:15461" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="11982:12118" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12204:12263" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12302:12438" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12479:12548" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12592:12742" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12784:12837" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="12845:12960" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="13421:14715" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="13835:13911" ph="/* Find only the valid one. ... */" />
+            <marker date="1522618707373" expanded="true" signature="14164:14369" ph="/* Evaluate tiles. If it is not wall or obstacle you can go in this direction. ... */" />
+            <marker date="1522618707373" expanded="true" signature="14518:14710" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="14804:14886" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="14915:15408" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15014:15403" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15143:15397" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15260:15390" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15465:15590" ph="/// Get the closest player from the ghost. ... " />
+            <marker date="1522618707373" expanded="true" signature="15628:16126" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15798:16096" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="15977:16091" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="16130:16352" ph="/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two  ... " />
+            <marker date="1522618707373" expanded="true" signature="16384:16580" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="16584:16750" ph="/// Get random cell coords around the start target position. ... " />
+            <marker date="1522618707373" expanded="true" signature="16803:17269" ph="{...}" />
+            <marker date="1522618707373" expanded="true" signature="17273:17602" ph="/// Check if it is possible change direction. ... " />
+            <marker date="1522618707373" expanded="true" signature="17691:18070" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="230" column="96" lean-forward="false" selection-start-line="230" selection-start-column="96" selection-end-line="230" selection-end-column="96" />
+        <state relative-caret-position="473">
+          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding>
             <marker date="1522617095600" expanded="false" signature="6:112" ph="..." />
             <marker date="1522617095600" expanded="true" signature="129:11486" ph="{...}" />
@@ -1127,62 +918,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding>
+            <marker date="1522617807219" expanded="false" signature="6:36" ph="..." />
+            <marker date="1522617807219" expanded="true" signature="72:348" ph="{...}" />
+            <marker date="1522617807219" expanded="true" signature="201:346" ph="{...}" />
+            <marker date="1522617807219" expanded="true" signature="282:343" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" column="131" lean-forward="true" selection-start-line="17" selection-start-column="131" selection-end-line="17" selection-end-column="131" />
+          <folding>
+            <marker date="1522623417162" expanded="false" signature="6:36" ph="..." />
+            <marker date="1522623417162" expanded="true" signature="72:1736" ph="{...}" />
+            <marker date="1522623417162" expanded="true" signature="76:284" ph="/// This class holds all global variables needs to be in every status effects. ... " />
+            <marker date="1522623417162" expanded="true" signature="349:1734" ph="{...}" />
+            <marker date="1522623417162" expanded="true" signature="355:426" ph="/// Type of the current status effect. ... " />
+            <marker date="1522623417162" expanded="true" signature="516:672" ph="/// Duration of the effect. If this is set to 0 then the status effect will be permanent till manually rmeoving t ... " />
+            <marker date="1522623417162" expanded="true" signature="731:819" ph="/// Is this status effect stackable with the same type? ... " />
+            <marker date="1522623417162" expanded="true" signature="852:965" ph="/// Can this status effect be overwritten by the same type of the status effect? ... " />
+            <marker date="1522623417162" expanded="true" signature="1003:1096" ph="/// Delay from the start of the status effect to be applied. ... " />
+            <marker date="1522623417162" expanded="true" signature="1139:1333" ph="/// Is this status effect damage over time (DoT)? If no, set this value to 0. If this value is set it says in whi ... " />
+            <marker date="1522623417162" expanded="true" signature="1364:1652" ph="/// Initialize the effect on the game object. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        <state relative-caret-position="-47">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
-            <marker date="1522617480249" expanded="false" signature="6:82" ph="..." />
-            <marker date="1522617480249" expanded="true" signature="107:3096" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="145:3094" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="151:217" ph="/// Status effect duration timer. ... " />
-            <marker date="1522617480249" expanded="true" signature="255:336" ph="/// Start delay timer to activate status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="376:436" ph="/// Damage over time timer. ... " />
-            <marker date="1522617480249" expanded="true" signature="470:577" ph="/// Get information about the status effect if has been already activated. ... " />
-            <marker date="1522617480249" expanded="true" signature="619:738" ph="/// Reference to Scriptable status effects which storing data about the status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="805:886" ph="/// Target which has applied this status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="931:1006" ph="/// Caster which casted the status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="1051:1127" ph="/// Check if status effect already expired. ... " />
-            <marker date="1522617480249" expanded="true" signature="1181:1533" ph="/// Initialize the status effect via constructor. ... " />
-            <marker date="1522617480249" expanded="true" signature="1623:1839" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="1843:1954" ph="/// Timer processes. ... " />
-            <marker date="1522617480249" expanded="true" signature="1986:2609" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2055:2108" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2172:2230" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2312:2421" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2476:2605" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2536:2600" ph="{...}" />
-            <marker date="1522617480249" expanded="true" signature="2613:2687" ph="/// Activate and start the status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="2731:2790" ph="/// End the status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="2829:2929" ph="/// Repeat some procedure each each tick according to repeat timer. ... " />
-            <marker date="1522617480249" expanded="true" signature="2969:3033" ph="/// Enum type of status effect. ... " />
-            <marker date="1522617480249" expanded="true" signature="3064:3091" ph="{...}" />
+            <marker date="1522619423989" expanded="false" signature="6:82" ph="..." />
+            <marker date="1522619423989" expanded="true" signature="107:3090" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="145:3088" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="151:217" ph="/// Status effect duration timer. ... " />
+            <marker date="1522619423989" expanded="true" signature="255:336" ph="/// Start delay timer to activate status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="376:436" ph="/// Damage over time timer. ... " />
+            <marker date="1522619423989" expanded="true" signature="470:577" ph="/// Get information about the status effect if has been already activated. ... " />
+            <marker date="1522619423989" expanded="true" signature="619:738" ph="/// Reference to Scriptable status effects which storing data about the status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="805:886" ph="/// Target which has applied this status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="928:1003" ph="/// Caster which casted the status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="1045:1121" ph="/// Check if status effect already expired. ... " />
+            <marker date="1522619423989" expanded="true" signature="1175:1527" ph="/// Initialize the status effect via constructor. ... " />
+            <marker date="1522619423989" expanded="true" signature="1617:1833" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="1837:1948" ph="/// Timer processes. ... " />
+            <marker date="1522619423989" expanded="true" signature="1980:2603" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2049:2102" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2166:2224" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2306:2415" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2470:2599" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2530:2594" ph="{...}" />
+            <marker date="1522619423989" expanded="true" signature="2607:2681" ph="/// Activate and start the status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="2725:2784" ph="/// End the status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="2823:2923" ph="/// Repeat some procedure each each tick according to repeat timer. ... " />
+            <marker date="1522619423989" expanded="true" signature="2963:3027" ph="/// Enum type of status effect. ... " />
+            <marker date="1522619423989" expanded="true" signature="3058:3085" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="705">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
           <folding>
-            <marker date="1522617174541" expanded="false" signature="6:183" ph="..." />
-            <marker date="1522617174541" expanded="true" signature="203:3188" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="255:3186" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
-            <marker date="1522617174541" expanded="true" signature="514:1000" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="583:651" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="733:901" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
-            <marker date="1522617174541" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
-            <marker date="1522617174541" expanded="true" signature="1508:2544" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="1572:1686" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="2550:2699" ph="/// Process all character's status effects. ... " />
-            <marker date="1522617174541" expanded="true" signature="2752:3129" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="2779:2892" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="2976:3125" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="3053:3120" ph="{...}" />
-            <marker date="1522617174541" expanded="true" signature="3165:3183" ph="{...}" />
+            <marker date="1522626489057" expanded="false" signature="6:183" ph="..." />
+            <marker date="1522626489057" expanded="true" signature="203:4701" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="255:4699" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
+            <marker date="1522626489057" expanded="true" signature="514:1000" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="583:651" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="733:901" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+            <marker date="1522626489057" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
+            <marker date="1522626489057" expanded="true" signature="1508:2547" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="1572:1686" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="2553:2702" ph="/// Process all character's status effects. ... " />
+            <marker date="1522626489057" expanded="true" signature="2755:3132" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="2782:2895" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="2979:3128" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="3056:3123" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="3136:3823" ph="/// Manually removes selected status effect/s. ... " />
+            <marker date="1522626489057" expanded="true" signature="4001:4696" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="4085:4343" ph="{...}" />
+            <marker date="1522626489057" expanded="true" signature="4402:4692" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="78" lean-forward="false" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
+          <folding>
+            <marker date="1522626636957" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
+            <marker date="1522626636957" expanded="true" signature="90:6473" ph="{...}" />
+            <marker date="1522626636957" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
+            <marker date="1522626636957" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
+            <marker date="1522626636957" expanded="true" signature="262:349" ph="/// Invulnerability of player after respawn/spawn. ... " />
+            <marker date="1522626636957" expanded="true" signature="411:484" ph="/// Player's default movement speed. ... " />
+            <marker date="1522626636957" expanded="true" signature="548:620" ph="/// Ghost's default movement speed. ... " />
+            <marker date="1522626636957" expanded="true" signature="708:783" ph="/// Ghost's frightened movement speed. ... " />
+            <marker date="1522626636957" expanded="true" signature="874:956" ph="/// Ghost's consumed (killed) movement speed. ... " />
+            <marker date="1522626636957" expanded="true" signature="1017:1044" ph="/* BOMBERMAN ... */" />
+            <marker date="1522626636957" expanded="true" signature="1054:1146" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
+            <marker date="1522626636957" expanded="true" signature="1206:1294" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
+            <marker date="1522626636957" expanded="true" signature="1357:1438" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
+            <marker date="1522626636957" expanded="true" signature="1501:1590" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
+            <marker date="1522626636957" expanded="true" signature="1654:1899" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
+            <marker date="1522626636957" expanded="true" signature="1969:2111" ph="{...}" />
+            <marker date="1522626636957" expanded="true" signature="2122:2144" ph="/* BOMB ... */" />
+            <marker date="1522626636957" expanded="true" signature="2154:2304" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
+            <marker date="1522626636957" expanded="true" signature="2363:2526" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
+            <marker date="1522626636957" expanded="true" signature="2576:2641" ph="/// Speed of a rolling bomb. ... " />
+            <marker date="1522626636957" expanded="true" signature="2693:2773" ph="/// Delayed explosion after rolling a bomb. ... " />
+            <marker date="1522626636957" expanded="true" signature="2841:2865" ph="/* LAYERS ... */" />
+            <marker date="1522626636957" expanded="true" signature="2875:3086" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+            <marker date="1522626636957" expanded="true" signature="3166:3352" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+            <marker date="1522626636957" expanded="true" signature="3422:3446" ph="/* GHOSTS ... */" />
+            <marker date="1522626636957" expanded="true" signature="3456:3526" ph="/// Delay after death to respawn. ... " />
+            <marker date="1522626636957" expanded="true" signature="3590:3665" ph="/// Duration of ghost frightened mode. ... " />
+            <marker date="1522626636957" expanded="true" signature="3731:3917" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
+            <marker date="1522626636957" expanded="true" signature="4023:4112" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
+            <marker date="1522626636957" expanded="true" signature="4186:4264" ph="/// Number of iterations for ghost modes. ... " />
+            <marker date="1522626636957" expanded="true" signature="4324:4410" ph="/// Ghost mode phases from the start of the game. ... " />
+            <marker date="1522626636957" expanded="true" signature="4534:4661" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
+            <marker date="1522626636957" expanded="true" signature="4786:4863" ph="/// Release Blinky ghost from its house. ... " />
+            <marker date="1522626636957" expanded="true" signature="4928:5004" ph="/// Release Pinky ghost from its house. ... " />
+            <marker date="1522626636957" expanded="true" signature="5068:5143" ph="/// Release Inky ghost from its house. ... " />
+            <marker date="1522626636957" expanded="true" signature="5207:5283" ph="/// Release Clyde ghost from its house. ... " />
+            <marker date="1522626636957" expanded="true" signature="5348:5487" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
+            <marker date="1522626636957" expanded="true" signature="5560:5786" ph="/// Select the position X cells in front of the closest player. ... " />
+            <marker date="1522626636957" expanded="true" signature="5902:6175" ph="/// Calculate the distance from the closest player. ... " />
+            <marker date="1522626636957" expanded="true" signature="6246:6409" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,7 @@ namespace StatusEffects.Scriptable
 		[Header("Basic Settings")] public StatusEffect.StatusEffectType StatusEffectType;
 		
 		/// <summary>
-		/// Duration of the effect.
+		/// Duration of the effect. If this is set to 0 then the status effect will be permanent till manually rmeoving the effect.
 		/// </summary>
 		[Header("Effect Property")] public float Duration;
 		

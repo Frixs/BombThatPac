@@ -25,12 +25,12 @@ public static class Constants
     /// <summary>
     /// Ghost's default movement speed.
     /// </summary>
-    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.4f;
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.2f;
     
     /// <summary>
     /// Ghost's frightened movement speed.
     /// </summary>
-    public const float GhostFrightenedMoveSpeed = PlayerDefaultMoveSpeed - 1.8f;
+    public const float GhostFrightenedMoveSpeed = PlayerDefaultMoveSpeed - 1.5f;
     
     /// <summary>
     /// Ghost's consumed (killed) movement speed.

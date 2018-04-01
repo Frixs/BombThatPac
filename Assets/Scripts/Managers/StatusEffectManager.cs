@@ -52,7 +52,7 @@ namespace Managers
 			// Get status effect.
 			StatusEffect newStatusEffect = newScriptableStatusEffect.Initialize(target, caster);
 			
-			bool effectOccurrence = target.AppliedStatusEffects.Any(item => item.Data == newScriptableStatusEffect);
+			bool effectOccurrence = target.AppliedStatusEffects.Exists(item => item.Data == newScriptableStatusEffect);
 			
 			// Don't let it create a new status effect of the same type if the status effect is not stackable and there is already one in.
 			if (!newStatusEffect.Data.IsStackable && effectOccurrence)
@@ -89,9 +89,38 @@ namespace Managers
 			}
 		}
 
-		public void RemoveStatusEffect()
+		/// <summary>
+		/// Manually removes selected status effect/s.
+		/// </summary>
+		/// <param name="target">Target who will get a new status effect.</param>
+		/// <param name="caster">Caster who applied status effect on the target. Can be NULL.</param>
+		/// <param name="newScriptableStatusEffect">New scriptable status effect to be applied.</param>
+		/// <param name="isCasterImportant">Let's say, if the method should care about caster or caster is caster should not be included to filter status effect to remove.</param>
+		/// <param name="shouldRemoveAllOfTheSameType">Should the method remove all the status effects of the same type (only from the same caster if it it set).</param>
+		public void RemoveStatusEffect(Character target, Character caster, ScriptableStatusEffect newScriptableStatusEffect, bool isCasterImportant, bool shouldRemoveAllOfTheSameType)
 		{
-			//TODO
+			// Remove all effects of the same type.
+			if (shouldRemoveAllOfTheSameType)
+			{
+				target.AppliedStatusEffects.RemoveAll(delegate(StatusEffect item)
+				{
+					if (isCasterImportant)
+						return item.Data == newScriptableStatusEffect && item.Caster == caster;
+					
+					return item.Data == newScriptableStatusEffect;
+				});
+			}
+			// Remove only the first occured status effect.
+			else
+			{
+				target.AppliedStatusEffects.Remove(target.AppliedStatusEffects.First(delegate(StatusEffect item)
+				{
+					if (isCasterImportant)
+						return item.Data == newScriptableStatusEffect && item.Caster == caster;
+					
+					return item.Data == newScriptableStatusEffect;
+				}));
+			}
 		}
 	}
 }
