@@ -100,7 +100,7 @@ namespace Items
 		void FixedUpdate()
 		{
 			// Restore the collision when player will be in sufficient distance from the bomb.
-			if (Vector2.Distance(Caster.transform.position, transform.position) > Caster.GetComponent<CircleCollider2D>().radius + GetComponent<CircleCollider2D>().radius)
+			if (Vector2.Distance(Caster.transform.position, transform.position) > Caster.GetComponent<CircleCollider2D>().radius + GetComponent<CircleCollider2D>().radius + Constants.BombCollisionActivateAdditionalSpace)
 			{
 				Physics2D.IgnoreCollision(Caster.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
 			}

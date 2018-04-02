@@ -20,7 +20,7 @@ public static class Constants
     /// <summary>
     /// Ghost's default movement speed.
     /// </summary>
-    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.2f;
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.1f;
 
     /*
      * BOMBERMAN
@@ -83,6 +83,11 @@ public static class Constants
     /// Delayed explosion after rolling a bomb.
     /// </summary>
     public const float BombExplosionDelayAfterRolling = 0.5f;
+ 
+    /// <summary>
+    /// Debug constant for some space between bomb and player when the player leave the bomb after placing.
+    /// </summary>
+    public const float BombCollisionActivateAdditionalSpace = 0.1f;
 
     /*
      * LAYERS

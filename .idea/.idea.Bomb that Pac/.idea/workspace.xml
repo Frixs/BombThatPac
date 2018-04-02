@@ -6,37 +6,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3945026-ee59-4bbb-a764-16d26cab1ec8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Bomb that Pac/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostBlinky.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostBlinky.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostClyde.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostClyde.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostInky.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostInky.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostPinky.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Ghosts/GhostPinky.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/Main.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/World/Main.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_001_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_001_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_002_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_002_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_003_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_003_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_004_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_004_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_006_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_006_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_007_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_007_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_008_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_008_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_009_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_009_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_010_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_010_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_011_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_011_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_012_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_012_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_013_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_013_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_014_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_014_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_015_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_015_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_016_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_016_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_017_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_017_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_018_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_018_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_019_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_019_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_020_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_020_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_021_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_021_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_022_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_022_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_023_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_023_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_024_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_024_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_025_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_025_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_026_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_026_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_027_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_027_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_028_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_028_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_029_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_029_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_030_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_030_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_031_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_031_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_032_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_032_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_033_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_033_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_034_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_034_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_035_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_035_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_036_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_036_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_037_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_037_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_038_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_038_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_039_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_039_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_040_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_040_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_041_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_041_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_042_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_042_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_043_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_043_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_044_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_044_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_045_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_045_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_046_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_046_001_001.png" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_047_001_001.png" afterPath="$PROJECT_DIR$/Assets/Sprites/Enviroment/Tilesets/WallTiles/GeneralMaze_Wall_Tile_047_001_001.png" />
       <change beforePath="$PROJECT_DIR$/Assets/StatusEffects/GhostBombMoveSpeedDebuff.asset" afterPath="$PROJECT_DIR$/Assets/StatusEffects/GhostBombMoveSpeedDebuff.asset" />
       <change beforePath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" afterPath="$PROJECT_DIR$/Library/Collab/CollabSnapshot_1b678b43-3af6-4050-9916-067681d20f7b.txt" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" afterPath="$PROJECT_DIR$/Library/expandedItems" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/08/08f94c2bfe22d48459075584762fa0a8" afterPath="$PROJECT_DIR$/Library/metadata/08/08f94c2bfe22d48459075584762fa0a8" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/08/08f94c2bfe22d48459075584762fa0a8.info" afterPath="$PROJECT_DIR$/Library/metadata/08/08f94c2bfe22d48459075584762fa0a8.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0a/0a53f25be7e2b8942925d4683db138e7" afterPath="$PROJECT_DIR$/Library/metadata/0a/0a53f25be7e2b8942925d4683db138e7" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0a/0a53f25be7e2b8942925d4683db138e7.info" afterPath="$PROJECT_DIR$/Library/metadata/0a/0a53f25be7e2b8942925d4683db138e7.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0a/0ac45da92fe14784b8e5b1197db20547" afterPath="$PROJECT_DIR$/Library/metadata/0a/0ac45da92fe14784b8e5b1197db20547" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0a/0ac45da92fe14784b8e5b1197db20547.info" afterPath="$PROJECT_DIR$/Library/metadata/0a/0ac45da92fe14784b8e5b1197db20547.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0f/0fc5de02256841f45b9ea13e8e595b93" afterPath="$PROJECT_DIR$/Library/metadata/0f/0fc5de02256841f45b9ea13e8e595b93" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0f/0fc5de02256841f45b9ea13e8e595b93.info" afterPath="$PROJECT_DIR$/Library/metadata/0f/0fc5de02256841f45b9ea13e8e595b93.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/11/11b468219704d64428e802b5698b8dab" afterPath="$PROJECT_DIR$/Library/metadata/11/11b468219704d64428e802b5698b8dab" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/11/11b468219704d64428e802b5698b8dab.info" afterPath="$PROJECT_DIR$/Library/metadata/11/11b468219704d64428e802b5698b8dab.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/16/16e6837ce7269dd42806742cdebe77a0" afterPath="$PROJECT_DIR$/Library/metadata/16/16e6837ce7269dd42806742cdebe77a0" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/16/16e6837ce7269dd42806742cdebe77a0.info" afterPath="$PROJECT_DIR$/Library/metadata/16/16e6837ce7269dd42806742cdebe77a0.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1c537dc8372138a4aadaec625f67dfbc" afterPath="$PROJECT_DIR$/Library/metadata/1c/1c537dc8372138a4aadaec625f67dfbc" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1c537dc8372138a4aadaec625f67dfbc.info" afterPath="$PROJECT_DIR$/Library/metadata/1c/1c537dc8372138a4aadaec625f67dfbc.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1cd1445f148e3764994de8959b22b4d1" afterPath="$PROJECT_DIR$/Library/metadata/1c/1cd1445f148e3764994de8959b22b4d1" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1cd1445f148e3764994de8959b22b4d1.info" afterPath="$PROJECT_DIR$/Library/metadata/1c/1cd1445f148e3764994de8959b22b4d1.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1d/1dd09cd102b9e3f4da52c37d4a5c0fe3" afterPath="$PROJECT_DIR$/Library/metadata/1d/1dd09cd102b9e3f4da52c37d4a5c0fe3" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1d/1dd09cd102b9e3f4da52c37d4a5c0fe3.info" afterPath="$PROJECT_DIR$/Library/metadata/1d/1dd09cd102b9e3f4da52c37d4a5c0fe3.info" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" afterPath="$PROJECT_DIR$/Library/metadata/25/253084a2f7c69094ab422469069e52d4" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/27/27859c942e3d48044a47520d8ddce57a" afterPath="$PROJECT_DIR$/Library/metadata/27/27859c942e3d48044a47520d8ddce57a" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/27/27859c942e3d48044a47520d8ddce57a.info" afterPath="$PROJECT_DIR$/Library/metadata/27/27859c942e3d48044a47520d8ddce57a.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/27/27ed8680e9a0ed7428e8f351071d76c3" afterPath="$PROJECT_DIR$/Library/metadata/27/27ed8680e9a0ed7428e8f351071d76c3" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/27/27ed8680e9a0ed7428e8f351071d76c3.info" afterPath="$PROJECT_DIR$/Library/metadata/27/27ed8680e9a0ed7428e8f351071d76c3.info" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/2b/2b6f152042eba2b4cbe8804d31fd19c3" afterPath="$PROJECT_DIR$/Library/metadata/2b/2b6f152042eba2b4cbe8804d31fd19c3" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/2b/2bba197a1d99f25489dcdab9acc29b15" afterPath="$PROJECT_DIR$/Library/metadata/2b/2bba197a1d99f25489dcdab9acc29b15" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/2b/2bba197a1d99f25489dcdab9acc29b15.info" afterPath="$PROJECT_DIR$/Library/metadata/2b/2bba197a1d99f25489dcdab9acc29b15.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/2d/2d558a8bafb485e49a14587bceb72e46" afterPath="$PROJECT_DIR$/Library/metadata/2d/2d558a8bafb485e49a14587bceb72e46" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/2d/2d558a8bafb485e49a14587bceb72e46.info" afterPath="$PROJECT_DIR$/Library/metadata/2d/2d558a8bafb485e49a14587bceb72e46.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/35/351b260c16c017a4c99e5c346e3e0e05" afterPath="$PROJECT_DIR$/Library/metadata/35/351b260c16c017a4c99e5c346e3e0e05" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/35/351b260c16c017a4c99e5c346e3e0e05.info" afterPath="$PROJECT_DIR$/Library/metadata/35/351b260c16c017a4c99e5c346e3e0e05.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/35/35474eafe7ce63c47860240b67f2f40d" afterPath="$PROJECT_DIR$/Library/metadata/35/35474eafe7ce63c47860240b67f2f40d" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/35/35474eafe7ce63c47860240b67f2f40d.info" afterPath="$PROJECT_DIR$/Library/metadata/35/35474eafe7ce63c47860240b67f2f40d.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/39/39af1a0607314dd48bf917bb1592b733" afterPath="$PROJECT_DIR$/Library/metadata/39/39af1a0607314dd48bf917bb1592b733" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/39/39af1a0607314dd48bf917bb1592b733.info" afterPath="$PROJECT_DIR$/Library/metadata/39/39af1a0607314dd48bf917bb1592b733.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/3b/3b039d8fa1a05004d9c5fdd5907a369d" afterPath="$PROJECT_DIR$/Library/metadata/3b/3b039d8fa1a05004d9c5fdd5907a369d" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/3b/3b039d8fa1a05004d9c5fdd5907a369d.info" afterPath="$PROJECT_DIR$/Library/metadata/3b/3b039d8fa1a05004d9c5fdd5907a369d.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/49/49a6379434cbcf148a87740dbca880ce" afterPath="$PROJECT_DIR$/Library/metadata/49/49a6379434cbcf148a87740dbca880ce" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/49/49a6379434cbcf148a87740dbca880ce.info" afterPath="$PROJECT_DIR$/Library/metadata/49/49a6379434cbcf148a87740dbca880ce.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4a/4ae5dc82e4981f44cb2cd0ca89574f1d" afterPath="$PROJECT_DIR$/Library/metadata/4a/4ae5dc82e4981f44cb2cd0ca89574f1d" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4a/4ae5dc82e4981f44cb2cd0ca89574f1d.info" afterPath="$PROJECT_DIR$/Library/metadata/4a/4ae5dc82e4981f44cb2cd0ca89574f1d.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4b/4b93bcfa35d651947912428ad0d4658d" afterPath="$PROJECT_DIR$/Library/metadata/4b/4b93bcfa35d651947912428ad0d4658d" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4b/4b93bcfa35d651947912428ad0d4658d.info" afterPath="$PROJECT_DIR$/Library/metadata/4b/4b93bcfa35d651947912428ad0d4658d.info" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d557c41369605e4fa1b8ecadcf952e8" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/50/50542123fc75f5a489b0640dd3fb27e3.info" afterPath="$PROJECT_DIR$/Library/metadata/50/50542123fc75f5a489b0640dd3fb27e3.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6b/6b98213bb4173414fbdcfba61ba7c775.info" afterPath="$PROJECT_DIR$/Library/metadata/6b/6b98213bb4173414fbdcfba61ba7c775.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6d/6d0bb1248cc9da04d8153167d5338be6.info" afterPath="$PROJECT_DIR$/Library/metadata/6d/6d0bb1248cc9da04d8153167d5338be6.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/82/82208ccea8374564bb09407be8432847" afterPath="$PROJECT_DIR$/Library/metadata/82/82208ccea8374564bb09407be8432847" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a9/a905749a6eef1a5479f4007961412a15.info" afterPath="$PROJECT_DIR$/Library/metadata/a9/a905749a6eef1a5479f4007961412a15.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b9/b9c0d1260519a944588c0097071e26d5" afterPath="$PROJECT_DIR$/Library/metadata/b9/b9c0d1260519a944588c0097071e26d5" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" afterPath="$PROJECT_DIR$/Library/metadata/d8/d8918ee29893a8f47ac53b67ebd1ce04" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ea/ea3f01450c9c5f147a8b467d27287215" afterPath="$PROJECT_DIR$/Library/metadata/ea/ea3f01450c9c5f147a8b467d27287215" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa6c7a0fffa219146b647366c365bf61" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa6c7a0fffa219146b647366c365bf61" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d76049c445947945af5ec93ff40665a" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d76049c445947945af5ec93ff40665a" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d76049c445947945af5ec93ff40665a.info" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d76049c445947945af5ec93ff40665a.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/53/535f535ef756c32448e42e45b937eb85" afterPath="$PROJECT_DIR$/Library/metadata/53/535f535ef756c32448e42e45b937eb85" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/53/535f535ef756c32448e42e45b937eb85.info" afterPath="$PROJECT_DIR$/Library/metadata/53/535f535ef756c32448e42e45b937eb85.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/53/538127cfa9384964ab82577b3e1bd2bf" afterPath="$PROJECT_DIR$/Library/metadata/53/538127cfa9384964ab82577b3e1bd2bf" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/53/538127cfa9384964ab82577b3e1bd2bf.info" afterPath="$PROJECT_DIR$/Library/metadata/53/538127cfa9384964ab82577b3e1bd2bf.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5c/5c6544fce77aed440bfc702461bf846e" afterPath="$PROJECT_DIR$/Library/metadata/5c/5c6544fce77aed440bfc702461bf846e" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5c/5c6544fce77aed440bfc702461bf846e.info" afterPath="$PROJECT_DIR$/Library/metadata/5c/5c6544fce77aed440bfc702461bf846e.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5c/5cf7d2ac0b5821646b8404315c9f092b" afterPath="$PROJECT_DIR$/Library/metadata/5c/5cf7d2ac0b5821646b8404315c9f092b" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5c/5cf7d2ac0b5821646b8404315c9f092b.info" afterPath="$PROJECT_DIR$/Library/metadata/5c/5cf7d2ac0b5821646b8404315c9f092b.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/86/86f82c36788899947b1ffb87f60ea6f4" afterPath="$PROJECT_DIR$/Library/metadata/86/86f82c36788899947b1ffb87f60ea6f4" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/86/86f82c36788899947b1ffb87f60ea6f4.info" afterPath="$PROJECT_DIR$/Library/metadata/86/86f82c36788899947b1ffb87f60ea6f4.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/8b/8bd2a9915d742fa4c930e0338c9e599f" afterPath="$PROJECT_DIR$/Library/metadata/8b/8bd2a9915d742fa4c930e0338c9e599f" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/8b/8bd2a9915d742fa4c930e0338c9e599f.info" afterPath="$PROJECT_DIR$/Library/metadata/8b/8bd2a9915d742fa4c930e0338c9e599f.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/a4/a4b94fba5c027e4449125e4a0b7e486d" afterPath="$PROJECT_DIR$/Library/metadata/a4/a4b94fba5c027e4449125e4a0b7e486d" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a84acaf86bed99646b17f036652cf075" afterPath="$PROJECT_DIR$/Library/metadata/a8/a84acaf86bed99646b17f036652cf075" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a84acaf86bed99646b17f036652cf075.info" afterPath="$PROJECT_DIR$/Library/metadata/a8/a84acaf86bed99646b17f036652cf075.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a8e72acc0d8bf8641b7b82e9cd9562eb" afterPath="$PROJECT_DIR$/Library/metadata/a8/a8e72acc0d8bf8641b7b82e9cd9562eb" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a8e72acc0d8bf8641b7b82e9cd9562eb.info" afterPath="$PROJECT_DIR$/Library/metadata/a8/a8e72acc0d8bf8641b7b82e9cd9562eb.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b2/b25d0a083d6f6744d84329facb0894b4" afterPath="$PROJECT_DIR$/Library/metadata/b2/b25d0a083d6f6744d84329facb0894b4" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b2/b25d0a083d6f6744d84329facb0894b4.info" afterPath="$PROJECT_DIR$/Library/metadata/b2/b25d0a083d6f6744d84329facb0894b4.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b2/b2dbfd1f720c58147890ba5a6e2a9a21" afterPath="$PROJECT_DIR$/Library/metadata/b2/b2dbfd1f720c58147890ba5a6e2a9a21" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b2/b2dbfd1f720c58147890ba5a6e2a9a21.info" afterPath="$PROJECT_DIR$/Library/metadata/b2/b2dbfd1f720c58147890ba5a6e2a9a21.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b3/b32c5de8657f3084dbc1bde294e9118f" afterPath="$PROJECT_DIR$/Library/metadata/b3/b32c5de8657f3084dbc1bde294e9118f" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b3/b32c5de8657f3084dbc1bde294e9118f.info" afterPath="$PROJECT_DIR$/Library/metadata/b3/b32c5de8657f3084dbc1bde294e9118f.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b6/b62fb5ae070cf1f4991b83ac27872d9b" afterPath="$PROJECT_DIR$/Library/metadata/b6/b62fb5ae070cf1f4991b83ac27872d9b" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b6/b62fb5ae070cf1f4991b83ac27872d9b.info" afterPath="$PROJECT_DIR$/Library/metadata/b6/b62fb5ae070cf1f4991b83ac27872d9b.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/bc/bca651036230916488009512588db75b" afterPath="$PROJECT_DIR$/Library/metadata/bc/bca651036230916488009512588db75b" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/bc/bca651036230916488009512588db75b.info" afterPath="$PROJECT_DIR$/Library/metadata/bc/bca651036230916488009512588db75b.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c3/c358ff5b7e9d2cb4b86bbcddb67278b0" afterPath="$PROJECT_DIR$/Library/metadata/c3/c358ff5b7e9d2cb4b86bbcddb67278b0" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c3/c358ff5b7e9d2cb4b86bbcddb67278b0.info" afterPath="$PROJECT_DIR$/Library/metadata/c3/c358ff5b7e9d2cb4b86bbcddb67278b0.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c9/c9297ed6a1eed124eadb47c5365c7a3a" afterPath="$PROJECT_DIR$/Library/metadata/c9/c9297ed6a1eed124eadb47c5365c7a3a" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c9/c9297ed6a1eed124eadb47c5365c7a3a.info" afterPath="$PROJECT_DIR$/Library/metadata/c9/c9297ed6a1eed124eadb47c5365c7a3a.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" afterPath="$PROJECT_DIR$/Library/metadata/c9/c9928ebcf29e43d438cc6f11b069fac0" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/cf/cf9fb42bbc5a351419d367649eeb5c38" afterPath="$PROJECT_DIR$/Library/metadata/cf/cf9fb42bbc5a351419d367649eeb5c38" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/cf/cf9fb42bbc5a351419d367649eeb5c38.info" afterPath="$PROJECT_DIR$/Library/metadata/cf/cf9fb42bbc5a351419d367649eeb5c38.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d0/d05965930faaf704e8aad142beae3cee" afterPath="$PROJECT_DIR$/Library/metadata/d0/d05965930faaf704e8aad142beae3cee" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d0/d05965930faaf704e8aad142beae3cee.info" afterPath="$PROJECT_DIR$/Library/metadata/d0/d05965930faaf704e8aad142beae3cee.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d4/d4d475b234eff1c4e8a5ed306a4e93d7" afterPath="$PROJECT_DIR$/Library/metadata/d4/d4d475b234eff1c4e8a5ed306a4e93d7" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d4/d4d475b234eff1c4e8a5ed306a4e93d7.info" afterPath="$PROJECT_DIR$/Library/metadata/d4/d4d475b234eff1c4e8a5ed306a4e93d7.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/db/db6c8194c76d2274db7c634b78e97002" afterPath="$PROJECT_DIR$/Library/metadata/db/db6c8194c76d2274db7c634b78e97002" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/db/db6c8194c76d2274db7c634b78e97002.info" afterPath="$PROJECT_DIR$/Library/metadata/db/db6c8194c76d2274db7c634b78e97002.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/ddb6a2883e5edb24f87e97d851a7c7b6" afterPath="$PROJECT_DIR$/Library/metadata/dd/ddb6a2883e5edb24f87e97d851a7c7b6" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/ddb6a2883e5edb24f87e97d851a7c7b6.info" afterPath="$PROJECT_DIR$/Library/metadata/dd/ddb6a2883e5edb24f87e97d851a7c7b6.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e4/e4f23b68a32acde4ca4b927b6af35fc3" afterPath="$PROJECT_DIR$/Library/metadata/e4/e4f23b68a32acde4ca4b927b6af35fc3" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e4/e4f23b68a32acde4ca4b927b6af35fc3.info" afterPath="$PROJECT_DIR$/Library/metadata/e4/e4f23b68a32acde4ca4b927b6af35fc3.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e6/e60c194fa8864d74f9b6916d889f98f8" afterPath="$PROJECT_DIR$/Library/metadata/e6/e60c194fa8864d74f9b6916d889f98f8" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e6/e60c194fa8864d74f9b6916d889f98f8.info" afterPath="$PROJECT_DIR$/Library/metadata/e6/e60c194fa8864d74f9b6916d889f98f8.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e8/e84cb3f5e595f1a4aa078d42e3c1c7d5" afterPath="$PROJECT_DIR$/Library/metadata/e8/e84cb3f5e595f1a4aa078d42e3c1c7d5" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e8/e84cb3f5e595f1a4aa078d42e3c1c7d5.info" afterPath="$PROJECT_DIR$/Library/metadata/e8/e84cb3f5e595f1a4aa078d42e3c1c7d5.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e8/e89c1886e88fd5c4fb9fa77c2fe09979" afterPath="$PROJECT_DIR$/Library/metadata/e8/e89c1886e88fd5c4fb9fa77c2fe09979" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/e8/e89c1886e88fd5c4fb9fa77c2fe09979.info" afterPath="$PROJECT_DIR$/Library/metadata/e8/e89c1886e88fd5c4fb9fa77c2fe09979.info" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa6768df2cd3f9d4aab1d8dc3912f54e" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa6768df2cd3f9d4aab1d8dc3912f54e" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa6768df2cd3f9d4aab1d8dc3912f54e.info" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa6768df2cd3f9d4aab1d8dc3912f54e.info" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,49 +177,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Constants.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+            <state relative-caret-position="720">
+              <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
               <folding>
-                <marker date="1522680204132" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
-                <marker date="1522680204132" expanded="true" signature="90:6015" ph="{...}" />
-                <marker date="1522680204132" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
-                <marker date="1522680204132" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
-                <marker date="1522680204132" expanded="true" signature="266:339" ph="/// Player's default movement speed. ... " />
-                <marker date="1522680204132" expanded="true" signature="403:475" ph="/// Ghost's default movement speed. ... " />
-                <marker date="1522680204132" expanded="true" signature="559:586" ph="/* BOMBERMAN ... */" />
-                <marker date="1522680204132" expanded="true" signature="596:688" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
-                <marker date="1522680204132" expanded="true" signature="748:836" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
-                <marker date="1522680204132" expanded="true" signature="899:980" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
-                <marker date="1522680204132" expanded="true" signature="1043:1132" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
-                <marker date="1522680204132" expanded="true" signature="1196:1441" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
-                <marker date="1522680204132" expanded="true" signature="1511:1653" ph="{...}" />
-                <marker date="1522680204132" expanded="true" signature="1664:1686" ph="/* BOMB ... */" />
-                <marker date="1522680204132" expanded="true" signature="1696:1846" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
-                <marker date="1522680204132" expanded="true" signature="1905:2068" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
-                <marker date="1522680204132" expanded="true" signature="2118:2183" ph="/// Speed of a rolling bomb. ... " />
-                <marker date="1522680204132" expanded="true" signature="2235:2315" ph="/// Delayed explosion after rolling a bomb. ... " />
-                <marker date="1522680204132" expanded="true" signature="2383:2407" ph="/* LAYERS ... */" />
-                <marker date="1522680204132" expanded="true" signature="2417:2628" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-                <marker date="1522680204132" expanded="true" signature="2708:2894" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-                <marker date="1522680204132" expanded="true" signature="2964:2988" ph="/* GHOSTS ... */" />
-                <marker date="1522680204132" expanded="true" signature="2998:3068" ph="/// Delay after death to respawn. ... " />
-                <marker date="1522680204132" expanded="true" signature="3132:3207" ph="/// Duration of ghost frightened mode. ... " />
-                <marker date="1522680204132" expanded="true" signature="3273:3459" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
-                <marker date="1522680204132" expanded="true" signature="3565:3654" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
-                <marker date="1522680204132" expanded="true" signature="3728:3806" ph="/// Number of iterations for ghost modes. ... " />
-                <marker date="1522680204132" expanded="true" signature="3866:3952" ph="/// Ghost mode phases from the start of the game. ... " />
-                <marker date="1522680204132" expanded="true" signature="4076:4203" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
-                <marker date="1522680204132" expanded="true" signature="4328:4405" ph="/// Release Blinky ghost from its house. ... " />
-                <marker date="1522680204132" expanded="true" signature="4470:4546" ph="/// Release Pinky ghost from its house. ... " />
-                <marker date="1522680204132" expanded="true" signature="4610:4685" ph="/// Release Inky ghost from its house. ... " />
-                <marker date="1522680204132" expanded="true" signature="4749:4825" ph="/// Release Clyde ghost from its house. ... " />
-                <marker date="1522680204132" expanded="true" signature="4890:5029" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
-                <marker date="1522680204132" expanded="true" signature="5102:5328" ph="/// Select the position X cells in front of the closest player. ... " />
-                <marker date="1522680204132" expanded="true" signature="5444:5717" ph="/// Calculate the distance from the closest player. ... " />
-                <marker date="1522680204132" expanded="true" signature="5788:5951" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
+                <marker date="1522693191565" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
+                <marker date="1522693191565" expanded="true" signature="90:6230" ph="{...}" />
+                <marker date="1522693191565" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
+                <marker date="1522693191565" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
+                <marker date="1522693191565" expanded="true" signature="266:339" ph="/// Player's default movement speed. ... " />
+                <marker date="1522693191565" expanded="true" signature="403:475" ph="/// Ghost's default movement speed. ... " />
+                <marker date="1522693191565" expanded="true" signature="559:586" ph="/* BOMBERMAN ... */" />
+                <marker date="1522693191565" expanded="true" signature="596:688" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
+                <marker date="1522693191565" expanded="true" signature="748:836" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
+                <marker date="1522693191565" expanded="true" signature="899:980" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
+                <marker date="1522693191565" expanded="true" signature="1043:1132" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
+                <marker date="1522693191565" expanded="true" signature="1196:1441" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
+                <marker date="1522693191565" expanded="true" signature="1511:1653" ph="{...}" />
+                <marker date="1522693191565" expanded="true" signature="1664:1686" ph="/* BOMB ... */" />
+                <marker date="1522693191565" expanded="true" signature="1696:1846" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
+                <marker date="1522693191565" expanded="true" signature="1905:2068" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
+                <marker date="1522693191565" expanded="true" signature="2118:2183" ph="/// Speed of a rolling bomb. ... " />
+                <marker date="1522693191565" expanded="true" signature="2235:2315" ph="/// Delayed explosion after rolling a bomb. ... " />
+                <marker date="1522693191565" expanded="true" signature="2384:2524" ph="/// Debug constant for some space between bomb and player when the player leave the bomb after placing. ... " />
+                <marker date="1522693191565" expanded="true" signature="2598:2622" ph="/* LAYERS ... */" />
+                <marker date="1522693191565" expanded="true" signature="2632:2843" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+                <marker date="1522693191565" expanded="true" signature="2923:3109" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+                <marker date="1522693191565" expanded="true" signature="3179:3203" ph="/* GHOSTS ... */" />
+                <marker date="1522693191565" expanded="true" signature="3213:3283" ph="/// Delay after death to respawn. ... " />
+                <marker date="1522693191565" expanded="true" signature="3347:3422" ph="/// Duration of ghost frightened mode. ... " />
+                <marker date="1522693191565" expanded="true" signature="3488:3674" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
+                <marker date="1522693191565" expanded="true" signature="3780:3869" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
+                <marker date="1522693191565" expanded="true" signature="3943:4021" ph="/// Number of iterations for ghost modes. ... " />
+                <marker date="1522693191565" expanded="true" signature="4081:4167" ph="/// Ghost mode phases from the start of the game. ... " />
+                <marker date="1522693191565" expanded="true" signature="4291:4418" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
+                <marker date="1522693191565" expanded="true" signature="4543:4620" ph="/// Release Blinky ghost from its house. ... " />
+                <marker date="1522693191565" expanded="true" signature="4685:4761" ph="/// Release Pinky ghost from its house. ... " />
+                <marker date="1522693191565" expanded="true" signature="4825:4900" ph="/// Release Inky ghost from its house. ... " />
+                <marker date="1522693191565" expanded="true" signature="4964:5040" ph="/// Release Clyde ghost from its house. ... " />
+                <marker date="1522693191565" expanded="true" signature="5105:5244" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
+                <marker date="1522693191565" expanded="true" signature="5317:5543" ph="/// Select the position X cells in front of the closest player. ... " />
+                <marker date="1522693191565" expanded="true" signature="5659:5932" ph="/// Calculate the distance from the closest player. ... " />
+                <marker date="1522693191565" expanded="true" signature="6003:6166" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
               </folding>
             </state>
           </provider>
@@ -204,6 +335,58 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Bomb.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="113" column="62" lean-forward="true" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+              <folding>
+                <marker date="1522693218544" expanded="false" signature="6:112" ph="..." />
+                <marker date="1522693218544" expanded="true" signature="129:11510" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="166:11508" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="172:233" ph="/// Reference to bomb owner. ... " />
+                <marker date="1522693218544" expanded="true" signature="279:333" ph="/// Bomb's countdown. ... " />
+                <marker date="1522693218544" expanded="true" signature="383:450" ph="/// Reference to explosion PREFAB. ... " />
+                <marker date="1522693218544" expanded="true" signature="491:598" ph="/// Scriptable asset of for ghost when the bomb hit it it will get debuff. ... " />
+                <marker date="1522693218544" expanded="true" signature="657:722" ph="/// Check if bomb can be rolled. ... " />
+                <marker date="1522693218544" expanded="true" signature="754:925" ph="/// Checks if bomb should start rolling. Checks when the bomb has collided with caster. Also it says if the bomb  ... " />
+                <marker date="1522693218544" expanded="true" signature="956:1042" ph="/// Rolling direction of the bomb. Normalized vector. ... " />
+                <marker date="1522693218544" expanded="true" signature="1083:1161" ph="/// Position where the bomb has been planted. ... " />
+                <marker date="1522693218544" expanded="true" signature="1203:1378" ph="/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. C ... " />
+                <marker date="1522693218544" expanded="true" signature="1487:2187" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="2242:2715" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="2392:2585" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="2792:3221" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="3094:3217" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="3275:4409" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="3436:4400" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="4415:4527" ph="/// Bomb explosion. ... " />
+                <marker date="1522693218544" expanded="true" signature="4567:4952" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="4775:4948" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="4956:5257" ph="/// Explosion in certain direction. ... " />
+                <marker date="1522693218544" expanded="true" signature="5332:5477" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="5395:5473" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="5489:5815" ph="/// Make explosion in the current cell (by world position pointing to the cell.) ... " />
+                <marker date="1522693218544" expanded="true" signature="5884:8688" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="6681:6848" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="7389:8249" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="7515:7585" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="7660:7758" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="7854:8238" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="8694:8829" ph="/// Roll the bomb in the correct direction. //Pretty the same method as method Move() in Ghost script. ... " />
+                <marker date="1522693218544" expanded="true" signature="8851:9739" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="8965:9590" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="9407:9517" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="9598:9735" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="9743:9900" ph="/// Check if target cell is safe to move there. ... " />
+                <marker date="1522693218544" expanded="true" signature="9933:11007" ph="{...}" />
+                <marker date="1522693218544" expanded="true" signature="11013:11277" ph="/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two  ... " />
+                <marker date="1522693218544" expanded="true" signature="11309:11505" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Character.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -255,77 +438,153 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatusEffect.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs">
+      <file leaf-file-name="StatusEffectManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+            <state relative-caret-position="193">
+              <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
               <folding>
-                <marker date="1522671061105" expanded="false" signature="6:82" ph="..." />
-                <marker date="1522671061105" expanded="true" signature="107:3233" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="145:3231" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="151:217" ph="/// Status effect duration timer. ... " />
-                <marker date="1522671061105" expanded="true" signature="255:336" ph="/// Start delay timer to activate status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="376:436" ph="/// Damage over time timer. ... " />
-                <marker date="1522671061105" expanded="true" signature="470:577" ph="/// Get information about the status effect if has been already activated. ... " />
-                <marker date="1522671061105" expanded="true" signature="619:738" ph="/// Reference to Scriptable status effects which storing data about the status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="805:886" ph="/// Target which has applied this status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="928:1003" ph="/// Caster which casted the status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="1045:1121" ph="/// Check if status effect already expired. ... " />
-                <marker date="1522671061105" expanded="true" signature="1196:1548" ph="/// Initialize the status effect via constructor. ... " />
-                <marker date="1522671061105" expanded="true" signature="1638:1854" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="1858:1969" ph="/// Timer processes. ... " />
-                <marker date="1522671061105" expanded="true" signature="2001:2623" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2070:2123" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2187:2245" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2326:2435" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2490:2619" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2550:2614" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="2627:2701" ph="/// Activate and start the status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="2745:2804" ph="/// End the status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="2843:2943" ph="/// Repeat some procedure each each tick according to repeat timer. ... " />
-                <marker date="1522671061105" expanded="true" signature="2983:3057" ph="/// Force End the status effect manually. ... " />
-                <marker date="1522671061105" expanded="true" signature="3082:3100" ph="{...}" />
-                <marker date="1522671061105" expanded="true" signature="3106:3170" ph="/// Enum type of status effect. ... " />
-                <marker date="1522671061105" expanded="true" signature="3201:3228" ph="{...}" />
+                <marker date="1522685487586" expanded="false" signature="6:183" ph="..." />
+                <marker date="1522685487586" expanded="true" signature="203:6541" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="255:6539" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
+                <marker date="1522685487586" expanded="true" signature="514:1000" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="583:651" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="733:901" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+                <marker date="1522685487586" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
+                <marker date="1522685487586" expanded="true" signature="1508:2997" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="1572:1686" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="3003:3152" ph="/// Process all character's status effects. ... " />
+                <marker date="1522685487586" expanded="true" signature="3205:3582" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="3232:3345" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="3429:3578" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="3506:3573" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="3586:4099" ph="/// Manually removes selected status effect/s. ... " />
+                <marker date="1522685487586" expanded="true" signature="4260:5981" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="4321:4433" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="4538:4951" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="5057:5450" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="5552:5977" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="5987:6075" ph="/// Removation methods for RemoveStatusEffect() method. ... " />
+                <marker date="1522685487586" expanded="true" signature="6102:6536" ph="{...}" />
+                <marker date="1522685487586" expanded="true" signature="6110:6239" ph="/// Should the method remove all the status effects of the same type (like MoveSpeedIncrease)? ... " />
+                <marker date="1522685487586" expanded="true" signature="6274:6398" ph="/// Should the method remove all the status effects of the same effect (scriptable form)? ... " />
+                <marker date="1522685487586" expanded="true" signature="6435:6513" ph="/// Remove the first occured status effect. ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatusEffectManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
+      <file leaf-file-name="GameManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="155" column="4" lean-forward="false" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
+            <state relative-caret-position="496">
+              <caret line="144" column="36" lean-forward="false" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
               <folding>
-                <marker date="1522679883592" expanded="false" signature="6:183" ph="..." />
-                <marker date="1522679883592" expanded="true" signature="203:6541" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="255:6539" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
-                <marker date="1522679883592" expanded="true" signature="514:1000" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="583:651" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="733:901" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
-                <marker date="1522679883592" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
-                <marker date="1522679883592" expanded="true" signature="1508:2997" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="1572:1686" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="3003:3152" ph="/// Process all character's status effects. ... " />
-                <marker date="1522679883592" expanded="true" signature="3205:3582" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="3232:3345" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="3429:3578" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="3506:3573" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="3586:4099" ph="/// Manually removes selected status effect/s. ... " />
-                <marker date="1522679883592" expanded="true" signature="4260:5981" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="4321:4433" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="4538:4951" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="5057:5450" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="5552:5977" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="5987:6075" ph="/// Removation methods for RemoveStatusEffect() method. ... " />
-                <marker date="1522679883592" expanded="true" signature="6102:6536" ph="{...}" />
-                <marker date="1522679883592" expanded="true" signature="6110:6239" ph="/// Should the method remove all the status effects of the same type (like MoveSpeedIncrease)? ... " />
-                <marker date="1522679883592" expanded="true" signature="6274:6398" ph="/// Should the method remove all the status effects of the same effect (scriptable form)? ... " />
-                <marker date="1522679883592" expanded="true" signature="6435:6513" ph="/// Remove the first occured status effect. ... " />
+                <marker date="1522691646463" expanded="false" signature="6:50" ph="..." />
+                <marker date="1522691646463" expanded="true" signature="70:6927" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="77:156" ph="/// Initialization &amp; controlling the game. ... " />
+                <marker date="1522691646463" expanded="true" signature="201:6925" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="216:347" ph="/// Static instance of GameManager which allows it to be accessed by any other script. ... " />
+                <marker date="1522691646463" expanded="true" signature="408:507" ph="/// Game mode if it is local game or online game, etc. ... " />
+                <marker date="1522691646463" expanded="true" signature="586:699" ph="/// The number of rounds a single player has to win to win the game. ... " />
+                <marker date="1522691646463" expanded="true" signature="748:866" ph="/// The delay between the start of RoundStarting and RoundPlaying phases. ... " />
+                <marker date="1522691646463" expanded="true" signature="916:1033" ph="/// // The delay between the end of RoundPlaying and RoundEnding phases. ... " />
+                <marker date="1522691646463" expanded="true" signature="1079:1212" ph="/// The last and the highest identifier of all spawned units or objects in a whole game. ... " />
+                <marker date="1522691646463" expanded="true" signature="1266:1389" ph="/// Reference to the CameraControl script for control during different phases. ... " />
+                <marker date="1522691646463" expanded="true" signature="1471:1569" ph="/// Reference to the prefab the players will control. ... " />
+                <marker date="1522691646463" expanded="true" signature="1650:1782" ph="/// A collection of managers for enabling and disabling different aspects of the tanks. ... " />
+                <marker date="1522691646463" expanded="true" signature="1832:1974" ph="/// All ghost prefabs to be spawned. Depends on the order for proper spawn position assignment!!! ... " />
+                <marker date="1522691646463" expanded="true" signature="2074:2155" ph="/// Reference to all spawned ghosts. ... " />
+                <marker date="1522691646463" expanded="true" signature="2214:2300" ph="/// Which round the game is currently on. ... " />
+                <marker date="1522691646463" expanded="true" signature="2344:2438" ph="/// Used to have a delay whilst the round starts. ... " />
+                <marker date="1522691646463" expanded="true" signature="2491:2591" ph="/// Used to have a delay whilst the round or game ends. ... " />
+                <marker date="1522691646463" expanded="true" signature="2642:2778" ph="/// Reference to the winner of the current round.  Used to make an announcement of who won. ... " />
+                <marker date="1522691646463" expanded="true" signature="2832:2959" ph="/// Reference to the winner of the game.  Used to make an announcement of who won. ... " />
+                <marker date="1522691646463" expanded="true" signature="3085:3713" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="3178:3288" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="3388:3590" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="3604:3703" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+                <marker date="1522691646463" expanded="true" signature="3774:4216" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="4070:4206" ph="/* Once the players have been created and the camera is using them as targets, start the game. ... */" />
+                <marker date="1522691646463" expanded="true" signature="4282:4302" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="4312:4397" ph="/// Spawn all players with choosen role. ... " />
+                <marker date="1522691646463" expanded="true" signature="4436:5110" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="4537:5100" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="5120:5203" ph="/// Spawn all ghosts to its positions. ... " />
+                <marker date="1522691646463" expanded="true" signature="5241:6233" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="5437:6223" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="6243:6342" ph="/// Set all camera targets which camera should follow. ... " />
+                <marker date="1522691646463" expanded="true" signature="6382:6919" ph="{...}" />
+                <marker date="1522691646463" expanded="true" signature="6645:6800" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+              <folding>
+                <marker date="1522692468647" expanded="true" signature="6:91" ph="..." />
+                <marker date="1522692468647" expanded="true" signature="111:3243" ph="{...}" />
+                <marker date="1522692468647" expanded="true" signature="118:405" ph="/// This class is to manage various settings on a player. ... " />
+                <marker date="1522692468647" expanded="true" signature="455:3241" ph="{...}" />
+                <marker date="1522692468647" expanded="true" signature="470:578" ph="/// A reference to the instance of the tank when it is created. ... " />
+                <marker date="1522692468647" expanded="true" signature="650:718" ph="/// Name of the player. ... " />
+                <marker date="1522692468647" expanded="true" signature="770:862" ph="/// This is the color this tank will be tinted. ... " />
+                <marker date="1522692468647" expanded="true" signature="914:1001" ph="/// Reference to player's movement script. ... " />
+                <marker date="1522692468647" expanded="true" signature="1067:1142" ph="/// Reference to player panel. ... " />
+                <marker date="1522692468647" expanded="true" signature="1227:1318" ph="/// The number of wins this player has so far. ... " />
+                <marker date="1522692468647" expanded="true" signature="1371:1665" ph="/// Pass all necessary parameters to Player scripts (like hotkeys etc.). ... " />
+                <marker date="1522692468647" expanded="true" signature="1712:2795" ph="{...}" />
+                <marker date="1522692468647" expanded="true" signature="1956:2118" ph="{...}" />
+                <marker date="1522692468647" expanded="true" signature="2809:2935" ph="/// Used at the start of each round to put the character into it's default state. ... " />
+                <marker date="1522692468647" expanded="true" signature="2963:3235" ph="{...}" />
+                <marker date="1522692468647" expanded="true" signature="2982:3225" ph="/* m_Instance.transform.position = m_SpawnPoint.position; ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerPanel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPanel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding>
+                <marker date="1522688768991" expanded="true" signature="41:323" ph="{...}" />
+                <marker date="1522688768991" expanded="true" signature="85:321" ph="{...}" />
+                <marker date="1522688768991" expanded="true" signature="91:158" ph="/// Reference to player inventory. ... " />
+                <marker date="1522688768991" expanded="true" signature="246:254" ph="{...}" />
+                <marker date="1522688768991" expanded="true" signature="310:318" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInterfaceGameplayManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplayManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="737">
+              <caret line="58" column="51" lean-forward="false" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+              <folding>
+                <marker date="1522690817071" expanded="true" signature="41:1496" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="102:1494" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="108:244" ph="/// Static instance of UserInterfaceGameplayManager which allows it to be accessed by any other script. ... " />
+                <marker date="1522690817071" expanded="true" signature="310:366" ph="/// PlayerPanel PREFAB. ... " />
+                <marker date="1522690817071" expanded="true" signature="441:936" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="510:578" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="660:837" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="842:932" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+                <marker date="1522690817071" expanded="true" signature="988:996" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="1052:1060" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="1064:1189" ph="/// Instantiate PlayerPanel. ... " />
+                <marker date="1522690817071" expanded="true" signature="1235:1491" ph="{...}" />
+                <marker date="1522690817071" expanded="true" signature="1274:1372" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -381,37 +640,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScriptableStatusEffect.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-              <folding>
-                <marker date="1522675055400" expanded="true" signature="6:81" ph="..." />
-                <marker date="1522675055400" expanded="true" signature="117:2288" ph="{...}" />
-                <marker date="1522675055400" expanded="true" signature="121:329" ph="/// This class holds all global variables needs to be in every status effects. ... " />
-                <marker date="1522675055400" expanded="true" signature="394:2286" ph="{...}" />
-                <marker date="1522675055400" expanded="true" signature="400:471" ph="/// Type of the current status effect. ... " />
-                <marker date="1522675055400" expanded="true" signature="561:678" ph="/// Should be the status effect permanent? If yes, Duration parameter is irrelevant. ... " />
-                <marker date="1522675055400" expanded="true" signature="739:895" ph="/// Duration of the effect. If this is set to 0 then the status effect will be permanent till manually rmeoving t ... " />
-                <marker date="1522675055400" expanded="true" signature="924:1128" ph="/// Should this status effect overwrite all status effects of that type (like MoveSPeedIncrease)? If this is TRUE ... " />
-                <marker date="1522675055400" expanded="true" signature="1202:1363" ph="/// Should this status effect overwrite all status effects the same as this one? If this is TRUE then IsStackable ... " />
-                <marker date="1522675055400" expanded="true" signature="1408:1496" ph="/// Is this status effect stackable with the same type? ... " />
-                <marker date="1522675055400" expanded="true" signature="1529:1622" ph="/// Delay from the start of the status effect to be applied. ... " />
-                <marker date="1522675055400" expanded="true" signature="1691:1885" ph="/// Is this status effect damage over time (DoT)? If no, set this value to 0. If this value is set it says in whi ... " />
-                <marker date="1522675055400" expanded="true" signature="1916:2204" ph="/// Initialize the effect on the game object. ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>trigger</find>
-      <find>tru</find>
-      <find>component =</find>
       <find>move</find>
       <find>wallt</find>
       <find>name</find>
@@ -439,6 +671,9 @@
       <find>RemoveStatusEffect</find>
       <find>[{0}</find>
       <find>[{0} ({1</find>
+      <find>instantiate</find>
+      <find>parent</find>
+      <find>physics</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -449,6 +684,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Tilemap/Brushes/GameObject Brush/Scripts/Editor/GameObjectBrush.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplayManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Invulnerability.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -466,8 +702,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Loader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tilemap/Brushes/Tint Brush/Scripts/Editor/TintBrush.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Tilemap/Brushes/Prefab Brush/Scripts/Editor/PrefabBrush.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/ItemLevitation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" root0="FORCE_HIGHLIGHTING" />
@@ -482,10 +720,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollowPlayers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/MapDestroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/BombSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enviroment/MapDestroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
@@ -518,10 +752,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/ScriptableData/ScriptableStatusEffectData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedModifier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/MoveSpeedModifier.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableInvulnerability.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableMoveSpeedIncrease.cs" />
@@ -530,9 +761,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/StatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatusEffects/Scriptable/ScriptableStatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Ghost.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplayManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs" />
       </list>
     </option>
   </component>
@@ -542,7 +780,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="131" />
     <option name="width" value="1440" />
@@ -604,6 +842,14 @@
               <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Items" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Managers" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -622,6 +868,23 @@
               <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="StatusEffects" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Scriptable" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="UI" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Bomb that Pac (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="UI" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Gameplay" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -692,12 +955,12 @@
       <workItem from="1522526331995" duration="12843000" />
       <workItem from="1522584677677" duration="14307000" />
       <workItem from="1522614220785" duration="10564000" />
-      <workItem from="1522663753209" duration="15833000" />
+      <workItem from="1522663753209" duration="24205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371038000" />
+    <option name="totallyTimeSpent" value="379410000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,7 +972,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -751,10 +1014,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/MapDestroyer.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/ConstantManager.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/BombSpawner.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enviroment/MapDestroyer.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -846,20 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="142" column="45" lean-forward="false" selection-start-line="142" selection-start-column="45" selection-end-line="142" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Special/GhostHouseDoorTrigger.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -886,14 +1131,6 @@
             <marker date="1522617810739" expanded="true" signature="211:286" ph="/// Speed to be increased (or deecreased). ... " />
             <marker date="1522617810739" expanded="true" signature="425:488" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="905">
-          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,55 +1178,6 @@
             <marker date="1522671000925" expanded="true" signature="364:447" ph="{...}" />
             <marker date="1522671000925" expanded="true" signature="480:563" ph="{...}" />
             <marker date="1522671000925" expanded="true" signature="599:654" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="98" column="52" lean-forward="false" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
-          <folding>
-            <marker date="1522595779764" expanded="false" signature="6:89" ph="..." />
-            <marker date="1522595779764" expanded="true" signature="111:6308" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="118:219" ph="/// This class defines the basics of all characters in the game. ... " />
-            <marker date="1522595779764" expanded="true" signature="271:6306" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="286:366" ph="/// The Character's movement speed. ... " />
-            <marker date="1522595779764" expanded="true" signature="438:504" ph="/// Delay to respawn. ... " />
-            <marker date="1522595779764" expanded="true" signature="584:685" ph="/// Used to identify which tank belongs to which player. ... " />
-            <marker date="1522595779764" expanded="true" signature="752:831" ph="/// Name of the current character. ... " />
-            <marker date="1522595779764" expanded="true" signature="928:1041" ph="/// All status effects which are currently applied on the character. ... " />
-            <marker date="1522595779764" expanded="true" signature="1134:1360" ph="/// The Character's direction. This value should be defined in inherit class in method like GetInput (Player). ... " />
-            <marker date="1522595779764" expanded="true" signature="1441:1613" ph="/// Reference to default animation controller. If character changes its animations we know which is the default o ... " />
-            <marker date="1522595779764" expanded="true" signature="1695:1784" ph="/// A reference to the character's animator. ... " />
-            <marker date="1522595779764" expanded="true" signature="1841:1914" ph="/// Reference to rigid body. ... " />
-            <marker date="1522595779764" expanded="true" signature="1967:2064" ph="/// Is character invulnerable thanks to some effect? ... " />
-            <marker date="1522595779764" expanded="true" signature="2145:2241" ph="/// Check if the character is already death or not. ... " />
-            <marker date="1522595779764" expanded="true" signature="2306:2398" ph="/// Tells if character can respawn after death. ... " />
-            <marker date="1522595779764" expanded="true" signature="2476:2722" ph="/// Set if character can move and interact with other characters. ... " />
-            <marker date="1522595779764" expanded="true" signature="2871:3076" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="3160:3409" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="3479:3519" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="3582:3631" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="3649:3727" ph="/// Check if character is moving. ... " />
-            <marker date="1522595779764" expanded="true" signature="3758:3835" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="3853:3922" ph="/// Moves the character. ... " />
-            <marker date="1522595779764" expanded="true" signature="3969:4158" ph="/// Get orientation of the character. Normalized vector with only 1 possible direction (W, A, S, D). ... " />
-            <marker date="1522595779764" expanded="true" signature="4218:4362" ph="/// Kill the character. ... " />
-            <marker date="1522595779764" expanded="true" signature="4427:4629" ph="/// Immediately kills the character without any reason. ... " />
-            <marker date="1522595779764" expanded="true" signature="4693:4857" ph="/// Check if character is killable. ... " />
-            <marker date="1522595779764" expanded="true" signature="4890:4959" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="4969:5042" ph="/// Handle animation layers. ... " />
-            <marker date="1522595779764" expanded="true" signature="5097:5563" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="5193:5464" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="5481:5553" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="5573:5655" ph="/// Activate current animation layer. ... " />
-            <marker date="1522595779764" expanded="true" signature="5708:5945" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="5778:5855" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="5963:6027" ph="/// Enable actions. ... " />
-            <marker date="1522595779764" expanded="true" signature="6063:6121" ph="{...}" />
-            <marker date="1522595779764" expanded="true" signature="6139:6204" ph="/// Disable actions. ... " />
-            <marker date="1522595779764" expanded="true" signature="6241:6300" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1159,38 +1347,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="155" column="4" lean-forward="false" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
+        <state relative-caret-position="169">
+          <caret line="98" column="52" lean-forward="false" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
           <folding>
-            <marker date="1522679883592" expanded="false" signature="6:183" ph="..." />
-            <marker date="1522679883592" expanded="true" signature="203:6541" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="255:6539" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
-            <marker date="1522679883592" expanded="true" signature="514:1000" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="583:651" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="733:901" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
-            <marker date="1522679883592" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
-            <marker date="1522679883592" expanded="true" signature="1508:2997" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="1572:1686" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="3003:3152" ph="/// Process all character's status effects. ... " />
-            <marker date="1522679883592" expanded="true" signature="3205:3582" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="3232:3345" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="3429:3578" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="3506:3573" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="3586:4099" ph="/// Manually removes selected status effect/s. ... " />
-            <marker date="1522679883592" expanded="true" signature="4260:5981" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="4321:4433" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="4538:4951" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="5057:5450" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="5552:5977" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="5987:6075" ph="/// Removation methods for RemoveStatusEffect() method. ... " />
-            <marker date="1522679883592" expanded="true" signature="6102:6536" ph="{...}" />
-            <marker date="1522679883592" expanded="true" signature="6110:6239" ph="/// Should the method remove all the status effects of the same type (like MoveSpeedIncrease)? ... " />
-            <marker date="1522679883592" expanded="true" signature="6274:6398" ph="/// Should the method remove all the status effects of the same effect (scriptable form)? ... " />
-            <marker date="1522679883592" expanded="true" signature="6435:6513" ph="/// Remove the first occured status effect. ... " />
+            <marker date="1522595779764" expanded="false" signature="6:89" ph="..." />
+            <marker date="1522595779764" expanded="true" signature="111:6308" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="118:219" ph="/// This class defines the basics of all characters in the game. ... " />
+            <marker date="1522595779764" expanded="true" signature="271:6306" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="286:366" ph="/// The Character's movement speed. ... " />
+            <marker date="1522595779764" expanded="true" signature="438:504" ph="/// Delay to respawn. ... " />
+            <marker date="1522595779764" expanded="true" signature="584:685" ph="/// Used to identify which tank belongs to which player. ... " />
+            <marker date="1522595779764" expanded="true" signature="752:831" ph="/// Name of the current character. ... " />
+            <marker date="1522595779764" expanded="true" signature="928:1041" ph="/// All status effects which are currently applied on the character. ... " />
+            <marker date="1522595779764" expanded="true" signature="1134:1360" ph="/// The Character's direction. This value should be defined in inherit class in method like GetInput (Player). ... " />
+            <marker date="1522595779764" expanded="true" signature="1441:1613" ph="/// Reference to default animation controller. If character changes its animations we know which is the default o ... " />
+            <marker date="1522595779764" expanded="true" signature="1695:1784" ph="/// A reference to the character's animator. ... " />
+            <marker date="1522595779764" expanded="true" signature="1841:1914" ph="/// Reference to rigid body. ... " />
+            <marker date="1522595779764" expanded="true" signature="1967:2064" ph="/// Is character invulnerable thanks to some effect? ... " />
+            <marker date="1522595779764" expanded="true" signature="2145:2241" ph="/// Check if the character is already death or not. ... " />
+            <marker date="1522595779764" expanded="true" signature="2306:2398" ph="/// Tells if character can respawn after death. ... " />
+            <marker date="1522595779764" expanded="true" signature="2476:2722" ph="/// Set if character can move and interact with other characters. ... " />
+            <marker date="1522595779764" expanded="true" signature="2871:3076" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="3160:3409" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="3479:3519" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="3582:3631" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="3649:3727" ph="/// Check if character is moving. ... " />
+            <marker date="1522595779764" expanded="true" signature="3758:3835" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="3853:3922" ph="/// Moves the character. ... " />
+            <marker date="1522595779764" expanded="true" signature="3969:4158" ph="/// Get orientation of the character. Normalized vector with only 1 possible direction (W, A, S, D). ... " />
+            <marker date="1522595779764" expanded="true" signature="4218:4362" ph="/// Kill the character. ... " />
+            <marker date="1522595779764" expanded="true" signature="4427:4629" ph="/// Immediately kills the character without any reason. ... " />
+            <marker date="1522595779764" expanded="true" signature="4693:4857" ph="/// Check if character is killable. ... " />
+            <marker date="1522595779764" expanded="true" signature="4890:4959" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="4969:5042" ph="/// Handle animation layers. ... " />
+            <marker date="1522595779764" expanded="true" signature="5097:5563" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="5193:5464" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="5481:5553" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="5573:5655" ph="/// Activate current animation layer. ... " />
+            <marker date="1522595779764" expanded="true" signature="5708:5945" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="5778:5855" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="5963:6027" ph="/// Enable actions. ... " />
+            <marker date="1522595779764" expanded="true" signature="6063:6121" ph="{...}" />
+            <marker date="1522595779764" expanded="true" signature="6139:6204" ph="/// Disable actions. ... " />
+            <marker date="1522595779764" expanded="true" signature="6241:6300" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1243,48 +1444,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/Inventory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <marker date="1522687281231" expanded="true" signature="41:212" ph="{...}" />
+            <marker date="1522687281231" expanded="true" signature="83:210" ph="{...}" />
+            <marker date="1522687281231" expanded="true" signature="135:143" ph="{...}" />
+            <marker date="1522687281231" expanded="true" signature="199:207" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplay.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/StatusEffectManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
           <folding>
-            <marker date="1522680204132" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
-            <marker date="1522680204132" expanded="true" signature="90:6015" ph="{...}" />
-            <marker date="1522680204132" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
-            <marker date="1522680204132" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
-            <marker date="1522680204132" expanded="true" signature="266:339" ph="/// Player's default movement speed. ... " />
-            <marker date="1522680204132" expanded="true" signature="403:475" ph="/// Ghost's default movement speed. ... " />
-            <marker date="1522680204132" expanded="true" signature="559:586" ph="/* BOMBERMAN ... */" />
-            <marker date="1522680204132" expanded="true" signature="596:688" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
-            <marker date="1522680204132" expanded="true" signature="748:836" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
-            <marker date="1522680204132" expanded="true" signature="899:980" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
-            <marker date="1522680204132" expanded="true" signature="1043:1132" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
-            <marker date="1522680204132" expanded="true" signature="1196:1441" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
-            <marker date="1522680204132" expanded="true" signature="1511:1653" ph="{...}" />
-            <marker date="1522680204132" expanded="true" signature="1664:1686" ph="/* BOMB ... */" />
-            <marker date="1522680204132" expanded="true" signature="1696:1846" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
-            <marker date="1522680204132" expanded="true" signature="1905:2068" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
-            <marker date="1522680204132" expanded="true" signature="2118:2183" ph="/// Speed of a rolling bomb. ... " />
-            <marker date="1522680204132" expanded="true" signature="2235:2315" ph="/// Delayed explosion after rolling a bomb. ... " />
-            <marker date="1522680204132" expanded="true" signature="2383:2407" ph="/* LAYERS ... */" />
-            <marker date="1522680204132" expanded="true" signature="2417:2628" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-            <marker date="1522680204132" expanded="true" signature="2708:2894" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
-            <marker date="1522680204132" expanded="true" signature="2964:2988" ph="/* GHOSTS ... */" />
-            <marker date="1522680204132" expanded="true" signature="2998:3068" ph="/// Delay after death to respawn. ... " />
-            <marker date="1522680204132" expanded="true" signature="3132:3207" ph="/// Duration of ghost frightened mode. ... " />
-            <marker date="1522680204132" expanded="true" signature="3273:3459" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
-            <marker date="1522680204132" expanded="true" signature="3565:3654" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
-            <marker date="1522680204132" expanded="true" signature="3728:3806" ph="/// Number of iterations for ghost modes. ... " />
-            <marker date="1522680204132" expanded="true" signature="3866:3952" ph="/// Ghost mode phases from the start of the game. ... " />
-            <marker date="1522680204132" expanded="true" signature="4076:4203" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
-            <marker date="1522680204132" expanded="true" signature="4328:4405" ph="/// Release Blinky ghost from its house. ... " />
-            <marker date="1522680204132" expanded="true" signature="4470:4546" ph="/// Release Pinky ghost from its house. ... " />
-            <marker date="1522680204132" expanded="true" signature="4610:4685" ph="/// Release Inky ghost from its house. ... " />
-            <marker date="1522680204132" expanded="true" signature="4749:4825" ph="/// Release Clyde ghost from its house. ... " />
-            <marker date="1522680204132" expanded="true" signature="4890:5029" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
-            <marker date="1522680204132" expanded="true" signature="5102:5328" ph="/// Select the position X cells in front of the closest player. ... " />
-            <marker date="1522680204132" expanded="true" signature="5444:5717" ph="/// Calculate the distance from the closest player. ... " />
-            <marker date="1522680204132" expanded="true" signature="5788:5951" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
+            <marker date="1522685487586" expanded="false" signature="6:183" ph="..." />
+            <marker date="1522685487586" expanded="true" signature="203:6541" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="255:6539" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="261:388" ph="/// Static instance of StatusEffectManager which allows it to be accessed by any other script. ... " />
+            <marker date="1522685487586" expanded="true" signature="514:1000" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="583:651" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="733:901" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="906:996" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+            <marker date="1522685487586" expanded="true" signature="1004:1390" ph="/// Apply a new status effect to a list of other effects which are already applied. ... " />
+            <marker date="1522685487586" expanded="true" signature="1508:2997" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="1572:1686" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="3003:3152" ph="/// Process all character's status effects. ... " />
+            <marker date="1522685487586" expanded="true" signature="3205:3582" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="3232:3345" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="3429:3578" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="3506:3573" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="3586:4099" ph="/// Manually removes selected status effect/s. ... " />
+            <marker date="1522685487586" expanded="true" signature="4260:5981" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="4321:4433" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="4538:4951" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="5057:5450" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="5552:5977" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="5987:6075" ph="/// Removation methods for RemoveStatusEffect() method. ... " />
+            <marker date="1522685487586" expanded="true" signature="6102:6536" ph="{...}" />
+            <marker date="1522685487586" expanded="true" signature="6110:6239" ph="/// Should the method remove all the status effects of the same type (like MoveSpeedIncrease)? ... " />
+            <marker date="1522685487586" expanded="true" signature="6274:6398" ph="/// Should the method remove all the status effects of the same effect (scriptable form)? ... " />
+            <marker date="1522685487586" expanded="true" signature="6435:6513" ph="/// Remove the first occured status effect. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="144" column="36" lean-forward="false" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+          <folding>
+            <marker date="1522691646463" expanded="false" signature="6:50" ph="..." />
+            <marker date="1522691646463" expanded="true" signature="70:6927" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="77:156" ph="/// Initialization &amp; controlling the game. ... " />
+            <marker date="1522691646463" expanded="true" signature="201:6925" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="216:347" ph="/// Static instance of GameManager which allows it to be accessed by any other script. ... " />
+            <marker date="1522691646463" expanded="true" signature="408:507" ph="/// Game mode if it is local game or online game, etc. ... " />
+            <marker date="1522691646463" expanded="true" signature="586:699" ph="/// The number of rounds a single player has to win to win the game. ... " />
+            <marker date="1522691646463" expanded="true" signature="748:866" ph="/// The delay between the start of RoundStarting and RoundPlaying phases. ... " />
+            <marker date="1522691646463" expanded="true" signature="916:1033" ph="/// // The delay between the end of RoundPlaying and RoundEnding phases. ... " />
+            <marker date="1522691646463" expanded="true" signature="1079:1212" ph="/// The last and the highest identifier of all spawned units or objects in a whole game. ... " />
+            <marker date="1522691646463" expanded="true" signature="1266:1389" ph="/// Reference to the CameraControl script for control during different phases. ... " />
+            <marker date="1522691646463" expanded="true" signature="1471:1569" ph="/// Reference to the prefab the players will control. ... " />
+            <marker date="1522691646463" expanded="true" signature="1650:1782" ph="/// A collection of managers for enabling and disabling different aspects of the tanks. ... " />
+            <marker date="1522691646463" expanded="true" signature="1832:1974" ph="/// All ghost prefabs to be spawned. Depends on the order for proper spawn position assignment!!! ... " />
+            <marker date="1522691646463" expanded="true" signature="2074:2155" ph="/// Reference to all spawned ghosts. ... " />
+            <marker date="1522691646463" expanded="true" signature="2214:2300" ph="/// Which round the game is currently on. ... " />
+            <marker date="1522691646463" expanded="true" signature="2344:2438" ph="/// Used to have a delay whilst the round starts. ... " />
+            <marker date="1522691646463" expanded="true" signature="2491:2591" ph="/// Used to have a delay whilst the round or game ends. ... " />
+            <marker date="1522691646463" expanded="true" signature="2642:2778" ph="/// Reference to the winner of the current round.  Used to make an announcement of who won. ... " />
+            <marker date="1522691646463" expanded="true" signature="2832:2959" ph="/// Reference to the winner of the game.  Used to make an announcement of who won. ... " />
+            <marker date="1522691646463" expanded="true" signature="3085:3713" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="3178:3288" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="3388:3590" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="3604:3703" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+            <marker date="1522691646463" expanded="true" signature="3774:4216" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="4070:4206" ph="/* Once the players have been created and the camera is using them as targets, start the game. ... */" />
+            <marker date="1522691646463" expanded="true" signature="4282:4302" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="4312:4397" ph="/// Spawn all players with choosen role. ... " />
+            <marker date="1522691646463" expanded="true" signature="4436:5110" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="4537:5100" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="5120:5203" ph="/// Spawn all ghosts to its positions. ... " />
+            <marker date="1522691646463" expanded="true" signature="5241:6233" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="5437:6223" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="6243:6342" ph="/// Set all camera targets which camera should follow. ... " />
+            <marker date="1522691646463" expanded="true" signature="6382:6919" ph="{...}" />
+            <marker date="1522691646463" expanded="true" signature="6645:6800" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPanel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <marker date="1522688768991" expanded="true" signature="41:323" ph="{...}" />
+            <marker date="1522688768991" expanded="true" signature="85:321" ph="{...}" />
+            <marker date="1522688768991" expanded="true" signature="91:158" ph="/// Reference to player inventory. ... " />
+            <marker date="1522688768991" expanded="true" signature="246:254" ph="{...}" />
+            <marker date="1522688768991" expanded="true" signature="310:318" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/UserInterfaceGameplayManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="58" column="51" lean-forward="false" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+          <folding>
+            <marker date="1522690817071" expanded="true" signature="41:1496" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="102:1494" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="108:244" ph="/// Static instance of UserInterfaceGameplayManager which allows it to be accessed by any other script. ... " />
+            <marker date="1522690817071" expanded="true" signature="310:366" ph="/// PlayerPanel PREFAB. ... " />
+            <marker date="1522690817071" expanded="true" signature="441:936" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="510:578" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="660:837" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="842:932" ph="/* Sets this to not be destroyed when reloading scene. ... */" />
+            <marker date="1522690817071" expanded="true" signature="988:996" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="1052:1060" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="1064:1189" ph="/// Instantiate PlayerPanel. ... " />
+            <marker date="1522690817071" expanded="true" signature="1235:1491" ph="{...}" />
+            <marker date="1522690817071" expanded="true" signature="1274:1372" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding>
+            <marker date="1522692468647" expanded="true" signature="6:91" ph="..." />
+            <marker date="1522692468647" expanded="true" signature="111:3243" ph="{...}" />
+            <marker date="1522692468647" expanded="true" signature="118:405" ph="/// This class is to manage various settings on a player. ... " />
+            <marker date="1522692468647" expanded="true" signature="455:3241" ph="{...}" />
+            <marker date="1522692468647" expanded="true" signature="470:578" ph="/// A reference to the instance of the tank when it is created. ... " />
+            <marker date="1522692468647" expanded="true" signature="650:718" ph="/// Name of the player. ... " />
+            <marker date="1522692468647" expanded="true" signature="770:862" ph="/// This is the color this tank will be tinted. ... " />
+            <marker date="1522692468647" expanded="true" signature="914:1001" ph="/// Reference to player's movement script. ... " />
+            <marker date="1522692468647" expanded="true" signature="1067:1142" ph="/// Reference to player panel. ... " />
+            <marker date="1522692468647" expanded="true" signature="1227:1318" ph="/// The number of wins this player has so far. ... " />
+            <marker date="1522692468647" expanded="true" signature="1371:1665" ph="/// Pass all necessary parameters to Player scripts (like hotkeys etc.). ... " />
+            <marker date="1522692468647" expanded="true" signature="1712:2795" ph="{...}" />
+            <marker date="1522692468647" expanded="true" signature="1956:2118" ph="{...}" />
+            <marker date="1522692468647" expanded="true" signature="2809:2935" ph="/// Used at the start of each round to put the character into it's default state. ... " />
+            <marker date="1522692468647" expanded="true" signature="2963:3235" ph="{...}" />
+            <marker date="1522692468647" expanded="true" signature="2982:3225" ph="/* m_Instance.transform.position = m_SpawnPoint.position; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+          <folding>
+            <marker date="1522693191565" expanded="true" signature="0:60" ph="/// List of all game constants. ... " />
+            <marker date="1522693191565" expanded="true" signature="90:6230" ph="{...}" />
+            <marker date="1522693191565" expanded="true" signature="97:121" ph="/* GLOBAL ... */" />
+            <marker date="1522693191565" expanded="true" signature="128:199" ph="/// Default name of the character. ... " />
+            <marker date="1522693191565" expanded="true" signature="266:339" ph="/// Player's default movement speed. ... " />
+            <marker date="1522693191565" expanded="true" signature="403:475" ph="/// Ghost's default movement speed. ... " />
+            <marker date="1522693191565" expanded="true" signature="559:586" ph="/* BOMBERMAN ... */" />
+            <marker date="1522693191565" expanded="true" signature="596:688" ph="/// Role: BOMBERMAN - countdown when the bomb explodes. ... " />
+            <marker date="1522693191565" expanded="true" signature="748:836" ph="/// Role: BOMBERMAN - distance of bomb's explosion. ... " />
+            <marker date="1522693191565" expanded="true" signature="899:980" ph="/// Role: BOMBERMAN - bomb max deploy count. ... " />
+            <marker date="1522693191565" expanded="true" signature="1043:1132" ph="/// Role: BOMBERMAN - Time to respawn the character. ... " />
+            <marker date="1522693191565" expanded="true" signature="1196:1441" ph="/// Role: BOMBERMAN - bomb explosion directions. ... " />
+            <marker date="1522693191565" expanded="true" signature="1511:1653" ph="{...}" />
+            <marker date="1522693191565" expanded="true" signature="1664:1686" ph="/* BOMB ... */" />
+            <marker date="1522693191565" expanded="true" signature="1696:1846" ph="/// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value. ... " />
+            <marker date="1522693191565" expanded="true" signature="1905:2068" ph="/// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the curre ... " />
+            <marker date="1522693191565" expanded="true" signature="2118:2183" ph="/// Speed of a rolling bomb. ... " />
+            <marker date="1522693191565" expanded="true" signature="2235:2315" ph="/// Delayed explosion after rolling a bomb. ... " />
+            <marker date="1522693191565" expanded="true" signature="2384:2524" ph="/// Debug constant for some space between bomb and player when the player leave the bomb after placing. ... " />
+            <marker date="1522693191565" expanded="true" signature="2598:2622" ph="/* LAYERS ... */" />
+            <marker date="1522693191565" expanded="true" signature="2632:2843" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+            <marker date="1522693191565" expanded="true" signature="2923:3109" ph="/// Layer name string reference to layer which hold all objects for script to be able to find among all objects t ... " />
+            <marker date="1522693191565" expanded="true" signature="3179:3203" ph="/* GHOSTS ... */" />
+            <marker date="1522693191565" expanded="true" signature="3213:3283" ph="/// Delay after death to respawn. ... " />
+            <marker date="1522693191565" expanded="true" signature="3347:3422" ph="/// Duration of ghost frightened mode. ... " />
+            <marker date="1522693191565" expanded="true" signature="3488:3674" ph="/// The ghosts start blinking a few seconds before they will go back to normal/Chase mode. This is number which s ... " />
+            <marker date="1522693191565" expanded="true" signature="3780:3869" ph="/// Blinking speed of the ghosts in frightened mode. ... " />
+            <marker date="1522693191565" expanded="true" signature="3943:4021" ph="/// Number of iterations for ghost modes. ... " />
+            <marker date="1522693191565" expanded="true" signature="4081:4167" ph="/// Ghost mode phases from the start of the game. ... " />
+            <marker date="1522693191565" expanded="true" signature="4291:4418" ph="/// Ghost mode phases from the start of the game. Chase mode is always after Scatter mode. ... " />
+            <marker date="1522693191565" expanded="true" signature="4543:4620" ph="/// Release Blinky ghost from its house. ... " />
+            <marker date="1522693191565" expanded="true" signature="4685:4761" ph="/// Release Pinky ghost from its house. ... " />
+            <marker date="1522693191565" expanded="true" signature="4825:4900" ph="/// Release Inky ghost from its house. ... " />
+            <marker date="1522693191565" expanded="true" signature="4964:5040" ph="/// Release Clyde ghost from its house. ... " />
+            <marker date="1522693191565" expanded="true" signature="5105:5244" ph="/// Pinky targets its target X cells ahead of target's direction. ... " />
+            <marker date="1522693191565" expanded="true" signature="5317:5543" ph="/// Select the position X cells in front of the closest player. ... " />
+            <marker date="1522693191565" expanded="true" signature="5659:5932" ph="/// Calculate the distance from the closest player. ... " />
+            <marker date="1522693191565" expanded="true" signature="6003:6166" ph="/// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Items/Bomb.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="113" column="62" lean-forward="true" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+          <folding>
+            <marker date="1522693218544" expanded="false" signature="6:112" ph="..." />
+            <marker date="1522693218544" expanded="true" signature="129:11510" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="166:11508" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="172:233" ph="/// Reference to bomb owner. ... " />
+            <marker date="1522693218544" expanded="true" signature="279:333" ph="/// Bomb's countdown. ... " />
+            <marker date="1522693218544" expanded="true" signature="383:450" ph="/// Reference to explosion PREFAB. ... " />
+            <marker date="1522693218544" expanded="true" signature="491:598" ph="/// Scriptable asset of for ghost when the bomb hit it it will get debuff. ... " />
+            <marker date="1522693218544" expanded="true" signature="657:722" ph="/// Check if bomb can be rolled. ... " />
+            <marker date="1522693218544" expanded="true" signature="754:925" ph="/// Checks if bomb should start rolling. Checks when the bomb has collided with caster. Also it says if the bomb  ... " />
+            <marker date="1522693218544" expanded="true" signature="956:1042" ph="/// Rolling direction of the bomb. Normalized vector. ... " />
+            <marker date="1522693218544" expanded="true" signature="1083:1161" ph="/// Position where the bomb has been planted. ... " />
+            <marker date="1522693218544" expanded="true" signature="1203:1378" ph="/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. C ... " />
+            <marker date="1522693218544" expanded="true" signature="1487:2187" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="2242:2715" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="2392:2585" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="2792:3221" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="3094:3217" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="3275:4409" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="3436:4400" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="4415:4527" ph="/// Bomb explosion. ... " />
+            <marker date="1522693218544" expanded="true" signature="4567:4952" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="4775:4948" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="4956:5257" ph="/// Explosion in certain direction. ... " />
+            <marker date="1522693218544" expanded="true" signature="5332:5477" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="5395:5473" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="5489:5815" ph="/// Make explosion in the current cell (by world position pointing to the cell.) ... " />
+            <marker date="1522693218544" expanded="true" signature="5884:8688" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="6681:6848" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="7389:8249" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="7515:7585" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="7660:7758" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="7854:8238" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="8694:8829" ph="/// Roll the bomb in the correct direction. //Pretty the same method as method Move() in Ghost script. ... " />
+            <marker date="1522693218544" expanded="true" signature="8851:9739" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="8965:9590" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="9407:9517" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="9598:9735" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="9743:9900" ph="/// Check if target cell is safe to move there. ... " />
+            <marker date="1522693218544" expanded="true" signature="9933:11007" ph="{...}" />
+            <marker date="1522693218544" expanded="true" signature="11013:11277" ph="/// Checks if the ghost already reached the target location (1 cell ahead) or he is still on the way between two  ... " />
+            <marker date="1522693218544" expanded="true" signature="11309:11505" ph="{...}" />
           </folding>
         </state>
       </provider>

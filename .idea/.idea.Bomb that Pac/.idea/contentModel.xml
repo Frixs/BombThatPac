@@ -59,6 +59,13 @@
             </e>
             <e p="StatusEffect.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="Gameplay" t="Include">
+              <e p="Inventory.cs" t="Include" />
+              <e p="PlayerPanel.cs" t="Include" />
+              <e p="UserInterfaceGameplayManager.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Tilemap" t="Include">
           <e p="Brushes" t="Include">

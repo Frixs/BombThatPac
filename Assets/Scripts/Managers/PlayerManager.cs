@@ -1,6 +1,8 @@
 ﻿using System;
 using Characters;
+using UI.Gameplay;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Managers
 {
@@ -35,14 +37,20 @@ namespace Managers
         [HideInInspector] public Player Player;
         
         /// <summary>
+        /// Reference to player panel.
+        /// </summary>
+        [HideInInspector] public PlayerPanel PlayerPanelReference;
+        
+        /// <summary>
         /// The number of wins this player has so far.
         /// </summary>
         [HideInInspector] public int Wins;
-    
+
         /// <summary>
         /// Pass all necessary parameters to Player scripts (like hotkeys etc.).
         /// </summary>
-        public void Setup()
+        /// <param name="initOrderNumber">Initialized order number of a player. 0 = The first player has been initialized. 1 = the 2nd player has been initialized. etc.</param>
+        public void Setup(int initOrderNumber)
         {
             // Assign player a new player object.
             Player.PlayerManagerReference = this;
@@ -54,6 +62,18 @@ namespace Managers
                     Player.InputPlayerSection = "Player"+ Player.Identifier;
                     break;
             }
+
+            // Setup player UI.
+            PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel();
+            // Set player colors.
+            PlayerPanelReference.PlayerInventory.GetComponent<Image>().color = PlayerColor;
+            // Set default scale & position.
+            PlayerPanelReference.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+            PlayerPanelReference.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(
+                10f + initOrderNumber * (10f + PlayerPanelReference.GetComponent<RectTransform>().rect.width),
+                10f,
+                0f
+            );
         }
     
         /// <summary>

@@ -122,7 +122,7 @@ namespace Managers
 							return false;
 					
 					item.ForceEnd();
-					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) removed!", target.Name, item);
 					return true;
 				});
 			}
@@ -139,7 +139,7 @@ namespace Managers
 							return false;
 					
 					item.ForceEnd();
-					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) removed!", target.Name, item);
 					return true;
 				});
 			}
@@ -156,7 +156,7 @@ namespace Managers
 							return false;
 					
 					item.ForceEnd();
-					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) removed!", target.Name, item);
 					return true;
 				}));
 			}
