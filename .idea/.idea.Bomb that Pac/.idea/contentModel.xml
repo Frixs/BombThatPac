@@ -34,8 +34,16 @@
           <e p="Constants.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="Bomb.cs" t="Include" />
+            <e p="Effects" t="Include">
+              <e p="ItemLevitation.cs" t="Include" />
+            </e>
             <e p="Fragment.cs" t="Include" />
-            <e p="ItemLevitation.cs" t="Include" />
+            <e p="SpecialItems" t="Include">
+              <e p="ItemBanana.cs" t="Include" />
+              <e p="ItemHex.cs" t="Include" />
+              <e p="ItemInvulPotion.cs" t="Include" />
+              <e p="SpecialItem.cs" t="Include" />
+            </e>
           </e>
           <e p="Loader.cs" t="Include" />
           <e p="Managers" t="Include">

@@ -1,5 +1,8 @@
-﻿using Items;
+﻿using System.Collections.Generic;
+using Items;
+using Items.SpecialItems;
 using Managers;
+using StatusEffects;
 using StatusEffects.Scriptable;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,6 +44,11 @@ namespace Characters
         /// Explosion direction represented as array filled with X, Y coords representing the direction.
         /// </summary>
         public abstract int[,] BombExplosionDirection { get; set; }
+
+        /// <summary>
+        /// All items represented as scriptable status effect the player currently has.
+        /// </summary>
+        protected Queue<ScriptableStatusEffect> ItemList = new Queue<ScriptableStatusEffect>();
         
         /// <summary>
         /// Reference to bomb PREFAB.
@@ -200,6 +208,41 @@ namespace Characters
                     GameManager.Instance.Ghosts[i].StartFrightenedMode();
                 }
                 
+                Destroy(other.gameObject);
+            }
+            // SPECIAL ITEM.
+            else if (other.gameObject.CompareTag("SpecialItem"))
+            {
+                Sprite previousItem = null;
+                
+                for (int i = 0; i < PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.childCount; i++)
+                {
+                    Image img = PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.GetChild(i).GetChild(0).GetComponent<Image>();
+
+                    if (i == 0)
+                    {
+                        img.enabled = true;
+                        
+                        previousItem = img.sprite;
+                        img.sprite = other.GetComponent<SpriteRenderer>().sprite;
+                    }
+                    else if (i > 0)
+                    {
+                        if (previousItem == null)
+                            break;
+                        
+                        img.enabled = true;
+                        
+                        Sprite currentItem = img.sprite;
+                        img.sprite = previousItem;
+                        previousItem = currentItem;
+                    }
+
+                    if (i == PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.childCount - 1 && previousItem != null)
+                        ItemList.Dequeue();
+                }
+                
+                ItemList.Enqueue(other.GetComponent<SpecialItem>().ItemStatusEffect);
                 Destroy(other.gameObject);
             }
         }
