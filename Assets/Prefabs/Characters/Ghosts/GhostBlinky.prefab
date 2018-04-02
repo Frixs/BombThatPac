@@ -96,6 +96,10 @@ MonoBehaviour:
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesRight: {fileID: 21300006, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   IsInGhostHouse: 0
+  _frightenedMoveSpeedStatusEffect: {fileID: 11400000, guid: 5f242309af0c84b4abfa5ab572480861,
+    type: 2}
+  _consumedMoveSpeedStatusEffect: {fileID: 11400000, guid: 8acb0f8fb9273d24f949be1b68b25a3b,
+    type: 2}
   FrightenedBlueSprite: {fileID: 21300000, guid: ee8f045da70ee584385f61127c5452ad,
     type: 3}
   FrightenedWhiteSprite: {fileID: 21300002, guid: ee8f045da70ee584385f61127c5452ad,

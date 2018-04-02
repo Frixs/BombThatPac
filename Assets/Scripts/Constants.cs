@@ -11,11 +11,6 @@ public static class Constants
     /// Default name of the character.
     /// </summary>
     public const string CharacterDefaultName = "NONAME";
-
-    /// <summary>
-    /// Invulnerability of player after respawn/spawn.
-    /// </summary>
-    public const float PlayerInvulOnRespawn = 3.0f;
     
     /// <summary>
     /// Player's default movement speed.
@@ -26,16 +21,6 @@ public static class Constants
     /// Ghost's default movement speed.
     /// </summary>
     public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.2f;
-    
-    /// <summary>
-    /// Ghost's frightened movement speed.
-    /// </summary>
-    public const float GhostFrightenedMoveSpeed = PlayerDefaultMoveSpeed - 1.5f;
-    
-    /// <summary>
-    /// Ghost's consumed (killed) movement speed.
-    /// </summary>
-    public const float GhostConsumedMoveSpeed = 15.0f;
 
     /*
      * BOMBERMAN

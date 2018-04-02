@@ -1,4 +1,6 @@
-﻿using Characters;
+﻿using System.Diagnostics;
+using Characters;
+using UnityEditor;
 using UnityEngine;
 
 namespace StatusEffects.Scriptable
@@ -15,9 +17,24 @@ namespace StatusEffects.Scriptable
 		[Header("Basic Settings")] public StatusEffect.StatusEffectType StatusEffectType;
 		
 		/// <summary>
+		/// Should be the status effect permanent? If yes, Duration parameter is irrelevant.
+		/// </summary>
+		[Header("Effect Duration")] public bool IsPermanent;
+		
+		/// <summary>
 		/// Duration of the effect. If this is set to 0 then the status effect will be permanent till manually rmeoving the effect.
 		/// </summary>
-		[Header("Effect Property")] public float Duration;
+		public float Duration;
+
+		/// <summary>
+		/// Should this status effect overwrite all status effects of that type (like MoveSPeedIncrease)? If this is TRUE then OverwriteTheSameEffects & IsStackable is irrelevant.
+		/// </summary>
+		[Header("Effect Connections")] public bool OverwriteTheSameTypes;
+		
+		/// <summary>
+		/// Should this status effect overwrite all status effects the same as this one? If this is TRUE then IsStackable is irrelevant.
+		/// </summary>
+		public bool OverwriteTheSameEffects;
 		
 		/// <summary>
 		/// Is this status effect stackable with the same type?
@@ -25,14 +42,9 @@ namespace StatusEffects.Scriptable
 		public bool IsStackable;
 		
 		/// <summary>
-		/// Can this status effect be overwritten by the same type of the status effect?
-		/// </summary>
-		public bool CanBeOverwritten;
-		
-		/// <summary>
 		/// Delay from the start of the status effect to be applied.
 		/// </summary>
-		public float StartActivationDelay;
+		[Header("Effect Timing")] public float StartActivationDelay;
 		
 		/// <summary>
 		/// Is this status effect damage over time (DoT)? If no, set this value to 0. If this value is set it says in which period the status effect should be activated.

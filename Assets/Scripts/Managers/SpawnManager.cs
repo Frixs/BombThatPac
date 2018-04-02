@@ -74,7 +74,7 @@ namespace Managers
 
 			toRespawn.transform.position = positions[Random.Range(0, positions.Length)].position;
 			toRespawn.gameObject.SetActive(true);
-			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Character has been respawned!", toRespawn.GetComponent<Character>().Identifier, toRespawn.GetComponent<Character>().Name);
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Character has been respawned!", toRespawn.GetComponent<Character>().Name);
 		    
 			toRespawn.GetComponent<Character>().IsDeath = false;
 

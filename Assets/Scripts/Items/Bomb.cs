@@ -85,7 +85,7 @@ namespace Items
 			if (Countdown <= 0f && !_isRolling)
 			{
 				Explode(transform.position);
-				Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb exploded!", Caster.Identifier, Caster.Name);
+				Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb exploded!", Caster.Name);
 				
 				Caster.BombDeployCounter--;
 				

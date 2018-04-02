@@ -181,7 +181,7 @@ namespace Characters
             (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
             BombDeployCounter++;
             
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] Bomb planted!", Identifier, Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb planted!", Name);
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -235,7 +235,7 @@ namespace Characters
             DropFragments();
 
             gameObject.SetActive(false);
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been killed by character: [{1}]!", Name, attacker.Name);
         }
 
         public override void ForceKill(bool respawn)
@@ -248,7 +248,7 @@ namespace Characters
             DropFragments();
             
             gameObject.SetActive(false);
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] player has been force killed!", Identifier, Name);
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been force killed!", Name);
         }
     }
 }

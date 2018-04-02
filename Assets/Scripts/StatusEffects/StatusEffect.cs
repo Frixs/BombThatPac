@@ -45,7 +45,7 @@ namespace StatusEffects
 		/// <summary>
 		/// Check if status effect already expired.
 		/// </summary>
-		public bool IsFinished => _durationTimer <= 0f;
+		public bool IsFinished => !Data.IsPermanent && _durationTimer <= 0f;
 
 		/// <summary>
 		/// Initialize the status effect via constructor.
@@ -86,7 +86,7 @@ namespace StatusEffects
 			}
 
 			// Check if status effect is timed (or permanent).
-			if (Data.Duration > 0f)
+			if (!Data.IsPermanent)
 			{
 				// Main duration timer.
 				_durationTimer -= delta;
@@ -121,6 +121,14 @@ namespace StatusEffects
 		/// </summary>
 		protected abstract void Repeat();
 
+		/// <summary>
+		/// Force End the status effect manually.
+		/// </summary>
+		public void ForceEnd()
+		{
+			End();
+		}
+		
 		/// <summary>
 		/// Enum type of status effect.
 		/// </summary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using Managers;
+using StatusEffects.Scriptable;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -120,6 +121,16 @@ namespace Characters
 		/// Target location is cell position 1 ahead, Previous location is the location from which the ghost just left. Current is auxiliary variable.
 		/// </summary>
 		private Vector3 _currentCell, _targetCell, _previousCell;
+		
+		/// <summary>
+		/// TODO
+		/// </summary>
+		[Header("Status Effects")] [SerializeField] private ScriptableStatusEffect _frightenedMoveSpeedStatusEffect;
+		
+		/// <summary>
+		/// TODO
+		/// </summary>
+		[SerializeField] private ScriptableStatusEffect _consumedMoveSpeedStatusEffect;
 
 		// TODO Remove these 3 variables after making animations for the ghosts.
 		private Sprite _defaultSprite;
@@ -222,9 +233,9 @@ namespace Characters
 
 			IsInvulnearable = true;
 			CurrentMode = Mode.Consumed; // We are not using ChangeMode method because we don't want to record previous mode.
-			MoveSpeed = Constants.GhostConsumedMoveSpeed;
+			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
 			
-			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] ghost has been killed by character: [{2} ({3})]!", Identifier, Name, attacker.Identifier, attacker.Name);
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] ghost has been killed by character: [{1}]!", Name, attacker.Name);
 		}
 
 		public override void ForceKill(bool respawn)
@@ -234,7 +245,9 @@ namespace Characters
 			
 			IsInvulnearable = true;
 			CurrentMode = Mode.Consumed;
-			Debug.unityLogger.LogFormat(LogType.Log, "[{0} ({1})] ghost has been force killed!", Identifier, Name);
+			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
+			
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] ghost has been force killed!", Name);
 		}
 		
 		/// <summary>
@@ -274,11 +287,12 @@ namespace Characters
 				{
 					IsInvulnearable = false;
 					
+					StatusEffectManager.Instance.RemoveStatusEffect(this, null, _consumedMoveSpeedStatusEffect, false, StatusEffectManager.RemoveMethod.RemoveTheFirst);
+					
 					if (!IsRespawnable)
 						Destroy(this);
 					
 					ChangeMode(_previousMode);
-					MoveSpeed = Constants.GhostDefaultMoveSpeed;
 					IsInGhostHouse = _isInGhostHouseDefaultVal;
 				}
 
@@ -374,12 +388,12 @@ namespace Characters
 			
 			if (CurrentMode == Mode.Frightened)
 			{
-				MoveSpeed = Constants.GhostDefaultMoveSpeed;
+				StatusEffectManager.Instance.RemoveStatusEffect(this, null, _frightenedMoveSpeedStatusEffect, false, StatusEffectManager.RemoveMethod.RemoveTheFirst);
 			}
 			
 			if (mode == Mode.Frightened)
 			{
-				MoveSpeed = Constants.GhostFrightenedMoveSpeed;
+				StatusEffectManager.Instance.ApplyStatusEffect(this, null, _frightenedMoveSpeedStatusEffect);
 			}
 			
 			_previousMode = CurrentMode;

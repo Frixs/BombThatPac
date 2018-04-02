@@ -52,18 +52,22 @@ namespace Managers
 			// Get status effect.
 			StatusEffect newStatusEffect = newScriptableStatusEffect.Initialize(target, caster);
 			
+			bool typeOccurrence = target.AppliedStatusEffects.Exists(item => item.Data.GetType() == newScriptableStatusEffect.GetType()); // TODO upravit!!! čisší kod.
 			bool effectOccurrence = target.AppliedStatusEffects.Exists(item => item.Data == newScriptableStatusEffect);
+
+			// Overwrite the status effect if there are some of the same type already in.
+			if (newStatusEffect.Data.OverwriteTheSameTypes && typeOccurrence)
+				RemoveStatusEffect(target, caster, newScriptableStatusEffect, false, RemoveMethod.RemoveAllOfTheSameType);
+
+			// Overwrite the status effect if there are some of the same effect already in.
+			else if (newStatusEffect.Data.OverwriteTheSameEffects && effectOccurrence)
+				RemoveStatusEffect(target, caster, newScriptableStatusEffect, false, RemoveMethod.RemoveAllOfTheSameEffect);
 			
-			// Don't let it create a new status effect of the same type if the status effect is not stackable and there is already one in.
-			if (!newStatusEffect.Data.IsStackable && effectOccurrence)
-				return;
-			
-			// Do not apply a new status effect if the status effect cannot be overwritten and this type of effect is already in.
-			if (newStatusEffect.Data.CanBeOverwritten && effectOccurrence)
-				target.AppliedStatusEffects.RemoveAll(item => item.Data == newScriptableStatusEffect);
-			else if (!newStatusEffect.Data.CanBeOverwritten && effectOccurrence)
+			// Don't let it create a new status effect of the same effect if the status effect is not stackable and there is already one in.
+			else if (!newStatusEffect.Data.IsStackable && effectOccurrence)
 				return;
 
+			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, newStatusEffect);
 			target.AppliedStatusEffects.Add(newStatusEffect);
 		}
 		
@@ -94,33 +98,89 @@ namespace Managers
 		/// </summary>
 		/// <param name="target">Target who will get a new status effect.</param>
 		/// <param name="caster">Caster who applied status effect on the target. Can be NULL.</param>
-		/// <param name="newScriptableStatusEffect">New scriptable status effect to be applied.</param>
-		/// <param name="isCasterImportant">Let's say, if the method should care about caster or caster is caster should not be included to filter status effect to remove.</param>
-		/// <param name="shouldRemoveAllOfTheSameType">Should the method remove all the status effects of the same type (only from the same caster if it it set).</param>
-		public void RemoveStatusEffect(Character target, Character caster, ScriptableStatusEffect newScriptableStatusEffect, bool isCasterImportant, bool shouldRemoveAllOfTheSameType)
+		/// <param name="scriptableStatusEffect">New scriptable status effect to be applied.</param>
+		/// <param name="isCasterImportant">Should the caster be added to filter for removation method?</param>
+		/// <param name="method">Method of the removation.</param>
+		public void RemoveStatusEffect(Character target, Character caster, ScriptableStatusEffect scriptableStatusEffect, bool isCasterImportant, RemoveMethod method)
 		{
-			// Remove all effects of the same type.
-			if (shouldRemoveAllOfTheSameType)
+			if (target == null || scriptableStatusEffect == null)
+			{
+				Debug.unityLogger.Log(LogType.Error, "Null reference for removing a status effect!");
+				return;
+			}
+
+			// Remove all status effects of the same type.
+			if (method == RemoveMethod.RemoveAllOfTheSameType)
 			{
 				target.AppliedStatusEffects.RemoveAll(delegate(StatusEffect item)
 				{
+					if (item.Data.GetType() != scriptableStatusEffect.GetType())
+						return false;
+
 					if (isCasterImportant)
-						return item.Data == newScriptableStatusEffect && item.Caster == caster;
+						if (item.Caster != caster)
+							return false;
 					
-					return item.Data == newScriptableStatusEffect;
+					item.ForceEnd();
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					return true;
+				});
+			}
+			// Remove all effects of the same effect.
+			else if (method == RemoveMethod.RemoveAllOfTheSameEffect)
+			{
+				target.AppliedStatusEffects.RemoveAll(delegate(StatusEffect item)
+				{
+					if (item.Data != scriptableStatusEffect)
+						return false;
+
+					if (isCasterImportant)
+						if (item.Caster != caster)
+							return false;
+					
+					item.ForceEnd();
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					return true;
 				});
 			}
 			// Remove only the first occured status effect.
-			else
+			else if (method == RemoveMethod.RemoveTheFirst)
 			{
 				target.AppliedStatusEffects.Remove(target.AppliedStatusEffects.First(delegate(StatusEffect item)
 				{
+					if (item.Data != scriptableStatusEffect)
+						return false;
+
 					if (isCasterImportant)
-						return item.Data == newScriptableStatusEffect && item.Caster == caster;
+						if (item.Caster != caster)
+							return false;
 					
-					return item.Data == newScriptableStatusEffect;
+					item.ForceEnd();
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, item);
+					return true;
 				}));
 			}
+		}
+		
+		/// <summary>
+		/// Removation methods for RemoveStatusEffect() method.
+		/// </summary>
+		public enum RemoveMethod
+		{
+			/// <summary>
+			/// Should the method remove all the status effects of the same type (like MoveSpeedIncrease)?
+			/// </summary>
+			RemoveAllOfTheSameType,
+			
+			/// <summary>
+			/// Should the method remove all the status effects of the same effect (scriptable form)?
+			/// </summary>
+			RemoveAllOfTheSameEffect,
+			
+			/// <summary>
+			/// Remove the first occured status effect.
+			/// </summary>
+			RemoveTheFirst,
 		}
 	}
 }
