@@ -1,2 +1,6 @@
-/.idea/
-/Temp/
+.idea/
+Temp/
+UnityPackageManager/
+obj/
+*.csproj
+*.sln
