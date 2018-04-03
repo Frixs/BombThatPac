@@ -15,6 +15,11 @@ namespace UI.Gameplay
 		/// </summary>
 		public Inventory PlayerInventory;
 		
+		/// <summary>
+		/// Reference to player stats view.
+		/// </summary>
+		public Stats PlayerStats;
+		
 		// Use this for initialization
 		void Start ()
 		{

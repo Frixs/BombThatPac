@@ -93,6 +93,9 @@ namespace Characters
         {
             CanPlantBombs = true;
             
+            // Set default number of fragments.
+            PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
+            
             base.Start();
         }
 
@@ -110,6 +113,7 @@ namespace Characters
             if (other.gameObject.CompareTag("Fragment"))
             {
                 FragmentCounter += other.GetComponent<Fragment>().Quantity;
+                PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
                 Destroy(other.gameObject);
             }
             // CHERRY.
@@ -256,6 +260,7 @@ namespace Characters
             frag.Quantity = FragmentCounter;
 
             FragmentCounter = 0;
+            PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
         }
 
         public override void Kill(Character attacker)
