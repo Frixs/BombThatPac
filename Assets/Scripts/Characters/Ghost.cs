@@ -123,12 +123,12 @@ namespace Characters
 		private Vector3 _currentCell, _targetCell, _previousCell;
 		
 		/// <summary>
-		/// TODO
+		/// Scriptable status effect for frightened mode as move speed.
 		/// </summary>
 		[Header("Status Effects")] [SerializeField] private ScriptableStatusEffect _frightenedMoveSpeedStatusEffect;
 		
 		/// <summary>
-		/// TODO
+		/// Scriptable status effect for consumed mode as move speed.
 		/// </summary>
 		[SerializeField] private ScriptableStatusEffect _consumedMoveSpeedStatusEffect;
 

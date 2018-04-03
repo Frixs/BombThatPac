@@ -1,9 +1,15 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 
 namespace UI.Gameplay
 {
 	public class PlayerPanel : MonoBehaviour
 	{
+		/// <summary>
+		/// Reference to the player.
+		/// </summary>
+		[HideInInspector] public PlayerManager PlayerManagerReference;
+		
 		/// <summary>
 		/// Reference to player inventory.
 		/// </summary>

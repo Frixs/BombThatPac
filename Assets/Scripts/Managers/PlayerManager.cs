@@ -56,15 +56,16 @@ namespace Managers
             Player.PlayerManagerReference = this;
             
             // Setup player's controls according to type of the game.
-            switch (GameManager.Instance.GameType)
+            switch (GameManager.Instance.CurrentGameType)
             {
-                case "LOCAL":
+                case GameType.LOCAL:
                     Player.InputPlayerSection = "Player"+ Player.Identifier;
                     break;
             }
 
             // Setup player UI.
             PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel();
+            PlayerPanelReference.PlayerManagerReference = this;
             // Set player colors.
             PlayerPanelReference.PlayerInventory.GetComponent<Image>().color = PlayerColor;
             // Set default scale & position.

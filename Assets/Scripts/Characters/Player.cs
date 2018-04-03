@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Items;
 using Items.SpecialItems;
 using Managers;
@@ -48,7 +49,7 @@ namespace Characters
         /// <summary>
         /// All items represented as scriptable status effect the player currently has.
         /// </summary>
-        protected Queue<ScriptableStatusEffect> ItemList = new Queue<ScriptableStatusEffect>();
+        [HideInInspector] public List<ScriptableStatusEffect> SpecialItemList = new List<ScriptableStatusEffect>();
         
         /// <summary>
         /// Reference to bomb PREFAB.
@@ -94,6 +95,32 @@ namespace Characters
             GetInput();
 
             base.Update();
+        }
+        
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            // FRAGMENT.
+            if (other.gameObject.CompareTag("Fragment"))
+            {
+                FragmentCounter += other.GetComponent<Fragment>().Quantity;
+                Destroy(other.gameObject);
+            }
+            // CHERRY.
+            else if (other.gameObject.CompareTag("Cherry"))
+            {
+                for (int i = 0; i < GameManager.Instance.Ghosts.Length; i++)
+                {
+                    GameManager.Instance.Ghosts[i].StartFrightenedMode();
+                }
+                
+                Destroy(other.gameObject);
+            }
+            // SPECIAL ITEM.
+            else if (other.gameObject.CompareTag("SpecialItem"))
+            {
+                PlayerManagerReference.PlayerPanelReference.PlayerInventory.AddItem(this, other.GetComponent<SpecialItem>());
+                Destroy(other.gameObject);
+            }
         }
 
         public override void Move()
@@ -155,10 +182,12 @@ namespace Characters
             
             if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "SpecialAction")))
             {
+                UseSpecialItem();
             }
             
             if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "CollectItem")))
             {
+                // Nothing.
             }
         }
 
@@ -192,59 +221,16 @@ namespace Characters
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb planted!", Name);
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        /// <summary>
+        /// Use special item from the player's inventory at 1st position.
+        /// </summary>
+        protected void UseSpecialItem()
         {
-            // FRAGMENT.
-            if (other.gameObject.CompareTag("Fragment"))
-            {
-                FragmentCounter += other.GetComponent<Fragment>().Quantity;
-                Destroy(other.gameObject);
-            }
-            // CHERRY.
-            else if (other.gameObject.CompareTag("Cherry"))
-            {
-                for (int i = 0; i < GameManager.Instance.Ghosts.Length; i++)
-                {
-                    GameManager.Instance.Ghosts[i].StartFrightenedMode();
-                }
-                
-                Destroy(other.gameObject);
-            }
-            // SPECIAL ITEM.
-            else if (other.gameObject.CompareTag("SpecialItem"))
-            {
-                Sprite previousItem = null;
-                
-                for (int i = 0; i < PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.childCount; i++)
-                {
-                    Image img = PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.GetChild(i).GetChild(0).GetComponent<Image>();
-
-                    if (i == 0)
-                    {
-                        img.enabled = true;
-                        
-                        previousItem = img.sprite;
-                        img.sprite = other.GetComponent<SpriteRenderer>().sprite;
-                    }
-                    else if (i > 0)
-                    {
-                        if (previousItem == null)
-                            break;
-                        
-                        img.enabled = true;
-                        
-                        Sprite currentItem = img.sprite;
-                        img.sprite = previousItem;
-                        previousItem = currentItem;
-                    }
-
-                    if (i == PlayerManagerReference.PlayerPanelReference.PlayerInventory.transform.childCount - 1 && previousItem != null)
-                        ItemList.Dequeue();
-                }
-                
-                ItemList.Enqueue(other.GetComponent<SpecialItem>().ItemStatusEffect);
-                Destroy(other.gameObject);
-            }
+            if (SpecialItemList.Count == 0)
+                return;
+            
+            StatusEffectManager.Instance.ApplyStatusEffect(this, null, SpecialItemList.Last());
+            PlayerManagerReference.PlayerPanelReference.PlayerInventory.RemoveItemAtFirstPos(this);
         }
 
         /// <summary>

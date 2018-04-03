@@ -17,7 +17,7 @@ namespace Managers
         /// <summary>
         /// Game mode if it is local game or online game, etc.
         /// </summary>
-        [Header("Game Constants")] public string GameType = "LOCAL";
+        [Header("Game Constants")] public GameType CurrentGameType;
 
         /// <summary>
         /// The number of rounds a single player has to win to win the game.
@@ -185,5 +185,10 @@ namespace Managers
             // These are the targets the camera should follow.
             CameraControl.Targets = targets;
         }
+    }
+
+    public enum GameType
+    {
+        LOCAL
     }
 }
