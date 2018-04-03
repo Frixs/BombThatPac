@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701a709a20e5154da9001756bfda7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemStatusEffect: {fileID: 0}
+  ItemStatusEffect: {fileID: 11400000, guid: 2e9399525549d6f45b50b831c5bbc1df, type: 2}
 --- !u!212 &212142275741155964
 SpriteRenderer:
   m_ObjectHideFlags: 1

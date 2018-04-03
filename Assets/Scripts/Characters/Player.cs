@@ -82,10 +82,17 @@ namespace Characters
         /// Counts player collected fragments.
         /// </summary>
         [HideInInspector] public int FragmentCounter = 0;
+        
+        /// <summary>
+        /// Can the player plant bombs?
+        /// </summary>
+        [HideInInspector] public bool CanPlantBombs;
 
         // Use this for initialization
         protected override void Start()
         {
+            CanPlantBombs = true;
+            
             base.Start();
         }
 
@@ -229,8 +236,8 @@ namespace Characters
             if (SpecialItemList.Count == 0)
                 return;
             
-            StatusEffectManager.Instance.ApplyStatusEffect(this, null, SpecialItemList.Last());
-            PlayerManagerReference.PlayerPanelReference.PlayerInventory.RemoveItemAtFirstPos(this);
+            if (StatusEffectManager.Instance.ApplyStatusEffect(this, null, SpecialItemList.Last()))
+                PlayerManagerReference.PlayerPanelReference.PlayerInventory.RemoveItemAtFirstPos(this);
         }
 
         /// <summary>

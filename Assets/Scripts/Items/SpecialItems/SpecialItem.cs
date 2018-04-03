@@ -6,7 +6,7 @@ namespace Items.SpecialItems
 	public abstract class SpecialItem : MonoBehaviour
 	{
 		/// <summary>
-		/// TODO
+		/// //TODO
 		/// </summary>
 		public ScriptableStatusEffect ItemStatusEffect;
 		

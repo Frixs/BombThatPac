@@ -44,12 +44,12 @@ namespace Characters
         /// <summary>
         /// Reference to default animation controller. If character changes its animations we know which is the default one to go back.
         /// </summary>
-        protected RuntimeAnimatorController AnimationControllerDefault;
+        [HideInInspector] public RuntimeAnimatorController AnimationControllerDefault;
 
         /// <summary>
         /// A reference to the character's animator.
         /// </summary>
-        protected Animator MyAnimator;
+        [HideInInspector] public Animator MyAnimator;
         
         /// <summary>
         /// Reference to rigid body.
@@ -60,6 +60,11 @@ namespace Characters
         /// Is character invulnerable thanks to some effect?
         /// </summary>
         [HideInInspector] public bool IsInvulnearable = false;
+        
+        /// <summary>
+        /// Is character immute to apply any status effect?
+        /// </summary>
+        [HideInInspector] public bool IsStatusEffectImmune = false;
         
         /// <summary>
         /// Check if the character is already death or not.

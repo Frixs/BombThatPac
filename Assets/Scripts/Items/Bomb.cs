@@ -234,11 +234,8 @@ namespace Items
 
 	        // Create an explosion.
             Vector3 pos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
-            GameObject explosion = (GameObject) Instantiate(ExplosionPrefab, pos, Quaternion.identity);
-
-            // Destroy the explosion after animation.
-            Destroy(explosion, ExplosionPrefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.Length);
-
+	        SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, pos, Quaternion.identity);
+	        
             return true;
         }
 		

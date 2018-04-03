@@ -41,13 +41,17 @@ namespace Managers
 		/// <param name="target">Target who will get a new status effect.</param>
 		/// <param name="caster">Caster who applied status effect on the target. Can be NULL.</param>
 		/// <param name="newScriptableStatusEffect">New scriptable status effect to be applied.</param>
-		public void ApplyStatusEffect(Character target, Character caster, ScriptableStatusEffect newScriptableStatusEffect)
+		/// <returns>TRUE: Status effect has been applied!</returns>
+		public bool ApplyStatusEffect(Character target, Character caster, ScriptableStatusEffect newScriptableStatusEffect)
 		{
 			if (target == null || newScriptableStatusEffect == null)
 			{
 				Debug.unityLogger.Log(LogType.Error, "Null reference for adding a new status effect!");
-				return;
+				return false;
 			}
+
+			if (target.IsStatusEffectImmune)
+				return false;
 
 			// Get status effect.
 			StatusEffect newStatusEffect = newScriptableStatusEffect.Initialize(target, caster);
@@ -65,10 +69,12 @@ namespace Managers
 			
 			// Don't let it create a new status effect of the same effect if the status effect is not stackable and there is already one in.
 			else if (!newStatusEffect.Data.IsStackable && effectOccurrence)
-				return;
+				return false;
 
 			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) applied!", target.Name, newStatusEffect);
 			target.AppliedStatusEffects.Add(newStatusEffect);
+
+			return true;
 		}
 		
 		/// <summary>

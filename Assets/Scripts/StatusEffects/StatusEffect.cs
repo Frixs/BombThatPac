@@ -91,7 +91,10 @@ namespace StatusEffects
 				// Main duration timer.
 				_durationTimer -= delta;
 				if (_durationTimer <= 0f)
+				{
 					End();
+					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) ended!", Target.Name, this);
+				}
 			}
 
 			// Repeating process.

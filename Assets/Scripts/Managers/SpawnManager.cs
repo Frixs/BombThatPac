@@ -82,5 +82,25 @@ namespace Managers
 			if (toRespawn is Player)
 				StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
 		}
+
+		/// <summary>
+		/// Spawn animation prefab at the current position.
+		/// </summary>
+		/// <param name="prefab">Prefab with animation to spawn.</param>
+		/// <param name="animPosition">Position where to spawn the animation prefab.</param>
+		/// <param name="animRotation">Rotation of the animation.</param>
+		public void SpawnAnimationAtPosition(GameObject prefab, Vector3 animPosition, Quaternion animRotation)
+		{
+			if (prefab == null)
+			{
+				Debug.unityLogger.Log(LogType.Error, "There is missing prefab to be able to spawn that animation!");
+				return;
+			}
+			
+			// Create an animation.
+			GameObject anim = (GameObject) Instantiate(prefab, animPosition, animRotation);
+			// Destroy the animation after expiration.
+			Destroy(anim, prefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.Length);
+		}
 	}
 }
