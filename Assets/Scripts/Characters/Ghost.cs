@@ -198,9 +198,6 @@ namespace Characters
 			{
 				if (MyAnimator.runtimeAnimatorController != AnimationControllerFrightenedBlue)
 					MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
-				
-				if (GetComponent<SpriteRenderer>().sprite != FrightenedBlueSprite && GetComponent<SpriteRenderer>().sprite != FrightenedWhiteSprite)
-					GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
 			}
 			else if (CurrentMode == Mode.Consumed)
 			{
@@ -409,6 +406,9 @@ namespace Characters
 			
 			if (CurrentMode != Mode.Consumed)
 				ChangeMode(Mode.Frightened);
+			
+			if (GetComponent<SpriteRenderer>().sprite != FrightenedBlueSprite)
+				GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
 		}
 		
 		/// <summary>

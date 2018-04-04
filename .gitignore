@@ -2,5 +2,6 @@
 Temp/
 UnityPackageManager/
 obj/
+Library/*Cache/
 *.csproj
 *.sln

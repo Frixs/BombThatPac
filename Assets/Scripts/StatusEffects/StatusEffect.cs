@@ -94,6 +94,7 @@ namespace StatusEffects
 				{
 					End();
 					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) ended!", Target.Name, this);
+					return;
 				}
 			}
 

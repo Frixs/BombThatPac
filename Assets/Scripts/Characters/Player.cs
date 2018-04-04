@@ -210,6 +210,9 @@ namespace Characters
             if (BombDeployCounter >= BombMaxAllowedDeploys)
                 return;
 
+            if (!CanPlantBombs)
+                return;
+
             Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 

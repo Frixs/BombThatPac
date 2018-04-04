@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using Characters;
-using UnityEditor;
+﻿using Characters;
 using UnityEngine;
 
 namespace StatusEffects.Scriptable
