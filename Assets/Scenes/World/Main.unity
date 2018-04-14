@@ -1400,7 +1400,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 164
+      value: 163
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -1588,7 +1588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 159
+      value: 158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -1682,7 +1682,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 165
+      value: 164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -1966,6 +1966,7 @@ MonoBehaviour:
     type: 2}
   DropChanceOfNothing: 40
   _spawnItemEachTick: 5
+  _itemLaunchDelay: 2
   _spawnableItemList:
   - {fileID: 114695341736397350, guid: 3572fb7a525bcc3469a8d68fa6c996fb, type: 2}
   - {fileID: 114972143415699946, guid: 263c69ae965c4624d94334d23a405fb7, type: 2}
@@ -4444,7 +4445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 157
+      value: 156
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -6540,7 +6541,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 162
+      value: 161
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -6822,7 +6823,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 160
+      value: 159
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -6963,7 +6964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 156
+      value: 155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -25377,7 +25378,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 158
+      value: 157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -25612,7 +25613,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 161
+      value: 160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}
@@ -26312,7 +26313,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4075142198831872, guid: 10ffaae0391b27747952111efc276d97, type: 2}
       propertyPath: m_RootOrder
-      value: 163
+      value: 162
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10ffaae0391b27747952111efc276d97, type: 2}

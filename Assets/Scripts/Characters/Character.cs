@@ -21,11 +21,6 @@ namespace Characters
         public abstract float RespawnDeathDelay { get; set; }
         
         /// <summary>
-        /// Reference to event animation controller.
-        /// </summary>
-        public abstract RuntimeAnimatorController EventAnimationController { get; }
-        
-        /// <summary>
         /// Used to identify which tank belongs to which player.
         /// </summary>
         [HideInInspector] public int Identifier;
@@ -185,14 +180,14 @@ namespace Characters
             if (_isEventAnimation)
             {
                 // Check if any event animation is already in progress.
-                if (MyAnimator.runtimeAnimatorController == EventAnimationController)
+                if ((int) MyAnimator.GetLayerWeight(MyAnimator.GetLayerIndex("EventLayer")) == 1)
                 {
                     if ((int) MyAnimator.GetFloat("event_id") != _eventAnimationId)
                         _eventAnimationTimer = 0;
                 }
                 // If no evnet animation is not executing right now, change controller to event controller.
                 else
-                    MyAnimator.runtimeAnimatorController = EventAnimationController;
+                    ActivateLayer("EventLayer");
                 
                 // Timer of the event animation.
                 _eventAnimationTimer += Time.deltaTime;
@@ -210,10 +205,6 @@ namespace Characters
                 else
                     return;
             }
-
-            // Set default move animation controller.
-            if (MyAnimator.runtimeAnimatorController != AnimationControllerDefault)
-                MyAnimator.runtimeAnimatorController = AnimationControllerDefault;
             
             // Checks if we are moving or standing still.
             if (IsMoving())
@@ -249,7 +240,7 @@ namespace Characters
         /// <param name="id">ID of the animation (It is defined in its Controller in BlendTree).</param>
         public void StartEventAnimation(int id)
         {
-            if (id <= 0 || id >= EventAnimationController.animationClips.Length)
+            if (id <= 0)
             {
                 Debug.unityLogger.Log(LogType.Error, "Animation event action is out of range!");
                 return;

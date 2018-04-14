@@ -23,8 +23,6 @@ namespace Characters
 
         public override float MoveSpeed { get; set; } = Constants.PlayerDefaultMoveSpeed;
         
-        public override RuntimeAnimatorController EventAnimationController { get; } = null;
-        
         /// <summary>
         /// Bomb countdown.
         /// </summary>

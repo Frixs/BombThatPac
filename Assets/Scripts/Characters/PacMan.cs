@@ -8,9 +8,6 @@ namespace Characters
         public override float MoveSpeed { get; set; } = Constants.PacManDefaultMoveSpeed;
         public override float RespawnDeathDelay { get; set; } = 0f;
 
-        public override RuntimeAnimatorController EventAnimationController => _eventAnimationController;
-        [SerializeField] private RuntimeAnimatorController _eventAnimationController;
-
         protected override void Start()
         {
             base.Start();
