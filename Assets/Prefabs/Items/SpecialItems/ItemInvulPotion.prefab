@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58866574484115228}
   - component: {fileID: 114284684650060334}
   - component: {fileID: 114897242225476720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ItemInvulPotion
   m_TagString: SpecialItem
   m_Icon: {fileID: 0}
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemStatusEffect: {fileID: 0}
+  DropChance: 15
 --- !u!114 &114897242225476720
 MonoBehaviour:
   m_ObjectHideFlags: 1

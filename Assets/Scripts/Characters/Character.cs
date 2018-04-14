@@ -21,6 +21,11 @@ namespace Characters
         public abstract float RespawnDeathDelay { get; set; }
         
         /// <summary>
+        /// Reference to event animation controller.
+        /// </summary>
+        public abstract RuntimeAnimatorController EventAnimationController { get; }
+        
+        /// <summary>
         /// Used to identify which tank belongs to which player.
         /// </summary>
         [HideInInspector] public int Identifier;
@@ -75,6 +80,21 @@ namespace Characters
         /// Tells if character can respawn after death.
         /// </summary>
         [HideInInspector] public bool IsRespawnable = true;
+
+        /// <summary>
+        /// Check if character is in some event animation.
+        /// </summary>
+        private bool _isEventAnimation = false;
+
+        /// <summary>
+        /// Event animation ID. This ID is defined in BlendTree in Animator event controller.
+        /// </summary>
+        private int _eventAnimationId;
+
+        /// <summary>
+        /// Timer for event action animation.
+        /// </summary>
+        private float _eventAnimationTimer;
         
         /// <summary>
         /// Set if character can move and interact with other characters.
@@ -161,6 +181,40 @@ namespace Characters
         /// </summary>
         protected virtual void HandleAnimationLayers()
         {
+            // Special event action animations.
+            if (_isEventAnimation)
+            {
+                // Check if any event animation is already in progress.
+                if (MyAnimator.runtimeAnimatorController == EventAnimationController)
+                {
+                    if ((int) MyAnimator.GetFloat("event_id") != _eventAnimationId)
+                        _eventAnimationTimer = 0;
+                }
+                // If no evnet animation is not executing right now, change controller to event controller.
+                else
+                    MyAnimator.runtimeAnimatorController = EventAnimationController;
+                
+                // Timer of the event animation.
+                _eventAnimationTimer += Time.deltaTime;
+                
+                // Tell to controller, which animation should be executed.
+                MyAnimator.SetFloat("event_id", _eventAnimationId);
+
+                // Timing the end of animation.
+                if (_eventAnimationTimer >= MyAnimator.runtimeAnimatorController.animationClips[_eventAnimationId - 1].length)
+                {
+                    _isEventAnimation = false;
+                    _eventAnimationId = 0;
+                    _eventAnimationTimer = 0;
+                }
+                else
+                    return;
+            }
+
+            // Set default move animation controller.
+            if (MyAnimator.runtimeAnimatorController != AnimationControllerDefault)
+                MyAnimator.runtimeAnimatorController = AnimationControllerDefault;
+            
             // Checks if we are moving or standing still.
             if (IsMoving())
             {
@@ -187,6 +241,22 @@ namespace Characters
             }
 
             MyAnimator.SetLayerWeight(MyAnimator.GetLayerIndex(layerName), 1);
+        }
+
+        /// <summary>
+        /// Set execution for event action animation.
+        /// </summary>
+        /// <param name="id">ID of the animation (It is defined in its Controller in BlendTree).</param>
+        public void StartEventAnimation(int id)
+        {
+            if (id <= 0 || id >= EventAnimationController.animationClips.Length)
+            {
+                Debug.unityLogger.Log(LogType.Error, "Animation event action is out of range!");
+                return;
+            }
+            
+            _isEventAnimation = true;
+            _eventAnimationId = id;
         }
         
         /// <summary>

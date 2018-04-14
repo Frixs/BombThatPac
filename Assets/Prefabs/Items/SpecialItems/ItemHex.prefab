@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58866574484115228}
   - component: {fileID: 114972143415699946}
   - component: {fileID: 114897242225476720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ItemHex
   m_TagString: SpecialItem
   m_Icon: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemStatusEffect: {fileID: 11400000, guid: 2e9399525549d6f45b50b831c5bbc1df, type: 2}
+  DropChance: 40
 --- !u!212 &212142275741155964
 SpriteRenderer:
   m_ObjectHideFlags: 1

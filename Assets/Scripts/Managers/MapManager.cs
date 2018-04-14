@@ -44,55 +44,14 @@ namespace Managers
         [SerializeField] private Tile _destructibleTile;
 
         /// <summary>
-        /// Reference to door game object.
-        /// </summary>
-        public GameObject PlayerSpawnPointPrefab => _playerSpawnPointPrefab;
-
-        [Header("Player Points")] [SerializeField]
-        private GameObject _playerSpawnPointPrefab;
-        
-        /// <summary>
         /// List of all possible player spawn positions.
         /// </summary>
         [HideInInspector] public Transform[] PlayerSpawnPoints;
         
         /// <summary>
-        /// Reference to door game object.
+        /// List of all possible item spawn positions.
         /// </summary>
-        public GameObject GhostDoorPrefab => _ghostDoorPrefab;
-
-        [Header("Ghost Points")] [SerializeField]
-        private GameObject _ghostDoorPrefab;
-        
-        /// <summary>
-        /// Reference to door game object trigger event handler.
-        /// </summary>
-        public GameObject GhostDoorTriggerPrefab => _ghostDoorTriggerPrefab;
-
-        [SerializeField]
-        private GameObject _ghostDoorTriggerPrefab;
-        
-        /// <summary>
-        /// Reference to ghost start target position. This is the first position whre they should go.
-        /// </summary>
-        public GameObject GhostStartTargetPositionPointPrefab => _ghostStartTargetPositionPointPrefab;
-
-        [SerializeField]
-        private GameObject _ghostStartTargetPositionPointPrefab;
-
-        /// <summary>
-        /// Reference to ghost spawn positions. Each ghost has only 1 own spawn position. Depends on the order!!!
-        /// </summary>
-        public GameObject[] GhostSpawnPointPrefabs => _ghostSpawnPointPrefabs;
-
-        [SerializeField] private GameObject[] _ghostSpawnPointPrefabs;
-
-        /// <summary>
-        /// Reference to ghost scatter home positions. Each ghost has only 1 own scatter home position. Depends on the order!!!
-        /// </summary>
-        public GameObject[] GhostScatterHomePrefabs => _ghostScatterHomePrefabs;
-
-        [SerializeField] private GameObject[] _ghostScatterHomePrefabs;
+        [HideInInspector] public Transform[] ItemSpawnPoints;
 
         // Awake is always called before any Start functions
         void Awake()
@@ -118,14 +77,17 @@ namespace Managers
         // Use this for initialization
         void Start()
         {
+            // Find all player spawn points.
             GameObject playerSpawnPointHandler = GameObject.Find("PlayerSpawnPoints");
-
             PlayerSpawnPoints = new Transform[playerSpawnPointHandler.transform.childCount];
-
             for (int i = 0; i < playerSpawnPointHandler.transform.childCount; i++)
-            {
                 PlayerSpawnPoints[i] = playerSpawnPointHandler.transform.GetChild(i);
-            }
+            
+            // Find all item spawn points.
+            GameObject itemSpawnPointHandler = GameObject.Find("ItemSpawnPoints");
+            ItemSpawnPoints = new Transform[itemSpawnPointHandler.transform.childCount];
+            for (int i = 0; i < itemSpawnPointHandler.transform.childCount; i++)
+                ItemSpawnPoints[i] = itemSpawnPointHandler.transform.GetChild(i);
         }
 
         // Update is called once per frame

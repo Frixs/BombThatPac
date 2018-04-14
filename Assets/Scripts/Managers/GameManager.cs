@@ -65,6 +65,16 @@ namespace Managers
         [HideInInspector] public Ghost[] Ghosts;
 
         /// <summary>
+        /// PacMan prefab to be spawned.
+        /// </summary>
+        [Header("PacMan Settings")][SerializeField] private PacMan _pacManToSpawnPrefab;
+        
+        /// <summary>
+        /// Reference to spawned PacMan.
+        /// </summary>
+        [HideInInspector] public PacMan PacMan;
+        
+        /// <summary>
         /// Which round the game is currently on.
         /// </summary>
         private int _roundNumber;
@@ -119,6 +129,7 @@ namespace Managers
             SpawnAllPlayers();
             SetCameraTargets();
             SpawnAllGhosts();
+            SpawnPacMan();
 
             // Once the players have been created and the camera is using them as targets, start the game.
             //StartCoroutine(GameLoop());
@@ -165,6 +176,18 @@ namespace Managers
                 Ghosts[i].ScatterBasePosition = scatterBasePoint;
                 Ghosts[i].StartTargetPosition = ghostStartTargetPoint;
             }
+        }
+
+        /// <summary>
+        /// Spawn PacMan to its position.
+        /// </summary>
+        private void SpawnPacMan()
+        {
+            Transform spawnPoint = GameObject.Find("PacManSpawnPoint").transform;
+
+            PacMan = Instantiate(_pacManToSpawnPrefab, spawnPoint.position, _pacManToSpawnPrefab.transform.rotation);
+            PacMan.Identifier = ++MaxObjectIdentifier;
+            PacMan.Name = "PacMan";
         }
 
         /// <summary>

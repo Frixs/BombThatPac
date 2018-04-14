@@ -16,12 +16,7 @@ public static class Constants
     /// Player's default movement speed.
     /// </summary>
     public const float PlayerDefaultMoveSpeed = 3.0f;
-    
-    /// <summary>
-    /// Ghost's default movement speed.
-    /// </summary>
-    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.1f;
-
+ 
     /*
      * BOMBERMAN
      */
@@ -102,11 +97,21 @@ public static class Constants
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be refered as obstacle.
     /// </summary>
     public const string UserLayerNameObstacle = "Obstacle";
+ 
+    /// <summary>
+    /// Layer name string reference to layer which hold all objects which are collectable by the player.
+    /// </summary>
+    public const string UserLayerNameCollectable = "Collectable";
     
     /*
      * GHOSTS
      */
     
+    /// <summary>
+    /// Ghost's default movement speed.
+    /// </summary>
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.1f;
+ 
     /// <summary>
     /// Delay after death to respawn.
     /// </summary>
@@ -187,4 +192,13 @@ public static class Constants
     /// Ghost method to get random cell around ghost start target position. This is the max. distance to reach random cell around.
     /// </summary>
     public const int GhostGetRandomCellMethodMaxDistance = 6;
+ 
+    /*
+     * PACMAN
+     */
+    
+    /// <summary>
+    /// PacMan's default movement speed.
+    /// </summary>
+    public const float PacManDefaultMoveSpeed = PlayerDefaultMoveSpeed + 0.5f;
 }

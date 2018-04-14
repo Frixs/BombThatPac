@@ -20,11 +20,10 @@ namespace Characters
         /// Reference to the player. This is just game object (Player) which player controls.
         /// </summary>
         [HideInInspector] public PlayerManager PlayerManagerReference;
-        
-        /// <summary>
-        /// The Player's movement speed.
-        /// </summary>
+
         public override float MoveSpeed { get; set; } = Constants.PlayerDefaultMoveSpeed;
+        
+        public override RuntimeAnimatorController EventAnimationController { get; } = null;
         
         /// <summary>
         /// Bomb countdown.

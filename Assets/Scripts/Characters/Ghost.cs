@@ -18,6 +18,8 @@ namespace Characters
 		protected abstract float GhostReleaseTimer { get; set; }
 		
 		public override float MoveSpeed { get; set; } = Constants.GhostDefaultMoveSpeed;
+		
+		public override RuntimeAnimatorController EventAnimationController { get; } = null;
 
 		/// <summary>
 		/// Spawn position of the ghost.

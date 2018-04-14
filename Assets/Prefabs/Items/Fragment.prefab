@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114748074694108890}
   - component: {fileID: 50014586390087900}
   - component: {fileID: 58557849714576592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fragment
   m_TagString: Fragment
   m_Icon: {fileID: 0}
@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b9c4b4a4c5fc54e95a3733aad1f0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Quantity: 0
   UiPanelQuantity: {fileID: 224178016162079974}
   UiTextQuantity: {fileID: 114193835325655188}
 --- !u!212 &212500434459616490
