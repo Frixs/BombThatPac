@@ -1,22 +1,11 @@
-﻿using Managers;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 namespace UI.MainMenu
 {
     public class MainMenu : MonoBehaviour
     {
         /// <summary>
-        /// TODO
-        /// </summary>
-        public void PlayButtonEvent()
-        {
-            SceneLoadingManager.Instance.LoadScene(1);
-            //SceneManager.LoadScene(1);
-        }
-        
-        /// <summary>
-        /// TODO
+        /// Button event method.
         /// </summary>
         public void QuitButtonEvent()
         {

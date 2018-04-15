@@ -503,7 +503,7 @@ namespace Characters
 				);
 				// Evaluate tiles. If it is not wall or obstacle you can go in this direction.
 				// If the ghosts are in ghost house (or in Consumed mode), they can go through the obstacle (only obstacle there is door).
-				if (tile != MapManager.Instance.WallTile && (obstacles.Length == 0 || (IsInGhostHouse && obstacles.Length > 0) || CurrentMode == Mode.Consumed))
+				if (tile != MapManager.Instance.WallTile && tile != MapManager.Instance.DestructableObstacleTile && (obstacles.Length == 0 || (IsInGhostHouse && obstacles.Length > 0) || CurrentMode == Mode.Consumed))
 				{
 					foundCells[cellCounter] = neighborCenter;
 					foundCellsDirection[cellCounter] = new Vector2(cellNeighborDirections[i, 0], cellNeighborDirections[i, 1]);

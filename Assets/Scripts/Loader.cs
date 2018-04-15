@@ -38,6 +38,5 @@ public class Loader : MonoBehaviour
 	void Start()
 	{
 		Time.timeScale = 1f;
-		GameManager.Instance.IsGamePaused = false;
 	}
 }

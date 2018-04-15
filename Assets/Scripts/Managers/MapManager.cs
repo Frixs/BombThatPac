@@ -39,9 +39,9 @@ namespace Managers
         /// <summary>
         /// Reference of detructable tile.
         /// </summary>
-        public Tile DestructibleTile => _destructibleTile;
+        public RuleTile DestructableObstacleTile => _destructableObstacleTile;
 
-        [SerializeField] private Tile _destructibleTile;
+        [SerializeField] private RuleTile _destructableObstacleTile;
 
         /// <summary>
         /// List of all possible player spawn positions.

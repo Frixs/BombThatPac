@@ -17,7 +17,13 @@ namespace Managers
     public class PlayerManager
     {
         /// <summary>
-        /// A reference to the instance of the tank when it is created.
+        /// Data from character selection.
+        /// TODO: It is better to remove this static in the future and make better solution how to handle these data.
+        /// </summary>
+        public static RuntimeAnimatorController[] PlayerCharacterSelection = new RuntimeAnimatorController[2];
+        
+        /// <summary>
+        /// A reference to the instance of the player when it is created.
         /// </summary>
         [HideInInspector] public GameObject Instance;
         
@@ -75,6 +81,10 @@ namespace Managers
                 10f,
                 0f
             );
+            
+            // Set player skin.
+            Player.SetDefaultAnimationController(PlayerCharacterSelection[initOrderNumber]);
+            Player.GetComponent<Animator>().runtimeAnimatorController = PlayerCharacterSelection[initOrderNumber];
         }
     
         /// <summary>

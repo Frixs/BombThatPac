@@ -176,6 +176,7 @@ namespace Items
         public bool ExplodeInCell(Vector3Int cell, Character caster)
         {
             TileBase tile = MapManager.Instance.TilemapGameplay.GetTile<TileBase>(cell);
+	        Vector3 explosionPos;
 
             // Try to find obstacle in the current cell.
             Collider2D[] obstacles = Physics2D.OverlapCircleAll(
@@ -191,10 +192,15 @@ namespace Items
             if (tile == MapManager.Instance.WallTile || obstacles.Length > 0)
                 return false;
 
-            if (tile == MapManager.Instance.DestructibleTile)
+	        if (tile == MapManager.Instance.DestructableObstacleTile)
             {
                 // Remove the tile.
                 MapManager.Instance.TilemapGameplay.SetTile(cell, null);
+	            
+	            // Create an explosion.
+	            explosionPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
+	            SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
+	            
                 return false;
             }
 
@@ -233,8 +239,8 @@ namespace Items
 	        }
 
 	        // Create an explosion.
-            Vector3 pos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
-	        SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, pos, Quaternion.identity);
+            explosionPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
+	        SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
 	        
             return true;
         }
@@ -285,16 +291,6 @@ namespace Items
 			Vector3Int neighbor = MapManager.Instance.TilemapGameplay.WorldToCell(_targetCell);
 			TileBase tile = MapManager.Instance.TilemapGameplay.GetTile<TileBase>(neighbor);
 			
-			// Try to find obstacle in the current cell.
-			Collider2D[] obstacles = Physics2D.OverlapCircleAll(
-				new Vector2(
-					_targetCell.x,
-					_targetCell.y
-				),
-				MapManager.Instance.TilemapCellHalfSize,
-				1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
-			);
-			
 			// Try to find if there is another bomb already planted.
 			Collider2D[] triggerObjects = Physics2D.OverlapCircleAll(
 				new Vector2(
@@ -309,7 +305,7 @@ namespace Items
 					return false;
 			
 			// Evaluate tiles. If it is not wall or obstacle you can go in this direction.
-			return tile != MapManager.Instance.WallTile && obstacles.Length == 0;
+			return tile != MapManager.Instance.WallTile && tile != MapManager.Instance.DestructableObstacleTile;
 		}
 		
 		/// <summary>
