@@ -163,7 +163,7 @@ namespace Characters
             
             Direction = Vector2.zero;
 
-            if (!HasEnabledActions)
+            if (!HasEnabledActions || GameManager.Instance.IsGamePaused)
                 return;
 
             if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveUp")))

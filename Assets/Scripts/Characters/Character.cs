@@ -130,6 +130,18 @@ namespace Characters
         {
             IsDeath = false;
         }
+
+        /// <summary>
+        /// Set new default controller to the character.
+        /// </summary>
+        /// <param name="controller">New animation controller to set.</param>
+        public void SetDefaultAnimationController(RuntimeAnimatorController controller)
+        {
+            if (controller == null)
+                return;
+            
+            AnimationControllerDefault = controller;
+        }
         
         /// <summary>
         /// Check if character is moving.
@@ -173,6 +185,7 @@ namespace Characters
 
         /// <summary>
         /// Handle animation layers.
+        /// TODO: It would be good to change whole system of handling animations for better performance in the future.
         /// </summary>
         protected virtual void HandleAnimationLayers()
         {

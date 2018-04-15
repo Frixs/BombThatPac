@@ -1,4 +1,4 @@
-﻿using Camera;
+﻿using Cameras;
 using Characters;
 using UnityEngine;
 
@@ -13,6 +13,11 @@ namespace Managers
         /// Static instance of GameManager which allows it to be accessed by any other script.
         /// </summary>
         public static GameManager Instance = null;
+
+        /// <summary>
+        /// Check if the game is currently paused or not.
+        /// </summary>
+        public bool IsGamePaused = false;
 
         /// <summary>
         /// Game mode if it is local game or online game, etc.
@@ -42,7 +47,7 @@ namespace Managers
         /// <summary>
         /// Reference to the CameraControl script for control during different phases.
         /// </summary>
-        [Header("Camera Settings")] public CameraControl CameraControl;
+        [Header("Camera Settings")] public GameCameraControl CameraControl;
 
         /// <summary>
         /// Reference to the prefab the players will control.

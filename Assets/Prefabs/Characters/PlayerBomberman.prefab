@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 1808872423296922}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 813d0506023fa62458a85172b9253483, type: 2}
+  m_Controller: {fileID: 9100000, guid: 39a2ca282f062b74aa12c8712b0a767b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109,7 +109,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Identifier: 0
   Name: NONAME
+  AnimationControllerDefault: {fileID: 0}
+  MyAnimator: {fileID: 0}
   IsInvulnearable: 0
+  IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
   PlayerManagerReference:
@@ -117,7 +120,9 @@ MonoBehaviour:
     PlayerName: 
     PlayerColor: {r: 0, g: 0, b: 0, a: 0}
     Player: {fileID: 0}
+    PlayerPanelReference: {fileID: 0}
     Wins: 0
+  SpecialItemList: []
   _bombPrefab: {fileID: 1286217638179488, guid: 5e0de5d795da747438060a9a3f8cf5cc,
     type: 2}
   _fragmentPrefab: {fileID: 1868182462786954, guid: 10ffaae0391b27747952111efc276d97,
@@ -127,6 +132,7 @@ MonoBehaviour:
   InputPlayerSection: 
   BombDeployCounter: 0
   FragmentCounter: 0
+  CanPlantBombs: 0
 --- !u!212 &212224063605262326
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -161,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300002, guid: 0dcb7e18d02c7eb4f8a0b68fe2cc51e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b75c22c089b37e9459e6d5e78c08b84d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

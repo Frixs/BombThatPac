@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 
 namespace UI.Gameplay
 {
@@ -13,6 +14,11 @@ namespace UI.Gameplay
 		/// PlayerPanel PREFAB.
 		/// </summary>
 		[SerializeField] private PlayerPanel _playerPanelPrefab;
+		
+		/// <summary>
+		/// PauseMenu reference.
+		/// </summary>
+		[SerializeField] private PauseMenu _pauseMenuReference;
 
 		void Awake()
 		{
@@ -41,10 +47,8 @@ namespace UI.Gameplay
 		// Update is called once per frame
 		void Update ()
 		{
-			if (Input.GetKey(KeyCode.Escape))
-			{
-				Application.Quit();
-			}
+			if (!GameManager.Instance.IsGamePaused && Input.GetKeyDown(KeyCode.Escape))
+				PauseTheGame();
 		}
 
 		/// <summary>
@@ -63,6 +67,16 @@ namespace UI.Gameplay
 			pp.transform.SetParent(this.transform);
 
 			return pp;
+		}
+
+		/// <summary>
+		/// Pause the game and open the pause menu.
+		/// </summary>
+		private void PauseTheGame()
+		{
+			_pauseMenuReference.gameObject.SetActive(true);
+			Time.timeScale = 0f;
+			GameManager.Instance.IsGamePaused = true;
 		}
 	}
 }

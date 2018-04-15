@@ -179,11 +179,6 @@ namespace Managers
         {
             List<Transform> possibleSpawns = new List<Transform>();
 
-            // Animate throwing item.
-            Component component = null;
-            if ((component = ItemSpawner.GetComponent<PacMan>()) != null)
-                ((PacMan) component).StartEventAnimation(1);
-
             // Find a free spawn point for the item.
             for (int i = 0; i < MapManager.Instance.ItemSpawnPoints.Length; i++)
             {
@@ -205,7 +200,13 @@ namespace Managers
                 Debug.unityLogger.LogFormat(LogType.Log, "[Spawner: {0}] There is no free spawn point to spawn new item.", ItemSpawner.name);
                 return;
             }
+            
+            // Animate throwing item.
+            Component component = null;
+            if ((component = ItemSpawner.GetComponent<PacMan>()) != null)
+                ((PacMan) component).StartEventAnimation(1);
 
+            // Get random spawn point.
             int spawnPointIndex = Random.Range(0, possibleSpawns.Count - 1);
 
             SpecialItem spawnedItem = Instantiate(item, ItemSpawner.transform.position, item.transform.rotation);

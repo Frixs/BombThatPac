@@ -6,19 +6,17 @@ using UnityEngine;
 /// </summary>
 public class Loader : MonoBehaviour
 {
-	/*
-	/// <summary>
-	/// Managers GO holder.
-	/// </summary>
-	[SerializeField]
-	private Transform _managers;
-	*/
-	
 	/// <summary>
 	/// InputManager PREFAB to instantiate.
 	/// </summary>
-	[SerializeField]
+	[Header("Manager Prefabs")] [SerializeField]
 	private GameObject _inputManager; 
+	
+	/// <summary>
+	/// SceneLoadingManager PREFAB to instantiate.
+	/// </summary>
+	[SerializeField]
+	private GameObject _sceneLoadingManager; 
 	
 	// Awake is always called before any Start functions
 	void Awake ()
@@ -29,15 +27,17 @@ public class Loader : MonoBehaviour
 			Instantiate(_inputManager);
 			//go.transform.parent = _managers;
 		}
+		
+		if (SceneLoadingManager.Instance == null)
+		{
+			Instantiate(_sceneLoadingManager);
+			//go.transform.parent = _managers;
+		}
 	}
-	
-	// Use this for initialization
-	void Start ()
+
+	void Start()
 	{
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+		Time.timeScale = 1f;
+		GameManager.Instance.IsGamePaused = false;
 	}
 }

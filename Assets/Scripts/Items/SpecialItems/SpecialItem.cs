@@ -85,11 +85,23 @@ namespace Items.SpecialItems
 			float scale = Mathf.Sin(pctLeft * onePctOfHalfSin) + 1f; // +1 because of we need to have 1 as the base scale.
 
 			transform.localScale = new Vector3(scale, scale, scale);
+			transform.GetComponent<SpriteRenderer>().color = new Color(
+				transform.GetComponent<SpriteRenderer>().color.r,
+				transform.GetComponent<SpriteRenderer>().color.g,
+				transform.GetComponent<SpriteRenderer>().color.b,
+				scale > 1f ? 2.75f - scale : scale // Scale is number between 1f and 2f. Thanks to this the alpha will be 0.75 at the highest point of sinusoid animation.
+			);
 
 			if (transform.position == _throwingPosition)
 			{
 				_isThrown = false;
 				transform.localScale = new Vector3(1f, 1f, 1f);
+				transform.GetComponent<SpriteRenderer>().color = new Color(
+					transform.GetComponent<SpriteRenderer>().color.r,
+					transform.GetComponent<SpriteRenderer>().color.g,
+					transform.GetComponent<SpriteRenderer>().color.b,
+					1f
+				);
 				GetComponent<ItemLevitation>().enabled = true;
 				GetComponent<CircleCollider2D>().enabled = true;
 			}
