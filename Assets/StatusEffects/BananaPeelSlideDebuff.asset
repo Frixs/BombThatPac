@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatusEffectType: 1
   IsPermanent: 0
-  Duration: 2
+  Duration: 1.5
+  RemoveAtDeath: 1
   OverwriteTheSameTypes: 0
   OverwriteTheSameEffects: 0
   IsStackable: 0

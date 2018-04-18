@@ -14,6 +14,7 @@ MonoBehaviour:
   StatusEffectType: 0
   IsPermanent: 0
   Duration: 3
+  RemoveAtDeath: 1
   OverwriteTheSameTypes: 1
   OverwriteTheSameEffects: 0
   IsStackable: 0

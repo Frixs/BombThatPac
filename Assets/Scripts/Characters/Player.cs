@@ -272,6 +272,9 @@ namespace Characters
                 return;
 
             IsDeath = true;
+
+            // Remove all status effects which have to be removed on death.
+            StatusEffectManager.Instance.RemoveRequiredAtDeath(this);
             
             if (IsRespawnable)
                 SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
@@ -289,6 +292,9 @@ namespace Characters
             
             IsDeath = true;
 
+            // Remove all status effects which have to be removed on death.
+            StatusEffectManager.Instance.RemoveRequiredAtDeath(this);
+            
             DropFragments();
             
             gameObject.SetActive(false);

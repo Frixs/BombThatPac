@@ -25,6 +25,11 @@ namespace StatusEffects.Scriptable
 		public float Duration;
 
 		/// <summary>
+		/// Should the status effect be removed at death of the target?
+		/// </summary>
+		public bool RemoveAtDeath;
+
+		/// <summary>
 		/// Should this status effect overwrite all status effects of that type (like MoveSPeedIncrease)? If this is TRUE then OverwriteTheSameEffects & IsStackable is irrelevant.
 		/// </summary>
 		[Header("Effect Connections")] public bool OverwriteTheSameTypes;

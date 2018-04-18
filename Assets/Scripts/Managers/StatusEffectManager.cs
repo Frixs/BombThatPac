@@ -56,7 +56,7 @@ namespace Managers
 			// Get status effect.
 			StatusEffect newStatusEffect = newScriptableStatusEffect.Initialize(target, caster);
 			
-			bool typeOccurrence = target.AppliedStatusEffects.Exists(item => item.Data.GetType() == newScriptableStatusEffect.GetType()); // TODO upravit!!! čisší kod.
+			bool typeOccurrence = target.AppliedStatusEffects.Exists(item => item.Data.GetType() == newScriptableStatusEffect.GetType());
 			bool effectOccurrence = target.AppliedStatusEffects.Exists(item => item.Data == newScriptableStatusEffect);
 
 			// Overwrite the status effect if there are some of the same type already in.
@@ -94,6 +94,28 @@ namespace Managers
 				statusEffect.Tick(Time.deltaTime);
 				if (statusEffect.IsFinished)
 				{
+					target.AppliedStatusEffects.Remove(statusEffect);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Remove all status effects which have to be removed at death.
+		/// </summary>
+		/// <param name="target">Target to remove its status effects.</param>
+		public void RemoveRequiredAtDeath(Character target)
+		{
+			if (target == null)
+			{
+				Debug.unityLogger.Log(LogType.Error, "Null reference!");
+				return;
+			}
+			
+			foreach (StatusEffect statusEffect in target.AppliedStatusEffects.ToArray())
+			{
+				if (statusEffect.Data.RemoveAtDeath)
+				{
+					statusEffect.ForceEnd();
 					target.AppliedStatusEffects.Remove(statusEffect);
 				}
 			}
