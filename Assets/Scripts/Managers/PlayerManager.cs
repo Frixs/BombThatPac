@@ -23,9 +23,9 @@ namespace Managers
         public static RuntimeAnimatorController[] PlayerCharacterSelection = new RuntimeAnimatorController[2];
         
         /// <summary>
-        /// A reference to the instance of the player when it is created.
+        /// A reference to the instance of the player if it is created.
         /// </summary>
-        [HideInInspector] public GameObject Instance;
+        [HideInInspector] public GameObject CharacterInstance;
         
         /// <summary>
         /// Name of the player.
@@ -40,7 +40,7 @@ namespace Managers
         /// <summary>
         /// Reference to player's movement script.
         /// </summary>
-        [HideInInspector] public Player Player;
+        [HideInInspector] public Player PlayerComponent;
         
         /// <summary>
         /// Reference to player panel.
@@ -59,13 +59,13 @@ namespace Managers
         public void Setup(int initOrderNumber)
         {
             // Assign player a new player object.
-            Player.PlayerManagerReference = this;
+            PlayerComponent.PlayerManagerReference = this;
             
             // Setup player's controls according to type of the game.
             switch (GameManager.Instance.CurrentGameType)
             {
                 case GameType.LOCAL:
-                    Player.InputPlayerSection = "Player"+ Player.Identifier;
+                    PlayerComponent.InputPlayerSection = "Player"+ PlayerComponent.Identifier;
                     break;
             }
 
@@ -83,8 +83,11 @@ namespace Managers
             );
             
             // Set player skin.
-            Player.SetDefaultAnimationController(PlayerCharacterSelection[initOrderNumber]);
-            Player.GetComponent<Animator>().runtimeAnimatorController = PlayerCharacterSelection[initOrderNumber];
+            if (PlayerCharacterSelection[initOrderNumber] != null)
+            {
+                PlayerComponent.SetDefaultAnimationController(PlayerCharacterSelection[initOrderNumber]);
+                PlayerComponent.GetComponent<Animator>().runtimeAnimatorController = PlayerCharacterSelection[initOrderNumber];
+            }
         }
     
         /// <summary>

@@ -72,12 +72,12 @@ namespace StatusEffects
 		public void Tick(float delta)
 		{
 			// Start delay if some exists.
-			if (_startDelayTimer >= 0f)
+			if (_startDelayTimer > 0f)
 			{
 				_startDelayTimer -= delta;
 				return;
 			}
-
+			
 			// Activate the status effect.
 			if (!_isAlreadyActivated)
 			{

@@ -1392,10 +1392,14 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 39a2ca282f062b74aa12c8712b0a767b, type: 2}
   - {fileID: 9100000, guid: c40f8bb05affa8c42bd0ee1bc154e6b5, type: 2}
   - {fileID: 9100000, guid: 57ded5f39e9315444bbe6dfdeec894a5, type: 2}
+  - {fileID: 9100000, guid: b9bfad2def1c83745ac35458b7833325, type: 2}
+  - {fileID: 9100000, guid: f24ef74ca31c9774986b9752521e5119, type: 2}
   _characterPreviewSkinList:
   - {fileID: 9100000, guid: ec0c78bd47567e54ab3fc02bdc534ad4, type: 2}
   - {fileID: 9100000, guid: e4e5b17af4d089749af353173295fa07, type: 2}
   - {fileID: 9100000, guid: 0ba37d312000c5c428881fb91bd45b41, type: 2}
+  - {fileID: 9100000, guid: 42ec9059874778d4daf4c95a3a3e3637, type: 2}
+  - {fileID: 9100000, guid: f7b0824fa5e3ced448adf97a1e525eee, type: 2}
 --- !u!1 &994008942
 GameObject:
   m_ObjectHideFlags: 0

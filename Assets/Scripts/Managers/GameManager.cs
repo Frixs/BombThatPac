@@ -1,5 +1,6 @@
 ﻿using Cameras;
 using Characters;
+using Special;
 using UnityEngine;
 
 namespace Managers
@@ -43,6 +44,11 @@ namespace Managers
         /// The last and the highest identifier of all spawned units or objects in a whole game.
         /// </summary>
         public int MaxObjectIdentifier = 0;
+
+        /// <summary>
+        /// PREFAB of finish portal to be spawned at the end.
+        /// </summary>
+        [SerializeField] private GameObject _finishPortalPrefab;
 
         /// <summary>
         /// Reference to the CameraControl script for control during different phases.
@@ -104,6 +110,21 @@ namespace Managers
         /// </summary>
         private PlayerManager _gameWinner;
 
+        /// <summary>
+        /// Checks if any of player has all fragments.
+        /// </summary>
+        [HideInInspector] public bool HasAnyPlayerAllFragments = false;
+        
+        /// <summary>
+        /// Possible player winner. Player with all fragments.
+        /// </summary>
+        [HideInInspector] public Player PossiblePlayerWinner;
+
+        /// <summary>
+        /// Currently opened finish portal reference.
+        /// </summary>
+        private FinishPortal _openedFinishPortal;
+
         // Awake is always called before any Start functions
         void Awake()
         {
@@ -143,6 +164,40 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
+            CheckPlayerFragmentCount();
+        }
+
+        /// <summary>
+        /// Check all player fragment count and open the finish portal if it is possible.
+        /// </summary>
+        private void CheckPlayerFragmentCount()
+        {
+            HasAnyPlayerAllFragments = false;
+            
+            // Go through all players.
+            for (int i = 0; i < Players.Length; i++)
+            {
+                if (Players[i].PlayerComponent.FragmentCounter >= MapManager.Instance.TotalFragmentCount)
+                {
+                    HasAnyPlayerAllFragments = true;
+                    PossiblePlayerWinner = Players[i].PlayerComponent;
+                    
+                    int finishSpawnPointId = Random.Range(0, MapManager.Instance.FinishSpawnPoints.Length);
+
+                    if (_openedFinishPortal == null)
+                        _openedFinishPortal = Instantiate(_finishPortalPrefab, MapManager.Instance.FinishSpawnPoints[finishSpawnPointId].transform.position, Quaternion.identity).GetComponent<FinishPortal>();
+                    
+                    break;
+                }
+            }
+
+            // Unless any of players have all fragments, destroy portal. 
+            if (!HasAnyPlayerAllFragments && _openedFinishPortal != null)
+            {
+                Destroy(_openedFinishPortal.gameObject);
+                PossiblePlayerWinner = null;
+                _openedFinishPortal = null;
+            }
         }
 
         /// <summary>
@@ -154,10 +209,10 @@ namespace Managers
             for (int i = 0; i < Players.Length; i++)
             {
                 // ... create them, set their player number and references needed for control.
-                Players[i].Instance = Instantiate(PlayerPrefabs[0], MapManager.Instance.PlayerSpawnPoints[i].position, MapManager.Instance.PlayerSpawnPoints[i].rotation);
-                Players[i].Player = Players[i].Instance.GetComponent<Player>();
-                Players[i].Player.Identifier = ++MaxObjectIdentifier;
-                Players[i].Player.Name = "Player" + Players[i].Player.Identifier;
+                Players[i].CharacterInstance = Instantiate(PlayerPrefabs[0], MapManager.Instance.PlayerSpawnPoints[i].position, MapManager.Instance.PlayerSpawnPoints[i].rotation);
+                Players[i].PlayerComponent = Players[i].CharacterInstance.GetComponent<Player>();
+                Players[i].PlayerComponent.Identifier = ++MaxObjectIdentifier;
+                Players[i].PlayerComponent.Name = "Player" + Players[i].PlayerComponent.Identifier;
                 Players[i].Setup(i);
             }
         }
@@ -207,7 +262,7 @@ namespace Managers
             for (int i = 0; i < targets.Length; i++)
             {
                 // ... set it to the appropriate player transform.
-                targets[i] = Players[i].Instance.transform;
+                targets[i] = Players[i].CharacterInstance.transform;
             }
 
             // These are the targets the camera should follow.

@@ -39,7 +39,7 @@ namespace Managers
 						{ "MoveDown",		KeyCode.DownArrow },
 						{ "MoveRight",		KeyCode.RightArrow },
 						{ "Action",			KeyCode.Return },
-						{ "SpecialAction",	KeyCode.RightShift },
+						{ "SpecialAction",	KeyCode.L },
 						{ "CollectItem",	KeyCode.RightControl },
 					}
 				},

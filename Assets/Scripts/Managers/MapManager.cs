@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Items;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace Managers
@@ -52,6 +53,16 @@ namespace Managers
         /// List of all possible item spawn positions.
         /// </summary>
         [HideInInspector] public Transform[] ItemSpawnPoints;
+        
+        /// <summary>
+        /// List of all possible finish spawn positions.
+        /// </summary>
+        [HideInInspector] public Transform[] FinishSpawnPoints;
+        
+        /// <summary>
+        /// Total fragment count in the maze.
+        /// </summary>
+        [HideInInspector] public int TotalFragmentCount;
 
         // Awake is always called before any Start functions
         void Awake()
@@ -88,6 +99,16 @@ namespace Managers
             ItemSpawnPoints = new Transform[itemSpawnPointHandler.transform.childCount];
             for (int i = 0; i < itemSpawnPointHandler.transform.childCount; i++)
                 ItemSpawnPoints[i] = itemSpawnPointHandler.transform.GetChild(i);
+            
+            // Find all finish spawn points.
+            GameObject finishSpawnPointHandler = GameObject.Find("FinishSpawnPoints");
+            FinishSpawnPoints = new Transform[finishSpawnPointHandler.transform.childCount];
+            for (int i = 0; i < finishSpawnPointHandler.transform.childCount; i++)
+                FinishSpawnPoints[i] = finishSpawnPointHandler.transform.GetChild(i);
+            
+            // Update only once. This set up the number of fragments in the maze.
+            if (TotalFragmentCount == 0)
+                TotalFragmentCount = GameObject.Find("Fragments").GetComponentsInChildren<Fragment>().Length;
         }
 
         // Update is called once per frame

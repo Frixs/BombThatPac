@@ -1,4 +1,5 @@
 ﻿using Items;
+using Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,21 +25,17 @@ namespace UI.Gameplay
 		}
 
 		/// <summary>
-		/// 
+		/// Update data count of player's fragment in player panel.
 		/// </summary>
-		/// <param name="count"></param>
+		/// <param name="count">Number to update.</param>
 		public void UpdateFragmentCount(int count)
 		{
 			Text fragCounter = GetComponentInChildren<Text>();
 			fragCounter.text = "Fragments: " + count;
 			
-			// TODO: Prototype speciality only!
-			if (_totalFragCount == 0)
-				_totalFragCount = GameObject.Find("Fragments").GetComponentsInChildren<Fragment>().Length;
-			
-			if (count >= _totalFragCount)
+			if (count >= MapManager.Instance.TotalFragmentCount)
 			{
-				fragCounter.text = "WINNER!";
+				fragCounter.text = "Find a portal!";
 				GetComponent<Image>().color = new Color(0f, 255f, 0f, 0.6f);
 			}
 			else

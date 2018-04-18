@@ -552,10 +552,10 @@ namespace Characters
 			
 			for (int i = 0; i < GameManager.Instance.Players.Length; i++)
 			{
-				currentDistance = Vector3.Distance(gameObject.transform.position, GameManager.Instance.Players[i].Player.transform.position);
+				currentDistance = Vector3.Distance(gameObject.transform.position, GameManager.Instance.Players[i].PlayerComponent.transform.position);
 				if (currentDistance < shortestDistance)
 				{
-					closestPlayer = GameManager.Instance.Players[i].Player;
+					closestPlayer = GameManager.Instance.Players[i].PlayerComponent;
 					shortestDistance = currentDistance;
 				}
 			}

@@ -19,6 +19,11 @@ namespace UI.Gameplay
 		/// PauseMenu reference.
 		/// </summary>
 		[SerializeField] private PauseMenu _pauseMenuReference;
+		
+		/// <summary>
+		/// ScoreMenu reference.
+		/// </summary>
+		[SerializeField] public ScoreMenu ScoreMenuReference;
 
 		void Awake()
 		{
@@ -40,12 +45,12 @@ namespace UI.Gameplay
 		}
 		
 		// Use this for initialization
-		void Start ()
+		void Start()
 		{
 		}
 	
 		// Update is called once per frame
-		void Update ()
+		void Update()
 		{
 			if (!GameManager.Instance.IsGamePaused && Input.GetKeyDown(KeyCode.Escape))
 				PauseTheGame();

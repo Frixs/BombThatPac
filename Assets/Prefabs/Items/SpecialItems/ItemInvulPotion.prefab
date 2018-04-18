@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05cfa9c6a0c15444a195637bfd9032d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemStatusEffect: {fileID: 0}
-  DropChance: 15
+  ItemStatusEffect: {fileID: 11400000, guid: f9405496b3c2cfc41bfb5486e76a70f7, type: 2}
+  DropChance: 5
 --- !u!114 &114897242225476720
 MonoBehaviour:
   m_ObjectHideFlags: 1

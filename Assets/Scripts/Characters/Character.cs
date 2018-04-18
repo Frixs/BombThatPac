@@ -54,7 +54,7 @@ namespace Characters
         /// <summary>
         /// Reference to rigid body.
         /// </summary>
-        protected Rigidbody2D MyRigidBody;
+        [HideInInspector] public Rigidbody2D MyRigidBody;
 
         /// <summary>
         /// Is character invulnerable thanks to some effect?

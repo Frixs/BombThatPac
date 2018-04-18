@@ -133,8 +133,11 @@ namespace Characters
 
         public override void Move()
         {
+            if (!HasEnabledActions)
+                return;
+            
             // Makes sure that the player moves.
-            MyRigidBody.velocity = Direction.normalized * MoveSpeed * (HasEnabledActions ? 1 : 0);
+            MyRigidBody.velocity = Direction.normalized * MoveSpeed;
         }
 
         public override Vector2 GetOrientation()
