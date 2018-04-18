@@ -90,12 +90,11 @@ MonoBehaviour:
   Name: NONAME
   AnimationControllerDefault: {fileID: 0}
   MyAnimator: {fileID: 0}
+  MyRigidBody: {fileID: 0}
   IsInvulnearable: 0
   IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
-  _eventAnimationController: {fileID: 9100000, guid: 211c796e9edb58040afcdf64779b7d09,
-    type: 2}
 --- !u!212 &212459503690641154
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -130,12 +129,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 8fa98199023ca1e47abb67528d0f18d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56bd40eed1235e1489f2f58ace78e116, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.8, y: 2.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
