@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212935284096361576}
   - component: {fileID: 114341373242539864}
   - component: {fileID: 95998818476818124}
-  - component: {fileID: 58644937860077538}
+  - component: {fileID: 70467275033821548}
   m_Layer: 8
   m_Name: GhostBlinky
   m_TagString: Ghost
@@ -43,8 +43,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58644937860077538
-CircleCollider2D:
+--- !u!70 &70467275033821548
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -56,8 +56,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.8, y: 0.8}
+  m_Direction: 0
 --- !u!95 &95998818476818124
 Animator:
   serializedVersion: 3
@@ -88,7 +88,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Identifier: 0
   Name: NONAME
+  AnimationControllerDefault: {fileID: 0}
+  MyAnimator: {fileID: 0}
+  MyRigidBody: {fileID: 0}
+  MyCollider: {fileID: 0}
   IsInvulnearable: 0
+  IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
   SpriteEyesUp: {fileID: 21300000, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}

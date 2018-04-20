@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Managers;
 using StatusEffects;
 using UnityEngine;
@@ -57,6 +58,11 @@ namespace Characters
         [HideInInspector] public Rigidbody2D MyRigidBody;
 
         /// <summary>
+        /// Reference to collider.
+        /// </summary>
+        [HideInInspector] public CapsuleCollider2D MyCollider;
+
+        /// <summary>
         /// Is character invulnerable thanks to some effect?
         /// </summary>
         [HideInInspector] public bool IsInvulnearable = false;
@@ -106,6 +112,7 @@ namespace Characters
         {
             MyRigidBody = GetComponent<Rigidbody2D>();
             MyAnimator = GetComponent<Animator>();
+            MyCollider = GetComponent<CapsuleCollider2D>();
             AnimationControllerDefault = MyAnimator.runtimeAnimatorController;
         }
 
@@ -261,6 +268,53 @@ namespace Characters
             
             _isEventAnimation = true;
             _eventAnimationId = id;
+        }
+        
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetColliderSize()
+        {
+            return MyCollider.size;
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <returns></returns>
+        public float GetColliderSizeMax()
+        {
+            return MyCollider.size.x > MyCollider.size.y ? MyCollider.size.x : MyCollider.size.y;
+        }
+        
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetColliderOffset()
+        {
+            return MyCollider.offset;
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        public void SetColliderSize(float x, float y)
+        {
+            MyCollider.size = new Vector2(x, y);
+        }
+        
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        public void SetColliderOffset(float x, float y)
+        {
+            MyCollider.offset = new Vector2(x, y);
         }
         
         /// <summary>

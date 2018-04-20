@@ -9,14 +9,24 @@ namespace StatusEffects.SpecialItems
 	public class Hex : StatusEffect
 	{
 		/// <summary>
-		/// Default collider radius of the character.
+		/// Default collider size of the character.
 		/// </summary>
-		private float _defaultColliderRadius;
+		private Vector2 _defaultColliderSize;
 		
 		/// <summary>
-		/// Mouse collider radius of the new form.
+		/// Default collider offset of the character.
 		/// </summary>
-		private float _mouseColliderRadius = 0.25f;
+		private Vector2 _defaultColliderOffset;
+		
+		/// <summary>
+		/// Mouse collider size of the new form.
+		/// </summary>
+		private Vector2 _mouseColliderSize = new Vector2(0.35f, 0.35f);
+		
+		/// <summary>
+		/// Mouse collider offset of the new form.
+		/// </summary>
+		private Vector2 _mouseColliderOffset = new Vector2(0f, -0.25f);
 		
 		public Hex(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
@@ -32,8 +42,10 @@ namespace StatusEffects.SpecialItems
 			
 			// Add mouse form.
 			Target.MyAnimator.runtimeAnimatorController = ((ScriptableHex) Data).MouseController;
-			_defaultColliderRadius = Target.GetComponent<CircleCollider2D>().radius;
-			Target.GetComponent<CircleCollider2D>().radius = _mouseColliderRadius;
+			_defaultColliderSize = Target.GetColliderSize();
+			_defaultColliderOffset = Target.GetColliderOffset();
+			Target.SetColliderSize(_mouseColliderSize.x, _mouseColliderSize.y);
+			Target.SetColliderOffset(_mouseColliderOffset.x, _mouseColliderOffset.y);
 			
 			// Add movespeed.
 			Target.MoveSpeed += ((ScriptableHex) Data).MoveSpeedIncrease;
@@ -49,7 +61,8 @@ namespace StatusEffects.SpecialItems
 			
 			// Return default character form.
 			Target.MyAnimator.runtimeAnimatorController = Target.AnimationControllerDefault;
-			Target.GetComponent<CircleCollider2D>().radius = _defaultColliderRadius;
+			Target.SetColliderSize(_defaultColliderSize.x, _defaultColliderSize.y);
+			Target.SetColliderOffset(_defaultColliderOffset.x, _defaultColliderOffset.y);
 			
 			// Return movespeed.
 			Target.MoveSpeed -= ((ScriptableHex) Data).MoveSpeedIncrease;

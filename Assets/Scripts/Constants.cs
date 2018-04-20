@@ -62,7 +62,7 @@ public static class Constants
     /// <summary>
     /// Countdown when the bomb explodes and hits another one. The new one will get new countdown set for this value.
     /// </summary>
-    public const float BombChainedCountdown = 0.5f;
+    public const float BombChainedCountdown = 0.2f;
  
     /// <summary>
     /// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the current direction.
@@ -78,11 +78,6 @@ public static class Constants
     /// Delayed explosion after rolling a bomb.
     /// </summary>
     public const float BombExplosionDelayAfterRolling = 0.5f;
- 
-    /// <summary>
-    /// Debug constant for some space between bomb and player when the player leave the bomb after placing.
-    /// </summary>
-    public const float BombCollisionActivateAdditionalSpace = 0.1f;
 
     /*
      * LAYERS

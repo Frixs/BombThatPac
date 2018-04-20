@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114177890079584444}
   - component: {fileID: 95442204627684884}
   - component: {fileID: 50736437586787514}
-  - component: {fileID: 58076598537587118}
+  - component: {fileID: 70274730300733892}
   m_Layer: 8
   m_Name: PlayerBomberman
   m_TagString: Player
@@ -59,13 +59,13 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b6f3a6293d3a6f14f8c88350028cc339, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &58076598537587118
-CircleCollider2D:
+  m_Constraints: 4
+--- !u!70 &70274730300733892
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,8 +77,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.5, y: 0.8}
+  m_Direction: 0
 --- !u!95 &95442204627684884
 Animator:
   serializedVersion: 3
@@ -111,15 +111,17 @@ MonoBehaviour:
   Name: NONAME
   AnimationControllerDefault: {fileID: 0}
   MyAnimator: {fileID: 0}
+  MyRigidBody: {fileID: 0}
+  MyCollider: {fileID: 0}
   IsInvulnearable: 0
   IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
   PlayerManagerReference:
-    Instance: {fileID: 0}
+    CharacterInstance: {fileID: 0}
     PlayerName: 
     PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    Player: {fileID: 0}
+    PlayerComponent: {fileID: 0}
     PlayerPanelReference: {fileID: 0}
     Wins: 0
   SpecialItemList: []

@@ -21,12 +21,37 @@ namespace Items
 		/// <summary>
 		/// Reference to explosion PREFAB.
 		/// </summary>
-		public GameObject ExplosionPrefab;
+		[Header("Settings")] public GameObject ExplosionPrefab;
+		
+		/// <summary>
+		/// Reference to bomb trigger PREFAB.
+		/// </summary>
+		public GameObject BombTriggerPrefab;
 
+		/// <summary>
+		/// Distance of explosion.
+		/// </summary>
+		[HideInInspector] public int ExplosionDistance;
+
+		/// <summary>
+		/// (This distance * chained bomb order) + normal distance of the bomb, if the bomb is in a chain.
+		/// </summary>
+		public int ChainAdditionalExplosionDistance;
+		
 		/// <summary>
 		/// Scriptable asset of for ghost when the bomb hit it it will get debuff.
 		/// </summary>
-		public ScriptableStatusEffect GhostBombStatusEffect;
+		[Header("Status Effects")] public ScriptableStatusEffect GhostBombStatusEffect;
+
+		/// <summary>
+		/// Check if this bomb is chained or it is the start one.
+		/// </summary>
+		private bool _isChained = false;
+
+		/// <summary>
+		/// Order of the chain. Is this f.e. 3rd bomb in a chain?
+		/// </summary>
+		private int _chainedOrder = 0;
 
 		/// <summary>
 		/// Check if bomb can be rolled.
@@ -57,6 +82,7 @@ namespace Items
 		void Start()
 		{
 			Countdown = Caster.BombCountdown;
+			ExplosionDistance = Caster.BombExplosionDistance;
 			
 			// Rolling default settings.
 			_rollable = true;
@@ -71,7 +97,13 @@ namespace Items
 			_previousCell = _currentCell;
 			
 			// Ignore collision when spawning under your feet.
-			Physics2D.IgnoreCollision(Caster.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>());
+			Physics2D.IgnoreCollision(Caster.MyCollider, GetComponent<CircleCollider2D>());
+			// Set trigger to be able to activate collision on exit.
+			BombTrigger trigger = Instantiate(BombTriggerPrefab, transform.position, Quaternion.identity).GetComponent<BombTrigger>();
+			trigger.BombCollider = GetComponent<CircleCollider2D>();
+			trigger.CharacterCollider = Caster.MyCollider;
+			trigger.GetComponent<CircleCollider2D>().offset = GetComponent<CircleCollider2D>().offset;
+			trigger.GetComponent<CircleCollider2D>().radius = GetComponent<CircleCollider2D>().radius;
 		}
 	
 		// Update is called once per frame
@@ -99,11 +131,6 @@ namespace Items
 		// FixedUpdate is called every fixed framerate frame
 		void FixedUpdate()
 		{
-			// Restore the collision when player will be in sufficient distance from the bomb.
-			if (Vector2.Distance(Caster.transform.position, transform.position) > Caster.GetComponent<CircleCollider2D>().radius + GetComponent<CircleCollider2D>().radius + Constants.BombCollisionActivateAdditionalSpace)
-			{
-				Physics2D.IgnoreCollision(Caster.GetComponent<CircleCollider2D>(), GetComponent<CircleCollider2D>(), false);
-			}
 		}
 
 		private void OnCollisionEnter2D(Collision2D other)
@@ -160,7 +187,10 @@ namespace Items
 		/// <param name="direction">Direction of explosion - Vector3Int filled only with -1, 0, 1 values. Each direction can has only1 value rest 0. We are on grid only.</param>
 		private void ExplodeInDirection(Vector3Int origin, Vector3Int direction)
 		{
-			for (int i = 1; i <= Caster.BombExplosionDistance; i++)
+			int explDistance = ExplosionDistance;
+			explDistance += _isChained ? _chainedOrder * ChainAdditionalExplosionDistance : 0;
+			
+			for (int i = 1; i <= explDistance; i++)
 			{
 				if (!ExplodeInCell(origin + direction * i, Caster))
 					break;
@@ -177,6 +207,7 @@ namespace Items
         {
             TileBase tile = MapManager.Instance.TilemapGameplay.GetTile<TileBase>(cell);
 	        Vector3 explosionPos;
+	        explosionPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
             // Try to find obstacle in the current cell.
             Collider2D[] obstacles = Physics2D.OverlapCircleAll(
@@ -198,7 +229,6 @@ namespace Items
                 MapManager.Instance.TilemapGameplay.SetTile(cell, null);
 	            
 	            // Create an explosion.
-	            explosionPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 	            SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
 	            
                 return false;
@@ -224,9 +254,11 @@ namespace Items
 			        ((Player) component).Kill(caster);
 		        }
 
-		        if ((component = hitColliders[i].GetComponent<Bomb>()) != null)
+		        if ((component = hitColliders[i].GetComponent<Bomb>()) != null && component != this)
 		        {
-			        ((Bomb) component).Countdown = Constants.BombChainedCountdown;
+			        ((Bomb) component).Countdown = ((Bomb) component).Countdown > 0f ? Constants.BombChainedCountdown : ((Bomb) component).Countdown;
+			        ((Bomb) component)._isChained = true;
+			        ((Bomb) component)._chainedOrder = this._chainedOrder + 1;
 		        }
                     
 		        if ((component = hitColliders[i].GetComponent<Ghost>()) != null)
@@ -239,7 +271,6 @@ namespace Items
 	        }
 
 	        // Create an explosion.
-            explosionPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 	        SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
 	        
             return true;

@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4394493997027600}
   - component: {fileID: 212803701123302480}
-  - component: {fileID: 114983265686077156}
   - component: {fileID: 58932104367231146}
+  - component: {fileID: 114983265686077156}
   m_Layer: 8
   m_Name: Bomb
   m_TagString: Bomb
@@ -72,6 +72,10 @@ MonoBehaviour:
   Countdown: 0
   ExplosionPrefab: {fileID: 1051096854954962, guid: 475a5b610ee3aaf458ff985a3a836f45,
     type: 2}
+  BombTriggerPrefab: {fileID: 1875920653071924, guid: 38f0a43ed3ba20b498d60964abd76e05,
+    type: 2}
+  ExplosionDistance: 0
+  ChainAdditionalExplosionDistance: 1
   GhostBombStatusEffect: {fileID: 11400000, guid: 9705f734134807244b65ca9c7aacb277,
     type: 2}
 --- !u!212 &212803701123302480
