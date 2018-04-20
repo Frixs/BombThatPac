@@ -214,6 +214,9 @@ namespace Managers
                 Players[i].PlayerComponent.Identifier = ++MaxObjectIdentifier;
                 Players[i].PlayerComponent.Name = "Player" + Players[i].PlayerComponent.Identifier;
                 Players[i].Setup(i);
+                
+                // Spawn animation.
+                SpawnManager.Instance.SpawnAnimationAtPosition(Players[i].PlayerComponent.InitSpawnAnimPrefab, MapManager.Instance.PlayerSpawnPoints[i].position, Quaternion.identity);
             }
         }
 

@@ -108,9 +108,9 @@ public static class Constants
     public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.1f;
  
     /// <summary>
-    /// Delay after death to respawn.
+    /// Delay after player death to respawn the player.
     /// </summary>
-    public const float GhostRespawnDeathDelay = 3.0f;
+    public const float GhostPlayerRespawnDeathDelay = 3.0f;
     
     /// <summary>
     /// Duration of ghost frightened mode.

@@ -57,6 +57,21 @@ namespace Characters
         /// Reference to fragment PREFAB.
         /// </summary>
         [SerializeField] private GameObject _fragmentPrefab;
+        
+        /// <summary>
+        /// Reference to spawn animation PREFAB.
+        /// </summary>
+        [SerializeField] private GameObject _spawnAnimPrefab;
+        
+        /// <summary>
+        /// Reference to initial spawn animation PREFAB.
+        /// </summary>
+        public GameObject InitSpawnAnimPrefab;
+        
+        /// <summary>
+        /// Reference to death animation PREFAB.
+        /// </summary>
+        [SerializeField] private GameObject _deathAnimPrefab;
 
         /// <summary>
         /// Scriptable asset of invulnerability status effect buff after respawn player.
@@ -277,9 +292,12 @@ namespace Characters
             StatusEffectManager.Instance.RemoveRequiredAtDeath(this);
             
             if (IsRespawnable)
-                SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints);
+                SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints, _spawnAnimPrefab);
 
             DropFragments();
+            
+            // Spawn death particles.
+            SpawnManager.Instance.SpawnAnimationAtPosition(_deathAnimPrefab, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been killed by character: [{1}]!", Name, attacker.Name);

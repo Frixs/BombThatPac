@@ -97,7 +97,8 @@ namespace Managers
         /// <param name="toRespawn">GameObject reference to respawn.</param>
         /// <param name="delay">Time to respawn.</param>
         /// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
-        public void RespawnCharacterInit(Character toRespawn, float delay, Transform[] positions)
+        /// <param name="spawnAnimation">Spawn animation reference.</param>
+        public void RespawnCharacterInit(Character toRespawn, float delay, Transform[] positions, GameObject spawnAnimation)
         {
             if (toRespawn == null || positions.Length == 0)
             {
@@ -105,7 +106,7 @@ namespace Managers
                 return;
             }
 
-            StartCoroutine(RespawnCharacter(toRespawn, delay, positions));
+            StartCoroutine(RespawnCharacter(toRespawn, delay, positions, spawnAnimation));
         }
 
         /// <summary>
@@ -114,8 +115,9 @@ namespace Managers
         /// <param name="toRespawn">GameObject reference to respawn.</param>
         /// <param name="delay">Time to respawn.</param>
         /// <param name="positions">Spawnpoint positions, whre the object can possibly spawn.</param>
+        /// <param name="spawnAnimation">Spawn animation reference.</param>
         /// <returns></returns>
-        private IEnumerator RespawnCharacter(Character toRespawn, float delay, Transform[] positions)
+        private IEnumerator RespawnCharacter(Character toRespawn, float delay, Transform[] positions, GameObject spawnAnimation)
         {
             yield return new WaitForSeconds(delay);
 
@@ -124,6 +126,9 @@ namespace Managers
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Character has been respawned!", toRespawn.GetComponent<Character>().Name);
 
             toRespawn.GetComponent<Character>().IsDeath = false;
+            
+            // Spawn animation.
+            SpawnAnimationAtPosition(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
 
             // If it is Player, set invulnerability on respawn.
             if (toRespawn is Player)

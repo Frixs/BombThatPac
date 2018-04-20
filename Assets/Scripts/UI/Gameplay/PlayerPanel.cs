@@ -20,6 +20,11 @@ namespace UI.Gameplay
 		/// </summary>
 		public Stats PlayerStats;
 		
+		/// <summary>
+		/// Reference to death placeholder.
+		/// </summary>
+		public DeathPlaceholder DeathPlaceholder;
+		
 		// Use this for initialization
 		void Start ()
 		{
@@ -28,6 +33,12 @@ namespace UI.Gameplay
 		// Update is called once per frame
 		void Update ()
 		{
+			ManageDeathPlaceholder();
+		}
+
+		private void ManageDeathPlaceholder()
+		{
+			DeathPlaceholder.gameObject.SetActive(PlayerManagerReference.PlayerComponent.IsDeath);
 		}
 	}
 }

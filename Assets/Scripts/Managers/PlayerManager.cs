@@ -81,7 +81,19 @@ namespace Managers
                 10f,
                 0f
             );
-            
+
+            // TODO only for 2 players to display 2nd player panel on right side.
+            if (initOrderNumber == 1)
+            {
+                PlayerPanelReference.GetComponent<RectTransform>().anchorMin = new Vector2(1f, 0f);
+                PlayerPanelReference.GetComponent<RectTransform>().anchorMax = new Vector2(1f, 0f);
+                PlayerPanelReference.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(
+                    -(10f + PlayerPanelReference.GetComponent<RectTransform>().rect.width),
+                    10f,
+                    0f
+                );
+            }
+
             // Set player skin.
             if (PlayerCharacterSelection[initOrderNumber] != null)
             {

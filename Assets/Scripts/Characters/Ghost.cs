@@ -10,7 +10,7 @@ namespace Characters
 	[Serializable]
 	public abstract class Ghost : ArtificialIntelligence
 	{
-		public override float RespawnDeathDelay { get; set; } = Constants.GhostRespawnDeathDelay;
+		public override float RespawnDeathDelay { get; set; } = Constants.GhostPlayerRespawnDeathDelay;
 		
 		/// <summary>
 		/// Timer to release ghosts from the start.

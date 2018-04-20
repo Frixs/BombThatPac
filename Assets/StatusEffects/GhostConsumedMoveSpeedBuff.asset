@@ -14,9 +14,10 @@ MonoBehaviour:
   StatusEffectType: 0
   IsPermanent: 1
   Duration: 0
+  RemoveAtDeath: 0
   OverwriteTheSameTypes: 1
   OverwriteTheSameEffects: 0
   IsStackable: 0
   StartActivationDelay: 0
   RepeatTime: 0
-  SpeedIncrease: 12
+  SpeedIncrease: 7

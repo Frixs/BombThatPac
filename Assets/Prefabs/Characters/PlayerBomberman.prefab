@@ -129,6 +129,12 @@ MonoBehaviour:
     type: 2}
   _fragmentPrefab: {fileID: 1868182462786954, guid: 10ffaae0391b27747952111efc276d97,
     type: 2}
+  _spawnAnimPrefab: {fileID: 1957876403188890, guid: 8a2216062aa140f46be1b0948f0d4725,
+    type: 2}
+  InitSpawnAnimPrefab: {fileID: 1957876403188890, guid: 8a2216062aa140f46be1b0948f0d4725,
+    type: 2}
+  _deathAnimPrefab: {fileID: 1982472187771570, guid: 50471a242dd956940bd66c225d63bd9d,
+    type: 2}
   _respawnInvulStatusEffect: {fileID: 11400000, guid: af5f9306dc89cdc4ea4da5a282883e70,
     type: 2}
   InputPlayerSection: 
