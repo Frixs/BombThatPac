@@ -139,7 +139,8 @@ namespace StatusEffects
 		public enum StatusEffectType
 		{
 			Buff,
-			Debuff
+			Debuff,
+			ItemActivator
 		}
 	}
 }

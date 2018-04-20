@@ -156,6 +156,38 @@ namespace Managers
         }
 
         /// <summary>
+        /// Spawn animation following target object.
+        /// </summary>
+        /// <param name="prefab">Prefab with animation to spawn.</param>
+        /// <param name="target">Target where to spawn the animation.</param>
+        /// <param name="animRotation">Rotation of the animation.</param>
+        /// <returns>Spawned animation gameobject reference.</returns>
+        public GameObject SpawnFollowingAnimationLoop(GameObject prefab, GameObject target, Quaternion animRotation)
+        {
+            if (prefab == null || target == null)
+            {
+                Debug.unityLogger.Log(LogType.Error, "Missing parameters!");
+                return null;
+            }
+            
+            // Create an animation.
+            GameObject anim = (GameObject) Instantiate(prefab, target.transform.position, animRotation);
+            anim.transform.parent = target.transform;
+
+            return anim;
+        }
+        
+        /// <summary>
+        /// Despawn (Destroy) animation.
+        /// </summary>
+        /// <param name="anim">Reference to gameobject animation.</param>
+        public void DespawnAnimation(GameObject anim)
+        {
+            if (anim != null)
+                Destroy(anim);
+        }
+
+        /// <summary>
         ///	Spawns random item from the list.
         /// </summary>
         public void SpawnRandomItem()

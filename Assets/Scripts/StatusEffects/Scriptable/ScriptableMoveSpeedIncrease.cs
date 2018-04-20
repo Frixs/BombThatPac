@@ -11,6 +11,11 @@ namespace StatusEffects.Scriptable
 		/// </summary>
 		[Header("Effect Speciality")] public float SpeedIncrease;
 
+		/// <summary>
+		/// Animation PREFAB. It can be NULL if you do not want to animate anything.
+		/// </summary>
+		public GameObject AnimationPrefab;
+
 		public override StatusEffect Initialize(Character target, Character caster)
 		{
 			return new MoveSpeedIncrease(this, target, caster);

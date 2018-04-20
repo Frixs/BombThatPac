@@ -27,6 +27,7 @@ namespace StatusEffects.SpecialItems
 
 		protected override void Repeat()
 		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

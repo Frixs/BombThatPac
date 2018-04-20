@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb19d370f356e845918f95bdb8ea714, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
-  StatusEffectType: 1
+  StatusEffectType: 2
   IsPermanent: 0
   Duration: 0
+  RemoveAtDeath: 0
   OverwriteTheSameTypes: 0
   OverwriteTheSameEffects: 0
   IsStackable: 0
