@@ -34,7 +34,7 @@ namespace StatusEffects
 
 			if (((ScriptableMoveSpeedIncrease) Data).AnimationPrefab != null)
 			{
-				_animationReference = SpawnManager.Instance.SpawnFollowingAnimationLoop(((ScriptableMoveSpeedIncrease) Data).AnimationPrefab, Target.gameObject, Quaternion.identity);
+				_animationReference = SpawnManager.Instance.SpawnFollowingAnimationLoop(((ScriptableMoveSpeedIncrease) Data).AnimationPrefab, Target.gameObject, Vector3.zero, Quaternion.identity);
 			}
 		}
 

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace StatusEffects.Scriptable.SpecialItems
 {
 	[CreateAssetMenu(menuName = "StatusEffect/SpecialItem/Hex")]
-	public class ScriptableHex : ScriptableStatusEffect
+	public class ScriptableSpecialItemHex : ScriptableStatusEffect
 	{
 		/// <summary>
 		/// Hex controller.
@@ -24,7 +24,7 @@ namespace StatusEffects.Scriptable.SpecialItems
 		
 		public override StatusEffect Initialize(Character target, Character caster)
 		{
-			return new Hex(this, target, caster);
+			return new SpecialItemHex(this, target, caster);
 		}
 	}
 }

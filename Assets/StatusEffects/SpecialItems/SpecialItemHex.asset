@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86afd272c3ae284ebc21933a0a61c83, type: 3}
+  m_Name: SpecialItemHex
+  m_EditorClassIdentifier: 
+  StatusEffectType: 0
+  IsPermanent: 0
+  Duration: 2
+  RemoveAtDeath: 1
+  OverwriteTheSameTypes: 0
+  OverwriteTheSameEffects: 0
+  IsStackable: 0
+  StartActivationDelay: 0
+  RepeatTime: 0
+  MouseController: {fileID: 9100000, guid: 30dd5a6d3c699e042a01e6b790757ad0, type: 2}
+  ExplosionPrefab: {fileID: 1136395108647710, guid: fe823d746946e1b4db9b889c076233c5,
+    type: 2}
+  MoveSpeedIncrease: 3

@@ -5,9 +5,9 @@ using StatusEffects.Scriptable.SpecialItems;
 
 namespace StatusEffects.SpecialItems
 {
-    public class SlowingDoom : StatusEffect
+    public class SpecialItemRealityShifter : StatusEffect
     {
-        public SlowingDoom(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
+        public SpecialItemRealityShifter(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
         {
         }
 
@@ -21,7 +21,7 @@ namespace StatusEffects.SpecialItems
                 StatusEffectManager.Instance.ApplyStatusEffect(
                     GameManager.Instance.Players[i].CharacterInstance.GetComponent<Character>(),
                     Target,
-                    ((ScriptableSlowingDoom) Data).ApplicableStatusEffect
+                    ((ScriptableSpecialItemRealityShifter) Data).ApplicableStatusEffect
                 );
             }
         }

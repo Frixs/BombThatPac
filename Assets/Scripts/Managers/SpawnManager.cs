@@ -160,9 +160,10 @@ namespace Managers
         /// </summary>
         /// <param name="prefab">Prefab with animation to spawn.</param>
         /// <param name="target">Target where to spawn the animation.</param>
+        /// <param name="additionalPositioning">Additional positiong. You can move relative from the target.</param>
         /// <param name="animRotation">Rotation of the animation.</param>
         /// <returns>Spawned animation gameobject reference.</returns>
-        public GameObject SpawnFollowingAnimationLoop(GameObject prefab, GameObject target, Quaternion animRotation)
+        public GameObject SpawnFollowingAnimationLoop(GameObject prefab, GameObject target, Vector3 additionalPositioning, Quaternion animRotation)
         {
             if (prefab == null || target == null)
             {
@@ -171,7 +172,7 @@ namespace Managers
             }
             
             // Create an animation.
-            GameObject anim = (GameObject) Instantiate(prefab, target.transform.position, animRotation);
+            GameObject anim = (GameObject) Instantiate(prefab, target.transform.position + additionalPositioning, animRotation);
             anim.transform.parent = target.transform;
 
             return anim;

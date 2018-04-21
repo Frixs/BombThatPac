@@ -176,13 +176,13 @@ namespace Characters
         /// </summary>
         protected void GetInput()
         {
+            if (!HasEnabledActions || GameManager.Instance.IsGamePaused)
+                return;
+            
             if (Direction != Vector2.zero && Direction != PreviousDirection)
                 PreviousDirection = Direction;
             
             Direction = Vector2.zero;
-
-            if (!HasEnabledActions || GameManager.Instance.IsGamePaused)
-                return;
 
             if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveUp")))
             {
@@ -215,6 +215,8 @@ namespace Characters
             {
                 // Nothing.
             }
+            
+            Direction *= HasSwappedDirection ? -1 : 1;
         }
 
         /// <summary>

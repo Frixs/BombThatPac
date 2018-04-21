@@ -83,6 +83,11 @@ namespace Characters
         [HideInInspector] public bool IsRespawnable = true;
 
         /// <summary>
+        /// Check if direction is swapped.
+        /// </summary>
+        [HideInInspector] public bool HasSwappedDirection = false;
+
+        /// <summary>
         /// Check if character is in some event animation.
         /// </summary>
         private bool _isEventAnimation = false;

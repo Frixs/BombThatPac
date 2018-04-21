@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace StatusEffects.SpecialItems
 {
-	public class Hex : StatusEffect
+	public class SpecialItemHex : StatusEffect
 	{
 		/// <summary>
 		/// Default collider size of the character.
@@ -28,7 +28,7 @@ namespace StatusEffects.SpecialItems
 		/// </summary>
 		private Vector2 _mouseColliderOffset = new Vector2(0f, -0.25f);
 		
-		public Hex(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
+		public SpecialItemHex(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
 		}
 
@@ -38,17 +38,17 @@ namespace StatusEffects.SpecialItems
 			Target.IsStatusEffectImmune = true;
 			
 			// Create an morph explosion.
-			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
+			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
 			
 			// Add mouse form.
-			Target.MyAnimator.runtimeAnimatorController = ((ScriptableHex) Data).MouseController;
+			Target.MyAnimator.runtimeAnimatorController = ((ScriptableSpecialItemHex) Data).MouseController;
 			_defaultColliderSize = Target.GetColliderSize();
 			_defaultColliderOffset = Target.GetColliderOffset();
 			Target.SetColliderSize(_mouseColliderSize.x, _mouseColliderSize.y);
 			Target.SetColliderOffset(_mouseColliderOffset.x, _mouseColliderOffset.y);
 			
 			// Add movespeed.
-			Target.MoveSpeed += ((ScriptableHex) Data).MoveSpeedIncrease;
+			Target.MoveSpeed += ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
 			
 			// Switch off bomb-planting.
 			((Player) Target).CanPlantBombs = false;
@@ -57,7 +57,7 @@ namespace StatusEffects.SpecialItems
 		protected override void End()
 		{
 			// Create an morph explosion.
-			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
+			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
 			
 			// Return default character form.
 			Target.MyAnimator.runtimeAnimatorController = Target.AnimationControllerDefault;
@@ -65,7 +65,7 @@ namespace StatusEffects.SpecialItems
 			Target.SetColliderOffset(_defaultColliderOffset.x, _defaultColliderOffset.y);
 			
 			// Return movespeed.
-			Target.MoveSpeed -= ((ScriptableHex) Data).MoveSpeedIncrease;
+			Target.MoveSpeed -= ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
 			
 			// Switch on bomb-planting.
 			((Player) Target).CanPlantBombs = true;

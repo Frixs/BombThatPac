@@ -2,7 +2,7 @@
 
 namespace Items.SpecialItems
 {
-	public class ItemInvulPotion : SpecialItem
+	public class SpecialItemBanana : SpecialItem
 	{
 		// Use this for initialization
 		protected override void Start()

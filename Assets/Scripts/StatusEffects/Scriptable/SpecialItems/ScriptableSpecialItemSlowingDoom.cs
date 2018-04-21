@@ -5,7 +5,7 @@ using UnityEngine;
 namespace StatusEffects.Scriptable.SpecialItems
 {
     [CreateAssetMenu(menuName = "StatusEffect/SpecialItem/SlowingDoom")]
-    public class ScriptableSlowingDoom : ScriptableStatusEffect
+    public class ScriptableSpecialItemSlowingDoom : ScriptableStatusEffect
     {
         /// <summary>
         /// Status effect which will be applied as debuff.
@@ -14,7 +14,7 @@ namespace StatusEffects.Scriptable.SpecialItems
         
         public override StatusEffect Initialize(Character target, Character caster)
         {
-            return new SlowingDoom(this, target, caster);
+            return new SpecialItemSlowingDoom(this, target, caster);
         }
     }
 }

@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace StatusEffects.SpecialItems
 {
-	public class Banana : StatusEffect
+	public class SpecialItemBanana : StatusEffect
 	{
-		public Banana(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
+		public SpecialItemBanana(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
 		}
 
@@ -18,7 +18,7 @@ namespace StatusEffects.SpecialItems
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(Target.transform.position);
 			Vector3 cellCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 			
-			ItemBananaPeel.Spawn(((ScriptableBanana) Data).BananaPeelPrefab, cellCenter, Quaternion.identity, Target.GetComponent<Player>());
+			ItemBananaPeel.Spawn(((ScriptableSpecialItemBanana) Data).BananaPeelPrefab, cellCenter, Quaternion.identity, Target.GetComponent<Player>());
 		}
 
 		protected override void End()

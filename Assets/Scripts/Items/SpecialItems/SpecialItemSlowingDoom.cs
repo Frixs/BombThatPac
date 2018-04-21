@@ -2,7 +2,7 @@
 
 namespace Items.SpecialItems
 {
-	public class ItemHex : SpecialItem
+	public class SpecialItemSlowingDoom : SpecialItem
 	{
 		// Use this for initialization
 		protected override void Start()

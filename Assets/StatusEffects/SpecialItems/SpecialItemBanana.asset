@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d3a0ef302ad284fb8cf6d5f2117209, type: 3}
-  m_Name: SlowingDoom
+  m_Script: {fileID: 11500000, guid: 2eb19d370f356e845918f95bdb8ea714, type: 3}
+  m_Name: SpecialItemBanana
   m_EditorClassIdentifier: 
   StatusEffectType: 2
   IsPermanent: 0
@@ -20,5 +20,5 @@ MonoBehaviour:
   IsStackable: 0
   StartActivationDelay: 0
   RepeatTime: 0
-  ApplicableStatusEffect: {fileID: 11400000, guid: 9c880edfe55f34141b57e0625dc10fe7,
+  BananaPeelPrefab: {fileID: 1991533875719256, guid: 8fc0068f67b3fd445b99614927fb49a5,
     type: 2}

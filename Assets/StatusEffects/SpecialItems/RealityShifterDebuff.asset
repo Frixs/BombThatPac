@@ -8,15 +8,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf309b5b993adde468e0be71153ae371, type: 3}
-  m_Name: InvulPotion
+  m_Script: {fileID: 11500000, guid: 1e9e5712e3b3cc64eaf4eab3e4eefea5, type: 3}
+  m_Name: RealityShifterDebuff
   m_EditorClassIdentifier: 
-  StatusEffectType: 0
+  StatusEffectType: 1
   IsPermanent: 0
-  Duration: 3
+  Duration: 5
   RemoveAtDeath: 1
   OverwriteTheSameTypes: 1
   OverwriteTheSameEffects: 0
   IsStackable: 0
   StartActivationDelay: 0
-  RepeatTime: 0.1
+  RepeatTime: 0
+  AnimationPrefab: {fileID: 1119188915125492, guid: a01e6fb47efb1cb4ba2c26f08b14f1f9,
+    type: 2}

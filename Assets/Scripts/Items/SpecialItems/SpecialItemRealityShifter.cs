@@ -2,7 +2,7 @@
 
 namespace Items.SpecialItems
 {
-	public class ItemBanana : SpecialItem
+	public class SpecialItemRealityShifter : SpecialItem
 	{
 		// Use this for initialization
 		protected override void Start()
