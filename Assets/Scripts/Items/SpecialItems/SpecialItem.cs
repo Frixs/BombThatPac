@@ -1,4 +1,5 @@
 ﻿using System;
+using Items.Effects;
 using StatusEffects.Scriptable;
 using UnityEngine;
 
@@ -59,7 +60,7 @@ namespace Items.SpecialItems
 				return;
 			
 			_isThrown = true;
-			GetComponent<ItemLevitation>().enabled = false;
+			GetComponent<ItemLevitationEffect>().enabled = false;
 			GetComponent<CircleCollider2D>().enabled = false;
 			_throwingPosition = position;
 			_throwingSpeed = speed;
@@ -102,7 +103,7 @@ namespace Items.SpecialItems
 					transform.GetComponent<SpriteRenderer>().color.b,
 					1f
 				);
-				GetComponent<ItemLevitation>().enabled = true;
+				GetComponent<ItemLevitationEffect>().enabled = true;
 				GetComponent<CircleCollider2D>().enabled = true;
 			}
 		}

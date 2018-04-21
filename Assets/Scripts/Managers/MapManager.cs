@@ -108,7 +108,7 @@ namespace Managers
             
             // Update only once. This set up the number of fragments in the maze.
             if (TotalFragmentCount == 0)
-                TotalFragmentCount = GameObject.Find("Fragments").GetComponentsInChildren<Fragment>().Length;
+                TotalFragmentCount = GameObject.Find("Fragments").GetComponentsInChildren<ItemFragment>().Length;
         }
 
         // Update is called once per frame

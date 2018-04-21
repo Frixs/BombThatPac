@@ -18,7 +18,7 @@ namespace StatusEffects.SpecialItems
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(Target.transform.position);
 			Vector3 cellCenter = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 			
-			BananaPeel.Spawn(((ScriptableBanana) Data).BananaPeelPrefab, cellCenter, Quaternion.identity, Target.GetComponent<Player>());
+			ItemBananaPeel.Spawn(((ScriptableBanana) Data).BananaPeelPrefab, cellCenter, Quaternion.identity, Target.GetComponent<Player>());
 		}
 
 		protected override void End()

@@ -124,7 +124,7 @@ namespace Characters
             // FRAGMENT.
             if (other.gameObject.CompareTag("Fragment"))
             {
-                FragmentCounter += other.GetComponent<Fragment>().Quantity;
+                FragmentCounter += other.GetComponent<ItemFragment>().Quantity;
                 PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
                 Destroy(other.gameObject);
             }
@@ -244,7 +244,7 @@ namespace Characters
                 if (triggerObjects[i].CompareTag("Bomb"))
                     return;
             
-            (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<Bomb>().Caster = this;
+            (Instantiate(_bombPrefab, cellCenterPos, Quaternion.identity) as GameObject).GetComponent<ItemBomb>().Caster = this;
             BombDeployCounter++;
             
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb planted!", Name);
@@ -274,7 +274,7 @@ namespace Characters
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
             // TODO: There is no check if any fragments are already on the position.
-            Fragment frag = Instantiate(_fragmentPrefab, cellCenterPos, Quaternion.identity).GetComponent<Fragment>();
+            ItemFragment frag = Instantiate(_fragmentPrefab, cellCenterPos, Quaternion.identity).GetComponent<ItemFragment>();
             frag.Quantity = FragmentCounter;
 
             FragmentCounter = 0;
