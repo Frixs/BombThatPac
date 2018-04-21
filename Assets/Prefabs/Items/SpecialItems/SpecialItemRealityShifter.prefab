@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemStatusEffect: {fileID: 11400000, guid: 0b2cd81047172784fb9f50e75b55722e, type: 2}
-  DropChance: 70
+  DropChance: 10
 --- !u!114 &114897242225476720
 MonoBehaviour:
   m_ObjectHideFlags: 1

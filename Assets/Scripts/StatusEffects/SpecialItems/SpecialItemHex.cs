@@ -21,7 +21,7 @@ namespace StatusEffects.SpecialItems
 		/// <summary>
 		/// Mouse collider size of the new form.
 		/// </summary>
-		private Vector2 _mouseColliderSize = new Vector2(0.35f, 0.35f);
+		private Vector2 _mouseColliderSize = new Vector2(0.45f, 0.45f);
 		
 		/// <summary>
 		/// Mouse collider offset of the new form.
