@@ -10,6 +10,7 @@ TagManager:
   - Item
   - Ghost
   - SpecialItem
+  - Map
   layers:
   - Default
   - TransparentFX

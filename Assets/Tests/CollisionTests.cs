@@ -6,19 +6,32 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using UnityEngine.Tilemaps;
 
 namespace Tests
 {
     public class CollisionTests
     {
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            SceneManager.LoadScene(1);
+        }
+
         [SetUp]
         public void SetUp()
         {
-            SceneManager.LoadScene(1);
-            
+            // TODO: it would be better to have method for this.
+            GameManager.Instance.DespawnAllUnits();
+            Object.DestroyImmediate(GameObject.FindWithTag("Map"));
+            Object.Instantiate(Resources.Load("GridTest"));
+            MapManager.Instance.TilemapGameplay = GameObject.Find("Tilemap_Gameplay").GetComponent<Tilemap>();
+            MapManager.Instance.Setup();
+            GameManager.Instance.SpawnAllUnits();
+
             //_playerPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Characters/PlayerBomberman.prefab");
         }
-
+        
         [TearDown]
         public void TearDown()
         {
@@ -30,12 +43,12 @@ namespace Tests
         {
             Player p1 = GameManager.Instance.Players[0].PlayerComponent;
             Player p2 = GameManager.Instance.Players[1].PlayerComponent;
-            
+            /*
             p1.transform.position = new Vector3(0f, -50f, 0f);
             p2.transform.position = new Vector3(1f, -50f, 0f);
             
             Vector3 targetOriginalPos = p2.transform.position;
-            
+            */
             yield return new WaitForSeconds(3f);
             
             Assert.IsNotNull(GameManager.Instance.Players);

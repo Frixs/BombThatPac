@@ -36,6 +36,9 @@ namespace UI.Gameplay
 			ManageDeathPlaceholder();
 		}
 
+		/// <summary>
+		/// Switch on/off player death label.
+		/// </summary>
 		private void ManageDeathPlaceholder()
 		{
 			DeathPlaceholder.gameObject.SetActive(PlayerManagerReference.PlayerComponent.IsDeath);

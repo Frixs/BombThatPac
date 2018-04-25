@@ -152,10 +152,7 @@ namespace Managers
             _startWait = new WaitForSeconds(StartDelay);
             _endWait = new WaitForSeconds(EndDelay);
 
-            SpawnAllPlayers();
-            SetCameraTargets();
-            SpawnAllGhosts();
-            SpawnPacMan();
+            SpawnAllUnits();
 
             // Once the players have been created and the camera is using them as targets, start the game.
             //StartCoroutine(GameLoop());
@@ -169,6 +166,7 @@ namespace Managers
 
         /// <summary>
         /// Check all player fragment count and open the finish portal if it is possible.
+        /// TODO: This method is probably not on the correct place.
         /// </summary>
         private void CheckPlayerFragmentCount()
         {
@@ -177,6 +175,9 @@ namespace Managers
             // Go through all players.
             for (int i = 0; i < Players.Length; i++)
             {
+                if (Players[i] == null || Players[i].PlayerComponent == null)
+                    continue;
+                
                 if (Players[i].PlayerComponent.FragmentCounter >= MapManager.Instance.TotalFragmentCount)
                 {
                     HasAnyPlayerAllFragments = true;
@@ -201,11 +202,45 @@ namespace Managers
         }
 
         /// <summary>
+        /// Spawn all units.
+        /// </summary>
+        public void SpawnAllUnits()
+        {
+            SpawnAllPlayers();
+            SetCameraTargets();
+            SpawnAllGhosts();
+            SpawnPacMan();
+            
+            Time.timeScale = 1f;
+        }
+
+        /// <summary>
+        /// Depspawn all units.
+        /// </summary>
+        public void DespawnAllUnits()
+        {
+            Time.timeScale = 0f;
+            
+            DespawnAllPlayers();
+            DespawnAllGhosts();
+            DespawnPacMan();
+        }
+
+        /// <summary>
+        /// Respawn all units as new.
+        /// </summary>
+        public void RespawnAllUnits()
+        {
+            DespawnAllUnits();
+            SpawnAllUnits();
+        }
+
+        /// <summary>
         /// Spawn all players with choosen role.
         /// </summary>
         private void SpawnAllPlayers()
         {
-            // For all the players...
+            // For all the players.
             for (int i = 0; i < Players.Length; i++)
             {
                 // ... create them, set their player number and references needed for control.
@@ -217,6 +252,18 @@ namespace Managers
                 
                 // Spawn animation.
                 SpawnManager.Instance.SpawnAnimationAtPosition(Players[i].PlayerComponent.InitSpawnAnimPrefab, MapManager.Instance.PlayerSpawnPoints[i].position, Quaternion.identity);
+            }
+        }
+
+        /// <summary>
+        /// Despawn all players.
+        /// </summary>
+        private void DespawnAllPlayers()
+        {
+            // For all the players.
+            for (int i = 0; i < Players.Length; i++)
+            {
+                Players[i].Deinitialize();
             }
         }
 
@@ -242,6 +289,18 @@ namespace Managers
         }
 
         /// <summary>
+        /// Despawn all ghosts.
+        /// </summary>
+        private void DespawnAllGhosts()
+        {
+            for (int i = 0; i < _ghostsToSpawnPrefabs.Length; i++)
+            {
+                Destroy(Ghosts[i]);
+                Ghosts[i] = null;
+            }
+        }
+
+        /// <summary>
         /// Spawn PacMan to its position.
         /// </summary>
         private void SpawnPacMan()
@@ -251,6 +310,15 @@ namespace Managers
             PacMan = Instantiate(_pacManToSpawnPrefab, spawnPoint.position, _pacManToSpawnPrefab.transform.rotation);
             PacMan.Identifier = ++MaxObjectIdentifier;
             PacMan.Name = "PacMan";
+        }
+        
+        /// <summary>
+        /// Despawn PacMan.
+        /// </summary>
+        private void DespawnPacMan()
+        {
+            Destroy(PacMan);
+            PacMan = null;
         }
 
         /// <summary>

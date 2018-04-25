@@ -3,6 +3,7 @@ using Characters;
 using UI.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 namespace Managers
 {
@@ -65,10 +66,39 @@ namespace Managers
             switch (GameManager.Instance.CurrentGameType)
             {
                 case GameType.LOCAL:
-                    PlayerComponent.InputPlayerSection = "Player"+ PlayerComponent.Identifier;
+                    PlayerComponent.InputPlayerSection = "Player"+ (initOrderNumber + 1);
                     break;
             }
 
+            InitializePlayerPanel(initOrderNumber);
+            
+            // Set player skin.
+            if (PlayerCharacterSelection[initOrderNumber] != null)
+            {
+                PlayerComponent.SetDefaultAnimationController(PlayerCharacterSelection[initOrderNumber]);
+                PlayerComponent.GetComponent<Animator>().runtimeAnimatorController = PlayerCharacterSelection[initOrderNumber];
+            }
+        }
+
+        /// <summary>
+        /// Completly deinitialize player game references.
+        /// </summary>
+        public void Deinitialize()
+        {
+            Object.Destroy(CharacterInstance);
+                
+            PlayerComponent = null;
+            CharacterInstance = null;
+            
+            DestroyPlayerPanel();
+        }
+
+        /// <summary>
+        /// Initialize player panel to UI.
+        /// </summary>
+        /// <param name="initOrderNumber">Initialized order number of a player. 0 = The first player has been initialized. 1 = the 2nd player has been initialized. etc.</param>
+        private void InitializePlayerPanel(int initOrderNumber)
+        {
             // Setup player UI.
             PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel();
             PlayerPanelReference.PlayerManagerReference = this;
@@ -93,13 +123,14 @@ namespace Managers
                     0f
                 );
             }
-
-            // Set player skin.
-            if (PlayerCharacterSelection[initOrderNumber] != null)
-            {
-                PlayerComponent.SetDefaultAnimationController(PlayerCharacterSelection[initOrderNumber]);
-                PlayerComponent.GetComponent<Animator>().runtimeAnimatorController = PlayerCharacterSelection[initOrderNumber];
-            }
+        }
+        
+        /// <summary>
+        /// Destroy player panel from UI.
+        /// </summary>
+        private void DestroyPlayerPanel()
+        {
+            Object.Destroy(PlayerPanelReference.gameObject);
         }
     
         /// <summary>

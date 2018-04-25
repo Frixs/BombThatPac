@@ -79,41 +79,74 @@ namespace Managers
                 // Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a MapManager.
                 Destroy(gameObject);
             }
-
-            // Initialize important constants.
-            TilemapCellSize = TilemapGameplay.cellSize.x;
-            TilemapCellHalfSize = TilemapCellSize / 2f;
         }
 
         // Use this for initialization
         void Start()
         {
-            // Find all player spawn points.
-            GameObject playerSpawnPointHandler = GameObject.Find("PlayerSpawnPoints");
-            PlayerSpawnPoints = new Transform[playerSpawnPointHandler.transform.childCount];
-            for (int i = 0; i < playerSpawnPointHandler.transform.childCount; i++)
-                PlayerSpawnPoints[i] = playerSpawnPointHandler.transform.GetChild(i);
-            
-            // Find all item spawn points.
-            GameObject itemSpawnPointHandler = GameObject.Find("ItemSpawnPoints");
-            ItemSpawnPoints = new Transform[itemSpawnPointHandler.transform.childCount];
-            for (int i = 0; i < itemSpawnPointHandler.transform.childCount; i++)
-                ItemSpawnPoints[i] = itemSpawnPointHandler.transform.GetChild(i);
-            
-            // Find all finish spawn points.
-            GameObject finishSpawnPointHandler = GameObject.Find("FinishSpawnPoints");
-            FinishSpawnPoints = new Transform[finishSpawnPointHandler.transform.childCount];
-            for (int i = 0; i < finishSpawnPointHandler.transform.childCount; i++)
-                FinishSpawnPoints[i] = finishSpawnPointHandler.transform.GetChild(i);
-            
-            // Update only once. This set up the number of fragments in the maze.
-            if (TotalFragmentCount == 0)
-                TotalFragmentCount = GameObject.Find("Fragments").GetComponentsInChildren<ItemFragment>().Length;
+            // Initialize important constants.
+            TilemapCellSize = TilemapGameplay.cellSize.x;
+            TilemapCellHalfSize = TilemapCellSize / 2f;
+
+            Setup();
         }
 
         // Update is called once per frame
         void Update()
         {
+        }
+
+        /// <summary>
+        /// Initialization of a map.
+        /// </summary>
+        public void Setup()
+        {
+            FindPlayerSpawnPoints();
+            FindItemSpawnPoints();
+            FindFinishSpawnPoints();
+            FindAndSetFragmentCount();
+        }
+
+        /// <summary>
+        /// Find and set all player spawn points.
+        /// </summary>
+        private void FindPlayerSpawnPoints()
+        {
+            GameObject playerSpawnPointHandler = GameObject.Find("PlayerSpawnPoints");
+            PlayerSpawnPoints = new Transform[playerSpawnPointHandler.transform.childCount];
+            for (int i = 0; i < playerSpawnPointHandler.transform.childCount; i++)
+                PlayerSpawnPoints[i] = playerSpawnPointHandler.transform.GetChild(i);
+        }
+        
+        /// <summary>
+        /// Find and set all item spawn points.
+        /// </summary>
+        private void FindItemSpawnPoints()
+        {
+            GameObject itemSpawnPointHandler = GameObject.Find("ItemSpawnPoints");
+            ItemSpawnPoints = new Transform[itemSpawnPointHandler.transform.childCount];
+            for (int i = 0; i < itemSpawnPointHandler.transform.childCount; i++)
+                ItemSpawnPoints[i] = itemSpawnPointHandler.transform.GetChild(i);
+        }
+        
+        /// <summary>
+        /// Find and set all finish spawn points.
+        /// </summary>
+        private void FindFinishSpawnPoints()
+        {
+            GameObject finishSpawnPointHandler = GameObject.Find("FinishSpawnPoints");
+            FinishSpawnPoints = new Transform[finishSpawnPointHandler.transform.childCount];
+            for (int i = 0; i < finishSpawnPointHandler.transform.childCount; i++)
+                FinishSpawnPoints[i] = finishSpawnPointHandler.transform.GetChild(i);
+        }
+
+        /// <summary>
+        /// Find and set total fragment count on a map.
+        /// </summary>
+        private void FindAndSetFragmentCount()
+        {
+            // Update only once. This set up the number of fragments in the maze.
+            TotalFragmentCount = GameObject.Find("Fragments").GetComponentsInChildren<ItemFragment>().Length;
         }
     }
 }
