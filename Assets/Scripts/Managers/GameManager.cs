@@ -295,7 +295,7 @@ namespace Managers
         {
             for (int i = 0; i < _ghostsToSpawnPrefabs.Length; i++)
             {
-                Destroy(Ghosts[i]);
+                Destroy(Ghosts[i].gameObject);
                 Ghosts[i] = null;
             }
         }
@@ -317,7 +317,7 @@ namespace Managers
         /// </summary>
         private void DespawnPacMan()
         {
-            Destroy(PacMan);
+            Destroy(PacMan.gameObject);
             PacMan = null;
         }
 

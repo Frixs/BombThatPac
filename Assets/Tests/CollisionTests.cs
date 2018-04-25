@@ -42,13 +42,16 @@ namespace Tests
         public IEnumerator TestCollidePlayerWithPlayer()
         {
             Player p1 = GameManager.Instance.Players[0].PlayerComponent;
+            p1.DisableActions();
             Player p2 = GameManager.Instance.Players[1].PlayerComponent;
-            /*
-            p1.transform.position = new Vector3(0f, -50f, 0f);
-            p2.transform.position = new Vector3(1f, -50f, 0f);
+            p2.DisableActions();
             
             Vector3 targetOriginalPos = p2.transform.position;
-            */
+
+            // TODO: Create Managar to handle movement. Good to have method like: Manager:Move(Object, from, to, speed);
+            // Also it could be useful with black hole effects.
+            p1.transform.position = p2.transform.position;
+            
             yield return new WaitForSeconds(3f);
             
             Assert.IsNotNull(GameManager.Instance.Players);
