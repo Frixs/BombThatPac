@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Runtime.Serialization.Formatters;
 using Characters;
 using Managers;
 using NUnit.Framework;
@@ -46,17 +45,18 @@ namespace Tests
             Player p2 = GameManager.Instance.Players[1].PlayerComponent;
             p2.DisableActions();
             
-            Vector3 targetOriginalPos = p2.transform.position;
+            Vector3 targetOriginalPos = new Vector3(p2.transform.position.x, p2.transform.position.y, p2.transform.position.z);
 
             // TODO: Create Managar to handle movement. Good to have method like: Manager:Move(Object, from, to, speed);
             // Also it could be useful with black hole effects.
-            p1.transform.position = p2.transform.position;
+            TransformManager.Instance.AddTransfMoveTowards(p1.gameObject, 0, targetOriginalPos, 3f);
             
             yield return new WaitForSeconds(3f);
             
-            Assert.IsNotNull(GameManager.Instance.Players);
-            
-            yield return null;
+            if (targetOriginalPos != p2.transform.position)
+                Assert.True(true);
+            else
+                Assert.Fail();
         }
         
         /*

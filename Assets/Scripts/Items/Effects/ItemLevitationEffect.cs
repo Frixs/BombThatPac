@@ -11,6 +11,16 @@ namespace Items.Effects
 	public class ItemLevitationEffect : MonoBehaviour
 	{
 		/// <summary>
+		/// New Levitation scale, possible to set from inspector.
+		/// </summary>
+		[Range(1, 100)] public float NewLevitationScale;
+		
+		/// <summary>
+		/// Levitation scale. Default value.
+		/// </summary>
+		private float LevitationScaleDefault = 40f;
+		
+		/// <summary>
 		/// Original X coord of the object.
 		/// </summary>
 		private float _originalX;
@@ -33,9 +43,11 @@ namespace Items.Effects
 		// Use this for initialization
 		void Start()
 		{
+			float levitationScale = NewLevitationScale > 0f ? NewLevitationScale : LevitationScaleDefault;
+			
 			_originalX = transform.position.x;
 			_originalY = transform.position.y;
-			_floatStrength = MapManager.Instance.TilemapCellSize / 40f;
+			_floatStrength = MapManager.Instance.TilemapCellSize / levitationScale;
 			_randomSeed = Random.Range(0f, 360f);
 		}
 
