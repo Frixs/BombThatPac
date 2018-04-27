@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Characters;
+using Items;
 using Managers;
 using NUnit.Framework;
 using UnityEngine;
@@ -34,6 +35,7 @@ namespace Tests
         [TearDown]
         public void TearDown()
         {
+            SceneManager.LoadScene(1);
             //UnityEngine.Object.DestroyImmediate(_playerPrefab, true);
         }
         
@@ -47,8 +49,6 @@ namespace Tests
             
             Vector3 targetOriginalPos = new Vector3(p2.transform.position.x, p2.transform.position.y, p2.transform.position.z);
 
-            // TODO: Create Managar to handle movement. Good to have method like: Manager:Move(Object, from, to, speed);
-            // Also it could be useful with black hole effects.
             TransformManager.Instance.AddTransfMoveTowards(p1.gameObject, 0, targetOriginalPos, 3f);
             
             yield return new WaitForSeconds(3f);
@@ -57,19 +57,94 @@ namespace Tests
                 Assert.True(true);
             else
                 Assert.Fail();
+            
+            yield return null;
         }
         
-        /*
         [UnityTest]
-        [Timeout(180000)] // Sets the timeout of the test in millisecon-ds (if the test hangs, this will ensure it closes after 3 minutes).
-        public IEnumerator TestAnimationAnimUtilityPrefab()
+        public IEnumerator TestCollidePlayerWithGhost()
         {
-            yield return new WaitForSeconds(1f);
-            // In this example, let's assume that our Example.prefab has a script on it called ExampleScript.
-            var script = GameManager.Instance.Players[0].CharacterInstance.GetComponent<Player>();
-            // Assert that the script exists on our prefab so we don't stumble upon this problem in the future.
-            Assert.IsTrue(script == null, "Player script must be set on Example.prefab.");
+            Player p1 = GameManager.Instance.Players[0].PlayerComponent;
+            p1.DisableActions();
+            Vector3 targetOriginalPos = new Vector3(p1.transform.position.x - 2, p1.transform.position.y, p1.transform.position.z);
+            Player p2 = GameManager.Instance.Players[1].PlayerComponent;
+            p2.gameObject.SetActive(false);
+            
+            Ghost ghost = GameManager.Instance.Ghosts[0];
+            ghost.DisableActions();
+            ghost.transform.position = targetOriginalPos;
+            
+            TransformManager.Instance.AddTransfMoveTowards(p1.gameObject, 0, targetOriginalPos, 3f);
+            
+            yield return new WaitForSeconds(3f);
+            
+            if (p1.IsDeath && !p1.gameObject.activeInHierarchy)
+                Assert.True(true);
+            else
+                Assert.Fail();
+            
+            yield return new WaitForSeconds(3.5f);
+            
+            Assert.IsTrue(!p1.IsDeath, "Player is not respawned!");
+
+            yield return null;
         }
-        */
+        
+        [UnityTest]
+        public IEnumerator TestCollidePlayerWithFragment()
+        {
+            Player p1 = GameManager.Instance.Players[0].PlayerComponent;
+            p1.DisableActions();
+            Vector3 targetOriginalPos = new Vector3(p1.transform.position.x, p1.transform.position.y - 4, p1.transform.position.z);
+            Player p2 = GameManager.Instance.Players[1].PlayerComponent;
+            p2.gameObject.SetActive(false);
+            
+            int totalCount = GameObject.Find("Fragments").GetComponentsInChildren<ItemFragment>().Length;
+            
+            TransformManager.Instance.AddTransfMoveTowards(p1.gameObject, 0, targetOriginalPos, 3f);
+            
+            yield return new WaitForSeconds(3f);
+            
+            Assert.IsTrue(GameObject.Find("Fragments").GetComponentsInChildren<ItemFragment>().Length == 0, "No collision. No destroy.");
+            Assert.IsTrue(p1.FragmentCounter == 3, "Wrong fragment counter.");
+            
+            yield return null;
+        }
+        
+        [UnityTest]
+        public IEnumerator TestCollidePlayerWithWall()
+        {
+            Player p1 = GameManager.Instance.Players[0].PlayerComponent;
+            p1.DisableActions();
+            Vector3 targetOriginalPos = new Vector3(p1.transform.position.x, p1.transform.position.y + 3, p1.transform.position.z);
+            Player p2 = GameManager.Instance.Players[1].PlayerComponent;
+            p2.gameObject.SetActive(false);
+            
+            TransformManager.Instance.AddTransfMoveTowards(p1.gameObject, 3f, targetOriginalPos, 3f);
+            
+            yield return new WaitForSeconds(3f);
+            
+            Assert.IsTrue(p1.transform.position != targetOriginalPos, "No collision.");
+            
+            yield return null;
+        }
+        
+        [UnityTest]
+        public IEnumerator TestCollidePlayerWithObstacle()
+        {
+            Player p1 = GameManager.Instance.Players[0].PlayerComponent;
+            p1.gameObject.SetActive(false);
+            Player p2 = GameManager.Instance.Players[1].PlayerComponent;
+            p2.DisableActions();
+            Vector3 targetOriginalPos = new Vector3(p2.transform.position.x, p2.transform.position.y + 2, p2.transform.position.z);
+            
+            TransformManager.Instance.AddTransfMoveTowards(p2.gameObject, 3f, targetOriginalPos, 3f);
+            
+            yield return new WaitForSeconds(3f);
+            
+            Assert.IsTrue(p2.transform.position != targetOriginalPos, "No collision.");
+            
+            yield return null;
+        }
     }
 }

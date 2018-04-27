@@ -268,7 +268,7 @@ namespace Characters
 
 		public override void Move()
 		{
-			if (_currentCell == _targetCell)
+			if (_currentCell == _targetCell || !HasEnabledActions)
 				return;
 			
 			if (OverShotTarget())
@@ -300,7 +300,7 @@ namespace Characters
 			}
 			else
 			{
-				transform.position += (Vector3) Direction * MoveSpeed * Time.deltaTime * (HasEnabledActions ? 1 : 0);
+				transform.position += (Vector3) Direction * MoveSpeed * Time.deltaTime;
 			}
 		}
 		
