@@ -5,7 +5,21 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - AnimationControllerDefault: {instanceID: 0}
+  - MyAnimator: {instanceID: 0}
+  - MyRigidBody: {instanceID: 0}
+  - MyCollider: {instanceID: 0}
+  - SpriteEyesUp: {instanceID: 0}
+  - SpriteEyesLeft: {instanceID: 0}
+  - SpriteEyesDown: {instanceID: 0}
+  - SpriteEyesRight: {instanceID: 0}
+  - _frightenedMoveSpeedStatusEffect: {instanceID: 0}
+  - _consumedMoveSpeedStatusEffect: {instanceID: 0}
+  - FrightenedModeMusic: {fileID: 8300000, guid: d37015f34d5f3344aa6f4032a1159c48,
+      type: 3}
+  - FrightenedBlueSprite: {instanceID: 0}
+  - FrightenedWhiteSprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

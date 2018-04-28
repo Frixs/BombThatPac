@@ -338,10 +338,16 @@ namespace Characters
 			{
 				_frightenedModeTimer += Time.deltaTime;
 
-				// Frightened timer.
+				// Frightened timer. End of frightened mode.
 				if (_frightenedModeTimer >= Constants.GhostFrightenedModeDuration)
 				{
 					_frightenedModeTimer = 0f;
+					
+					// Start playing game music loop.
+					if (GameManager.Instance.IsFrightenedModeUp)
+						SoundManager.Instance.PlayPreviousBackgroundMusic(true);
+					GameManager.Instance.IsFrightenedModeUp = false;
+					
 					ChangeMode(_previousMode);
 				}
 				// Blinking in frightened mode.
@@ -409,6 +415,11 @@ namespace Characters
 			
 			if (GetComponent<SpriteRenderer>().sprite != FrightenedBlueSprite)
 				GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
+			
+			// Start playing game music loop.
+			if (!GameManager.Instance.IsFrightenedModeUp)
+				SoundManager.Instance.PlayNewBackgroundMusic(GameManager.Instance.FrightenedModeMusic);
+			GameManager.Instance.IsFrightenedModeUp = true;
 		}
 		
 		/// <summary>

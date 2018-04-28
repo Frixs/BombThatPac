@@ -55,3 +55,5 @@ MonoBehaviour:
     type: 2}
   _sceneLoadingManager: {fileID: 1855028508375390, guid: 0a71f0cb53830504e99a8d1bdde0ffd9,
     type: 2}
+  _soundManager: {fileID: 1981593695204300, guid: 3efc23436c37152459e6bc8f2cfa3d79,
+    type: 2}

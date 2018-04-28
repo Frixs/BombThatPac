@@ -78,6 +78,8 @@ MonoBehaviour:
   ChainAdditionalExplosionDistance: 1
   GhostBombStatusEffect: {fileID: 11400000, guid: 9705f734134807244b65ca9c7aacb277,
     type: 2}
+  ExplosionSfx:
+  - {fileID: 8300000, guid: 6d6bf0f516f7c9741867a8abbbc2cb34, type: 3}
 --- !u!212 &212803701123302480
 SpriteRenderer:
   m_ObjectHideFlags: 1

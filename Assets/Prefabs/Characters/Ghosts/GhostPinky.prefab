@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4130001184602850}
   - component: {fileID: 212935284096361576}
   - component: {fileID: 114185783352962718}
+  - component: {fileID: 114940392100744606}
   - component: {fileID: 95998818476818124}
   - component: {fileID: 70717835512577508}
   m_Layer: 8
@@ -96,6 +97,7 @@ MonoBehaviour:
   IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
+  HasSwappedDirection: 0
   SpriteEyesUp: {fileID: 21300000, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesLeft: {fileID: 21300002, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
@@ -109,6 +111,20 @@ MonoBehaviour:
     type: 3}
   FrightenedWhiteSprite: {fileID: 21300002, guid: ee8f045da70ee584385f61127c5452ad,
     type: 3}
+--- !u!114 &114940392100744606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861575854465322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 0, y: 0, z: 0}
+  ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
+  ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &212935284096361576
 SpriteRenderer:
   m_ObjectHideFlags: 1

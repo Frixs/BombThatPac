@@ -16,6 +16,8 @@ namespace UI.Gameplay
             Time.timeScale = 1f;
             GameManager.Instance.IsGamePaused = false;
             gameObject.SetActive(false);
+            
+            SoundManager.Instance.PlayPreviousBackgroundMusic(true);
         }
         
         public void MainMenuButtonEvent()

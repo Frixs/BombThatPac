@@ -44,6 +44,11 @@ namespace Items
 		[Header("Status Effects")] public ScriptableStatusEffect GhostBombStatusEffect;
 
 		/// <summary>
+		/// Sound on explosion.
+		/// </summary>
+		[Header("Music Settings")] public AudioClip[] ExplosionSfx;
+		
+		/// <summary>
 		/// Check if this bomb is chained or it is the start one.
 		/// </summary>
 		private bool _isChained = false;
@@ -178,6 +183,8 @@ namespace Items
 			{
 				ExplodeInDirection(originCell, new Vector3Int(Caster.BombExplosionDirection[i, 0], Caster.BombExplosionDirection[i, 1], Caster.BombExplosionDirection[i, 2]));
 			}
+			
+			SoundManager.Instance.RandomizeSfx(ExplosionSfx);
 		}
 
 		/// <summary>

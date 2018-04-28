@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212459503690641154}
   - component: {fileID: 95534391057588828}
   - component: {fileID: 114106496752990530}
+  - component: {fileID: 114017575623772264}
   - component: {fileID: 70275899605772778}
   m_Layer: 0
   m_Name: PacMan
@@ -75,6 +76,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114017575623772264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709404228281080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: -0.02, y: -0.45, z: 0}
+  ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
+  ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114106496752990530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,6 +111,7 @@ MonoBehaviour:
   IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
+  HasSwappedDirection: 0
 --- !u!212 &212459503690641154
 SpriteRenderer:
   m_ObjectHideFlags: 1

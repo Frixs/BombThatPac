@@ -276,47 +276,47 @@ namespace Characters
         }
         
         /// <summary>
-        /// TODO
+        /// Get size of character collider.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Size of character collider.</returns>
         public Vector2 GetColliderSize()
         {
             return MyCollider.size;
         }
 
         /// <summary>
-        /// TODO
+        /// Get higher size of the size.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Get the higher cillider from X or Y coord.</returns>
         public float GetColliderSizeMax()
         {
             return MyCollider.size.x > MyCollider.size.y ? MyCollider.size.x : MyCollider.size.y;
         }
         
         /// <summary>
-        /// TODO
+        /// Get offset of character collider.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Offset of character collider.</returns>
         public Vector2 GetColliderOffset()
         {
             return MyCollider.offset;
         }
 
         /// <summary>
-        /// TODO
+        /// Set new collider size.
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
+        /// <param name="x">Height of collider.</param>
+        /// <param name="y">With of collider.</param>
         public void SetColliderSize(float x, float y)
         {
             MyCollider.size = new Vector2(x, y);
         }
         
         /// <summary>
-        /// TODO
+        /// Set collider offset.
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
+        /// <param name="x">X coord.</param>
+        /// <param name="y">Y coord.</param>
         public void SetColliderOffset(float x, float y)
         {
             MyCollider.offset = new Vector2(x, y);

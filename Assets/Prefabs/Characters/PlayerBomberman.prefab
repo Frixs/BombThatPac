@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4955692010094732}
   - component: {fileID: 212224063605262326}
-  - component: {fileID: 114177890079584444}
   - component: {fileID: 95442204627684884}
-  - component: {fileID: 50736437586787514}
+  - component: {fileID: 114177890079584444}
+  - component: {fileID: 114951234373389756}
   - component: {fileID: 70274730300733892}
+  - component: {fileID: 50736437586787514}
   m_Layer: 8
   m_Name: PlayerBomberman
   m_TagString: Player
@@ -77,7 +78,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.8}
+  m_Size: {x: 0.5, y: 0.85}
   m_Direction: 0
 --- !u!95 &95442204627684884
 Animator:
@@ -117,6 +118,7 @@ MonoBehaviour:
   IsStatusEffectImmune: 0
   IsDeath: 0
   IsRespawnable: 1
+  HasSwappedDirection: 0
   PlayerManagerReference:
     CharacterInstance: {fileID: 0}
     PlayerName: 
@@ -137,10 +139,26 @@ MonoBehaviour:
     type: 2}
   _respawnInvulStatusEffect: {fileID: 11400000, guid: af5f9306dc89cdc4ea4da5a282883e70,
     type: 2}
+  CollectItemSfx:
+  - {fileID: 8300000, guid: 39343de3e89e243439d6de0b093e2fce, type: 3}
   InputPlayerSection: 
   BombDeployCounter: 0
   FragmentCounter: 0
   CanPlantBombs: 0
+--- !u!114 &114951234373389756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808872423296922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 0, y: 0, z: 0}
+  ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
+  ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &212224063605262326
 SpriteRenderer:
   m_ObjectHideFlags: 1

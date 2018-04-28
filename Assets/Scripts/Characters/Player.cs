@@ -81,6 +81,11 @@ namespace Characters
         [Header("Status Effects")] [SerializeField] private ScriptableStatusEffect _respawnInvulStatusEffect;
         
         /// <summary>
+        /// Sound on collect item.
+        /// </summary>
+        [Header("Music Settings")] public AudioClip[] CollectItemSfx;
+        
+        /// <summary>
         /// Lets say which section of player controls the character should use.
         /// </summary>
         [HideInInspector] public string InputPlayerSection;
@@ -127,6 +132,8 @@ namespace Characters
                 FragmentCounter += other.GetComponent<ItemFragment>().Quantity;
                 PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
                 Destroy(other.gameObject);
+                
+                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
             }
             // CHERRY.
             else if (other.gameObject.CompareTag("Cherry"))
@@ -137,12 +144,16 @@ namespace Characters
                 }
                 
                 Destroy(other.gameObject);
+                
+                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
             }
             // SPECIAL ITEM.
             else if (other.gameObject.CompareTag("SpecialItem"))
             {
                 PlayerManagerReference.PlayerPanelReference.PlayerInventory.AddItem(this, other.GetComponent<SpecialItem>());
                 Destroy(other.gameObject);
+                
+                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
             }
         }
 

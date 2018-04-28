@@ -18,7 +18,7 @@ namespace Managers
         /// <summary>
         /// Check if the game is currently paused or not.
         /// </summary>
-        public bool IsGamePaused = false;
+        [HideInInspector] public bool IsGamePaused = false;
 
         /// <summary>
         /// Game mode if it is local game or online game, etc.
@@ -68,7 +68,8 @@ namespace Managers
         /// <summary>
         /// All ghost prefabs to be spawned. Depends on the order for proper spawn position assignment!!!
         /// </summary>
-        [Header("Ghost Settings")][SerializeField] private Ghost[] _ghostsToSpawnPrefabs;
+        [Header("Ghost Settings")] [SerializeField]
+        private Ghost[] _ghostsToSpawnPrefabs;
 
         /// <summary>
         /// Reference to all spawned ghosts.
@@ -78,12 +79,25 @@ namespace Managers
         /// <summary>
         /// PacMan prefab to be spawned.
         /// </summary>
-        [Header("PacMan Settings")][SerializeField] private PacMan _pacManToSpawnPrefab;
-        
+        [Header("PacMan Settings")] [SerializeField]
+        private PacMan _pacManToSpawnPrefab;
+
         /// <summary>
         /// Reference to spawned PacMan.
         /// </summary>
         [HideInInspector] public PacMan PacMan;
+
+        /// <summary>
+        /// This is the default background music on the game.
+        /// </summary>
+        [Header("Music Settings")] public AudioClip GameModeMusic;
+        
+        /// <summary>
+        /// This is the default frightened background music on the game.
+        /// </summary>
+        public AudioClip FrightenedModeMusic;
+
+        [HideInInspector] public bool IsFrightenedModeUp;
         
         /// <summary>
         /// Which round the game is currently on.
@@ -114,7 +128,7 @@ namespace Managers
         /// Checks if any of player has all fragments.
         /// </summary>
         [HideInInspector] public bool HasAnyPlayerAllFragments = false;
-        
+
         /// <summary>
         /// Possible player winner. Player with all fragments.
         /// </summary>
@@ -153,6 +167,9 @@ namespace Managers
             _endWait = new WaitForSeconds(EndDelay);
 
             SpawnAllUnits();
+            
+            // Start playing game music loop.
+            SoundManager.Instance.PlayNewBackgroundMusic(GameModeMusic);
 
             // Once the players have been created and the camera is using them as targets, start the game.
             //StartCoroutine(GameLoop());
@@ -171,23 +188,24 @@ namespace Managers
         private void CheckPlayerFragmentCount()
         {
             HasAnyPlayerAllFragments = false;
-            
+
             // Go through all players.
             for (int i = 0; i < Players.Length; i++)
             {
                 if (Players[i] == null || Players[i].PlayerComponent == null)
                     continue;
-                
+
                 if (Players[i].PlayerComponent.FragmentCounter >= MapManager.Instance.TotalFragmentCount)
                 {
                     HasAnyPlayerAllFragments = true;
                     PossiblePlayerWinner = Players[i].PlayerComponent;
-                    
+
                     int finishSpawnPointId = Random.Range(0, MapManager.Instance.FinishSpawnPoints.Length);
 
                     if (_openedFinishPortal == null)
-                        _openedFinishPortal = Instantiate(_finishPortalPrefab, MapManager.Instance.FinishSpawnPoints[finishSpawnPointId].transform.position, Quaternion.identity).GetComponent<FinishPortal>();
-                    
+                        _openedFinishPortal = Instantiate(_finishPortalPrefab, MapManager.Instance.FinishSpawnPoints[finishSpawnPointId].transform.position, Quaternion.identity)
+                            .GetComponent<FinishPortal>();
+
                     break;
                 }
             }
@@ -210,7 +228,7 @@ namespace Managers
             SetCameraTargets();
             SpawnAllGhosts();
             SpawnPacMan();
-            
+
             Time.timeScale = 1f;
         }
 
@@ -220,7 +238,7 @@ namespace Managers
         public void DespawnAllUnits()
         {
             Time.timeScale = 0f;
-            
+
             DespawnAllPlayers();
             DespawnAllGhosts();
             DespawnPacMan();
@@ -249,7 +267,7 @@ namespace Managers
                 Players[i].PlayerComponent.Identifier = ++MaxObjectIdentifier;
                 Players[i].PlayerComponent.Name = "Player" + Players[i].PlayerComponent.Identifier;
                 Players[i].Setup(i);
-                
+
                 // Spawn animation.
                 SpawnManager.Instance.SpawnAnimationAtPosition(Players[i].PlayerComponent.InitSpawnAnimPrefab, MapManager.Instance.PlayerSpawnPoints[i].position, Quaternion.identity);
             }
@@ -273,12 +291,12 @@ namespace Managers
         private void SpawnAllGhosts()
         {
             Transform ghostStartTargetPoint = GameObject.Find("GhostStartTargetPositionPoint").transform;
-            
+
             for (int i = 0; i < _ghostsToSpawnPrefabs.Length; i++)
             {
                 Transform spawnPoint = GameObject.Find("Ghost" + _ghostsToSpawnPrefabs[i].GetType().Name + "SpawnPoint").transform;
                 Transform scatterBasePoint = GameObject.Find("Ghost" + _ghostsToSpawnPrefabs[i].GetType().Name + "ScatterBase").transform;
-                
+
                 Ghosts[i] = Instantiate(_ghostsToSpawnPrefabs[i], spawnPoint.position, _ghostsToSpawnPrefabs[i].transform.rotation);
                 Ghosts[i].Identifier = ++MaxObjectIdentifier;
                 Ghosts[i].Name = "Ghost" + _ghostsToSpawnPrefabs[i].GetType().Name;
@@ -311,7 +329,7 @@ namespace Managers
             PacMan.Identifier = ++MaxObjectIdentifier;
             PacMan.Name = "PacMan";
         }
-        
+
         /// <summary>
         /// Despawn PacMan.
         /// </summary>

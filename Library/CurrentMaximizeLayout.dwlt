@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 958
-  m_MinSize: {x: 642, y: 492}
-  m_MaxSize: {x: 22012, y: 14042}
+  m_MinSize: {x: 811, y: 471}
+  m_MaxSize: {x: 22006, y: 14021}
   vertical: 0
-  controlID: 1342
+  controlID: 14652
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,10 +122,10 @@ MonoBehaviour:
     y: 0
     width: 1032
     height: 958
-  m_MinSize: {x: 306, y: 442}
-  m_MaxSize: {x: 8006, y: 8042}
+  m_MinSize: {x: 302, y: 442}
+  m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
-  controlID: 1387
+  controlID: 14618
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 0
     width: 1032
     height: 573
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -182,14 +182,14 @@ MonoBehaviour:
     height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1135.2221132716982
+  lastFramingTime: 1930.4121403546958
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.738431, y: -5.745952, z: 0.1536596}
+    m_Target: {x: -1.8057023, y: -4.645167, z: -0.060546875}
     speed: 2
-    m_Value: {x: -2.738431, y: -5.745952, z: 0.1536596}
+    m_Value: {x: -1.8057023, y: -4.645167, z: -0.060546875}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -217,9 +217,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.837222
+    m_Target: 9.407776
     speed: 2
-    m_Value: 6.837222
+    m_Value: 9.407776
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -993,8 +993,12 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 0}
-  m_BreadCrumbs: []
+  m_AnimatorController: {fileID: 9100000, guid: 516438b6fd2f7a44dac48859e11c09b9,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 1107253374917462848, guid: 516438b6fd2f7a44dac48859e11c09b9,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -1081,10 +1085,10 @@ MonoBehaviour:
     y: 573
     width: 1032
     height: 385
-  m_MinSize: {x: 306, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 302, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 1365
+  controlID: 14619
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1215,10 +1219,10 @@ MonoBehaviour:
     y: 0
     width: 460
     height: 958
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 1343
+  controlID: 14653
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1237,8 +1241,8 @@ MonoBehaviour:
     y: 0
     width: 460
     height: 625
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1275,7 +1279,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 5acefdffe0e2fdff3ae3fdffaefbfdff5210feffc010feff4229feff3675feff5275feff0c90feff72a5feff8ea5feff50c0feffe2d6fefffed6feff0af2feffda07fffff607ffffa022ffffac37ffffc837ffff6a52ffffb267ffffce67ffff4c82ffffb296ffffce96ffff52b1ffff74c5ffff90c5ffff06e0ffff9efbffff00000000
+    m_ExpandedIDs: fc13fdff4414fdff4895fdff24fefdffc45cfeff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1316,8 +1320,8 @@ MonoBehaviour:
     y: 625
     width: 460
     height: 333
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -1362,19 +1366,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Resources
+    - Assets/Audio/SFX
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Resources
+  - Assets/Audio/SFX
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Frixs\Documents\WORKSPACE\Unity\Bomb that Pac
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: cc2e0000
-    m_LastClickedID: 11980
-    m_ExpandedIDs: 00000000e0280000222900003e29000086290000b2290000d2290000882a0000ac2a0000782c0000ec2c00004a2d00009e2d0000e22d00004e2e0000802f00001030000064300000b2310000ea310000683a00006a3a00006c3a00006e3a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 121}
+    m_SelectedIDs: 58290000
+    m_LastClickedID: 10584
+    m_ExpandedIDs: 00000000e628000028290000442900008c290000b8290000d8290000302a0000902a0000ac2a0000b42a0000882c00005a2d0000ae2d00005c2e00008e2f00001e30000072300000be310000c0310000f83100004a3300007e3a0000803a0000823a0000843a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1402,7 +1406,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0280000222900003e29000086290000b2290000d2290000882a0000ac2a0000782c0000ec2c00004a2d00009e2d0000e22d00004e2e0000802f00001030000064300000b2310000ea310000683a00006a3a00006c3a00006e3a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000e628000028290000442900008c290000b8290000d8290000302a0000902a0000ac2a0000b42a0000882c00005a2d0000ae2d00005c2e00008e2f00001e30000072300000be310000c0310000f83100004a3300007e3a0000803a0000823a0000843a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1429,8 +1433,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: f0b8faffc2b70100d4cdffff9287000080870000fcab0000048c0100cc290000262a00008a2800009c29000094280000d229000064280000da280000ba280000282800006a280000682a0000e4280000722800005e290000582800004a29000030280000342a0000582900007429000014290000142a0000ae2900008e2800004ec3fcffe2280000bc270000ea4104008a6dfcff54d7faffce28000028290000000000002c2800001e2a0000e02c0000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: f0b8faffc2b70100d4cdffff9287000080870000fcab0000048c0100cc290000262a00008a2800009c29000094280000d229000064280000da280000ba280000282800006a280000682a0000e4280000722800005e290000582800004a29000030280000342a0000582900007429000014290000142a0000ae2900008e2800004ec3fcffe2280000bc270000ea4104008a6dfcff54d7faffce280000282900002c2800001e2a0000e02c000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1475,15 +1479,15 @@ MonoBehaviour:
     y: 0
     width: 428
     height: 958
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1582,7 +1586,7 @@ MonoBehaviour:
       name: Bomb that Pac
       fullName: Bomb that Pac
       resultStatus: 1
-      duration: 3.6940968
+      duration: 20.8492
       messages: 
       output: 
       stacktrace: 
@@ -1594,7 +1598,7 @@ MonoBehaviour:
       name: Assembly-CSharp.dll
       fullName: C:/Users/Frixs/Documents/WORKSPACE/Unity/Bomb that Pac/Library/ScriptAssemblies/Assembly-CSharp.dll
       resultStatus: 1
-      duration: 3.6633604
+      duration: 20.82531
       messages: 
       output: 
       stacktrace: 
@@ -1606,7 +1610,7 @@ MonoBehaviour:
       name: Tests
       fullName: Tests
       resultStatus: 1
-      duration: 3.6287901
+      duration: 20.786303
       messages: 
       output: 
       stacktrace: 
@@ -1617,8 +1621,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][Tests.CollisionTests][suite]'
       name: CollisionTests
       fullName: Tests.CollisionTests
-      resultStatus: 1
-      duration: 3.5995872
+      resultStatus: 0
+      duration: 20.75426
       messages: 
       output: 
       stacktrace: 
@@ -1630,7 +1634,7 @@ MonoBehaviour:
       name: TestCollidePlayerWithFragment
       fullName: Tests.CollisionTests.TestCollidePlayerWithFragment
       resultStatus: 0
-      duration: 0
+      duration: 3.1511788
       messages: 
       output: 
       stacktrace: 
@@ -1641,10 +1645,24 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][Tests.CollisionTests.TestCollidePlayerWithGhost]'
       name: TestCollidePlayerWithGhost
       fullName: Tests.CollisionTests.TestCollidePlayerWithGhost
-      resultStatus: 1
-      duration: 3.1363204
+      resultStatus: 0
+      duration: 6.6296105
       messages: 
-      output: "[Player8] player has been killed by character: [GhostBlinky]!\r\n"
+      output: "[Player8] player has been killed by character: [GhostBlinky]!\r\n[Player8]
+        Character has been respawned!\r\n[Player8] Status effect (StatusEffects.Invulnerability)
+        applied!\r\n[Player8] Status effect (StatusEffects.Invulnerability) ended!\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][Tests.CollisionTests.TestCollidePlayerWithObstacle]'
+      name: TestCollidePlayerWithObstacle
+      fullName: Tests.CollisionTests.TestCollidePlayerWithObstacle
+      resultStatus: 0
+      duration: 3.121639
+      messages: 
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1653,8 +1671,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][Tests.CollisionTests.TestCollidePlayerWithPlayer]'
       name: TestCollidePlayerWithPlayer
       fullName: Tests.CollisionTests.TestCollidePlayerWithPlayer
-      resultStatus: 1
-      duration: 3.1530924
+      resultStatus: 0
+      duration: 3.116892
       messages: 
       output: 
       stacktrace: 
@@ -1662,12 +1680,24 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: TestCollidePlayerWithFragment (0,000s)
+    - id: '[Assembly-CSharp][Tests.CollisionTests.TestCollidePlayerWithWall]'
+      name: TestCollidePlayerWithWall
+      fullName: Tests.CollisionTests.TestCollidePlayerWithWall
+      resultStatus: 0
+      duration: 3.1217194
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    m_ResultText: CollisionTests (20,754s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b50ac1ef
-      m_LastClickedID: -272561483
+      m_SelectedIDs: 2694a4d1
+      m_LastClickedID: -777743322
       m_ExpandedIDs: 6f61b8ae895d45b589a0abbf2694a4d13beef202ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0

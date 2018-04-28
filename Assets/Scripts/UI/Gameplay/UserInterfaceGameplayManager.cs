@@ -24,6 +24,11 @@ namespace UI.Gameplay
 		/// ScoreMenu reference.
 		/// </summary>
 		[SerializeField] public ScoreMenu ScoreMenuReference;
+		
+		/// <summary>
+		/// This music is playing if the pause menu is open.
+		/// </summary>
+		[Header("Music Settings")] public AudioClip PauseModeMusic;
 
 		void Awake()
 		{
@@ -82,6 +87,8 @@ namespace UI.Gameplay
 			_pauseMenuReference.gameObject.SetActive(true);
 			Time.timeScale = 0f;
 			GameManager.Instance.IsGamePaused = true;
+			
+			SoundManager.Instance.PlayNewBackgroundMusic(PauseModeMusic);
 		}
 	}
 }
