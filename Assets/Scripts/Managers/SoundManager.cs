@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Others;
+using UnityEngine;
 
 namespace Managers
 {
@@ -13,9 +14,9 @@ namespace Managers
         public static SoundManager Instance = null;
 
         /// <summary>
-        /// Drag a reference to the audio source which will play the sound effects.
+        /// PREFAB of SFX handler object.
         /// </summary>
-        public AudioSource SfxSource;
+        public GameObject SfxHandlerPrefab;
         
         /// <summary>
         /// Drag a reference to the audio source which will play the music.
@@ -31,6 +32,11 @@ namespace Managers
         /// The highest a sound effect will be randomly pitched.
         /// </summary>
         public float HighPitchRange = 1.02f;
+        
+        /// <summary>
+        /// Default pitch.
+        /// </summary>
+        public float DefaultPitchRange = 1f;
         
         /// <summary>
         /// Previous background music.
@@ -76,20 +82,24 @@ namespace Managers
         /// Used to play single sound clips. 
         /// </summary>
         /// <param name="clip">Audio clip to play.</param>
-        public void PlaySingle(AudioClip clip)
+        public void PlaySingleSfx(AudioClip clip)
         {
-            // Set the clip of our efxSource audio source to the clip passed in as a parameter.
-            SfxSource.clip = clip;
+            // Create an handler.
+            SfxHandler handler = Instantiate(SfxHandlerPrefab, Vector3.zero, Quaternion.identity).GetComponent<SfxHandler>();
 
-            // Play the clip.
-            SfxSource.Play();
+            handler.SfxSource.clip = clip;
+            handler.SfxSource.pitch = DefaultPitchRange;
+            handler.SfxSource.Play();
+            
+            // Destroy the handler after expiration.
+            Destroy(handler.gameObject, clip.length);
         }
 
         /// <summary>
         /// RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
         /// </summary>
         /// <param name="clips">Audio clip to play.</param>
-        public void RandomizeSfx(AudioClip[] clips)
+        public void PlayRandomizeSfx(AudioClip[] clips)
         {
             // Generate a random number between 0 and the length of our array of clips passed in.
             int randomIndex = Random.Range(0, clips.Length);
@@ -97,14 +107,15 @@ namespace Managers
             // Choose a random pitch to play back our clip at between our high and low pitch ranges.
             float randomPitch = Random.Range(LowPitchRange, HighPitchRange);
 
-            // Set the pitch of the audio source to the randomly chosen pitch.
-            SfxSource.pitch = randomPitch;
+            // Create an handler.
+            SfxHandler handler = Instantiate(SfxHandlerPrefab, Vector3.zero, Quaternion.identity).GetComponent<SfxHandler>();
 
-            // Set the clip to the clip at our randomly chosen index.
-            SfxSource.clip = clips[randomIndex];
-
-            // Play the clip.
-            SfxSource.Play();
+            handler.SfxSource.clip = clips[randomIndex];
+            handler.SfxSource.pitch = randomPitch;
+            handler.SfxSource.Play();
+            
+            // Destroy the handler after expiration.
+            Destroy(handler.gameObject, clips[randomIndex].length);
         }
 
         /// <summary>

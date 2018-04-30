@@ -184,7 +184,7 @@ namespace Items
 				ExplodeInDirection(originCell, new Vector3Int(Caster.BombExplosionDirection[i, 0], Caster.BombExplosionDirection[i, 1], Caster.BombExplosionDirection[i, 2]));
 			}
 			
-			SoundManager.Instance.RandomizeSfx(ExplosionSfx);
+			SoundManager.Instance.PlayRandomizeSfx(ExplosionSfx);
 		}
 
 		/// <summary>

@@ -36,6 +36,11 @@ namespace Items.SpecialItems
 		/// Throwing distance.
 		/// </summary>
 		private float _throwingDistance;
+
+		/// <summary>
+		/// Variable to save order value during throwing item.
+		/// </summary>
+		private int _originalOrderLayer;
 		
 		// Use this for initialization
 		protected virtual void Start()
@@ -66,6 +71,9 @@ namespace Items.SpecialItems
 			_throwingSpeed = speed;
 			_throwingDistance = Vector3.Distance(transform.position, _throwingPosition);
 			transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+			
+			_originalOrderLayer = GetComponent<SpriteRenderer>().sortingOrder;
+			GetComponent<SpriteRenderer>().sortingOrder = 25; // higher than ghost & players.
 		}
 
 		/// <summary>
@@ -105,6 +113,7 @@ namespace Items.SpecialItems
 				);
 				GetComponent<ItemLevitationEffect>().enabled = true;
 				GetComponent<CircleCollider2D>().enabled = true;
+				GetComponent<SpriteRenderer>().sortingOrder = _originalOrderLayer;
 			}
 		}
 	}

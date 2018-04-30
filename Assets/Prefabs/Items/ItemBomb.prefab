@@ -80,6 +80,7 @@ MonoBehaviour:
     type: 2}
   ExplosionSfx:
   - {fileID: 8300000, guid: 6d6bf0f516f7c9741867a8abbbc2cb34, type: 3}
+  - {fileID: 8300000, guid: 7bc703a46e163744c9806e8b33cd4483, type: 3}
 --- !u!212 &212803701123302480
 SpriteRenderer:
   m_ObjectHideFlags: 1

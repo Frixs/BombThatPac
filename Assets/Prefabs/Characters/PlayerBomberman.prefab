@@ -119,6 +119,11 @@ MonoBehaviour:
   IsDeath: 0
   IsRespawnable: 1
   HasSwappedDirection: 0
+  SpawnSfx:
+  - {fileID: 8300000, guid: ddca1d4ae8d817349bd71f0a91a4e17d, type: 3}
+  - {fileID: 8300000, guid: 9c909c327a1c98741b182209cbf6df21, type: 3}
+  DeathSfx:
+  - {fileID: 8300000, guid: c973d1705dcd34a48aa8f3f8abd40c8f, type: 3}
   PlayerManagerReference:
     CharacterInstance: {fileID: 0}
     PlayerName: 

@@ -98,6 +98,9 @@ MonoBehaviour:
   IsDeath: 0
   IsRespawnable: 1
   HasSwappedDirection: 0
+  SpawnSfx: []
+  DeathSfx:
+  - {fileID: 8300000, guid: 833e74dbc627f924bb61c898d5e30950, type: 3}
   SpriteEyesUp: {fileID: 21300000, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesLeft: {fileID: 21300002, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}

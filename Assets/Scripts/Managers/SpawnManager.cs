@@ -129,6 +129,8 @@ namespace Managers
             
             // Spawn animation.
             SpawnAnimationAtPosition(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
+            
+            SoundManager.Instance.PlayRandomizeSfx(toRespawn.GetComponent<Character>().SpawnSfx);
 
             // If it is Player, set invulnerability on respawn.
             if (toRespawn is Player)

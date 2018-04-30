@@ -83,7 +83,7 @@ namespace Characters
         /// <summary>
         /// Sound on collect item.
         /// </summary>
-        [Header("Music Settings")] public AudioClip[] CollectItemSfx;
+        [Header("Special Music Settings")] public AudioClip[] CollectItemSfx;
         
         /// <summary>
         /// Lets say which section of player controls the character should use.
@@ -133,7 +133,7 @@ namespace Characters
                 PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);
                 Destroy(other.gameObject);
                 
-                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
+                SoundManager.Instance.PlayRandomizeSfx(CollectItemSfx);
             }
             // CHERRY.
             else if (other.gameObject.CompareTag("Cherry"))
@@ -145,7 +145,7 @@ namespace Characters
                 
                 Destroy(other.gameObject);
                 
-                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
+                SoundManager.Instance.PlayRandomizeSfx(CollectItemSfx);
             }
             // SPECIAL ITEM.
             else if (other.gameObject.CompareTag("SpecialItem"))
@@ -153,7 +153,7 @@ namespace Characters
                 PlayerManagerReference.PlayerPanelReference.PlayerInventory.AddItem(this, other.GetComponent<SpecialItem>());
                 Destroy(other.gameObject);
                 
-                SoundManager.Instance.RandomizeSfx(CollectItemSfx);
+                SoundManager.Instance.PlayRandomizeSfx(CollectItemSfx);
             }
         }
 
@@ -311,6 +311,8 @@ namespace Characters
             
             // Spawn death particles.
             SpawnManager.Instance.SpawnAnimationAtPosition(_deathAnimPrefab, transform.position, Quaternion.identity);
+            
+            SoundManager.Instance.PlayRandomizeSfx(DeathSfx);
 
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been killed by character: [{1}]!", Name, attacker.Name);

@@ -88,6 +88,16 @@ namespace Characters
         [HideInInspector] public bool HasSwappedDirection = false;
 
         /// <summary>
+        /// Sound on spawn.
+        /// </summary>
+        [Header("Music Settings")] public AudioClip[] SpawnSfx;
+        
+        /// <summary>
+        /// Sound on death.
+        /// </summary>
+        public AudioClip[] DeathSfx;
+
+        /// <summary>
         /// Check if character is in some event animation.
         /// </summary>
         private bool _isEventAnimation = false;

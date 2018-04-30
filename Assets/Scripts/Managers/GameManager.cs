@@ -96,7 +96,20 @@ namespace Managers
         /// This is the default frightened background music on the game.
         /// </summary>
         public AudioClip FrightenedModeMusic;
+        
+        /// <summary>
+        /// Initialization SFX for frightened mode.
+        /// </summary>
+        public AudioClip FrightenedModeMusicInitSfx;
+        
+        /// <summary>
+        /// End SFX for frightened mode.
+        /// </summary>
+        public AudioClip FrightenedModeMusicEndSfx;
 
+        /// <summary>
+        /// Check if game is currently in frightened mode.
+        /// </summary>
         [HideInInspector] public bool IsFrightenedModeUp;
         
         /// <summary>

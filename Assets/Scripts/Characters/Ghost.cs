@@ -232,6 +232,8 @@ namespace Characters
 			CurrentMode = Mode.Consumed; // We are not using ChangeMode method because we don't want to record previous mode.
 			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
 			
+			SoundManager.Instance.PlayRandomizeSfx(DeathSfx);
+			
 			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] ghost has been killed by character: [{1}]!", Name, attacker.Name);
 		}
 
@@ -345,7 +347,11 @@ namespace Characters
 					
 					// Start playing game music loop.
 					if (GameManager.Instance.IsFrightenedModeUp)
+					{
 						SoundManager.Instance.PlayPreviousBackgroundMusic(true);
+						SoundManager.Instance.PlaySingleSfx(GameManager.Instance.FrightenedModeMusicEndSfx);
+					}
+
 					GameManager.Instance.IsFrightenedModeUp = false;
 					
 					ChangeMode(_previousMode);
@@ -418,7 +424,11 @@ namespace Characters
 			
 			// Start playing game music loop.
 			if (!GameManager.Instance.IsFrightenedModeUp)
+			{
 				SoundManager.Instance.PlayNewBackgroundMusic(GameManager.Instance.FrightenedModeMusic);
+				SoundManager.Instance.PlaySingleSfx(GameManager.Instance.FrightenedModeMusicInitSfx);
+			}
+
 			GameManager.Instance.IsFrightenedModeUp = true;
 		}
 		
