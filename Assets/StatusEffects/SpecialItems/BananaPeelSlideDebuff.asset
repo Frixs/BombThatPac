@@ -21,3 +21,5 @@ MonoBehaviour:
   StartActivationDelay: 0
   RepeatTime: 0
   SlideSpeed: 2.5
+  StunAnimationPrefab: {fileID: 1071466392684834, guid: 6f14119e0e48c2541a2a8971433831ce,
+    type: 2}

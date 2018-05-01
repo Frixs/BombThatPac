@@ -8,6 +8,11 @@ namespace StatusEffects
 {
 	public class ImmobileSlide : StatusEffect
 	{
+		/// <summary>
+		/// Reference to be able to despawn animation of stun.
+		/// </summary>
+		private GameObject _animationToDespawnInTheEnd;
+		
 		public ImmobileSlide(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
 		}
@@ -16,13 +21,15 @@ namespace StatusEffects
 		{
 			Target.DisableActions();
 			Target.MyRigidBody.AddForce(Target.transform.forward.normalized * ((ScriptableImmobileSlide) Data).SlideSpeed);
-			Target.GetComponent<SpriteRenderer>().color = new Color(1f, 0.4f, 0.4f);
+			
+			_animationToDespawnInTheEnd = SpawnManager.Instance.SpawnFollowingAnimationLoop(((ScriptableImmobileSlide) Data).StunAnimationPrefab, Target.gameObject, Vector3.zero, Quaternion.identity);
 		}
 
 		protected override void End()
 		{
+			SpawnManager.Instance.DespawnAnimation(_animationToDespawnInTheEnd);
+			
 			Target.EnableActions();
-			Target.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
 		}
 
 		protected override void Repeat()
