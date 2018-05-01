@@ -59,5 +59,21 @@ namespace Characters.Effects
             _appliedOffset = Offset != Vector3.zero ? Offset : _offsetDefault;
             _shadow.transform.localPosition = _appliedOffset;
         }
+
+        /// <summary>
+        /// Unhide shoadw.
+        /// </summary>
+        public void TurnOn()
+        {
+            _shadow.SetActive(true);
+        }
+
+        /// <summary>
+        ///  Hide shadow.
+        /// </summary>
+        public void TurnOff()
+        {
+            _shadow.SetActive(false);
+        }
     }
 }

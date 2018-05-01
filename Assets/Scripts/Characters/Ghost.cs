@@ -1,4 +1,5 @@
 ﻿using System;
+using Characters.Effects;
 using Managers;
 using StatusEffects.Scriptable;
 using UnityEngine;
@@ -227,6 +228,9 @@ namespace Characters
 			CurrentMode = Mode.Consumed; // We are not using ChangeMode method because we don't want to record previous mode.
 			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
 			
+			// Turn off shadows.
+			GetComponent<BlobShadowEffect>().TurnOff();
+			
 			SoundManager.Instance.PlayRandomizeSfx(DeathSfx);
 			
 			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] ghost has been killed by character: [{1}]!", Name, attacker.Name);
@@ -240,6 +244,9 @@ namespace Characters
 			IsInvulnearable = true;
 			CurrentMode = Mode.Consumed;
 			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
+			
+			// Turn off shadows.
+			GetComponent<BlobShadowEffect>().TurnOff();
 			
 			Debug.unityLogger.LogFormat(LogType.Log, "[{0}] ghost has been force killed!", Name);
 		}
@@ -282,6 +289,9 @@ namespace Characters
 					IsInvulnearable = false;
 					
 					StatusEffectManager.Instance.RemoveStatusEffect(this, null, _consumedMoveSpeedStatusEffect, false, StatusEffectManager.RemoveMethod.RemoveTheFirst);
+					
+					// Turn on shadows.
+					GetComponent<BlobShadowEffect>().TurnOn();
 					
 					if (!IsRespawnable)
 						Destroy(this);

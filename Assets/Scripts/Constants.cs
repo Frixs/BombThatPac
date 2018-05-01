@@ -67,12 +67,12 @@ public static class Constants
     /// <summary>
     /// This const says how many cells the bomb will be pushed when the caster of the bomb push the bomb in the current direction.
     /// </summary>
-    public const int BombRollDistance = 2;
+    public const int BombRollDistance = 4;
  
     /// <summary>
     /// Speed of a rolling bomb.
     /// </summary>
-    public const float BombRollSpeed = 3.0f;
+    public const float BombRollSpeed = 4.0f;
  
     /// <summary>
     /// Delayed explosion after rolling a bomb.
