@@ -112,6 +112,8 @@ MonoBehaviour:
   IsDeath: 0
   IsRespawnable: 1
   HasSwappedDirection: 0
+  SpawnSfx: []
+  DeathSfx: []
 --- !u!212 &212459503690641154
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -145,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 22
   m_Sprite: {fileID: 21300000, guid: 56bd40eed1235e1489f2f58ace78e116, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

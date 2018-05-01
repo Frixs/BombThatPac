@@ -56,6 +56,7 @@ namespace Characters.Effects
 
         private void LateUpdate()
         {
+            _appliedOffset = Offset != Vector3.zero ? Offset : _offsetDefault;
             _shadow.transform.localPosition = _appliedOffset;
         }
     }

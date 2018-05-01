@@ -33,16 +33,6 @@ namespace Characters
 		/// First target position till leaving the ghost house.
 		/// </summary>
 		public abstract Transform StartTargetPosition { get; set; }
-		
-		/// <summary>
-		/// Reference to frightened animation controller.
-		/// </summary>
-		protected RuntimeAnimatorController AnimationControllerFrightenedBlue;
-		
-		/// <summary>
-		/// Reference to frightened animation controller.
-		/// </summary>
-		protected RuntimeAnimatorController AnimationControllerFrightenedWhite;
 
 		/// <summary>
 		/// Sprite for eyes texture when ghost is death and it is moving back to its ghost house.
@@ -67,14 +57,19 @@ namespace Characters
 		[Header("Settings")] public bool IsInGhostHouse;
 
 		/// <summary>
-		/// Reference to animation controller of frightened mode BLUE.
+		/// Offset of the ghost.
 		/// </summary>
-		[SerializeField] private RuntimeAnimatorController _frightenedBlue;
+		[SerializeField] private Vector3 _rendererOffset;
 		
 		/// <summary>
-		/// Reference to animation controller of frightened mode WHITE.
+		/// Reference to frightened animation controller.
 		/// </summary>
-		[SerializeField] private RuntimeAnimatorController _frightenedWhite;
+		[SerializeField] protected RuntimeAnimatorController AnimationControllerFrightenedBlue;
+		
+		/// <summary>
+		/// Reference to frightened animation controller.
+		/// </summary>
+		[SerializeField] protected RuntimeAnimatorController AnimationControllerFrightenedWhite;
 		
 		/// <summary>
 		/// Default value of 'IsInGhostHouse' set in inicialization.
@@ -147,6 +142,7 @@ namespace Characters
 		{
 			HasEnabledActions = false;
 			_isInGhostHouseDefaultVal = IsInGhostHouse;
+			transform.localPosition += _rendererOffset;
 			
 			// Get position of the ghost.
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.localPosition);
@@ -170,7 +166,7 @@ namespace Characters
 		protected override void Update()
 		{
 			ModeUpdate();
-
+			
 			base.Update();
 		}
 		
@@ -193,8 +189,10 @@ namespace Characters
 			}
 			else if (CurrentMode == Mode.Frightened)
 			{
-				if (MyAnimator.runtimeAnimatorController != AnimationControllerFrightenedBlue)
+				if (MyAnimator.runtimeAnimatorController != AnimationControllerFrightenedBlue && MyAnimator.runtimeAnimatorController != AnimationControllerFrightenedWhite)
 					MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
+				
+				base.HandleAnimationLayers();
 			}
 			else if (CurrentMode == Mode.Consumed)
 			{
@@ -274,7 +272,7 @@ namespace Characters
 			{
 				_currentCell = _targetCell;
 
-				transform.localPosition = _currentCell;
+				transform.localPosition = _currentCell + _rendererOffset;
 					
 				// portal code
 				
@@ -561,7 +559,7 @@ namespace Characters
 			
 			for (int i = 0; i < GameManager.Instance.Players.Length; i++)
 			{
-				currentDistance = Vector3.Distance(gameObject.transform.position, GameManager.Instance.Players[i].PlayerComponent.transform.position);
+				currentDistance = Vector3.Distance(transform.position, GameManager.Instance.Players[i].PlayerComponent.transform.position);
 				if (currentDistance < shortestDistance)
 				{
 					closestPlayer = GameManager.Instance.Players[i].PlayerComponent;
@@ -578,8 +576,8 @@ namespace Characters
 		/// <returns>TRUE: The ghost reached the target location.</returns>
 		private bool OverShotTarget()
 		{
-			float cellToTarget = Vector3.Distance(_previousCell, _targetCell);
-			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell);
+			float cellToTarget = Vector3.Distance(_previousCell + _rendererOffset, _targetCell + _rendererOffset);
+			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell + _rendererOffset);
 
 			return cellToSelf > cellToTarget;
 		}

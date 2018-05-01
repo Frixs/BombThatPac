@@ -25,7 +25,7 @@ namespace StatusEffects
 			_animationReference = SpawnManager.Instance.SpawnFollowingAnimationLoop(
 				((ScriptableSwapControls) Data).AnimationPrefab, 
 				Target.gameObject, 
-				new Vector3(0f, 0.8f, 0f), 
+				new Vector3(0.25f, 1.3f, 0f), 
 				Quaternion.identity
 			);
 		}

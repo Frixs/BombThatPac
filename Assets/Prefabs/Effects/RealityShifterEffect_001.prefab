@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834747269969280}
   - component: {fileID: 212985139322201926}
+  - component: {fileID: 95952510304801568}
   m_Layer: 0
   m_Name: RealityShifterEffect_001
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95952510304801568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119188915125492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b243fafe7f3d9a248a9e72e25a27983a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212985139322201926
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 95fa1e3a9c5982c44b107b98b304692a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dab94fde3f563e4ea7ed41664447b2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

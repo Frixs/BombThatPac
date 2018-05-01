@@ -77,8 +77,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
-  m_Size: {x: 0.5, y: 0.5}
+  m_Offset: {x: 0, y: -0.2}
+  m_Size: {x: 0.99, y: 0.99}
   m_Direction: 0
 --- !u!95 &95442204627684884
 Animator:
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: -0.55, z: 0}
   ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
   ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &212224063605262326

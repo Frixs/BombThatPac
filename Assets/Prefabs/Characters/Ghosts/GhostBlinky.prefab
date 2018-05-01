@@ -56,8 +56,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4, y: 0.8}
+  m_Offset: {x: 0, y: -0.2}
+  m_Size: {x: 0.6, y: 0.79}
   m_Direction: 0
 --- !u!95 &95998818476818124
 Animator:
@@ -106,8 +106,11 @@ MonoBehaviour:
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesRight: {fileID: 21300006, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   IsInGhostHouse: 0
-  _frightenedBlue: {fileID: 9100000, guid: e588db0fb7dfd5d46b8b8c6af936002c, type: 2}
-  _frightenedWhite: {fileID: 9100000, guid: 2fd963d155ef9d64ebd62539b46fa2fa, type: 2}
+  _rendererOffset: {x: 0, y: 0.2, z: 0}
+  AnimationControllerFrightenedBlue: {fileID: 9100000, guid: e588db0fb7dfd5d46b8b8c6af936002c,
+    type: 2}
+  AnimationControllerFrightenedWhite: {fileID: 9100000, guid: 2fd963d155ef9d64ebd62539b46fa2fa,
+    type: 2}
   _frightenedMoveSpeedStatusEffect: {fileID: 11400000, guid: 5f242309af0c84b4abfa5ab572480861,
     type: 2}
   _consumedMoveSpeedStatusEffect: {fileID: 11400000, guid: 8acb0f8fb9273d24f949be1b68b25a3b,
@@ -123,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: -0.65, z: 0}
   ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
   ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &212935284096361576

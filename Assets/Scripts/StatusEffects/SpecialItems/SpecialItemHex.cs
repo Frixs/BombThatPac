@@ -1,4 +1,5 @@
 ﻿using Characters;
+using Characters.Effects;
 using Managers;
 using StatusEffects.Scriptable;
 using StatusEffects.Scriptable.SpecialItems;
@@ -27,6 +28,11 @@ namespace StatusEffects.SpecialItems
 		/// Mouse collider offset of the new form.
 		/// </summary>
 		private Vector2 _mouseColliderOffset = new Vector2(0f, -0.25f);
+
+		/// <summary>
+		/// Reference to go back to default shadow offset.
+		/// </summary>
+		private Vector3 _defaultShadowOffset;
 		
 		public SpecialItemHex(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
@@ -46,6 +52,8 @@ namespace StatusEffects.SpecialItems
 			_defaultColliderOffset = Target.GetColliderOffset();
 			Target.SetColliderSize(_mouseColliderSize.x, _mouseColliderSize.y);
 			Target.SetColliderOffset(_mouseColliderOffset.x, _mouseColliderOffset.y);
+			_defaultShadowOffset = Target.GetComponent<BlobShadowEffect>().Offset; 
+			Target.GetComponent<BlobShadowEffect>().Offset = new Vector3(0f, -0.4f, 0f);
 			
 			// Add movespeed.
 			Target.MoveSpeed += ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
@@ -63,6 +71,7 @@ namespace StatusEffects.SpecialItems
 			Target.MyAnimator.runtimeAnimatorController = Target.AnimationControllerDefault;
 			Target.SetColliderSize(_defaultColliderSize.x, _defaultColliderSize.y);
 			Target.SetColliderOffset(_defaultColliderOffset.x, _defaultColliderOffset.y);
+			Target.GetComponent<BlobShadowEffect>().Offset = _defaultShadowOffset;
 			
 			// Return movespeed.
 			Target.MoveSpeed -= ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
