@@ -150,17 +150,17 @@ public static class Constants
     /// <summary>
     /// Release Pinky ghost from its house.
     /// </summary>
-    public const float GhostPinkyReleaseTimer = 5.0f;
+    public const float GhostPinkyReleaseTimer = 0.0f;
     
     /// <summary>
     /// Release Inky ghost from its house.
     /// </summary>
-    public const float GhostInkyReleaseTimer = 14.0f;
+    public const float GhostInkyReleaseTimer = 0.1f;
     
     /// <summary>
     /// Release Clyde ghost from its house.
     /// </summary>
-    public const float GhostClydeReleaseTimer = 21.0f;
+    public const float GhostClydeReleaseTimer = 0.2f;
     
     /// <summary>
     /// Pinky targets its target X cells ahead of target's direction.

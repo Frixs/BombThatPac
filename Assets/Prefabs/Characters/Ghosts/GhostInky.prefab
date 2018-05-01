@@ -57,7 +57,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.4, y: 0.8}
   m_Direction: 0
 --- !u!95 &95998818476818124
 Animator:
@@ -68,7 +68,7 @@ Animator:
   m_GameObject: {fileID: 1861575854465322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f046f731e92f47d49baf2fc39c20c353, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -106,14 +106,12 @@ MonoBehaviour:
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesRight: {fileID: 21300006, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   IsInGhostHouse: 1
+  _frightenedBlue: {fileID: 9100000, guid: e588db0fb7dfd5d46b8b8c6af936002c, type: 2}
+  _frightenedWhite: {fileID: 9100000, guid: 2fd963d155ef9d64ebd62539b46fa2fa, type: 2}
   _frightenedMoveSpeedStatusEffect: {fileID: 11400000, guid: 5f242309af0c84b4abfa5ab572480861,
     type: 2}
   _consumedMoveSpeedStatusEffect: {fileID: 11400000, guid: 8acb0f8fb9273d24f949be1b68b25a3b,
     type: 2}
-  FrightenedBlueSprite: {fileID: 21300000, guid: ee8f045da70ee584385f61127c5452ad,
-    type: 3}
-  FrightenedWhiteSprite: {fileID: 21300002, guid: ee8f045da70ee584385f61127c5452ad,
-    type: 3}
 --- !u!114 &114303544631755202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,12 +160,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300004, guid: 16b3f1e8de6014b429ceaf050f1071ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7da0e6cac1359646964a1195737d664, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.764, y: 0.824}
+  m_Size: {x: 0.3984375, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

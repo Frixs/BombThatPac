@@ -65,6 +65,16 @@ namespace Characters
 		/// Checks if ghost is still in ghost house.
 		/// </summary>
 		[Header("Settings")] public bool IsInGhostHouse;
+
+		/// <summary>
+		/// Reference to animation controller of frightened mode BLUE.
+		/// </summary>
+		[SerializeField] private RuntimeAnimatorController _frightenedBlue;
+		
+		/// <summary>
+		/// Reference to animation controller of frightened mode WHITE.
+		/// </summary>
+		[SerializeField] private RuntimeAnimatorController _frightenedWhite;
 		
 		/// <summary>
 		/// Default value of 'IsInGhostHouse' set in inicialization.
@@ -131,18 +141,10 @@ namespace Characters
 		/// Scriptable status effect for consumed mode as move speed.
 		/// </summary>
 		[SerializeField] private ScriptableStatusEffect _consumedMoveSpeedStatusEffect;
-
-		// TODO Remove these 3 variables after making animations for the ghosts.
-		private Sprite _defaultSprite;
-		public Sprite FrightenedBlueSprite;
-		public Sprite FrightenedWhiteSprite;
 		
 		// Use this for initialization
 		protected override void Start()
 		{
-			// TODO Remove this line after making animations for the ghosts.
-			_defaultSprite = GetComponent<SpriteRenderer>().sprite;
-			
 			HasEnabledActions = false;
 			_isInGhostHouseDefaultVal = IsInGhostHouse;
 			
@@ -182,17 +184,12 @@ namespace Characters
 		
 		protected override void HandleAnimationLayers()
 		{
-			// TODO Add animations and remove static sprites.
 			if (CurrentMode != Mode.Frightened && CurrentMode != Mode.Consumed)
 			{
 				if (MyAnimator.runtimeAnimatorController != AnimationControllerDefault)
 					MyAnimator.runtimeAnimatorController = AnimationControllerDefault;
 
-				if (GetComponent<SpriteRenderer>().sprite != _defaultSprite)
-					GetComponent<SpriteRenderer>().sprite = _defaultSprite;
-
-				// TODO uncomment this line after adding ghost animations.
-				//base.HandleAnimationLayers();
+				base.HandleAnimationLayers();
 			}
 			else if (CurrentMode == Mode.Frightened)
 			{
@@ -369,17 +366,11 @@ namespace Characters
 						{
 							MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
 							_frightenedModeIsWhite = false;
-							
-							// TODO remove this line after adding animations.
-							GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
 						}
 						else // Go to white.
 						{
 							MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedWhite;
 							_frightenedModeIsWhite = true;
-							
-							// TODO remove this line after adding animations.
-							GetComponent<SpriteRenderer>().sprite = FrightenedWhiteSprite;
 						}
 					}
 				}
@@ -418,9 +409,6 @@ namespace Characters
 			
 			if (CurrentMode != Mode.Consumed)
 				ChangeMode(Mode.Frightened);
-			
-			if (GetComponent<SpriteRenderer>().sprite != FrightenedBlueSprite)
-				GetComponent<SpriteRenderer>().sprite = FrightenedBlueSprite;
 			
 			// Start playing game music loop.
 			if (!GameManager.Instance.IsFrightenedModeUp)
