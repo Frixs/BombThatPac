@@ -271,7 +271,10 @@ namespace Items
 		        if ((component = hitColliders[i].GetComponent<Ghost>()) != null)
 		        {
 			        if (((Ghost) component).CurrentMode == Ghost.Mode.Frightened)
+			        {
 				        ((Ghost) component).Kill(caster);
+			        }
+
 			        if (((Ghost) component).CurrentMode != Ghost.Mode.Frightened && ((Ghost) component).CurrentMode != Ghost.Mode.Consumed)
 			        	StatusEffectManager.Instance.ApplyStatusEffect((Ghost) component, Caster, GhostBombStatusEffect);
 		        }

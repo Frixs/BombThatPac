@@ -1,6 +1,5 @@
 ﻿using Characters;
 using Managers;
-using UI.Gameplay;
 using UnityEngine;
 
 namespace Special
@@ -13,16 +12,7 @@ namespace Special
             
             if ((component = other.gameObject.GetComponent<Player>()) != null && GameManager.Instance.PossiblePlayerWinner != null && ((Player) component).Identifier == GameManager.Instance.PossiblePlayerWinner.Identifier)
             {
-                Time.timeScale = 0f;
-                GameManager.Instance.IsGamePaused = true;
-                UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
-                UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + GameManager.Instance.PossiblePlayerWinner.Identifier;
-
-                for (int i = 0; i < GameManager.Instance.Players.Length; i++)
-                {
-                    Destroy(GameManager.Instance.Players[i].PlayerPanelReference.gameObject);
-                    GameManager.Instance.Players[i].PlayerPanelReference = null;
-                }
+                GameManager.Instance.EndTheGame();
             }
         }
     }

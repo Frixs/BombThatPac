@@ -105,6 +105,26 @@ namespace Characters
         /// </summary>
         [HideInInspector] public bool CanPlantBombs;
 
+        /// <summary>
+        /// Stats: Player kill count in the round.
+        /// </summary>
+        [HideInInspector] public int PlayerKillCount;
+        
+        /// <summary>
+        /// Stats: Ghost kill count in the round.
+        /// </summary>
+        [HideInInspector] public int GhostKillCount;
+        
+        /// <summary>
+        /// Stats: Deathcount in the round.
+        /// </summary>
+        [HideInInspector] public int DeathCount;
+        
+        /// <summary>
+        /// Stats: Item collect count in the round.
+        /// </summary>
+        [HideInInspector] public int ItemCollectCount;
+
         // Use this for initialization
         protected override void Start()
         {
@@ -150,6 +170,8 @@ namespace Characters
             // SPECIAL ITEM.
             else if (other.gameObject.CompareTag("SpecialItem"))
             {
+                ItemCollectCount++;
+                
                 PlayerManagerReference.PlayerPanelReference.PlayerInventory.AddItem(this, other.GetComponent<SpecialItem>());
                 Destroy(other.gameObject);
                 
@@ -308,6 +330,10 @@ namespace Characters
                 SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints, _spawnAnimPrefab);
 
             DropFragments();
+
+            DeathCount++;
+            if (attacker is Player && attacker.Identifier != Identifier)
+                ((Player) attacker).PlayerKillCount++;
             
             // Spawn death particles.
             SpawnManager.Instance.SpawnAnimationAtPosition(_deathAnimPrefab, transform.position, Quaternion.identity);

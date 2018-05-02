@@ -1,6 +1,7 @@
 ﻿using Cameras;
 using Characters;
 using Special;
+using UI.Gameplay;
 using UnityEngine;
 
 namespace Managers
@@ -369,6 +370,23 @@ namespace Managers
 
             // These are the targets the camera should follow.
             CameraControl.Targets = targets;
+        }
+
+        /// <summary>
+        /// End the game and show scoreboard with winner player statistics.
+        /// </summary>
+        public void EndTheGame()
+        {
+            Time.timeScale = 0f;
+            IsGamePaused = true;
+            UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
+            UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + PossiblePlayerWinner.Identifier;
+            
+            for (int i = 0; i < Players.Length; i++)
+            {
+                Destroy(Players[i].PlayerPanelReference.gameObject);
+                Players[i].PlayerPanelReference = null;
+            }
         }
     }
 

@@ -228,6 +228,11 @@ namespace Characters
 			CurrentMode = Mode.Consumed; // We are not using ChangeMode method because we don't want to record previous mode.
 			StatusEffectManager.Instance.ApplyStatusEffect(this, null, _consumedMoveSpeedStatusEffect);
 			
+			if (attacker is Player)
+			{
+				((Player) attacker).GhostKillCount++;
+			}
+
 			// Turn off shadows.
 			GetComponent<BlobShadowEffect>().TurnOff();
 			
