@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Managers
@@ -14,33 +14,31 @@ namespace Managers
 		/// <summary>
 		/// Dictionary with all hotkeys.
 		/// </summary>
-		public Dictionary<string, Dictionary<string, KeyCode>> Hotkeys;
+		public Dictionary<string, Dictionary<InputButtonType, string>> Hotkeys;
 
 		// On script enable.
 		void OnEnable()
 		{
 			// Set up all hotkeys.
-			Hotkeys = new Dictionary<string, Dictionary<string, KeyCode>>() {
+			Hotkeys = new Dictionary<string, Dictionary<InputButtonType, string>>() {
 				{
-					"Player1", new Dictionary<string, KeyCode>() {
-						{ "MoveUp", 		KeyCode.W },
-						{ "MoveLeft",		KeyCode.A },
-						{ "MoveDown",		KeyCode.S },
-						{ "MoveRight",		KeyCode.D },
-						{ "Action",			KeyCode.Space },
-						{ "SpecialAction",	KeyCode.R },
-						{ "CollectItem",	KeyCode.F },
+					"Player1", new Dictionary<InputButtonType, string>() {
+						{ InputButtonType.MoveUp, 		InputNameHandler.MoveUp },
+						{ InputButtonType.MoveLeft,		InputNameHandler.MoveLeft },
+						{ InputButtonType.MoveDown,		InputNameHandler.MoveDown },
+						{ InputButtonType.MoveRight,	InputNameHandler.MoveRight },
+						{ InputButtonType.Bomb,			InputNameHandler.Bomb },
+						{ InputButtonType.UseItem,		InputNameHandler.UseItem },
 					}
 				},
 				{
-					"Player2", new Dictionary<string, KeyCode>() {
-						{ "MoveUp", 		KeyCode.UpArrow },
-						{ "MoveLeft",		KeyCode.LeftArrow },
-						{ "MoveDown",		KeyCode.DownArrow },
-						{ "MoveRight",		KeyCode.RightArrow },
-						{ "Action",			KeyCode.Return },
-						{ "SpecialAction",	KeyCode.L },
-						{ "CollectItem",	KeyCode.RightControl },
+					"Player2", new Dictionary<InputButtonType, string>() {
+						{ InputButtonType.MoveUp, 		InputNameHandler.MoveUpP2 },
+						{ InputButtonType.MoveLeft,		InputNameHandler.MoveLeftP2 },
+						{ InputButtonType.MoveDown,		InputNameHandler.MoveDownP2 },
+						{ InputButtonType.MoveRight,	InputNameHandler.MoveRightP2 },
+						{ InputButtonType.Bomb,			InputNameHandler.BombP2 },
+						{ InputButtonType.UseItem,		InputNameHandler.UseItemP2 },
 					}
 				},
 			};
@@ -80,17 +78,52 @@ namespace Managers
 		/// Get KeyCode by the section and name of the hotkey.
 		/// </summary>
 		/// <param name="section">Secion name.</param>
-		/// <param name="hotkeyName">Hotkey name.</param>
+		/// <param name="hotkeyName">Hotkey enum.</param>
 		/// <returns></returns>
-		public KeyCode GetButtonKeyCode(string section, string hotkeyName)
+		public string GetButton(string section, InputButtonType hotkeyName)
 		{
 			if (!Hotkeys.ContainsKey(section) || !Hotkeys[section].ContainsKey(hotkeyName))
 			{
 				Debug.unityLogger.LogFormat(LogType.Error, "No KeyCode for hotkey: {0} from the section: {1}!", hotkeyName, section);
-				return KeyCode.None;
+				return string.Empty;
 			}
 
 			return Hotkeys[section][hotkeyName];
 		}
+	}
+
+	/// <summary>
+	/// This class handle all string references to input set in Unity input manager.
+	/// </summary>
+	public static class InputNameHandler
+	{
+		// Player 1.
+		public const string MoveUp = "Move Up";
+		public const string MoveDown = "Move Down";
+		public const string MoveLeft = "Move Left";
+		public const string MoveRight = "Move Right";
+		public const string Bomb = "Bomb";
+		public const string UseItem = "Use Item";
+		
+		// Player 2.
+		public const string MoveUpP2 = "Move Up (Player 2)";
+		public const string MoveDownP2 = "Move Down (Player 2)";
+		public const string MoveLeftP2 = "Move Left (Player 2)";
+		public const string MoveRightP2 = "Move Right (Player 2)";
+		public const string BombP2 = "Bomb (Player 2)";
+		public const string UseItemP2 = "Use Item (Player 2)";
+	}
+
+	/// <summary>
+	/// Type of the buttons.
+	/// </summary>
+	public enum InputButtonType
+	{
+		MoveUp,
+		MoveDown,
+		MoveLeft,
+		MoveRight,
+		Bomb,
+		UseItem,
 	}
 }

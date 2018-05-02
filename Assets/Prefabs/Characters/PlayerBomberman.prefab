@@ -119,6 +119,7 @@ MonoBehaviour:
   IsDeath: 0
   IsRespawnable: 1
   HasSwappedDirection: 0
+  RendererOffset: {x: 0, y: -0.2, z: 0}
   SpawnSfx:
   - {fileID: 8300000, guid: ddca1d4ae8d817349bd71f0a91a4e17d, type: 3}
   - {fileID: 8300000, guid: 9c909c327a1c98741b182209cbf6df21, type: 3}
@@ -150,6 +151,10 @@ MonoBehaviour:
   BombDeployCounter: 0
   FragmentCounter: 0
   CanPlantBombs: 0
+  PlayerKillCount: 0
+  GhostKillCount: 0
+  DeathCount: 0
+  ItemCollectCount: 0
 --- !u!114 &114951234373389756
 MonoBehaviour:
   m_ObjectHideFlags: 1

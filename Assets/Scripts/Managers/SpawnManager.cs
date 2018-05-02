@@ -122,6 +122,11 @@ namespace Managers
             yield return new WaitForSeconds(delay);
 
             toRespawn.transform.position = positions[Random.Range(0, positions.Length)].position;
+            
+            // If it is Player, set invulnerability on respawn.
+            if (toRespawn is Player)
+                StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
+            
             toRespawn.gameObject.SetActive(true);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Character has been respawned!", toRespawn.GetComponent<Character>().Name);
 
@@ -131,10 +136,6 @@ namespace Managers
             SpawnAnimationAtPosition(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
             
             SoundManager.Instance.PlayRandomizeSfx(toRespawn.GetComponent<Character>().SpawnSfx);
-
-            // If it is Player, set invulnerability on respawn.
-            if (toRespawn is Player)
-                StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
         }
 
         /// <summary>

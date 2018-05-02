@@ -88,9 +88,14 @@ namespace Characters
         [HideInInspector] public bool HasSwappedDirection = false;
 
         /// <summary>
+        /// Offset of the ghost.
+        /// </summary>
+        [Header("CHAR: Settings")] [SerializeField] public Vector3 RendererOffset;
+        
+        /// <summary>
         /// Sound on spawn.
         /// </summary>
-        [Header("Music Settings")] public AudioClip[] SpawnSfx;
+        [Header("CHAR: Music Settings")] public AudioClip[] SpawnSfx;
         
         /// <summary>
         /// Sound on death.

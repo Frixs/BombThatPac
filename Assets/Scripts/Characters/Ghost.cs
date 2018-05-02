@@ -56,11 +56,6 @@ namespace Characters
 		/// Checks if ghost is still in ghost house.
 		/// </summary>
 		[Header("Settings")] public bool IsInGhostHouse;
-
-		/// <summary>
-		/// Offset of the ghost.
-		/// </summary>
-		[SerializeField] private Vector3 _rendererOffset;
 		
 		/// <summary>
 		/// Reference to frightened animation controller.
@@ -143,7 +138,7 @@ namespace Characters
 		{
 			HasEnabledActions = false;
 			_isInGhostHouseDefaultVal = IsInGhostHouse;
-			transform.localPosition += _rendererOffset;
+			transform.localPosition += RendererOffset;
 			
 			// Get position of the ghost.
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.localPosition);
@@ -284,7 +279,7 @@ namespace Characters
 			{
 				_currentCell = _targetCell;
 
-				transform.localPosition = _currentCell + _rendererOffset;
+				transform.localPosition = _currentCell + RendererOffset;
 					
 				// portal code
 				
@@ -591,8 +586,8 @@ namespace Characters
 		/// <returns>TRUE: The ghost reached the target location.</returns>
 		private bool OverShotTarget()
 		{
-			float cellToTarget = Vector3.Distance(_previousCell + _rendererOffset, _targetCell + _rendererOffset);
-			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell + _rendererOffset);
+			float cellToTarget = Vector3.Distance(_previousCell + RendererOffset, _targetCell + RendererOffset);
+			float cellToSelf = Vector3.Distance(transform.localPosition, _previousCell + RendererOffset);
 
 			return cellToSelf > cellToTarget;
 		}

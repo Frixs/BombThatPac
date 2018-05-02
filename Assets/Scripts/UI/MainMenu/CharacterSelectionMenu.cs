@@ -31,6 +31,34 @@ namespace UI.MainMenu
             PlayerManager.PlayerCharacterSelection[1] = _characterSkinList[1];
         }
 
+        private void Update()
+        {
+            if (Input.GetButtonDown(InputManager.Instance.GetButton("Player1", InputButtonType.MoveLeft)))
+            {
+                ChangeCharacterLeftButtonP1Event();
+            }
+            
+            if (Input.GetButtonDown(InputManager.Instance.GetButton("Player1", InputButtonType.MoveRight)))
+            {
+                ChangeCharacterRightButtonP1Event();
+            }
+            
+            if (Input.GetButtonDown(InputManager.Instance.GetButton("Player2", InputButtonType.MoveLeft)))
+            {
+                ChangeCharacterLeftButtonP2Event();
+            }
+            
+            if (Input.GetButtonDown(InputManager.Instance.GetButton("Player2", InputButtonType.MoveRight)))
+            {
+                ChangeCharacterRightButtonP2Event();
+            }
+            
+            if (Input.GetButtonDown(InputManager.Instance.GetButton("Player1", InputButtonType.Bomb)) || Input.GetButtonUp(InputManager.Instance.GetButton("Player2", InputButtonType.Bomb)))
+            {
+                StartButtonEvent();
+            }
+        }
+
         /// <summary>
         /// Button event method.
         /// </summary>

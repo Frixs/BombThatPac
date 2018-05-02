@@ -77,7 +77,7 @@ namespace Characters
         /// Scriptable asset of invulnerability status effect buff after respawn player.
         /// </summary>
         public ScriptableStatusEffect RespawnInvulStatusEffect => _respawnInvulStatusEffect;
-
+        
         [Header("Status Effects")] [SerializeField] private ScriptableStatusEffect _respawnInvulStatusEffect;
         
         /// <summary>
@@ -216,37 +216,32 @@ namespace Characters
             
             if (!HasEnabledActions || GameManager.Instance.IsGamePaused)
                 return;
-
-            if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveUp")))
+            
+            if (Input.GetButton(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.MoveUp)))
             {
                 Direction += Vector2.up;
             }
-            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveLeft")))
+            else if (Input.GetButton(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.MoveLeft)))
             {
                 Direction += Vector2.left;
             }
-            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveDown")))
+            else if (Input.GetButton(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.MoveDown)))
             {
                 Direction += Vector2.down;
             }
-            else if (Input.GetKey(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "MoveRight")))
+            else if (Input.GetButton(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.MoveRight)))
             {
                 Direction += Vector2.right;
             }
 
-            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "Action")))
+            if (Input.GetButtonDown(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.Bomb)))
             {
                 PlaceBomb();
             }
             
-            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "SpecialAction")))
+            if (Input.GetButtonDown(InputManager.Instance.GetButton(InputPlayerSection, InputButtonType.UseItem)))
             {
                 UseSpecialItem();
-            }
-            
-            if (Input.GetKeyDown(InputManager.Instance.GetButtonKeyCode(InputPlayerSection, "CollectItem")))
-            {
-                // Nothing.
             }
             
             Direction *= HasSwappedDirection ? -1 : 1;
@@ -263,7 +258,7 @@ namespace Characters
             if (!CanPlantBombs)
                 return;
 
-            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
+            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position + RendererOffset);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
             // Try to find if there is another bomb already planted.
@@ -305,7 +300,7 @@ namespace Characters
             if (FragmentCounter == 0)
                 return;
             
-            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position);
+            Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position + RendererOffset);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
 
             // TODO: There is no check if any fragments are already on the position.

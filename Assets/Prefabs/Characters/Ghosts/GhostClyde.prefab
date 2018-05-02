@@ -98,6 +98,7 @@ MonoBehaviour:
   IsDeath: 0
   IsRespawnable: 1
   HasSwappedDirection: 0
+  RendererOffset: {x: 0, y: 0.2, z: 0}
   SpawnSfx: []
   DeathSfx:
   - {fileID: 8300000, guid: 833e74dbc627f924bb61c898d5e30950, type: 3}
@@ -106,7 +107,6 @@ MonoBehaviour:
   SpriteEyesDown: {fileID: 21300004, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   SpriteEyesRight: {fileID: 21300006, guid: 2030dcd8bf48a9f4da330c81c8b858c7, type: 3}
   IsInGhostHouse: 1
-  _rendererOffset: {x: 0, y: 0.2, z: 0}
   AnimationControllerFrightenedBlue: {fileID: 9100000, guid: e588db0fb7dfd5d46b8b8c6af936002c,
     type: 2}
   AnimationControllerFrightenedWhite: {fileID: 9100000, guid: 2fd963d155ef9d64ebd62539b46fa2fa,
