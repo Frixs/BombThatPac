@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Managers;
+using TMPro;
 using UnityEngine;
 
 namespace UI
@@ -25,9 +26,21 @@ namespace UI
         /// </summary>
         [SerializeField] private TMP_ColorGradient _activeState;
         
+        /// <summary>
+        /// Sound on button click.
+        /// </summary>
+        [Header("Music Settings")] public AudioClip ButtonClickSfx;
+        
+        /// <summary>
+        /// Sound on button click.
+        /// </summary>
+        public AudioClip ButtonHoverSfx;
+        
         public void EventOnMouseEnter()
         {
             LabelText.colorGradientPreset = _hoverState;
+            
+            SoundManager.Instance.PlaySingleSfx(ButtonHoverSfx);
         }
 
         public void EventOnMouseExit()
@@ -43,6 +56,8 @@ namespace UI
         public void EventOnMouseKeyDown()
         {
             LabelText.colorGradientPreset = _activeState;
+            
+            SoundManager.Instance.PlaySingleSfx(ButtonClickSfx);
         }
     }
 }

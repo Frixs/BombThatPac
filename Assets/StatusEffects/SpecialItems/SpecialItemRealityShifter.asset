@@ -22,3 +22,4 @@ MonoBehaviour:
   RepeatTime: 0
   ApplicableStatusEffect: {fileID: 11400000, guid: f1add8a433bf01e43b0fd6e95efda35b,
     type: 2}
+  StartSfx: {fileID: 8300000, guid: b043f7702bcf1ce47bbcd8e9e78d02b3, type: 3}

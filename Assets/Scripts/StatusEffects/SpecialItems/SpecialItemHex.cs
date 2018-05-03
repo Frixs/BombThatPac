@@ -58,6 +58,9 @@ namespace StatusEffects.SpecialItems
 			// Add movespeed.
 			Target.MoveSpeed += ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
 			
+			// Play sound.
+			SoundManager.Instance.PlaySingleSfx(((ScriptableSpecialItemHex) Data).StartSfx);
+			
 			// Switch off bomb-planting.
 			((Player) Target).CanPlantBombs = false;
 		}
@@ -75,6 +78,9 @@ namespace StatusEffects.SpecialItems
 			
 			// Return movespeed.
 			Target.MoveSpeed -= ((ScriptableSpecialItemHex) Data).MoveSpeedIncrease;
+			
+			// Play sound.
+			SoundManager.Instance.PlaySingleSfx(((ScriptableSpecialItemHex) Data).EndSfx);
 			
 			// Switch on bomb-planting.
 			((Player) Target).CanPlantBombs = true;

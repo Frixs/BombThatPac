@@ -24,6 +24,9 @@ namespace StatusEffects.SpecialItems
                     ((ScriptableSpecialItemRealityShifter) Data).ApplicableStatusEffect
                 );
             }
+            
+            // Play sound.
+            SoundManager.Instance.PlaySingleSfx(((ScriptableSpecialItemRealityShifter) Data).StartSfx);
         }
 
         protected override void End()

@@ -11,6 +11,11 @@ namespace StatusEffects.Scriptable.SpecialItems
 		/// Status effect which will be applied as debuff.
 		/// </summary>
 		[Header("Effect Speciality")] public ScriptableSwapControls ApplicableStatusEffect;
+		
+		/// <summary>
+		/// Sound on start.
+		/// </summary>
+		public AudioClip StartSfx;
         
 		public override StatusEffect Initialize(Character target, Character caster)
 		{

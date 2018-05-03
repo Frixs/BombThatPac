@@ -20,3 +20,4 @@ MonoBehaviour:
   IsStackable: 0
   StartActivationDelay: 0
   RepeatTime: 0.1
+  StartSfx: {fileID: 8300000, guid: 1f789d5ec472c9a4c8aa768805ac8c1a, type: 3}

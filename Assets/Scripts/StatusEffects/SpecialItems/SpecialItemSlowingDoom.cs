@@ -24,6 +24,9 @@ namespace StatusEffects.SpecialItems
                     ((ScriptableSpecialItemSlowingDoom) Data).ApplicableStatusEffect
                 );
             }
+
+            // Play sound.
+            SoundManager.Instance.PlaySingleSfx(((ScriptableSpecialItemSlowingDoom) Data).StartSfx);
         }
 
         protected override void End()

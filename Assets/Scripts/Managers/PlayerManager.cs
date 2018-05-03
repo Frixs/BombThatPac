@@ -65,7 +65,7 @@ namespace Managers
             // Setup player's controls according to type of the game.
             switch (GameManager.Instance.CurrentGameType)
             {
-                case GameType.LOCAL:
+                case GameType.Local:
                     PlayerComponent.InputPlayerSection = "Player"+ (initOrderNumber + 1);
                     break;
             }

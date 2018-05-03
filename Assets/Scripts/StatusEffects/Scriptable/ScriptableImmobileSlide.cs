@@ -16,6 +16,11 @@ namespace StatusEffects.Scriptable
         /// </summary>
         public GameObject StunAnimationPrefab;
         
+        /// <summary>
+        /// Sound on start.
+        /// </summary>
+        public AudioClip StartSfx;
+        
         public override StatusEffect Initialize(Character target, Character caster)
         {
             return new ImmobileSlide(this, target, caster);

@@ -22,6 +22,16 @@ namespace StatusEffects.Scriptable.SpecialItems
 		/// </summary>
 		public float MoveSpeedIncrease;
 		
+		/// <summary>
+		/// Sound on start.
+		/// </summary>
+		public AudioClip StartSfx;
+		
+		/// <summary>
+		/// Sound on end.
+		/// </summary>
+		public AudioClip EndSfx;
+		
 		public override StatusEffect Initialize(Character target, Character caster)
 		{
 			return new SpecialItemHex(this, target, caster);

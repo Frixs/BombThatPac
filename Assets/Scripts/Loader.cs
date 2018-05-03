@@ -47,6 +47,8 @@ public class Loader : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
+        // Be sure time is not stopped. Only if we are in the game we want to handle time with GameManager.
+        if (GameManager.Instance == null)
+            Time.timeScale = 1f;
     }
 }

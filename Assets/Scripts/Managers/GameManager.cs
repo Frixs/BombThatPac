@@ -1,8 +1,13 @@
-﻿using Cameras;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using Cameras;
 using Characters;
 using Special;
 using UI.Gameplay;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Managers
 {
@@ -44,7 +49,12 @@ namespace Managers
         /// <summary>
         /// The last and the highest identifier of all spawned units or objects in a whole game.
         /// </summary>
-        public int MaxObjectIdentifier = 0;
+        [HideInInspector] public int MaxObjectIdentifier = 0;
+
+        /// <summary>
+        /// Initial countdown on the start game.
+        /// </summary>
+        private float _initialCountdown = Constants.GameStartCountdown;
 
         /// <summary>
         /// PREFAB of finish portal to be spawned at the end.
@@ -92,17 +102,17 @@ namespace Managers
         /// This is the default background music on the game.
         /// </summary>
         [Header("Music Settings")] public AudioClip GameModeMusic;
-        
+
         /// <summary>
         /// This is the default frightened background music on the game.
         /// </summary>
         public AudioClip FrightenedModeMusic;
-        
+
         /// <summary>
         /// Initialization SFX for frightened mode.
         /// </summary>
         public AudioClip FrightenedModeMusicInitSfx;
-        
+
         /// <summary>
         /// End SFX for frightened mode.
         /// </summary>
@@ -112,7 +122,7 @@ namespace Managers
         /// Check if game is currently in frightened mode.
         /// </summary>
         [HideInInspector] public bool IsFrightenedModeUp;
-        
+
         /// <summary>
         /// Which round the game is currently on.
         /// </summary>
@@ -149,6 +159,11 @@ namespace Managers
         [HideInInspector] public Player PossiblePlayerWinner;
 
         /// <summary>
+        /// Check if the game is currently in initial game countdown.
+        /// </summary>
+        [HideInInspector] public bool IsInInitialCountdown = false;
+
+        /// <summary>
         /// Currently opened finish portal reference.
         /// </summary>
         private FinishPortal _openedFinishPortal;
@@ -181,12 +196,11 @@ namespace Managers
             _endWait = new WaitForSeconds(EndDelay);
 
             SpawnAllUnits();
-            
+
             // Start playing game music loop.
             SoundManager.Instance.PlayNewBackgroundMusic(GameModeMusic);
 
-            // Once the players have been created and the camera is using them as targets, start the game.
-            //StartCoroutine(GameLoop());
+            StartInitialCountdown();
         }
 
         // Update is called once per frame
@@ -381,17 +395,66 @@ namespace Managers
             IsGamePaused = true;
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + PossiblePlayerWinner.Identifier;
-            
+
             for (int i = 0; i < Players.Length; i++)
             {
                 Destroy(Players[i].PlayerPanelReference.gameObject);
                 Players[i].PlayerPanelReference = null;
             }
         }
+
+        /// <summary>
+        /// Start initial coundown of the game.
+        /// </summary>
+        private void StartInitialCountdown()
+        {
+            IsInInitialCountdown = true;
+
+            StartCoroutine(InitialCountdownProgress(_initialCountdown));
+        }
+
+        /// <summary>
+        /// Progress the countdown during time is stopped.
+        /// </summary>
+        /// <param name="delay">Delay of the countdown.</param>
+        /// <returns>IEnumerator.</returns>
+        private IEnumerator InitialCountdownProgress(float delay)
+        {
+            const float howManyTimesCountdownShouldBeSlowed = 2f;
+            
+            Time.timeScale = 0f;
+            
+            float countdownTimer = 0f;
+            float previousTime = Time.realtimeSinceStartup;
+            
+            while (countdownTimer <= delay)
+            {
+                countdownTimer += (Time.realtimeSinceStartup - previousTime) / howManyTimesCountdownShouldBeSlowed;
+                previousTime = Time.realtimeSinceStartup;
+                
+                int countdown = (int) Math.Round(delay - countdownTimer);
+                
+                // Countdown text label.
+                UserInterfaceGameplayManager.Instance.CountdownMenuReference.CountdownText.text = (countdown > 0 ? "" + countdown : "START");
+                // Background alpha stairs.
+                UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color = new Color(
+                    UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color.r,
+                    UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color.g,
+                    UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color.b,
+                    countdown * (0.25f / (delay + 0.5f)) + 0.75f
+                );
+                
+                yield return 0;
+            }
+
+            UserInterfaceGameplayManager.Instance.CountdownMenuReference.gameObject.SetActive(false);
+            Time.timeScale = 1;
+            IsInInitialCountdown = false;
+        }
     }
 
     public enum GameType
     {
-        LOCAL
+        Local
     }
 }

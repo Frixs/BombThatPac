@@ -12,6 +12,11 @@ namespace StatusEffects.Scriptable.SpecialItems
         /// </summary>
         [Header("Effect Speciality")] public ScriptableMoveSpeedIncrease ApplicableStatusEffect;
         
+        /// <summary>
+        /// Sound on start.
+        /// </summary>
+        public AudioClip StartSfx;
+        
         public override StatusEffect Initialize(Character target, Character caster)
         {
             return new SpecialItemSlowingDoom(this, target, caster);

@@ -24,6 +24,11 @@ namespace UI.MainMenu
         /// All character preview skins for player selection.
         /// </summary>
         [SerializeField] private RuntimeAnimatorController[] _characterPreviewSkinList;
+        
+        /// <summary>
+        /// Sound on start click.
+        /// </summary>
+        [Header("Music Settings")] public AudioClip StartClickSfx;
 
         private void Start()
         {
@@ -64,6 +69,8 @@ namespace UI.MainMenu
         /// </summary>
         public void StartButtonEvent()
         {
+            SoundManager.Instance.PlaySingleSfx(StartClickSfx);
+            
             SceneLoadingManager.Instance.LoadScene(1);
         }
 

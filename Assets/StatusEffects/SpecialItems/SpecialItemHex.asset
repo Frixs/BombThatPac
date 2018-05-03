@@ -24,3 +24,5 @@ MonoBehaviour:
   ExplosionPrefab: {fileID: 1136395108647710, guid: fe823d746946e1b4db9b889c076233c5,
     type: 2}
   MoveSpeedIncrease: 3
+  StartSfx: {fileID: 8300000, guid: ab19791a1fe341b4da68a4a6829e0900, type: 3}
+  EndSfx: {fileID: 8300000, guid: 97a13d4bcb97d3f4c8fd4bfcfed87683, type: 3}

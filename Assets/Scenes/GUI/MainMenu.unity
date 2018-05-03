@@ -530,6 +530,16 @@ Prefab:
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 119356217}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcc89b0d802520441beb901b0cba970a, type: 2}
   m_IsPrefabParent: 0
@@ -709,6 +719,16 @@ Prefab:
       propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3, type: 2}
   m_IsPrefabParent: 0
@@ -878,6 +898,16 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114269893223028042, guid: cf506fdea8945654dad116f4e7efe156,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114269893223028042, guid: cf506fdea8945654dad116f4e7efe156,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf506fdea8945654dad116f4e7efe156, type: 2}
   m_IsPrefabParent: 0
@@ -1350,6 +1380,16 @@ Prefab:
       propertyPath: m_Name
       value: StartButton
       objectReference: {fileID: 0}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3, type: 2}
   m_IsPrefabParent: 0
@@ -1795,6 +1835,16 @@ Prefab:
       propertyPath: m_Navigation.m_Mode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcc89b0d802520441beb901b0cba970a, type: 2}
   m_IsPrefabParent: 0
@@ -2022,6 +2072,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0ba37d312000c5c428881fb91bd45b41, type: 2}
   - {fileID: 9100000, guid: 42ec9059874778d4daf4c95a3a3e3637, type: 2}
   - {fileID: 9100000, guid: f7b0824fa5e3ced448adf97a1e525eee, type: 2}
+  StartClickSfx: {fileID: 8300000, guid: fc9da9efba6b9c64591334574d0e491f, type: 3}
 --- !u!1001 &822439890
 Prefab:
   m_ObjectHideFlags: 0
@@ -2293,6 +2344,16 @@ Prefab:
       propertyPath: m_Transition
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114269893223028042, guid: fcc89b0d802520441beb901b0cba970a,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcc89b0d802520441beb901b0cba970a, type: 2}
   m_IsPrefabParent: 0
@@ -2603,6 +2664,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCharacterRightButtonP1Event
       objectReference: {fileID: 0}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3, type: 2}
   m_IsPrefabParent: 0
@@ -2782,6 +2853,16 @@ Prefab:
       propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3, type: 2}
   m_IsPrefabParent: 0
@@ -2941,6 +3022,16 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114269893223028042, guid: 635dda55197b92348bb9aa1a6f2799c3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114269893223028042, guid: 635dda55197b92348bb9aa1a6f2799c3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 635dda55197b92348bb9aa1a6f2799c3, type: 2}
   m_IsPrefabParent: 0
@@ -3206,6 +3297,16 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonClickSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+    - target: {fileID: 114865358456191718, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3,
+        type: 2}
+      propertyPath: ButtonHoverSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f04d611c7259eb4cbdd5f6ccf9316b3, type: 2}
   m_IsPrefabParent: 0

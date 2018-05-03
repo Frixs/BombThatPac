@@ -82,8 +82,12 @@ namespace Managers
         /// Used to play single sound clips. 
         /// </summary>
         /// <param name="clip">Audio clip to play.</param>
-        public void PlaySingleSfx(AudioClip clip)
+        /// <returns>GameObject which handle SFX.</returns>
+        public GameObject PlaySingleSfx(AudioClip clip)
         {
+            if (clip == null)
+                return null;
+            
             // Create an handler.
             SfxHandler handler = Instantiate(SfxHandlerPrefab, Vector3.zero, Quaternion.identity).GetComponent<SfxHandler>();
 
@@ -93,14 +97,20 @@ namespace Managers
             
             // Destroy the handler after expiration.
             Destroy(handler.gameObject, clip.length);
+            
+            return handler.gameObject;
         }
 
         /// <summary>
         /// RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
         /// </summary>
         /// <param name="clips">Audio clip to play.</param>
-        public void PlayRandomizeSfx(AudioClip[] clips)
+        /// <returns>GameObject which handle SFX.</returns>
+        public GameObject PlayRandomizeSfx(AudioClip[] clips)
         {
+            if (clips.Length == 0)
+                return null;
+            
             // Generate a random number between 0 and the length of our array of clips passed in.
             int randomIndex = Random.Range(0, clips.Length);
 
@@ -116,6 +126,18 @@ namespace Managers
             
             // Destroy the handler after expiration.
             Destroy(handler.gameObject, clips[randomIndex].length);
+
+            return handler.gameObject;
+        }
+
+        /// <summary>
+        /// Stop playing SFX.
+        /// </summary>
+        /// <param name="goSfx">GameObject which handle playing SFX.</param>
+        public void StopPlayingSfx(GameObject goSfx)
+        {
+            if (goSfx != null)
+                Destroy(goSfx);
         }
 
         /// <summary>

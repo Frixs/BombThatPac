@@ -5,7 +5,13 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - LabelText: {instanceID: 0}
+  - _normalState: {instanceID: 0}
+  - _hoverState: {instanceID: 0}
+  - _activeState: {instanceID: 0}
+  - ButtonClickSfx: {fileID: 8300000, guid: 57b09226147de7146ad22c26e82a7cb8, type: 3}
+  - ButtonHoverSfx: {fileID: 8300000, guid: 543e37195075b794b9573f152068b394, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

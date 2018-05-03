@@ -26,6 +26,11 @@ namespace UI.Gameplay
 		[SerializeField] public ScoreMenu ScoreMenuReference;
 		
 		/// <summary>
+		/// CountdownMenu reference.
+		/// </summary>
+		[SerializeField] public CountdownMenu CountdownMenuReference;
+		
+		/// <summary>
 		/// This music is playing if the pause menu is open.
 		/// </summary>
 		[Header("Music Settings")] public AudioClip PauseModeMusic;
@@ -57,7 +62,7 @@ namespace UI.Gameplay
 		// Update is called once per frame
 		void Update()
 		{
-			if (!GameManager.Instance.IsGamePaused && Input.GetKeyDown(KeyCode.Escape))
+			if (!GameManager.Instance.IsGamePaused && !GameManager.Instance.IsInInitialCountdown && Input.GetKeyDown(KeyCode.Escape))
 				PauseTheGame();
 		}
 
