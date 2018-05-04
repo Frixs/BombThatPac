@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Items;
 using Items.SpecialItems;
 using Managers;
 using StatusEffects;
 using StatusEffects.Scriptable;
+using UI.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -306,6 +308,12 @@ namespace Characters
             // TODO: There is no check if any fragments are already on the position.
             ItemFragment frag = Instantiate(_fragmentPrefab, cellCenterPos, Quaternion.identity).GetComponent<ItemFragment>();
             frag.Quantity = FragmentCounter;
+            
+            // Show message if it is more than X% of total fragment count.
+            if (FragmentCounter >= Math.Round(MapManager.Instance.TotalFragmentCount * .7f)) // 70% and more fragment drop will cause notification.
+            {
+                UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification(Name.ToUpper() + " LOST QUITE AMOUNT OF COINS!");
+            }
 
             FragmentCounter = 0;
             PlayerManagerReference.PlayerPanelReference.PlayerStats.UpdateFragmentCount(FragmentCounter);

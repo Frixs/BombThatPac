@@ -31,6 +31,11 @@ namespace UI.Gameplay
 		[SerializeField] public CountdownMenu CountdownMenuReference;
 		
 		/// <summary>
+		/// NotificationPanel reference.
+		/// </summary>
+		[SerializeField] public NotificationPanel NotificationPanelReference;
+		
+		/// <summary>
 		/// This music is playing if the pause menu is open.
 		/// </summary>
 		[Header("Music Settings")] public AudioClip PauseModeMusic;

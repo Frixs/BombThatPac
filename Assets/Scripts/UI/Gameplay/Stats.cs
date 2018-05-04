@@ -31,7 +31,7 @@ namespace UI.Gameplay
 		public void UpdateFragmentCount(int count)
 		{
 			Text fragCounter = GetComponentInChildren<Text>();
-			fragCounter.text = "Fragments: " + count;
+			fragCounter.text = "Coins: " + count;
 			
 			if (count >= MapManager.Instance.TotalFragmentCount)
 			{

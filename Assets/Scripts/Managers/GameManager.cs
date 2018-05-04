@@ -102,6 +102,11 @@ namespace Managers
         /// This is the default background music on the game.
         /// </summary>
         [Header("Music Settings")] public AudioClip GameModeMusic;
+        
+        /// <summary>
+        /// Score mode music background.
+        /// </summary>
+        public AudioClip ScoreModeMusic;
 
         /// <summary>
         /// This is the default frightened background music on the game.
@@ -225,6 +230,10 @@ namespace Managers
 
                 if (Players[i].PlayerComponent.FragmentCounter >= MapManager.Instance.TotalFragmentCount)
                 {
+                    // Show notification.
+                    if (PossiblePlayerWinner == null || PossiblePlayerWinner.Identifier != Players[i].PlayerComponent.Identifier)
+                        UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification(Players[i].PlayerComponent.Name.ToUpper() + " IS ALMOST A WINNER!");
+                    
                     HasAnyPlayerAllFragments = true;
                     PossiblePlayerWinner = Players[i].PlayerComponent;
 
@@ -395,6 +404,9 @@ namespace Managers
             IsGamePaused = true;
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + PossiblePlayerWinner.Identifier;
+            UserInterfaceGameplayManager.Instance.NotificationPanelReference.ForceOffNotification();
+            
+            SoundManager.Instance.PlayNewBackgroundMusic(ScoreModeMusic);
 
             for (int i = 0; i < Players.Length; i++)
             {
@@ -420,7 +432,7 @@ namespace Managers
         /// <returns>IEnumerator.</returns>
         private IEnumerator InitialCountdownProgress(int delay)
         {
-            const float howManyTimesCountdownShouldBeSlowed = 2f;
+            const float howManyTimesCountdownShouldBeSlowed = 1.5f;
             
             Time.timeScale = 0f;
             
@@ -459,6 +471,10 @@ namespace Managers
             UserInterfaceGameplayManager.Instance.CountdownMenuReference.gameObject.SetActive(false);
             Time.timeScale = 1;
             IsInInitialCountdown = false;
+            
+            // Show goal message.
+            yield return new WaitForSeconds(Constants.GoalNotificationDelay);
+            UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification("COLLECT ALL THE COINS!");
         }
     }
 

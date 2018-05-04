@@ -382,6 +382,14 @@ namespace Characters
 						}
 					}
 				}
+				else
+				{
+					if (_frightenedModeIsWhite) // Go to blue if frightened mode has been extended and the ghosts stay in white.
+					{
+						MyAnimator.runtimeAnimatorController = AnimationControllerFrightenedBlue;
+						_frightenedModeIsWhite = false;
+					}
+				}
 			}
 		}
 		

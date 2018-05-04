@@ -18,9 +18,14 @@ public static class Constants
     public const float PlayerDefaultMoveSpeed = 3.0f;
  
     /// <summary>
-    /// COuntdown on the start game.
+    /// Countdown on the start game.
     /// </summary>
     public const int GameStartCountdown = 4;
+ 
+    /// <summary>
+    /// Show goal of the game after this time as notification after game countdown.
+    /// </summary>
+    public const float GoalNotificationDelay = 1f;
  
     /*
      * BOMBERMAN
