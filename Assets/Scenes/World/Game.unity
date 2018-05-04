@@ -1652,7 +1652,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -1734,6 +1734,11 @@ Prefab:
         type: 2}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4739d1069d314d545a6fb9b4d63cbfd2, type: 2}
@@ -7058,7 +7063,6 @@ MonoBehaviour:
   StartDelay: 3
   EndDelay: 3
   MaxObjectIdentifier: 0
-  InitialCountdown: 5
   _finishPortalPrefab: {fileID: 1875920653071924, guid: cc5a61ea99ddec4428281a22afa2f6c9,
     type: 2}
   CameraControl: {fileID: 1251551102}

@@ -20,7 +20,7 @@ public static class Constants
     /// <summary>
     /// COuntdown on the start game.
     /// </summary>
-    public const float GameStartCountdown = 3.0f;
+    public const int GameStartCountdown = 4;
  
     /*
      * BOMBERMAN

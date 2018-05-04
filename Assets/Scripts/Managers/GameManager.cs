@@ -54,7 +54,7 @@ namespace Managers
         /// <summary>
         /// Initial countdown on the start game.
         /// </summary>
-        private float _initialCountdown = Constants.GameStartCountdown;
+        private int _initialCountdown = Constants.GameStartCountdown;
 
         /// <summary>
         /// PREFAB of finish portal to be spawned at the end.
@@ -418,7 +418,7 @@ namespace Managers
         /// </summary>
         /// <param name="delay">Delay of the countdown.</param>
         /// <returns>IEnumerator.</returns>
-        private IEnumerator InitialCountdownProgress(float delay)
+        private IEnumerator InitialCountdownProgress(int delay)
         {
             const float howManyTimesCountdownShouldBeSlowed = 2f;
             
@@ -433,9 +433,18 @@ namespace Managers
                 previousTime = Time.realtimeSinceStartup;
                 
                 int countdown = (int) Math.Round(delay - countdownTimer);
+
+                string textLabel = "";
+
+                if (countdown == delay)
+                    textLabel += "GET READY";
+                else if (countdown > 0)
+                    textLabel += countdown;
+                else
+                    textLabel += "START";
                 
                 // Countdown text label.
-                UserInterfaceGameplayManager.Instance.CountdownMenuReference.CountdownText.text = (countdown > 0 ? "" + countdown : "START");
+                UserInterfaceGameplayManager.Instance.CountdownMenuReference.CountdownText.text = textLabel;
                 // Background alpha stairs.
                 UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color = new Color(
                     UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color.r,

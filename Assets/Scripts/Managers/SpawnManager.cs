@@ -122,20 +122,22 @@ namespace Managers
             yield return new WaitForSeconds(delay);
 
             toRespawn.transform.position = positions[Random.Range(0, positions.Length)].position;
+
+            toRespawn.IsInvulnearable = true; // Make the target invulnerable despite receiving invulnerability as status effect. But we need to know it is invulnerable before set active.
+            
+            toRespawn.IsDeath = false;
+            toRespawn.gameObject.SetActive(true);
             
             // If it is Player, set invulnerability on respawn.
             if (toRespawn is Player)
                 StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
-            
-            toRespawn.gameObject.SetActive(true);
-            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Character has been respawned!", toRespawn.GetComponent<Character>().Name);
 
-            toRespawn.GetComponent<Character>().IsDeath = false;
-            
             // Spawn animation.
             SpawnAnimationAtPosition(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
-            
+
             SoundManager.Instance.PlayRandomizeSfx(toRespawn.GetComponent<Character>().SpawnSfx);
+
+            Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Character has been respawned!", toRespawn.GetComponent<Character>().Name);
         }
 
         /// <summary>
@@ -173,14 +175,14 @@ namespace Managers
                 Debug.unityLogger.Log(LogType.Error, "Missing parameters!");
                 return null;
             }
-            
+
             // Create an animation.
             GameObject anim = (GameObject) Instantiate(prefab, target.transform.position + additionalPositioning, animRotation);
             anim.transform.parent = target.transform;
 
             return anim;
         }
-        
+
         /// <summary>
         /// Despawn (Destroy) animation.
         /// </summary>
@@ -241,7 +243,7 @@ namespace Managers
                 Debug.unityLogger.LogFormat(LogType.Log, "[Spawner: {0}] There is no free spawn point to spawn new item.", ItemSpawner.name);
                 return;
             }
-            
+
             // Animate throwing item.
             Component component = null;
             if ((component = ItemSpawner.GetComponent<PacMan>()) != null)

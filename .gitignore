@@ -3,5 +3,7 @@ Temp/
 UnityPackageManager/
 obj/
 Library/*Cache/
+Library/Collab/
+Library/CurrentLayout.dwlt
 *.csproj
 *.sln
