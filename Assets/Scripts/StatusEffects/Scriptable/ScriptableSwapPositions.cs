@@ -12,11 +12,6 @@ namespace StatusEffects.Scriptable
 		[Header("Effect Speciality")] public float TeleportSpeed;
 		
 		/// <summary>
-		/// Particle above the head which says the teleport is comming.
-		/// </summary>
-		public GameObject DelayEffectPrefab;
-		
-		/// <summary>
 		/// First explosion on hide / before teleporting.
 		/// </summary>
 		public GameObject StartEffectExplosionPrefab;
@@ -30,11 +25,6 @@ namespace StatusEffects.Scriptable
 		/// End explosion after teleporting.
 		/// </summary>
 		public GameObject EndEffectExplosionPrefab;
-		
-		/// <summary>
-		/// Sound before teleporting.
-		/// </summary>
-		public AudioClip DelaySfx;
 		
 		/// <summary>
 		/// Sound on start.

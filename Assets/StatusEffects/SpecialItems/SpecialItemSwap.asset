@@ -14,11 +14,14 @@ MonoBehaviour:
   StatusEffectType: 2
   IsPermanent: 0
   Duration: 0
-  RemoveAtDeath: 0
+  RemoveAtDeath: 1
   OverwriteTheSameTypes: 0
   OverwriteTheSameEffects: 0
   IsStackable: 0
-  StartActivationDelay: 0
+  StartActivationDelay: 2
   RepeatTime: 0
   ApplicableStatusEffect: {fileID: 11400000, guid: 1819456d79da35c47913959ceb656187,
     type: 2}
+  DelayEffectPrefab: {fileID: 1837840215202068, guid: 0d050388363a7bf47af1028a48d9bad1,
+    type: 2}
+  DelaySfx: {fileID: 8300000, guid: baa38fb4c4fc1ec4a90eb2effd00c539, type: 3}

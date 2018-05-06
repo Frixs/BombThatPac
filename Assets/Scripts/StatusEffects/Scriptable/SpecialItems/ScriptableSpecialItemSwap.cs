@@ -12,6 +12,16 @@ namespace StatusEffects.Scriptable.SpecialItems
 		/// </summary>
 		[Header("Effect Speciality")] public ScriptableSwapPositions ApplicableStatusEffect;
 		
+		/// <summary>
+		/// Particle above the head which says the teleport is comming.
+		/// </summary>
+		public GameObject DelayEffectPrefab;
+		
+		/// <summary>
+		/// Sound before teleporting.
+		/// </summary>
+		public AudioClip DelaySfx;
+		
 		public override StatusEffect Initialize(Character target, Character caster)
 		{
 			return new SpecialItemSwap(this, target, caster);

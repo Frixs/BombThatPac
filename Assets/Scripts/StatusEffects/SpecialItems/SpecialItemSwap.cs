@@ -10,13 +10,20 @@ namespace StatusEffects.SpecialItems
 {
 	public class SpecialItemSwap : StatusEffect
 	{
+		private GameObject _delaySfx = null;
+		private GameObject _delayEffectTarget = null;
+		
 		public SpecialItemSwap(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
 		}
 
 		protected override void Delay()
 		{
-			throw new System.NotImplementedException();
+			// Spawn delay animation.
+			_delayEffectTarget = SpawnManager.Instance.SpawnFollowingAnimationLoop(((ScriptableSpecialItemSwap) Data).DelayEffectPrefab, Target.gameObject, Vector3.zero, Quaternion.identity);
+			
+			// Play sound.
+			_delaySfx = SoundManager.Instance.PlaySingleSfx(((ScriptableSpecialItemSwap) Data).DelaySfx);
 		}
 
 		protected override void Activate()
@@ -31,6 +38,8 @@ namespace StatusEffects.SpecialItems
 
 		protected override void End()
 		{
+			SoundManager.Instance.StopPlayingSfx(_delaySfx);
+			SpawnManager.Instance.DespawnAnimation(_delayEffectTarget);
 		}
 
 		protected override void Repeat()

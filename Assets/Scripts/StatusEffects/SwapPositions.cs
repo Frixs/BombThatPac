@@ -11,8 +11,6 @@ namespace StatusEffects
 		private GameObject _trailAnotherPlayer = null;
 		private Player _anotherPlayer = null;
 		private GameObject _trailSfx = null;
-		private GameObject _delaySfx = null;
-		private GameObject _delayEffectCaster = null;
 		
 		public SwapPositions(ScriptableStatusEffect data, Character target, Character caster) : base(data, target, caster)
 		{
@@ -20,18 +18,11 @@ namespace StatusEffects
 
 		protected override void Delay()
 		{
-			// Spawn delay animation.
-			_delayEffectCaster = SpawnManager.Instance.SpawnFollowingAnimationLoop(((ScriptableSwapPositions) Data).DelayEffectPrefab, Caster.gameObject, Vector3.zero, Quaternion.identity);
-			
-			// Play sound.
-			_delaySfx = SoundManager.Instance.PlaySingleSfx(((ScriptableSwapPositions) Data).DelaySfx);
+			throw new System.NotImplementedException();
 		}
 
 		protected override void Activate()
 		{
-			SoundManager.Instance.StopPlayingSfx(_delaySfx);
-			SpawnManager.Instance.DespawnAnimation(_delayEffectCaster);
-			
 			// Find random player to change position with.
 			float theLongestDistance = 0f;
 			foreach (PlayerManager pm in GameManager.Instance.Players)
@@ -52,12 +43,18 @@ namespace StatusEffects
 
 			// Check if the player exists.
 			if (_anotherPlayer == null)
+			{
+				RemoveThisStatusEffect();
 				return;
-			
+			}
+
 			// Check if the player is alive or is immune to status effects.
 			if (_anotherPlayer.IsDeath || _anotherPlayer.IsStatusEffectImmune)
+			{
+				RemoveThisStatusEffect();
 				return;
-			
+			}
+
 			// Spawn explosion animation.
 			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSwapPositions) Data).StartEffectExplosionPrefab, Caster.transform.position, Quaternion.identity);
 			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSwapPositions) Data).StartEffectExplosionPrefab, _anotherPlayer.transform.position, Quaternion.identity);
@@ -131,7 +128,18 @@ namespace StatusEffects
 				_anotherPlayer.gameObject.SetActive(true);
 				Caster.IsStatusEffectImmune = false;
 				_anotherPlayer.IsStatusEffectImmune = false;
+
+				RemoveThisStatusEffect();
 			}
+		}
+
+		/// <summary>
+		/// Removes this status effect.
+		/// </summary>
+		private void RemoveThisStatusEffect()
+		{
+			// Remove this status effect.
+			StatusEffectManager.Instance.RemoveStatusEffect(Target, null, Data, false, StatusEffectManager.RemoveMethod.RemoveAllOfTheSameType);
 		}
 	}
 }
