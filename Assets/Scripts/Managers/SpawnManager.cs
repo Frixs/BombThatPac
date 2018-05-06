@@ -133,7 +133,7 @@ namespace Managers
                 StatusEffectManager.Instance.ApplyStatusEffect(toRespawn, null, ((Player) toRespawn).RespawnInvulStatusEffect);
 
             // Spawn animation.
-            SpawnAnimationAtPosition(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
+            SpawnAnimationAtPositionWithExpiry(spawnAnimation, toRespawn.transform.position, Quaternion.identity);
 
             SoundManager.Instance.PlayRandomizeSfx(toRespawn.GetComponent<Character>().SpawnSfx);
 
@@ -141,23 +141,35 @@ namespace Managers
         }
 
         /// <summary>
+        /// Spawn animation prefab at the current position and delete it after expiration.
+        /// </summary>
+        /// <param name="prefab">Prefab with animation to spawn.</param>
+        /// <param name="animPosition">Position where to spawn the animation prefab.</param>
+        /// <param name="animRotation">Rotation of the animation.</param>
+        public void SpawnAnimationAtPositionWithExpiry(GameObject prefab, Vector3 animPosition, Quaternion animRotation)
+        {
+            GameObject anim = SpawnAnimationAtPosition(prefab, animPosition, animRotation);
+            // Destroy the animation after expiration.
+            Destroy(anim, prefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.Length);
+        }
+        
+        /// <summary>
         /// Spawn animation prefab at the current position.
         /// </summary>
         /// <param name="prefab">Prefab with animation to spawn.</param>
         /// <param name="animPosition">Position where to spawn the animation prefab.</param>
         /// <param name="animRotation">Rotation of the animation.</param>
-        public void SpawnAnimationAtPosition(GameObject prefab, Vector3 animPosition, Quaternion animRotation)
+        /// <returns>Return animation reference.</returns>
+        public GameObject SpawnAnimationAtPosition(GameObject prefab, Vector3 animPosition, Quaternion animRotation)
         {
             if (prefab == null)
             {
                 Debug.unityLogger.Log(LogType.Error, "There is missing prefab to be able to spawn that animation!");
-                return;
+                return null;
             }
 
             // Create an animation.
-            GameObject anim = (GameObject) Instantiate(prefab, animPosition, animRotation);
-            // Destroy the animation after expiration.
-            Destroy(anim, prefab.GetComponent<Animator>().runtimeAnimatorController.animationClips.Length);
+            return Instantiate(prefab, animPosition, animRotation);
         }
 
         /// <summary>

@@ -16,6 +16,11 @@ namespace StatusEffects
 		/// Start delay timer to activate status effect.
 		/// </summary>
 		private float _startDelayTimer;
+
+		/// <summary>
+		/// Check if delay already started (i.e. whole status effect started in this moment).
+		/// </summary>
+		private bool _isAlreadyDelayActivated;
 		
 		/// <summary>
 		/// Damage over time timer.
@@ -45,7 +50,7 @@ namespace StatusEffects
 		/// <summary>
 		/// Check if status effect already expired.
 		/// </summary>
-		public bool IsFinished => !Data.IsPermanent && _durationTimer <= 0f;
+		public bool IsFinished => !Data.IsPermanent && _durationTimer <= 0f && _isAlreadyActivated;
 
 		/// <summary>
 		/// Initialize the status effect via constructor.
@@ -62,7 +67,9 @@ namespace StatusEffects
 			_durationTimer = Data.Duration;
 			_startDelayTimer = Data.StartActivationDelay;
 			_repeatTimer = Data.RepeatTime;
+			
 			_isAlreadyActivated = false;
+			_isAlreadyDelayActivated = false;
 		}
 
 		/// <summary>
@@ -75,6 +82,11 @@ namespace StatusEffects
 			if (_startDelayTimer > 0f)
 			{
 				_startDelayTimer -= delta;
+				
+				if (!_isAlreadyDelayActivated)
+					Delay();
+				
+				_isAlreadyDelayActivated = true;
 				return;
 			}
 			
@@ -110,6 +122,11 @@ namespace StatusEffects
 			}
 		}
 
+		/// <summary>
+		/// Method to process some code when the status effect is delayed before activation.
+		/// </summary>
+		protected abstract void Delay();
+		
 		/// <summary>
 		/// Activate and start the status effect.
 		/// </summary>

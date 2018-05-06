@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c39d2797ebecdf41a268c6f2fc10292, type: 3}
+  m_Name: SpecialItemBombReplicator
+  m_EditorClassIdentifier: 
+  StatusEffectType: 0
+  IsPermanent: 0
+  Duration: 20
+  RemoveAtDeath: 0
+  OverwriteTheSameTypes: 0
+  OverwriteTheSameEffects: 0
+  IsStackable: 1
+  StartActivationDelay: 0
+  RepeatTime: 0
+  AdditionalBombs: 1
+  BuffEffectPrefab: {fileID: 1234011804569280, guid: 30f4873265ad90142b6cdf057795c2ed,
+    type: 2}
+  StartSfx: {fileID: 8300000, guid: c3fc2eefd42eada4e9e6372aae7cc269, type: 3}

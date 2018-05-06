@@ -13,6 +13,11 @@ namespace StatusEffects.SpecialItems
 		{
 		}
 
+		protected override void Delay()
+		{
+			throw new System.NotImplementedException();
+		}
+
 		protected override void Activate()
 		{
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(Target.transform.position);

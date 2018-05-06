@@ -236,7 +236,7 @@ namespace Items
                 MapManager.Instance.TilemapGameplay.SetTile(cell, null);
 	            
 	            // Create an explosion.
-	            SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
+	            SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(ExplosionPrefab, explosionPos, Quaternion.identity);
 	            
                 return false;
             }
@@ -281,7 +281,7 @@ namespace Items
 	        }
 
 	        // Create an explosion.
-	        SpawnManager.Instance.SpawnAnimationAtPosition(ExplosionPrefab, explosionPos, Quaternion.identity);
+	        SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(ExplosionPrefab, explosionPos, Quaternion.identity);
 	        
             return true;
         }

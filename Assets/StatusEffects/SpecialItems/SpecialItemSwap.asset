@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9323a6ee7411594983b6a53240658c5, type: 3}
+  m_Name: SpecialItemSwap
+  m_EditorClassIdentifier: 
+  StatusEffectType: 2
+  IsPermanent: 0
+  Duration: 0
+  RemoveAtDeath: 0
+  OverwriteTheSameTypes: 0
+  OverwriteTheSameEffects: 0
+  IsStackable: 0
+  StartActivationDelay: 0
+  RepeatTime: 0
+  ApplicableStatusEffect: {fileID: 11400000, guid: 1819456d79da35c47913959ceb656187,
+    type: 2}

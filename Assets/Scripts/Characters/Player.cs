@@ -339,7 +339,7 @@ namespace Characters
                 ((Player) attacker).PlayerKillCount++;
             
             // Spawn death particles.
-            SpawnManager.Instance.SpawnAnimationAtPosition(_deathAnimPrefab, transform.position, Quaternion.identity);
+            SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(_deathAnimPrefab, transform.position, Quaternion.identity);
             
             SoundManager.Instance.PlayRandomizeSfx(DeathSfx);
 

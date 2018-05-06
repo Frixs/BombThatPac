@@ -1,23 +1,21 @@
 fileFormatVersion: 2
-guid: 896181e63df517d45b7a7e24f3701fd4
-timeCreated: 1520801764
+guid: 68042175503428e429928de498efb20e
+timeCreated: 1525618008
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Explosion_TileSet_0
-    21300002: Explosion_TileSet_1
-    21300004: Explosion_TileSet_2
-    21300006: Explosion_TileSet_3
-    21300008: Explosion_TileSet_4
-    21300010: Explosion_TileSet_5
-    21300012: Explosion_TileSet_6
-    21300014: BombExplosion_TileSet_001_0
-    21300016: BombExplosion_TileSet_001_1
-    21300018: BombExplosion_TileSet_001_2
-    21300020: BombExplosion_TileSet_001_3
-    21300022: BombExplosion_TileSet_001_4
-    21300024: BombExplosion_TileSet_001_5
-    21300026: BombExplosion_TileSet_001_6
+    21300000: Swap_Delay_001_0
+    21300002: Swap_Delay_001_1
+    21300004: Swap_Delay_001_2
+    21300006: Swap_Delay_001_3
+    21300008: Swap_Delay_001_4
+    21300010: Swap_Delay_001_5
+    21300012: Swap_Delay_001_6
+    21300014: Swap_Delay_001_7
+    21300016: Swap_Delay_001_8
+    21300018: Swap_Delay_001_9
+    21300020: Swap_Delay_001_10
+    21300022: Swap_Delay_001_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -45,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -60,7 +58,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 121
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -90,17 +88,153 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BombExplosion_TileSet_001_0
+      name: Swap_Delay_001_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 363
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 363
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 363
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_4
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 242
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 242
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 121
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 121
+        width: 111
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Swap_Delay_001_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 111
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,13 +242,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BombExplosion_TileSet_001_1
+      name: Swap_Delay_001_10
       rect:
         serializedVersion: 2
-        x: 16
+        x: 111
         y: 0
-        width: 16
-        height: 16
+        width: 111
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,69 +256,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BombExplosion_TileSet_001_2
+      name: Swap_Delay_001_11
       rect:
         serializedVersion: 2
-        x: 32
+        x: 222
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: BombExplosion_TileSet_001_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: BombExplosion_TileSet_001_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: BombExplosion_TileSet_001_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: BombExplosion_TileSet_001_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
+        width: 111
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -11,6 +11,11 @@ namespace StatusEffects.SpecialItems
         {
         }
 
+        protected override void Delay()
+        {
+            throw new System.NotImplementedException();
+        }
+
         protected override void Activate()
         {
             for (int i = 0; i < GameManager.Instance.Players.Length; i++)

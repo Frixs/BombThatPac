@@ -9,15 +9,5 @@ namespace UI.Gameplay
         /// Reference to player panel.
         /// </summary>
         public PlayerPanel PlayerPanelReference;
-        
-        // Use this for initialization
-        void Start()
-        {
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        }
     }
 }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65da0ba1f616066428d7a0a8704385ba, type: 3}
+  m_Name: SwapPositions
+  m_EditorClassIdentifier: 
+  StatusEffectType: 0
+  IsPermanent: 1
+  Duration: 0
+  RemoveAtDeath: 1
+  OverwriteTheSameTypes: 0
+  OverwriteTheSameEffects: 0
+  IsStackable: 0
+  StartActivationDelay: 1
+  RepeatTime: 0.02
+  TeleportSpeed: 8
+  DelayEffectPrefab: {fileID: 1837840215202068, guid: 0d050388363a7bf47af1028a48d9bad1,
+    type: 2}
+  StartEffectExplosionPrefab: {fileID: 1101794200035006, guid: e0e015a953b36e549a74b8eeda4a9be6,
+    type: 2}
+  TrailPrefab: {fileID: 1097745716882546, guid: bef7537ef83bb004aaddd920a2e74cdc,
+    type: 2}
+  EndEffectExplosionPrefab: {fileID: 1101794200035006, guid: e0e015a953b36e549a74b8eeda4a9be6,
+    type: 2}
+  DelaySfx: {fileID: 8300000, guid: baa38fb4c4fc1ec4a90eb2effd00c539, type: 3}
+  StartSfx: {fileID: 8300000, guid: 0b64f63593f01fb41b983d7f3e4c5c33, type: 3}
+  TrailSfx: {fileID: 8300000, guid: ab476e73e21bb0647bbe0edd43e62a11, type: 3}
+  EndSfx: {fileID: 8300000, guid: 43809ddd4a172f04f8f7ce5ff3d00cbd, type: 3}

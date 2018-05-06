@@ -16,6 +16,11 @@ namespace StatusEffects
 		{
 		}
 
+		protected override void Delay()
+		{
+			throw new System.NotImplementedException();
+		}
+
 		protected override void Activate()
 		{
 			// Swap direction.

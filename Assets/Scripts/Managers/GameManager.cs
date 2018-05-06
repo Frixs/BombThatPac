@@ -306,7 +306,7 @@ namespace Managers
                 Players[i].Setup(i);
 
                 // Spawn animation.
-                SpawnManager.Instance.SpawnAnimationAtPosition(Players[i].PlayerComponent.InitSpawnAnimPrefab, MapManager.Instance.PlayerSpawnPoints[i].position, Quaternion.identity);
+                SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(Players[i].PlayerComponent.InitSpawnAnimPrefab, MapManager.Instance.PlayerSpawnPoints[i].position, Quaternion.identity);
             }
         }
 
@@ -433,7 +433,8 @@ namespace Managers
         private IEnumerator InitialCountdownProgress(int delay)
         {
             const float howManyTimesCountdownShouldBeSlowed = 1.5f;
-            
+
+            IsGamePaused = true;
             Time.timeScale = 0f;
             
             float countdownTimer = 0f;
@@ -471,6 +472,7 @@ namespace Managers
             UserInterfaceGameplayManager.Instance.CountdownMenuReference.gameObject.SetActive(false);
             Time.timeScale = 1;
             IsInInitialCountdown = false;
+            IsGamePaused = false;
             
             // Show goal message.
             yield return new WaitForSeconds(Constants.GoalNotificationDelay);

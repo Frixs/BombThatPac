@@ -21,6 +21,11 @@ namespace StatusEffects
 		{
 		}
 
+		protected override void Delay()
+		{
+			throw new System.NotImplementedException();
+		}
+
 		protected override void Activate() // TODO check if value is under zero. + end this efect if target dies. + animation speed too.
 		{
 			float speedPctChange = Target.MoveSpeed / 100f; // Get 1% of current move speed.

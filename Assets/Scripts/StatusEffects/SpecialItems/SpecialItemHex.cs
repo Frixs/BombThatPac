@@ -38,13 +38,18 @@ namespace StatusEffects.SpecialItems
 		{
 		}
 
+		protected override void Delay()
+		{
+			throw new System.NotImplementedException();
+		}
+
 		protected override void Activate()
 		{
 			// Aplly status effect immune form.
 			Target.IsStatusEffectImmune = true;
 			
 			// Create an morph explosion.
-			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
+			SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
 			
 			// Add mouse form.
 			Target.MyAnimator.runtimeAnimatorController = ((ScriptableSpecialItemHex) Data).MouseController;
@@ -68,7 +73,7 @@ namespace StatusEffects.SpecialItems
 		protected override void End()
 		{
 			// Create an morph explosion.
-			SpawnManager.Instance.SpawnAnimationAtPosition(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
+			SpawnManager.Instance.SpawnAnimationAtPositionWithExpiry(((ScriptableSpecialItemHex) Data).ExplosionPrefab, Target.transform.position, Quaternion.identity);
 			
 			// Return default character form.
 			Target.MyAnimator.runtimeAnimatorController = Target.AnimationControllerDefault;

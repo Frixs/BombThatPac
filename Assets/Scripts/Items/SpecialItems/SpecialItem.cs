@@ -73,7 +73,7 @@ namespace Items.SpecialItems
 			transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 			
 			_originalOrderLayer = GetComponent<SpriteRenderer>().sortingOrder;
-			GetComponent<SpriteRenderer>().sortingOrder = 25; // higher than ghost & players.
+			GetComponent<SpriteRenderer>().sortingOrder = 35; // higher than ghost & players & animations.
 		}
 
 		/// <summary>
