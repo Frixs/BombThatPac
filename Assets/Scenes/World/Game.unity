@@ -7453,6 +7453,7 @@ MonoBehaviour:
   _finishPortalPrefab: {fileID: 1875920653071924, guid: cc5a61ea99ddec4428281a22afa2f6c9,
     type: 2}
   CameraControl: {fileID: 1251551102}
+  _winnerAuraEffect: {fileID: 11400000, guid: 9a52ac68701d12a41a79955a7e1e4577, type: 2}
   PlayerPrefabs:
   - {fileID: 1808872423296922, guid: 2aef1125e20158a428e2364cf5a5339a, type: 2}
   Players:

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cameras;
 using Characters;
 using Special;
+using StatusEffects.Scriptable;
 using UI.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
@@ -67,9 +68,15 @@ namespace Managers
         [Header("Camera Settings")] public GameCameraControl CameraControl;
 
         /// <summary>
+        /// Effect which is applied on it during player has all the fragments.
+        /// </summary>
+        [Header("Player Settings")] [SerializeField]
+        private ScriptableAuraEffect _winnerAuraEffect;
+
+        /// <summary>
         /// Reference to the prefab the players will control.
         /// </summary>
-        [Header("Player Settings")] public GameObject[] PlayerPrefabs;
+        public GameObject[] PlayerPrefabs;
 
         /// <summary>
         /// A collection of managers for enabling and disabling different aspects of the tanks.
@@ -102,7 +109,7 @@ namespace Managers
         /// This is the default background music on the game.
         /// </summary>
         [Header("Music Settings")] public AudioClip GameModeMusic;
-        
+
         /// <summary>
         /// Score mode music background.
         /// </summary>
@@ -232,8 +239,13 @@ namespace Managers
                 {
                     // Show notification.
                     if (PossiblePlayerWinner == null || PossiblePlayerWinner.Identifier != Players[i].PlayerComponent.Identifier)
-                        UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification(Players[i].PlayerComponent.Name.ToUpper() + " IS ALMOST A WINNER!");
-                    
+                    {
+                        UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification("FIND PACMAN'S PORTAL, " + Players[i].PlayerComponent.Name.ToUpper() + "!");
+                        
+                        // Apply winner aura effect.
+                        StatusEffectManager.Instance.ApplyStatusEffect(Players[i].PlayerComponent, null, _winnerAuraEffect);
+                    }
+
                     HasAnyPlayerAllFragments = true;
                     PossiblePlayerWinner = Players[i].PlayerComponent;
 
@@ -405,7 +417,7 @@ namespace Managers
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
             UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + PossiblePlayerWinner.Identifier;
             UserInterfaceGameplayManager.Instance.NotificationPanelReference.ForceOffNotification();
-            
+
             SoundManager.Instance.PlayNewBackgroundMusic(ScoreModeMusic);
 
             for (int i = 0; i < Players.Length; i++)
@@ -436,15 +448,15 @@ namespace Managers
 
             IsGamePaused = true;
             Time.timeScale = 0f;
-            
+
             float countdownTimer = 0f;
             float previousTime = Time.realtimeSinceStartup;
-            
+
             while (countdownTimer <= delay)
             {
                 countdownTimer += (Time.realtimeSinceStartup - previousTime) / howManyTimesCountdownShouldBeSlowed;
                 previousTime = Time.realtimeSinceStartup;
-                
+
                 int countdown = (int) Math.Round(delay - countdownTimer);
 
                 string textLabel = "";
@@ -455,7 +467,7 @@ namespace Managers
                     textLabel += countdown;
                 else
                     textLabel += "START";
-                
+
                 // Countdown text label.
                 UserInterfaceGameplayManager.Instance.CountdownMenuReference.CountdownText.text = textLabel;
                 // Background alpha stairs.
@@ -465,7 +477,7 @@ namespace Managers
                     UserInterfaceGameplayManager.Instance.CountdownMenuReference.GetComponent<Image>().color.b,
                     countdown * (0.25f / (delay + 0.5f)) + 0.75f
                 );
-                
+
                 yield return 0;
             }
 
@@ -473,7 +485,7 @@ namespace Managers
             Time.timeScale = 1;
             IsInInitialCountdown = false;
             IsGamePaused = false;
-            
+
             // Show goal message.
             yield return new WaitForSeconds(Constants.GoalNotificationDelay);
             UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification("COLLECT ALL THE COINS!");

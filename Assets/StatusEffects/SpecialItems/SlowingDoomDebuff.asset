@@ -21,5 +21,5 @@ MonoBehaviour:
   StartActivationDelay: 0
   RepeatTime: 0
   SpeedIncrease: -1.5
-  AnimationPrefab: {fileID: 1934937476388120, guid: acbb91dfb3b04b747890bcad47f20cfd,
+  AnimationPrefab: {fileID: 1740423880971846, guid: 8f4e2c1eab4e76f44a265ddf42cf56d8,
     type: 2}

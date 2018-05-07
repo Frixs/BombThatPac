@@ -38,8 +38,8 @@ namespace UI.Gameplay
 			
 			if (count >= MapManager.Instance.TotalFragmentCount)
 			{
-				fragCounter.text = "Find a portal!";
-				GetComponent<Image>().color = new Color(0f, 255f, 0f, 1f);
+				fragCounter.text = "ALL";
+				GetComponent<Image>().color = new Color(0.417f, 0.929f, 0.184f, 1f);
 			}
 			else
 			{
