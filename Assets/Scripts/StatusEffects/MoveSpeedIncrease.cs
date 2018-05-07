@@ -53,7 +53,7 @@ namespace StatusEffects
 			
 			if (_animationReference != null)
 			{
-				SpawnManager.Instance.DespawnAnimation(_animationReference);
+				SpawnManager.Instance.DespawnAnimation(_animationReference, 0);
 			}
 		}
 

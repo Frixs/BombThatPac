@@ -199,9 +199,15 @@ namespace Managers
         /// Despawn (Destroy) animation.
         /// </summary>
         /// <param name="anim">Reference to gameobject animation.</param>
-        public void DespawnAnimation(GameObject anim)
+        /// <param name="delay">Delay after which the animation will be destroyed.</param>
+        public void DespawnAnimation(GameObject anim, float delay)
         {
-            if (anim != null)
+            if (anim == null)
+                return;
+            
+            if (delay > 0f)
+                Destroy(anim, delay);
+            else
                 Destroy(anim);
         }
 

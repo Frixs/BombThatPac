@@ -1676,7 +1676,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -1763,6 +1763,16 @@ Prefab:
         type: 2}
       propertyPath: m_textInfo.spaceCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
+        type: 2}
+      propertyPath: m_fontSizeBase
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4739d1069d314d545a6fb9b4d63cbfd2, type: 2}
@@ -1974,7 +1984,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -3314,7 +3324,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -5720,12 +5730,12 @@ Prefab:
     - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114036205198649220, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -6716,7 +6726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dampTime: 0.6
-  _screenEdgeBuffer: 7
+  _screenEdgeBuffer: 5
   _minSize: 7
   Targets:
   - {fileID: 0}
@@ -7448,13 +7458,13 @@ MonoBehaviour:
   Players:
   - CharacterInstance: {fileID: 0}
     PlayerName: Player1
-    PlayerColor: {r: 0.09385811, g: 0.5056319, b: 0.9117647, a: 1}
+    PlayerColor: {r: 0.5514706, g: 0.49875647, b: 0.50420964, a: 1}
     PlayerComponent: {fileID: 0}
     PlayerPanelReference: {fileID: 0}
     Wins: 0
   - CharacterInstance: {fileID: 0}
     PlayerName: Player2
-    PlayerColor: {r: 0.86764705, g: 0.15311417, b: 0.15311417, a: 1}
+    PlayerColor: {r: 0.5529412, g: 0.49803922, b: 0.5058824, a: 1}
     PlayerComponent: {fileID: 0}
     PlayerPanelReference: {fileID: 0}
     Wins: 0

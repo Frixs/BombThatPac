@@ -109,8 +109,9 @@ namespace StatusEffects
 				SoundManager.Instance.StopPlayingSfx(_trailSfx);
 				SoundManager.Instance.PlaySingleSfx(((ScriptableSwapPositions) Data).EndSfx);
 				
-				SpawnManager.Instance.DespawnAnimation(_trailCaster);
-				SpawnManager.Instance.DespawnAnimation(_trailAnotherPlayer);
+				// Despawn trail animation when the trail animation ends.
+				SpawnManager.Instance.DespawnAnimation(_trailCaster, _trailCaster.GetComponent<ParticleSystem>().main.duration);
+				SpawnManager.Instance.DespawnAnimation(_trailAnotherPlayer, _trailAnotherPlayer.GetComponent<ParticleSystem>().main.duration);
 				
 				Caster.transform.position = _trailCaster.transform.position;
 				_anotherPlayer.transform.position = _trailAnotherPlayer.transform.position;

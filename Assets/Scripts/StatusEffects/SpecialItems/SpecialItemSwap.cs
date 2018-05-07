@@ -39,7 +39,7 @@ namespace StatusEffects.SpecialItems
 		protected override void End()
 		{
 			SoundManager.Instance.StopPlayingSfx(_delaySfx);
-			SpawnManager.Instance.DespawnAnimation(_delayEffectTarget);
+			SpawnManager.Instance.DespawnAnimation(_delayEffectTarget, 0);
 		}
 
 		protected override void Repeat()

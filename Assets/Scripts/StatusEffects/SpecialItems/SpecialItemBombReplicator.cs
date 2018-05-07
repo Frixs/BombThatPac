@@ -56,7 +56,7 @@ namespace StatusEffects.SpecialItems
 
             // Despawn animation.
             if (Int32.Parse(_followingAnimation.GetComponent<SmokeEffect>().TextLabel.text) == 0) // 0 is default value in the text label.
-                SpawnManager.Instance.DespawnAnimation(_followingAnimation);
+                SpawnManager.Instance.DespawnAnimation(_followingAnimation, 0);
         }
 
         protected override void Repeat()

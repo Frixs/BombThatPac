@@ -40,7 +40,7 @@ namespace StatusEffects
 
 		protected override void End()
 		{
-			SpawnManager.Instance.DespawnAnimation(_animationToDespawnInTheEnd);
+			SpawnManager.Instance.DespawnAnimation(_animationToDespawnInTheEnd, 0);
 			
 			// Stop playing the SFX.
 			SoundManager.Instance.StopPlayingSfx(_sfxToDespawnInTheEnd);

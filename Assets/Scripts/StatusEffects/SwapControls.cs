@@ -41,7 +41,7 @@ namespace StatusEffects
 			Target.HasSwappedDirection = false;
 			
 			// Despawn animation.
-			SpawnManager.Instance.DespawnAnimation(_animationReference);
+			SpawnManager.Instance.DespawnAnimation(_animationReference, 0);
 		}
 
 		protected override void Repeat()

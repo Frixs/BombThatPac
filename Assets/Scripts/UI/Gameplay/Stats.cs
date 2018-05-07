@@ -12,7 +12,7 @@ namespace UI.Gameplay
 		/// </summary>
 		public PlayerPanel PlayerPanelReference;
 
-		private int _totalFragCount;
+		private Color _defaultScoreLabelColor = Color.clear;
 		
 		// Use this for initialization
 		void Start ()
@@ -30,17 +30,20 @@ namespace UI.Gameplay
 		/// <param name="count">Number to update.</param>
 		public void UpdateFragmentCount(int count)
 		{
+			if (_defaultScoreLabelColor == Color.clear)
+				_defaultScoreLabelColor = GetComponent<Image>().color;
+			
 			Text fragCounter = GetComponentInChildren<Text>();
-			fragCounter.text = "Coins: " + count;
+			fragCounter.text = "" + count;
 			
 			if (count >= MapManager.Instance.TotalFragmentCount)
 			{
 				fragCounter.text = "Find a portal!";
-				GetComponent<Image>().color = new Color(0f, 255f, 0f, 0.6f);
+				GetComponent<Image>().color = new Color(0f, 255f, 0f, 1f);
 			}
 			else
 			{
-				GetComponent<Image>().color = new Color(216f, 216f, 216f, 0.6f);
+				GetComponent<Image>().color = _defaultScoreLabelColor;
 			}
 		}
 	}
