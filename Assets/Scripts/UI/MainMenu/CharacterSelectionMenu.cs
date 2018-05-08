@@ -88,7 +88,7 @@ namespace UI.MainMenu
         /// </summary>
         private void StartTheGame()
         {
-            SceneLoadingManager.Instance.LoadScene(1);
+            SceneLoadingManager.Instance.LoadScene(2);
         }
 
         /// <summary>
