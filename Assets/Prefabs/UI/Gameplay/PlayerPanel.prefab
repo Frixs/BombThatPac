@@ -481,7 +481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DEATH
+  m_Text: DEAD
 --- !u!114 &114613222858358960
 MonoBehaviour:
   m_ObjectHideFlags: 1

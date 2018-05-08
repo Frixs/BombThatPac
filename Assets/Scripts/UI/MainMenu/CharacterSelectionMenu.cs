@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using System.Collections;
+using Managers;
 using UnityEngine;
 
 namespace UI.MainMenu
@@ -14,6 +15,11 @@ namespace UI.MainMenu
         /// Reference to character animation preview of player 2.
         /// </summary>
         [SerializeField] private GameObject _previewP2;
+
+        /// <summary>
+        /// Background reference in main menu.
+        /// </summary>
+        [SerializeField] private MainMenuBackground _backgroundMainMenu;
         
         /// <summary>
         /// All character skins for players.
@@ -69,9 +75,28 @@ namespace UI.MainMenu
         /// </summary>
         public void StartButtonEvent()
         {
-            SoundManager.Instance.PlaySingleSfx(StartClickSfx);
+            _backgroundMainMenu.StartAnimation();
+
+            Invoke("PlayStartSound", 0.8f);
+            Invoke("StartTheGame", 1.5f);
             
+            gameObject.SetActive(false);
+        }
+
+        /// <summary>
+        /// Start the game.
+        /// </summary>
+        private void StartTheGame()
+        {
             SceneLoadingManager.Instance.LoadScene(1);
+        }
+
+        /// <summary>
+        /// Play start sound.
+        /// </summary>
+        private void PlayStartSound()
+        {
+            SoundManager.Instance.PlaySingleSfx(StartClickSfx);
         }
 
         /// <summary>

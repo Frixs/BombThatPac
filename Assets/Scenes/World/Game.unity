@@ -5680,12 +5680,12 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 127.005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -5705,7 +5705,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -5715,7 +5715,7 @@ Prefab:
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224152962453045202, guid: 4739d1069d314d545a6fb9b4d63cbfd2,
         type: 2}
@@ -13518,14 +13518,6 @@ CompositeCollider2D:
         Y: 10000000
       - X: 30000000
         Y: 10000000
-    - - X: 10000000
-        Y: 20000000
-      - X: 0
-        Y: 20000000
-      - X: 0
-        Y: 10000000
-      - X: 10000000
-        Y: 10000000
     - - X: -10000000
         Y: 20000000
       - X: -20000000
@@ -13533,6 +13525,14 @@ CompositeCollider2D:
       - X: -20000000
         Y: 10000000
       - X: -10000000
+        Y: 10000000
+    - - X: 10000000
+        Y: 20000000
+      - X: 0
+        Y: 20000000
+      - X: 0
+        Y: 10000000
+      - X: 10000000
         Y: 10000000
     - - X: 90000000
         Y: -30000000
@@ -14044,14 +14044,14 @@ CompositeCollider2D:
       - {x: -11, y: 5}
       - {x: -10, y: 5}
       - {x: -10, y: 4}
-    - - {x: -1, y: 2}
-      - {x: -2, y: 2}
-      - {x: -2, y: 1}
-      - {x: -1, y: 1}
     - - {x: 1, y: 2}
       - {x: 0, y: 2}
       - {x: 0, y: 1}
       - {x: 1, y: 1}
+    - - {x: -1, y: 2}
+      - {x: -2, y: 2}
+      - {x: -2, y: 1}
+      - {x: -1, y: 1}
     - - {x: 3, y: 2}
       - {x: 2, y: 2}
       - {x: 2, y: 1}

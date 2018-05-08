@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4394493997027600}
   - component: {fileID: 212803701123302480}
-  - component: {fileID: 58932104367231146}
+  - component: {fileID: 95942981050331326}
   - component: {fileID: 114983265686077156}
+  - component: {fileID: 114104016468828784}
+  - component: {fileID: 58932104367231146}
   m_Layer: 8
   m_Name: ItemBomb
   m_TagString: Bomb
@@ -54,9 +56,40 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02}
+  m_Offset: {x: -0.08, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!95 &95942981050331326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286217638179488}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9183cbb43e8ae7a49a8f840fcc644f9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114104016468828784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286217638179488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3feb90e186975fc439b410a555248382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: -0.1, y: -0.35, z: 0}
+  ShadowSprite: {fileID: 21300000, guid: d523520874bb9c8489c55f016c5c8bcd, type: 3}
+  ShadowMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114983265686077156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,12 +148,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 797be95878169e045b2a7e59a9fda915, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 461eac0571fa0f74abe2d2335c9b09ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

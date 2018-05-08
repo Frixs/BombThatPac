@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1102941, g: 0.088615604, b: 0.068933815, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -272,6 +272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiPanelQuantity: {fileID: 224178016162079974}
   UiTextQuantity: {fileID: 114193835325655188}
+  _bagSprite: {fileID: 21300000, guid: c6130b18ac54ad5448639fd2c79c935a, type: 3}
+  _bagParticles: {fileID: 1713569160147822, guid: f2a1a3434933d3f4eb09ca31a51c1b79,
+    type: 2}
 --- !u!212 &212500434459616490
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -346,7 +349,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &224178016162079974
 RectTransform:

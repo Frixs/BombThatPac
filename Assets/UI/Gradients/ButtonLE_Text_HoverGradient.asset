@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 2108210716, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: ButtonLE_Text_HoverGradient
   m_EditorClassIdentifier: 
-  topLeft: {r: 1, g: 0.5626268, b: 0.44852942, a: 1}
-  topRight: {r: 1, g: 0.53274924, b: 0.41176468, a: 1}
+  topLeft: {r: 1, g: 0.4117647, b: 0.25882354, a: 1}
+  topRight: {r: 1, g: 0.41009593, b: 0.25735295, a: 1}
   bottomLeft: {r: 0.6985294, g: 0.5773849, b: 0.46739838, a: 1}
   bottomRight: {r: 0.5588235, g: 0.23421279, b: 0.23421279, a: 1}
