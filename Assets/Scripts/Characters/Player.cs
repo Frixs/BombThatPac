@@ -312,7 +312,7 @@ namespace Characters
             // Show message if it is more than X% of total fragment count.
             if (FragmentCounter >= Math.Round(MapManager.Instance.TotalFragmentCount * .7f)) // 70% and more fragment drop will cause notification.
             {
-                UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification(Name.ToUpper() + " LOST QUITE AMOUNT OF COINS!");
+                UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification(Name.ToUpper() + " LOST LARGE AMOUNT OF COINS!");
             }
 
             FragmentCounter = 0;

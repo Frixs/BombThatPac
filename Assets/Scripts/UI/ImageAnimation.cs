@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 namespace UI
 {
+    /// <summary>
+    /// Animation image UI component.
+    /// </summary>
     public class ImageAnimation : MonoBehaviour
     {
         public Sprite[] Sprites;

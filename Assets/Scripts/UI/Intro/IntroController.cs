@@ -8,6 +8,9 @@ namespace UI.Intro
 {
     public class IntroController : MonoBehaviour
     {
+        /// <summary>
+        /// Video player reference.
+        /// </summary>
         [SerializeField] private VideoPlayer _videoPlayer;
         
         // Use this for initialization
@@ -26,6 +29,9 @@ namespace UI.Intro
             }
         }
 
+        /// <summary>
+        /// Start playing the intro video.
+        /// </summary>
         private void StartIntro()
         {
             _videoPlayer.Play();
@@ -33,6 +39,10 @@ namespace UI.Intro
             Invoke("LoadTheGame", (float) _videoPlayer.clip.length);
         }
 
+        /// <summary>
+        /// Load the game scene.
+        /// Set loading screen to black background bacause to intro ending.
+        /// </summary>
         private void LoadTheGame()
         {
             SceneLoadingManager.Instance.LoadScene(1);

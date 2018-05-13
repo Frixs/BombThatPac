@@ -62,11 +62,11 @@ namespace Items
 		/// Check if bomb can be rolled.
 		/// </summary>
 		private bool _rollable;
-		
+
 		/// <summary>
 		/// Checks if bomb should start rolling. Checks when the bomb has collided with caster. Also it says if the bomb currently rolling or not.
 		/// </summary>
-		private bool _isRolling;
+		public bool IsRolling { get; private set; }
 
 		/// <summary>
 		/// Rolling direction of the bomb. Normalized vector.
@@ -91,7 +91,7 @@ namespace Items
 			
 			// Rolling default settings.
 			_rollable = true;
-			_isRolling = false;
+			IsRolling = false;
 			_plantedPosition = transform.position;
 			// Get position of the bomb.
 			Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.localPosition);
@@ -119,7 +119,7 @@ namespace Items
 			// Roll the bomb if the bomb has been pushed by caster.
 			Roll();
 
-			if (Countdown <= 0f && !_isRolling)
+			if (Countdown <= 0f && !IsRolling)
 			{
 				Explode(transform.position);
 				Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Bomb exploded!", Caster.Name);
@@ -164,7 +164,7 @@ namespace Items
 					return;
 				
 				_rollable = false;
-				_isRolling = true;
+				IsRolling = true;
 			}
 				
 		}
@@ -291,7 +291,7 @@ namespace Items
 		/// </summary>
 		private void Roll()
 		{
-			if (!_isRolling)
+			if (!IsRolling)
 				return;
 
 			if (_currentCell == _targetCell)
@@ -308,7 +308,7 @@ namespace Items
 				// Check if thje bomb is on the maximal rolling position or the bomb cannot move towards wall or obstacle.
 				if (_currentCell == _plantedPosition + new Vector3(_rollingDirection.x, _rollingDirection.y, 0) * Constants.BombRollDistance || !CheckTargetCell())
 				{
-					_isRolling = false;
+					IsRolling = false;
 					Countdown += Constants.BombExplosionDelayAfterRolling;
 					return;
 				}

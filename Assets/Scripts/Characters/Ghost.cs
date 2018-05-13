@@ -1,5 +1,6 @@
 ﻿using System;
 using Characters.Effects;
+using Items;
 using Managers;
 using StatusEffects.Scriptable;
 using UnityEngine;
@@ -503,13 +504,16 @@ namespace Characters
 			// All neighbors with its directions.
 			Vector3[] foundCells = new Vector3[4];
 			Vector2[] foundCellsDirection = new Vector2[4];
+			bool[] foundCellsBombCheck = new bool[4];
 			
 			// Valid neighbor counter.
 			int cellCounter = 0;
+			int cellBombCounter = 0;
 
 			// Go through all neighbors and find the valid one.
 			for (int i = 0; i < cellNeighborDirections.GetLength(0); i++)
 			{
+				bool isBombInTheCell = false;
 				// Get neighbor tile position in the center.
 				Vector3 neighborCenter = _currentCell + new Vector3(cellNeighborDirections[i, 0], cellNeighborDirections[i, 1], cellNeighborDirections[i, 2]);
 				// Get tile reference.
@@ -526,29 +530,89 @@ namespace Characters
 					MapManager.Instance.TilemapCellHalfSize,
 					1 << LayerMask.NameToLayer(Constants.UserLayerNameObstacle)
 				);
+				// Try to find bomb in the cell.
+				Collider2D[] triggerObjects = Physics2D.OverlapCircleAll(
+					new Vector2(
+						neighborCenter.x,
+						neighborCenter.y
+					),
+					MapManager.Instance.TilemapCellHalfSize,
+					1 << LayerMask.NameToLayer(Constants.UserLayerNameTriggerObject)
+				);
+				// Go through all trigger object in the cell and try to find if one of them is a bomb.
+				for (int j = 0; j < triggerObjects.Length; j++)
+					if (triggerObjects[j].CompareTag("Bomb") && !triggerObjects[j].GetComponent<ItemBomb>().IsRolling)
+					{
+						isBombInTheCell = true;
+						break;
+					}
+
 				// Evaluate tiles. If it is not wall or obstacle you can go in this direction.
 				// If the ghosts are in ghost house (or in Consumed mode), they can go through the obstacle (only obstacle there is door).
 				if (tile != MapManager.Instance.WallTile && ((obstacles.Length == 0 && tile != MapManager.Instance.DestructableObstacleTile) || IsInGhostHouse || CurrentMode == Mode.Consumed))
 				{
+					
 					foundCells[cellCounter] = neighborCenter;
 					foundCellsDirection[cellCounter] = new Vector2(cellNeighborDirections[i, 0], cellNeighborDirections[i, 1]);
+					foundCellsBombCheck[cellCounter] = false;
+					
+					// Make a bomb as obstacle for the ghosts if they are not in the house, consumed mode or frightened mode.
+					if (isBombInTheCell && !IsInGhostHouse && CurrentMode != Mode.Consumed && CurrentMode != Mode.Frightened)
+					{
+						foundCellsBombCheck[cellCounter] = true;
+						cellBombCounter++;
+					}
+
 					cellCounter++;
 				}
 			}
-
+			
 			// Find the neighbor with shortest straight path to player.
-			if (cellCounter == 1)
+			if (cellCounter == 1) // If there is only 1 way to go, go there and ignore bombs.
 			{
 				moveToCell = foundCells[0];
 				direction = foundCellsDirection[0];
 			}
-			else if (cellCounter > 1)
+			else if (cellCounter > 1) // If there is more than 1 possible new cells to move.
 			{
 				float shortestDistance = float.MaxValue;
 
+				// Go through all the possible cells.
 				for (int i = 0; i < foundCells.Length; i++)
 				{
-					if (foundCellsDirection[i] != Vector2.zero && IsPossibleToChangeDirection(foundCellsDirection[i], PreviousDirection))
+					bool validCell = false;
+					
+					// Check if all possible cells are affected by the bombs.
+					// If all of the possible cells has laying bomb in, ignore the bombs.
+					if (cellCounter == cellBombCounter)
+					{
+						if (foundCellsDirection[i] != Vector2.zero && IsPossibleToChangeDirection(foundCellsDirection[i], PreviousDirection))
+							validCell = true;
+					}
+					// If there is at least 1 possible cell without the bomb, go there.
+					else
+					{
+						// Get only the cells without the bomb.
+						if (foundCellsDirection[i] != Vector2.zero && !foundCellsBombCheck[i])
+						{
+							// If there is only 1 possible cell without the bomb, go there and ignore possibility of the ghost move.
+							if (cellCounter - cellBombCounter == 1)
+							{
+								validCell = true;
+							}
+							// If there are at least 2 possible cells without the bomb, check also possibility of the ghost move.
+							else
+							{
+								if (IsPossibleToChangeDirection(foundCellsDirection[i], PreviousDirection))
+								{
+									validCell = true;
+								}
+							}
+						}
+					}
+
+					// Count the valid cell to the final research of next move.
+					if (validCell)
 					{
 						float distance = Vector3.Distance(foundCells[i], targetCenter);
 
