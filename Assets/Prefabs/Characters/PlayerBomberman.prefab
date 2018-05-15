@@ -158,8 +158,8 @@ MonoBehaviour:
   AnimationControllerDefault: {fileID: 0}
   MyAnimator: {fileID: 0}
   MyRigidBody: {fileID: 0}
-  MyTriggerCollider: {fileID: 0}
   MyCollider: {fileID: 0}
+  MyOutsideCollider: {fileID: 0}
   IsInvulnearable: 0
   IsStatusEffectImmune: 0
   IsDeath: 0

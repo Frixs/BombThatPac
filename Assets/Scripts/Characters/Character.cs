@@ -60,12 +60,12 @@ namespace Characters
         /// <summary>
         /// Reference to trigger.
         /// </summary>
-        [HideInInspector] public CapsuleCollider2D MyTriggerCollider;
+        [HideInInspector] public CapsuleCollider2D MyCollider;
         
         /// <summary>
         /// Reference to collider.
         /// </summary>
-        [HideInInspector] public CapsuleCollider2D MyCollider;
+        [HideInInspector] public CapsuleCollider2D MyOutsideCollider;
 
         /// <summary>
         /// Is character invulnerable thanks to some effect?
@@ -140,7 +140,7 @@ namespace Characters
             AnimationControllerDefault = MyAnimator.runtimeAnimatorController;
             
             // Get trigger collider.
-            MyTriggerCollider = GetComponent<CapsuleCollider2D>();
+            MyCollider = GetComponent<CapsuleCollider2D>();
             
             // Check if exists special collider for collisions or get the same one.
             if (transform.childCount > 0)
@@ -149,10 +149,10 @@ namespace Characters
                     if (child.name != "Collider")
                         continue;
                     
-                    MyCollider = child.GetComponentInChildren<CapsuleCollider2D>();
+                    MyOutsideCollider = child.GetComponentInChildren<CapsuleCollider2D>();
                 }
             else
-                MyCollider = MyTriggerCollider;
+                MyOutsideCollider = MyCollider;
         }
 
         // Update is called once per frame
@@ -315,7 +315,7 @@ namespace Characters
         /// <returns>Size of character collider.</returns>
         public Vector2 GetColliderSize()
         {
-            return MyTriggerCollider.size;
+            return MyCollider.size;
         }
         
         /// <summary>
@@ -324,7 +324,7 @@ namespace Characters
         /// <returns>Offset of character collider.</returns>
         public Vector2 GetColliderOffset()
         {
-            return MyTriggerCollider.offset;
+            return MyCollider.offset;
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace Characters
         /// <param name="y">With of collider.</param>
         public void SetColliderSize(float x, float y)
         {
-            MyTriggerCollider.size = new Vector2(x, y);
+            MyCollider.size = new Vector2(x, y);
         }
         
         /// <summary>
@@ -344,7 +344,7 @@ namespace Characters
         /// <param name="y">Y coord.</param>
         public void SetColliderOffset(float x, float y)
         {
-            MyTriggerCollider.offset = new Vector2(x, y);
+            MyCollider.offset = new Vector2(x, y);
         }
         
         /// <summary>

@@ -17,6 +17,11 @@ namespace Items
 		/// Bomb's countdown.
 		/// </summary>
 		[HideInInspector] public float Countdown;
+
+		/// <summary>
+		/// Reference to the bomb's trigger.
+		/// </summary>
+		private GameObject _bombTriggerReference;
 		
 		/// <summary>
 		/// Reference to explosion PREFAB.
@@ -24,7 +29,7 @@ namespace Items
 		[Header("Settings")] public GameObject ExplosionPrefab;
 		
 		/// <summary>
-		/// Reference to bomb trigger PREFAB.
+		/// Bomb trigger PREFAB.
 		/// </summary>
 		public GameObject BombTriggerPrefab;
 
@@ -103,18 +108,19 @@ namespace Items
 			
 			// Ignore collision when spawning under your feet.
 			Physics2D.IgnoreCollision(Caster.MyCollider, GetComponent<CircleCollider2D>());
-			if (Caster.MyCollider != Caster.MyTriggerCollider)
-				Physics2D.IgnoreCollision(Caster.MyTriggerCollider, GetComponent<CircleCollider2D>());
 				
 			// Set trigger to be able to activate collision on exit.
 			ItemBombTrigger trigger = Instantiate(BombTriggerPrefab, transform.position, Quaternion.identity).GetComponent<ItemBombTrigger>();
 			trigger.BombCollider = GetComponent<CircleCollider2D>();
-			trigger.CharacterCollider.Add(Caster.MyCollider);
-			if (Caster.MyCollider != Caster.MyTriggerCollider)
-				trigger.CharacterCollider.Add(Caster.MyTriggerCollider);
+			trigger.CharacterColliderList.Add(Caster.MyCollider);
+			print(trigger.CharacterColliderList.Count);
 			
+			// Set the same collider to trigger as the bomb.
 			trigger.GetComponent<CircleCollider2D>().offset = GetComponent<CircleCollider2D>().offset;
 			trigger.GetComponent<CircleCollider2D>().radius = GetComponent<CircleCollider2D>().radius;
+
+			// Save a reference to the trigger to be able to destroy it with the bomb.
+			_bombTriggerReference = trigger.gameObject;
 		}
 	
 		// Update is called once per frame
@@ -139,9 +145,9 @@ namespace Items
 				Countdown = 0f;
 		}
 
-		// FixedUpdate is called every fixed framerate frame
-		void FixedUpdate()
+		private void OnDestroy()
 		{
+			Destroy(_bombTriggerReference);
 		}
 
 		private void OnCollisionEnter2D(Collision2D other)
