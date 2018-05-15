@@ -103,10 +103,16 @@ namespace Items
 			
 			// Ignore collision when spawning under your feet.
 			Physics2D.IgnoreCollision(Caster.MyCollider, GetComponent<CircleCollider2D>());
+			if (Caster.MyCollider != Caster.MyTriggerCollider)
+				Physics2D.IgnoreCollision(Caster.MyTriggerCollider, GetComponent<CircleCollider2D>());
+				
 			// Set trigger to be able to activate collision on exit.
 			ItemBombTrigger trigger = Instantiate(BombTriggerPrefab, transform.position, Quaternion.identity).GetComponent<ItemBombTrigger>();
 			trigger.BombCollider = GetComponent<CircleCollider2D>();
-			trigger.CharacterCollider = Caster.MyCollider;
+			trigger.CharacterCollider.Add(Caster.MyCollider);
+			if (Caster.MyCollider != Caster.MyTriggerCollider)
+				trigger.CharacterCollider.Add(Caster.MyTriggerCollider);
+			
 			trigger.GetComponent<CircleCollider2D>().offset = GetComponent<CircleCollider2D>().offset;
 			trigger.GetComponent<CircleCollider2D>().radius = GetComponent<CircleCollider2D>().radius;
 		}

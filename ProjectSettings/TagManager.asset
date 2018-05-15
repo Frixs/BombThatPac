@@ -24,8 +24,8 @@ TagManager:
   - Obstacle
   - Trigger
   - Collectable
-  - 
-  - 
+  - CharacterCollider
+  - GameplayTilemap
   - 
   - 
   - 
