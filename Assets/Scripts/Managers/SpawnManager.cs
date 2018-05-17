@@ -224,7 +224,7 @@ namespace Managers
                 top += _spawnableItemList[i].DropChance;
                 if (rand < top)
                 {
-                    SpawnItem(_spawnableItemList[i]);
+                    StartCoroutine(SpawnItem(_spawnableItemList[i]));
                     return;
                 }
             }
@@ -236,7 +236,7 @@ namespace Managers
         /// Spawn item.
         /// </summary>
         /// <param name="item">Item to be spawned.</param>
-        private void SpawnItem(SpecialItem item)
+        private IEnumerator SpawnItem(SpecialItem item)
         {
             List<Transform> possibleSpawns = new List<Transform>();
 
@@ -259,13 +259,16 @@ namespace Managers
             if (possibleSpawns.Count == 0)
             {
                 Debug.unityLogger.LogFormat(LogType.Log, "[Spawner: {0}] There is no free spawn point to spawn new item.", ItemSpawner.name);
-                return;
+                yield return null;
             }
 
             // Animate throwing item.
             Component component = null;
             if ((component = ItemSpawner.GetComponent<PacMan>()) != null)
+            {
                 ((PacMan) component).StartEventAnimation(1);
+                yield return new WaitForSeconds(0.4f); // Wait for the correct animation.
+            }
 
             // Get random spawn point.
             int spawnPointIndex = Random.Range(0, possibleSpawns.Count - 1);
@@ -273,6 +276,8 @@ namespace Managers
             SpecialItem spawnedItem = Instantiate(item, ItemSpawner.transform.position, item.transform.rotation);
             spawnedItem.StartThrowing(possibleSpawns[spawnPointIndex].position, 3f);
             Debug.unityLogger.LogFormat(LogType.Log, "[Spawner: {0}] Spawning item: {1}.", ItemSpawner.name, item);
+
+            yield return null;
         }
 
         /// <summary>
