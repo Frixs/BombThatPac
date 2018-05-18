@@ -301,13 +301,31 @@ namespace Characters
         {
             if (FragmentCounter == 0)
                 return;
-            
+
+            int existingFragmentCount = 0;
             Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position + RendererOffset);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
+            
+            // Get all collectables in the cell.
+            Collider2D[] collectables = Physics2D.OverlapCircleAll(
+                new Vector2(
+                    cellCenterPos.x,
+                    cellCenterPos.y
+                ),
+                MapManager.Instance.TilemapCellHalfSize,
+                1 << LayerMask.NameToLayer(Constants.UserLayerNameCollectable)
+            );
+            // Get existing count if there is already some fragment.
+            if (collectables.Length > 0)
+                foreach (Collider2D item in collectables)
+                    if (item.CompareTag("Fragment"))
+                    {
+                        existingFragmentCount = item.GetComponent<ItemFragment>().Quantity;
+                        break;
+                    }
 
-            // TODO: There is no check if any fragments are already on the position.
             ItemFragment frag = Instantiate(_fragmentPrefab, cellCenterPos, Quaternion.identity).GetComponent<ItemFragment>();
-            frag.Quantity = FragmentCounter;
+            frag.Quantity = FragmentCounter + existingFragmentCount;
             
             // Show message if it is more than X% of total fragment count.
             if (FragmentCounter >= Math.Round(MapManager.Instance.TotalFragmentCount * .7f)) // 70% and more fragment drop will cause notification.
@@ -332,8 +350,6 @@ namespace Characters
             if (IsRespawnable)
                 SpawnManager.Instance.RespawnCharacterInit(this, RespawnDeathDelay, MapManager.Instance.PlayerSpawnPoints, _spawnAnimPrefab);
 
-            DropFragments();
-
             DeathCount++;
             if (attacker is Player && attacker.Identifier != Identifier)
                 ((Player) attacker).PlayerKillCount++;
@@ -343,6 +359,7 @@ namespace Characters
             
             SoundManager.Instance.PlayRandomizeSfx(DeathSfx);
 
+            DropFragments();
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been killed by character: [{1}]!", Name, attacker.Name);
         }
@@ -357,8 +374,7 @@ namespace Characters
             // Remove all status effects which have to be removed on death.
             StatusEffectManager.Instance.RemoveRequiredAtDeath(this);
             
-            DropFragments();
-            
+            DropFragments();            
             gameObject.SetActive(false);
             Debug.unityLogger.LogFormat(LogType.Log, "[{0}] player has been force killed!", Name);
         }
