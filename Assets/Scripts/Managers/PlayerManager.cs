@@ -99,29 +99,42 @@ namespace Managers
         /// <param name="initOrderNumber">Initialized order number of a player. 0 = The first player has been initialized. 1 = the 2nd player has been initialized. etc.</param>
         private void InitializePlayerPanel(int initOrderNumber)
         {
-            // Setup player UI.
-            PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel();
-            PlayerPanelReference.PlayerManagerReference = this;
-            // Set player colors.
-            PlayerPanelReference.PlayerInventory.GetComponent<Image>().color = PlayerColor;
-            // Set default scale & position.
-            PlayerPanelReference.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
-            PlayerPanelReference.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(
-                10f + initOrderNumber * (10f + PlayerPanelReference.GetComponent<RectTransform>().rect.width),
-                10f,
-                0f
-            );
-
-            // TODO only for 2 players to display 2nd player panel on right side.
-            if (initOrderNumber == 1)
+            if (initOrderNumber == 0)
             {
-                PlayerPanelReference.GetComponent<RectTransform>().anchorMin = new Vector2(1f, 0f);
-                PlayerPanelReference.GetComponent<RectTransform>().anchorMax = new Vector2(1f, 0f);
+                // Setup player UI.
+                PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel(false);
+                PlayerPanelReference.PlayerManagerReference = this;
+                // Set player colors.
+                //PlayerPanelReference.PlayerInventory.GetComponent<Image>().color = PlayerColor;
+
+                // Player 1.
+                // Set default scale & position.
+                PlayerPanelReference.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
                 PlayerPanelReference.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(
-                    -(10f + PlayerPanelReference.GetComponent<RectTransform>().rect.width),
-                    10f,
+                    0f,
+                    0f,
                     0f
                 );
+            }
+            else if (initOrderNumber == 1)
+            {
+                // Setup player UI.
+                PlayerPanelReference = UserInterfaceGameplayManager.Instance.InstantiatePlayerPanel(true);
+                PlayerPanelReference.PlayerManagerReference = this;
+                // Set player colors.
+                //PlayerPanelReference.PlayerInventory.GetComponent<Image>().color = PlayerColor;
+
+                // Player 2.
+                // Set default scale & position.
+                PlayerPanelReference.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                PlayerPanelReference.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(
+                    -(PlayerPanelReference.GetComponent<RectTransform>().rect.width),
+                    0f,
+                    0f
+                );
+                
+                PlayerPanelReference.GetComponent<RectTransform>().anchorMin = new Vector2(1f, 0f);
+                PlayerPanelReference.GetComponent<RectTransform>().anchorMax = new Vector2(1f, 0f);
             }
         }
         

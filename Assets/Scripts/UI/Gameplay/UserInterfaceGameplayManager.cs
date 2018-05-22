@@ -16,6 +16,11 @@ namespace UI.Gameplay
 		[SerializeField] private PlayerPanel _playerPanelPrefab;
 		
 		/// <summary>
+		/// PlayerPanel PREFAB - Player2.
+		/// </summary>
+		[SerializeField] private PlayerPanel _playerPanelRotatedPrefab;
+		
+		/// <summary>
 		/// PauseMenu reference.
 		/// </summary>
 		[SerializeField] private PauseMenu _pauseMenuReference;
@@ -74,16 +79,17 @@ namespace UI.Gameplay
 		/// <summary>
 		/// Instantiate PlayerPanel.
 		/// </summary>
+		/// <param name="rotated">Should the panel be rotated?</param>
 		/// <returns>Reference of Instantiated PlayerPanel.</returns>
-		public PlayerPanel InstantiatePlayerPanel()
+		public PlayerPanel InstantiatePlayerPanel(bool rotated)
 		{
-			if (_playerPanelPrefab == null)
+			if (_playerPanelPrefab == null || _playerPanelRotatedPrefab == null)
 			{
 				Debug.unityLogger.Log(LogType.Error, "Null reference to prefab!");
 				return null;
 			}
-			
-			PlayerPanel pp = Instantiate(_playerPanelPrefab);
+
+			PlayerPanel pp = Instantiate(!rotated ? _playerPanelPrefab : _playerPanelRotatedPrefab);
 			pp.transform.SetParent(this.transform);
 
 			return pp;
