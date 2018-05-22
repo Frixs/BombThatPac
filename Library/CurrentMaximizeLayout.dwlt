@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 817, y: 492}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 21242
+  controlID: 21808
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 21243
+  controlID: 21809
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 0
     width: 1075
     height: 573
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -187,9 +187,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4784435, y: -2.643264, z: 0.0808768}
+    m_Target: {x: -0.7205471, y: 0.8028799, z: 0.18426953}
     speed: 2
-    m_Value: {x: -1.4784435, y: -2.643264, z: 0.0808768}
+    m_Value: {x: -0.7205471, y: 0.8028799, z: 0.18426953}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -217,9 +217,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.61939
+    m_Target: 4.173503
     speed: 2
-    m_Value: 14.61939
+    m_Value: 4.173503
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 21244
+  controlID: 21810
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 21190
+  controlID: 21691
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 2818fbff8093fbff8c93fbff72c6fbff78c6fbff72c7ffff76c7ffffa6c7ffffa8c7ffffaac7ffffacc7ffff84fbffff00000000
+    m_ExpandedIDs: 46b3f6ff48b3f6ff0a18f8ff0c18f8ff4ea8f8ff50a8f8ff6471f9ff6871f9ffa0aff9ff2e51faffd682faffde82faffb8a4fafff0a4fafff2a4fafff4a4faffa6d1faffa8d1faffc670ffffc870ffffd2a2ffffd4a2ffff80cfffff84fbffff00000000623d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1872,19 +1872,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/UI
+    - Assets/Prefabs/Effects
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites/UI
+  - Assets/Prefabs/Effects
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Frixs\Documents\WORKSPACE\Unity\Bomb that Pac
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 900}
-    m_SelectedIDs: f2290000
-    m_LastClickedID: 10738
-    m_ExpandedIDs: 000000002a29000070290000f22900000a2a00005e2a0000942a0000f82b0000082c0000b62c0000802d0000502f0000da2f000074300000e8300000e8310000d8330000e6330000303400000235000078350000863700005a390000b2390000e8420000ea420000ec420000ee42000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 309}
+    m_SelectedIDs: be2e0000
+    m_LastClickedID: 11966
+    m_ExpandedIDs: 000000002a290000702900000e2a0000622a0000982a0000da2b0000fc2b00000c2c0000ba2c0000842d0000582f0000e62f000086300000fa300000d8310000d633000020340000f2340000683500004a390000a23900007c4300007e430000804300008243000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1912,7 +1912,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a29000070290000f22900000a2a00005e2a0000942a0000f82b0000082c0000b62c0000802d0000502f0000da2f000074300000e8300000e8310000d8330000e6330000303400000235000078350000863700005a390000b2390000e8420000ea420000ec420000ee42000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000002a290000702900000e2a0000622a0000982a0000da2b0000fc2b00000c2c0000ba2c0000842d0000582f0000e62f000086300000fa300000d8310000d633000020340000f2340000683500004a390000a23900007c4300007e430000804300008243000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1940,7 +1940,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: f0b8faffc2b70100d4cdffff9287000080870000fcab0000048c01008a28000094280000d229000064280000da280000ba280000282800006a280000682a0000e4280000722800005e290000582800004a290000302800008e2800004ec3fcffe2280000bc270000ea4104008a6dfcff54d7faffce2800002c280000e02c0000bc500000162a00009aac0300fc290000922e000000000000
+    m_ExpandedInstanceIDs: f0b8faffc2b70100d4cdffff9287000080870000fcab0000048c01008a28000094280000d229000064280000da280000ba280000282800006a280000682a0000e4280000722800005e290000582800004a290000302800008e2800004ec3fcffe2280000bc270000ea4104008a6dfcff54d7faffce2800002c280000e02c0000bc500000162a00009aac0300fc290000922e000000000000a0430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

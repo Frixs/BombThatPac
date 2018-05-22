@@ -13,10 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatusEffectType: 1
   IsPermanent: 0
-  Duration: 1.5
+  Duration: 3.5
+  RemoveAtDeath: 0
   OverwriteTheSameTypes: 0
   OverwriteTheSameEffects: 0
   IsStackable: 0
   StartActivationDelay: 0
   RepeatTime: 0
-  SpeedIncrease: -1.5
+  SpeedIncrease: -1.7
+  AnimationPrefab: {fileID: 0}

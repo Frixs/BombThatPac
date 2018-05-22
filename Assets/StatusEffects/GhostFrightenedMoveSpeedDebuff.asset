@@ -20,5 +20,5 @@ MonoBehaviour:
   IsStackable: 0
   StartActivationDelay: 0
   RepeatTime: 0
-  SpeedIncrease: -1.6
+  SpeedIncrease: -1.7
   AnimationPrefab: {fileID: 0}

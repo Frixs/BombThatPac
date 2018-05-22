@@ -10,7 +10,7 @@ namespace StatusEffects
 		/// <summary>
 		/// Status effect duration timer.
 		/// </summary>
-		private float _durationTimer;
+		protected float DurationTimer { get; private set; }
 		
 		/// <summary>
 		/// Start delay timer to activate status effect.
@@ -50,7 +50,7 @@ namespace StatusEffects
 		/// <summary>
 		/// Check if status effect already expired.
 		/// </summary>
-		public bool IsFinished => !Data.IsPermanent && _durationTimer <= 0f && _isAlreadyActivated;
+		public bool IsFinished => !Data.IsPermanent && DurationTimer <= 0f && _isAlreadyActivated;
 
 		/// <summary>
 		/// Initialize the status effect via constructor.
@@ -64,7 +64,7 @@ namespace StatusEffects
 			Target = target;
 			Caster = caster;
 
-			_durationTimer = Data.Duration;
+			DurationTimer = Data.Duration;
 			_startDelayTimer = Data.StartActivationDelay;
 			_repeatTimer = Data.RepeatTime;
 			
@@ -101,8 +101,8 @@ namespace StatusEffects
 			if (!Data.IsPermanent)
 			{
 				// Main duration timer.
-				_durationTimer -= delta;
-				if (_durationTimer <= 0f)
+				DurationTimer -= delta;
+				if (DurationTimer <= 0f)
 				{
 					End();
 					Debug.unityLogger.LogFormat(LogType.Log, "[{0}] Status effect ({1}) ended!", Target.Name, this);

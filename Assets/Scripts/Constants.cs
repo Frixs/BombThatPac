@@ -115,7 +115,7 @@ public static class Constants
     /// <summary>
     /// Ghost's default movement speed.
     /// </summary>
-    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.1f;
+    public const float GhostDefaultMoveSpeed = PlayerDefaultMoveSpeed - 0.5f;
  
     /// <summary>
     /// Delay after player death to respawn the player.
