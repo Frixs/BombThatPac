@@ -1,5 +1,6 @@
 ﻿using Managers;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Gameplay
 {
@@ -24,6 +25,21 @@ namespace UI.Gameplay
 		/// Reference to death placeholder.
 		/// </summary>
 		public DeathPlaceholder DeathPlaceholder;
+
+		/// <summary>
+		/// Reference to object which handles inventory bag background.
+		/// </summary>
+		public GameObject BagBackground;
+
+		/// <summary>
+		/// Bag sprite of idle.
+		/// </summary>
+		public Sprite BagIdleSprite;
+		
+		/// <summary>
+		/// Bag sprite of death.
+		/// </summary>
+		public Sprite BagDeathSprite;
 		
 		// Use this for initialization
 		void Start ()
@@ -41,7 +57,18 @@ namespace UI.Gameplay
 		/// </summary>
 		private void ManageDeathPlaceholder()
 		{
-			DeathPlaceholder.gameObject.SetActive(PlayerManagerReference.PlayerComponent.IsDeath);
+			//DeathPlaceholder.gameObject.SetActive(PlayerManagerReference.PlayerComponent.IsDeath);
+
+			if (PlayerManagerReference.PlayerComponent.IsDeath)
+			{
+				if (BagBackground.GetComponent<Image>().sprite != BagDeathSprite)
+					BagBackground.GetComponent<Image>().sprite = BagDeathSprite;
+			}
+			else
+			{
+				if (BagBackground.GetComponent<Image>().sprite != BagIdleSprite)
+					BagBackground.GetComponent<Image>().sprite = BagIdleSprite;
+			}
 		}
 	}
 }

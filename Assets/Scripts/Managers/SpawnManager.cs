@@ -259,7 +259,7 @@ namespace Managers
             if (possibleSpawns.Count == 0)
             {
                 Debug.unityLogger.LogFormat(LogType.Log, "[Spawner: {0}] There is no free spawn point to spawn new item.", ItemSpawner.name);
-                yield return null;
+                yield break;
             }
 
             // Animate throwing item.

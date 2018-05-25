@@ -321,6 +321,7 @@ namespace Characters
                     if (item.CompareTag("Fragment"))
                     {
                         existingFragmentCount = item.GetComponent<ItemFragment>().Quantity;
+                        Destroy(item.gameObject);
                         break;
                     }
 
