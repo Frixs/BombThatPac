@@ -9,6 +9,7 @@ using StatusEffects.Scriptable;
 using UI.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Characters
 {
@@ -305,6 +306,27 @@ namespace Characters
             int existingFragmentCount = 0;
             Vector3Int cell = MapManager.Instance.TilemapGameplay.WorldToCell(transform.position + RendererOffset);
             Vector3 cellCenterPos = MapManager.Instance.TilemapGameplay.GetCellCenterWorld(cell);
+            
+            // Get all triggers in the cell.
+            Collider2D[] triggers = Physics2D.OverlapCircleAll(
+                new Vector2(
+                    cellCenterPos.x,
+                    cellCenterPos.y
+                ),
+                MapManager.Instance.TilemapCellHalfSize,
+                1 << LayerMask.NameToLayer(Constants.UserLayerNameTrigger)
+            );
+            // Find if we are in ghost house or not.
+            if (triggers.Length > 0)
+                foreach (Collider2D item in triggers)
+                    if (item.CompareTag("GhostHouse"))
+                    {
+                        // If player dies in the ghost house, the fragments have to be moved out of it.
+                        // Change the location of the spawn to one of the item spawn position.
+                        int newSpawnPosIdx = Random.Range(0, MapManager.Instance.ItemSpawnPoints.Length - 1);
+                        cellCenterPos = MapManager.Instance.ItemSpawnPoints[newSpawnPosIdx].position;
+                        // Continue the code of drop with a new position.
+                    }
             
             // Get all collectables in the cell.
             Collider2D[] collectables = Physics2D.OverlapCircleAll(

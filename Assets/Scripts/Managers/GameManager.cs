@@ -63,6 +63,11 @@ namespace Managers
         [SerializeField] private GameObject _finishPortalPrefab;
 
         /// <summary>
+        /// Reference to ghost house door.
+        /// </summary>
+        [SerializeField] private GhostHouseDoor _ghostHouseDoor;
+
+        /// <summary>
         /// Reference to the CameraControl script for control during different phases.
         /// </summary>
         [Header("Camera Settings")] public GameCameraControl CameraControl;
@@ -240,21 +245,17 @@ namespace Managers
                     // Show notification.
                     if (PossiblePlayerWinner == null || PossiblePlayerWinner.Identifier != Players[i].PlayerComponent.Identifier)
                     {
-                        UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification("FIND PACMAN'S PORTAL, " + Players[i].PlayerComponent.Name.ToUpper() + "!");
-                        
+                        UserInterfaceGameplayManager.Instance.NotificationPanelReference.ShowNotification("PACMAN IS WAITING FOR YOU, " + Players[i].PlayerComponent.Name.ToUpper() + "!");
+
                         // Apply winner aura effect.
                         StatusEffectManager.Instance.ApplyStatusEffect(Players[i].PlayerComponent, null, _winnerAuraEffect);
                     }
 
                     HasAnyPlayerAllFragments = true;
+                    
                     PossiblePlayerWinner = Players[i].PlayerComponent;
-
-                    int finishSpawnPointId = Random.Range(0, MapManager.Instance.FinishSpawnPoints.Length);
-
-                    if (_openedFinishPortal == null)
-                        _openedFinishPortal = Instantiate(_finishPortalPrefab, MapManager.Instance.FinishSpawnPoints[finishSpawnPointId].transform.position, Quaternion.identity)
-                            .GetComponent<FinishPortal>();
-
+                    SetWinnerPossibility();
+                    
                     break;
                 }
             }
@@ -262,10 +263,43 @@ namespace Managers
             // Unless any of players have all fragments, destroy portal. 
             if (!HasAnyPlayerAllFragments && _openedFinishPortal != null)
             {
+                // Destroy the portal.
                 Destroy(_openedFinishPortal.gameObject);
-                PossiblePlayerWinner = null;
                 _openedFinishPortal = null;
+                
+                UnsetWinnerPossibility();
+                PossiblePlayerWinner = null;
             }
+        }
+
+        /// <summary>
+        /// Set the player possibility to win the game.
+        /// </summary>
+        private void SetWinnerPossibility()
+        {
+            int finishSpawnPointId = Random.Range(0, MapManager.Instance.FinishSpawnPoints.Length);
+            if (_openedFinishPortal == null)
+            {
+                _openedFinishPortal = Instantiate(_finishPortalPrefab, MapManager.Instance.FinishSpawnPoints[finishSpawnPointId].transform.position, Quaternion.identity).GetComponent<FinishPortal>();
+                
+                // Open the door.
+                List<Collider2D> colliders = new List<Collider2D>();
+                colliders.Add(PossiblePlayerWinner.MyCollider);
+                colliders.Add(PossiblePlayerWinner.MyOutsideCollider);
+                _ghostHouseDoor.OpenDoor(colliders);
+            }
+        }
+
+        /// <summary>
+        /// Unset player possibility to win the game.
+        /// </summary>
+        private void UnsetWinnerPossibility()
+        {
+            // Close the door.
+            List<Collider2D> colliders = new List<Collider2D>();
+            colliders.Add(PossiblePlayerWinner.MyCollider);
+            colliders.Add(PossiblePlayerWinner.MyOutsideCollider);
+            _ghostHouseDoor.CloseDoor(colliders);
         }
 
         /// <summary>

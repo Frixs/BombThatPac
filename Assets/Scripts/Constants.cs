@@ -97,6 +97,11 @@ public static class Constants
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be triggered (f.e bomb is looking for players.).
     /// </summary>
     public const string UserLayerNameTriggerObject = "TriggerObject";
+ 
+    /// <summary>
+    /// All triggers.
+    /// </summary>
+    public const string UserLayerNameTrigger = "Trigger";
     
     /// <summary>
     /// Layer name string reference to layer which hold all objects for script to be able to find among all objects that needs to be refered as obstacle.

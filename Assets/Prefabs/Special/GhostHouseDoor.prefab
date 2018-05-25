@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4067864316032564}
   - component: {fileID: 212645857450910078}
+  - component: {fileID: 95624562508715488}
+  - component: {fileID: 114202658965398986}
   - component: {fileID: 50603235052019098}
   - component: {fileID: 61132791555921852}
   - component: {fileID: 251973589736853160}
@@ -79,8 +81,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.1428572, y: 1.1428572}
+    newSize: {x: 1.1428572, y: 1.1428572}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -88,6 +90,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
+--- !u!95 &95624562508715488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995089997832600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fb1a98d7b44df24fbc71e41819f634b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114202658965398986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995089997832600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21de0e53609450f4cbfa9f553d877192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _openAnimationController: {fileID: 9100000, guid: ab0d6adecc2076b4384f040347bd481c,
+    type: 2}
+  _closeAnimationController: {fileID: 9100000, guid: 8fb1a98d7b44df24fbc71e41819f634b,
+    type: 2}
+  _openSfx: {fileID: 8300000, guid: 842fa84616683924ea5e5e25e9d2556c, type: 3}
+  _closeSfx: {fileID: 8300000, guid: 5114d0ffcb5363b45ad909cf30129f97, type: 3}
 --- !u!212 &212645857450910078
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,12 +158,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de4d31efaa52ad3438a77c3cf1e5983b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d88d19f09b5b13840861a229279e53b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1428572, y: 1.1428572}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

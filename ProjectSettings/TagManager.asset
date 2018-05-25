@@ -11,6 +11,7 @@ TagManager:
   - Ghost
   - SpecialItem
   - Map
+  - GhostHouse
   layers:
   - Default
   - TransparentFX

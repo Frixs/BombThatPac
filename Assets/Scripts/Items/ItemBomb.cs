@@ -113,7 +113,6 @@ namespace Items
 			ItemBombTrigger trigger = Instantiate(BombTriggerPrefab, transform.position, Quaternion.identity).GetComponent<ItemBombTrigger>();
 			trigger.BombCollider = GetComponent<CircleCollider2D>();
 			trigger.CharacterColliderList.Add(Caster.MyCollider);
-			print(trigger.CharacterColliderList.Count);
 			
 			// Set the same collider to trigger as the bomb.
 			trigger.GetComponent<CircleCollider2D>().offset = GetComponent<CircleCollider2D>().offset;
