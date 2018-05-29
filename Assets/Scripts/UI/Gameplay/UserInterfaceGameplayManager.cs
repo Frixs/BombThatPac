@@ -1,5 +1,9 @@
-﻿using Managers;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Characters;
+using Managers;
 using UnityEngine;
+using UnityEngine.Video;
 
 namespace UI.Gameplay
 {
@@ -41,9 +45,34 @@ namespace UI.Gameplay
 		[SerializeField] public NotificationPanel NotificationPanelReference;
 		
 		/// <summary>
+		/// NotificationPanel reference.
+		/// </summary>
+		[SerializeField] public VideoPlayer OutroPlayerReference;
+		
+		/// <summary>
+		/// Outro background reference.
+		/// </summary>
+		[SerializeField] public GameObject OutroBackgroundReference;
+		
+		/// <summary>
+		/// Decors reference.
+		/// </summary>
+		[SerializeField] public GameObject DecorsReference;
+		
+		/// <summary>
 		/// This music is playing if the pause menu is open.
 		/// </summary>
 		[Header("Music Settings")] public AudioClip PauseModeMusic;
+		
+		/// <summary>
+		/// Score mode music background.
+		/// </summary>
+		public AudioClip ScoreModeMusic;
+
+		/// <summary>
+		/// Save the id at the end to be able to show it in scoreboard.
+		/// </summary>
+		private int _playerWinnerId = 0;
 
 		void Awake()
 		{
@@ -105,6 +134,63 @@ namespace UI.Gameplay
 			GameManager.Instance.IsGamePaused = true;
 			
 			SoundManager.Instance.PlayNewBackgroundMusic(PauseModeMusic);
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="playerWinnerId"></param>
+		public void EndTheGame(int playerWinnerId)
+		{
+			_playerWinnerId = playerWinnerId;
+			
+			PlayOutro();
+			NotificationPanelReference.ForceOffNotification();
+
+			SoundManager.Instance.PlayNewBackgroundMusic(ScoreModeMusic);
+		}
+
+		private void ShowScore()
+		{
+			ScoreMenuReference.gameObject.SetActive(true);
+			ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + _playerWinnerId;
+		}
+		
+		/// <summary>
+		/// Play outro video.
+		/// </summary>
+		private void PlayOutro()
+		{
+			OutroPlayerReference.gameObject.SetActive(true);
+			OutroPlayerReference.Play();
+			
+			StartCoroutine(StopOutro());
+		}
+
+		/// <summary>
+		/// Close and stop intro after playback.
+		/// </summary>
+		/// <returns>IEnumerator.</returns>
+		private IEnumerator StopOutro()
+		{
+			float countdownTimer = 0f;
+			float previousTime = Time.realtimeSinceStartup;
+
+			while (countdownTimer <= (float) OutroPlayerReference.clip.length)
+			{
+				countdownTimer += Time.realtimeSinceStartup - previousTime;
+				previousTime = Time.realtimeSinceStartup;
+				
+				yield return 0;
+			}
+
+			OutroBackgroundReference.SetActive(true);
+			DecorsReference.SetActive(false);
+			ShowScore();
+			OutroPlayerReference.Stop();
+			OutroPlayerReference.gameObject.SetActive(false);
+
+			yield return null;
 		}
 	}
 }

@@ -116,11 +116,6 @@ namespace Managers
         [Header("Music Settings")] public AudioClip GameModeMusic;
 
         /// <summary>
-        /// Score mode music background.
-        /// </summary>
-        public AudioClip ScoreModeMusic;
-
-        /// <summary>
         /// This is the default frightened background music on the game.
         /// </summary>
         public AudioClip FrightenedModeMusic;
@@ -448,11 +443,8 @@ namespace Managers
         {
             Time.timeScale = 0f;
             IsGamePaused = true;
-            UserInterfaceGameplayManager.Instance.ScoreMenuReference.gameObject.SetActive(true);
-            UserInterfaceGameplayManager.Instance.ScoreMenuReference.PlacerNamePlaceholderText.text = "Player " + PossiblePlayerWinner.Identifier;
-            UserInterfaceGameplayManager.Instance.NotificationPanelReference.ForceOffNotification();
 
-            SoundManager.Instance.PlayNewBackgroundMusic(ScoreModeMusic);
+            UserInterfaceGameplayManager.Instance.EndTheGame(PossiblePlayerWinner.Identifier);
 
             for (int i = 0; i < Players.Length; i++)
             {
