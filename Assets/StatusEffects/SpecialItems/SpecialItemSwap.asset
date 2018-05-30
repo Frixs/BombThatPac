@@ -18,7 +18,7 @@ MonoBehaviour:
   OverwriteTheSameTypes: 0
   OverwriteTheSameEffects: 0
   IsStackable: 0
-  StartActivationDelay: 2
+  StartActivationDelay: 1
   RepeatTime: 0
   ApplicableStatusEffect: {fileID: 11400000, guid: 1819456d79da35c47913959ceb656187,
     type: 2}
